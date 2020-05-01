@@ -55,7 +55,12 @@ nav a{
     content:"";
     transition: background-color ease 1s;
 }
+
+.section-title{
+		font-weight: 700;
+		color: #2B3F48;
 	
+}	
 
 	h1, h2, h3
 	{
@@ -63,6 +68,7 @@ nav a{
 		padding: 0;
 		font-weight: 700;
 		color: #2B3F48;
+		font-size: 5em;
 	}
 	
 	p, ol, ul
