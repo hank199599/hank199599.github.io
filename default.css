@@ -87,9 +87,9 @@ nav a{
 		text-align: center;
 	}
 		
-		ul.actions li
-		{
-		}
+	ul.actions li
+	{
+	}
 	
 	p
 	{
@@ -146,7 +146,8 @@ nav a{
 	}
 	
 	.image-centered
-	{
+	{	width: 5vw;
+		width: 5vw;
 		display: block;
 		margin: 0 0 2em 0;
 	}
@@ -267,16 +268,23 @@ nav a{
 		margin-bottom: 3em;
 	}
 	
-	.title h2
+	.main
 	{
-		text-transform: uppercase;
-		font-size: 2.7em;
-	}
+		font-size: 5em;
+		color: #FFFFFF;
+		}
 	
 	.title .byline
 	{
 		font-size: 1.7em;
 		color: #6F6F6F;
+	}
+
+	.school_link
+	{
+		font-size: 1.7em;
+		text-decoration:none;
+		color:#6F6F6F
 	}
 		
 /*********************************************************************************/
