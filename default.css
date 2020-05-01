@@ -1,20 +1,62 @@
 	html, body
 	{
 		height: 100%;
+		width:auto;
 	}
 	
 	body
 	{
 		margin: 0px;
 		padding: 0px;
-		background: #333333;
+		background: #ffffff;
 		font-family: 'Varela', sans-serif;
 		font-size: 11pt;
 		font-weight: 300;
-		color: #656565;
+		color: black;
 	}
+
+nav{
+	height:30px;
+    position: fixed;
+    top: 100;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    transition: background-color ease 0.8s;
+	background-color: #4e4c52;
+}
+
+nav a{
+	text-decoration:none;
+	color:#e0e0e0
+}
+
+#nav>ul{
+    display: flex;
+
+}
+
+.nav_item{
+    font-size: 21px;
+    list-style: none;
+    padding: 0 10px;
+    color: #e0e0e0;
+    cursor: pointer;
+}
+
+.nav_item:hover:after,.nav_active:after{
+    background-color: #e0e0e0;
+}
+
+.nav_item:after{
+    height: 3px;
+    width: 100%;
+    display: block;
+    content:"";
+    transition: background-color ease 1s;
+}
 	
-	
+
 	h1, h2, h3
 	{
 		margin: 0;
@@ -186,7 +228,7 @@
 	{
 		display: inline-block;
 		padding: 0em 3em;
-		background: #af1641;
+		background: #387dcc;
 		border-radius: 7px;
 		letter-spacing: 0.20em;
 		line-height: 4em;
@@ -194,7 +236,7 @@
 		text-transform: uppercase;
 		font-weight: 400;
 		font-size: 1em;
-		color: #FFF;
+		color: #ffffff;
 	}
 	
 	.button:before
@@ -377,14 +419,14 @@
 	
 	#menu li:hover a, #menu li.active a, #menu li.active span
 	{
-		background: #dc572e;
+		background: #387dcc;
 		border-radius: 7px;
 		color: #FFF;
 	}
 	
 	#menu .current_page_item a
 	{
-		background: #af1641;
+		background: #4e4c52;
 		color: #FFF;
 	}
 	
@@ -400,7 +442,7 @@
 	{
 		overflow: hidden;
 		padding: 7em 0em 5em 0em;
-		background: #af1641;
+		background: #4e4c52;
 		background-size: cover;
 		text-align: center;
 		color: rgba(255,255,255,.8);
@@ -425,7 +467,7 @@
 	#banner .button
 	{
 		margin-top: 3em;
-		background: #dc572e !important;
+		background: #5f6368 !important;
 	}
 
 /*********************************************************************************/
@@ -475,7 +517,9 @@
 
 	#copyright
 	{
+		width:auto;
 		overflow: hidden;
+		background-color: #4e4c52;
 		padding: 5em 0em;
 		border-top: 1px solid rgba(255,255,255,0.08);
 	}
@@ -501,7 +545,7 @@
 	{
 		overflow: hidden;
 		padding: 5em 0em;
-		background: #af1641;
+		background: #4e4c52;
 		color: rgba(255,255,255,.8);
 		text-align: center;
 	}
@@ -516,7 +560,7 @@
 		background: #FFF;
 		margin-top: 3em;
 		font-size: 1em;
-		color: #af1641;
+		color: #4e4c52;
 	}
 
 	#featured img
