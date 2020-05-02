@@ -70,9 +70,17 @@ nav a{
 		padding: 0;
 		font-weight: 500;
 		color: #2B3F48;
-		font-size: 2em;
+		font-size: 3vw;
 	}
 	
+	h4, h5
+	{
+		margin: 0;
+		padding: 0;
+		font-weight: 500;
+		color: #ffffff;
+		font-size: 1vw;
+	}	
 	p, ol, ul
 	{
 		margin-top: 0;
@@ -127,7 +135,7 @@ nav a{
 	{
 		display: block;
 		height: auto;
-		max-width: 100%;
+		max-width:100% ;
 		margin: 0em auto;
 
 	}
@@ -237,33 +245,18 @@ nav a{
 /* Button Style                                                                  */
 /*********************************************************************************/
 
-	.button
-	{
-		display: inline-block;
-		padding: 0em 3em;
-		background: #387dcc;
-		border-radius: 7px;
-		letter-spacing: 0.20em;
-		line-height: 9vh;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-weight: 400;
-		font-size: 2vw;
-		color: #ffffff;
-	}
-	
-	.button:before
-	{
-		display: inline-block;
-		background: #FFC31F;
-		margin-right: 1em;
-		width: 40px;
-		height: 40px;
-		line-height: 40px;
-		border-radius: 20px;
-		text-align: center;
-		color: #272925;
-	}
+.button mdc-button.mdc-button--outlined{
+  width: 30vw;
+  height:40px;  
+  margin: 0px;
+  padding: 0px;
+  margin: 0em auto;
+  mdc-theme--primary: #ded7ff;
+  mdc-theme--primary-bg: #003db8;
+  color:#6F6F6F
+  z-index: 2;
+
+}
 	
 /*********************************************************************************/
 /* Heading Titles                                                                */
@@ -271,24 +264,24 @@ nav a{
 
 	.title
 	{
-		margin-bottom: 4vh;
+		margin-bottom: 4vw;
 	}
 	
 	.main
 	{
-		font-size: 10vh;
+		font-size: 10vw;
 		color: #FFFFFF;
 		}
 	
 	.title .byline
 	{
-		font-size: 4vh;
+		font-size: 4vw;
 		color: #6F6F6F;
 	}
 
 	.school_link
 	{
-		font-size: 3.2vh;
+		font-size: 2vw;
 		text-decoration:none;
 		list-style: none;
 		color:#6F6F6F
@@ -637,5 +630,35 @@ nav a{
 		font-size: 3em;
 	}
 
+/*********************************************************************************/
+/* 旋轉木馬                                                                     */
+/*********************************************************************************/
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: #EEE;
+  width: 50vw;
+  height: 28.12vw;
+  margin: 0px;
+  padding: 0px;
+  margin: 0em auto;
+}
+
+.carousel-cell {
+  width: 50vw;
+  height: 28.12vw;
+  margin-right: 10px;
+  background: #4e4c52;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+.carousel-img {
+  width: 50vw;
+  height: 28.12vw;
+  }
 
 
