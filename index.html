@@ -19,12 +19,42 @@ Released   : 20140322
 <link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
-
-<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
-
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
+<style>
+  .mdc-button.mdc-button--outlined {
+  		width:30vw;
+		height:4vw;
+		font-size:3vw;
+		text-align: center;
+		margin: 0 auto;
+        --mdc-theme-primary: #795548;
+        --mdc-theme-on-primary: var(--mdc-theme-text-primary-on-dark);
+		font-weight:bold;
+      }
+     .cards {
+        display: center;
+        flex-wrap: wrap;
+      }
+
+      .element-card {
+        width: 20em;
+        margin: 16px;
+      }
+
+      .element-card > .mdc-card__media {
+        height: 9em;
+      }
+	  .element-card.wind {
+        --mdc-theme-primary: #4e4c52;
+        --mdc-theme-on-primary: var(--mdc-theme-text-primary-on-dark);
+      }  
+</style>
 <body>
 <!--home section-->
+
 <section class="section" id="home-section">
 	<nav id="nav">
 		<ul>
@@ -52,62 +82,81 @@ Released   : 20140322
 <!--about section-->			
 <section class="section" id="about-section">
 		<div class="container">
+    <h1 class="section-title">學經歷</h1>
 
-    <h1 class="section-title">簡歷</h1>
-<div class="title" style="width:auto;">
-		<table>
+	<table>
 		<tr><td align="center"><img class="image-ncnu" src="pic/NCNU.png"/></td><td align="left"><a title="NCNU" href="https://www.gazette.ncnu.edu.tw/" target="_blank" class="school_link"><span>  國立暨南國際大學 應用材料與光電工程學系 (2014-2018)</span></a></td></tr>
 		<tr><td align="center"><img class="image-ncnu" src="pic/edx.png"/></td><td align="left"><a title="EDX證照連結" href="https://drive.google.com/file/d/1gvh8BDTiXr284X9fW3XZ8wL_QjwQQvyc/view?usp=sharing" target="_blank" class="school_link"><span>  線上課程證書</span></a></td></tr></table>
-	</div>			
+  </div>	
   </div>	
 </section>
-
-
-<section class="section" id="skill-section">
-		<div class="container">
-		<h1 class="section-title">SKILL</h1>
-			<div class="title">
-				<h2>Fusce ultrices fringilla metus</h2>
-				<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span> </div>
-			<p>This is <strong>BarbedFlower</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
-		</div>
-		<ul class="actions">
-			<li><a href="#works-section" class="button">Etiam posuere</a></li>
-		</ul>
-</section>
-    
     
 <section class="section" id="works-section">
 
    <div class="container">
    <h1 class="section-title">作品集</h1>
 		<div class="title">
-			<h2>Google助理語音應用程式</h2>
-			<img src="pic/assistant_device.png" class="image" />
+		<h2>Google助理語音應用程式</h2></div>
 
-			<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span> </div>
-		<div id="three-column">
-			<div class="tbox1">
-				<div class="box">
-					<p>Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
-				</div>
-			</div>
-			<div class="tbox2">
-				<div class="box">
-					<p>Etiam neque. Vivamus consequat lorem at nisl. Nullam non wisi a sem semper eleifend. Donec mattis.</p>
-				</div>
-			</div>
+		<div class="carousel"  align="center" data-flickity='{ "wrapAround": true}'>
+		  <div class="carousel-cell"><a href="https://assistant.google.com/services/a/uid/00000058f29109ab" target="_blank"><img src="pic/food_decider.png"class="carousel-img"/></a></div>
+		  <div class="carousel-cell"><a href="https://assistant.google.com/services/a/uid/000000b5033b5e97" target="_blank"><img src="pic/1A2B.png" class="carousel-img"/></a></div>
+		  <div class="carousel-cell"><a href="https://assistant.google.com/services/a/uid/000000603cba0b27" target="_blank"><img src="pic/brain_game.png"class="carousel-img"/></a></div>
+		  <div class="carousel-cell"><a href="https://assistant.google.com/services/a/uid/000000fa049fc5e5" target="_blank"><img src="pic/pollutant.png"class="carousel-img"/></a></div>
+		  <div class="carousel-cell"><a href="https://assistant.google.com/services/a/uid/00000038183bf1fb" target="_blank"><img src="pic/mars.png"class="carousel-img"/></a></div>
+		  <div class="carousel-cell"><a href="https://assistant.google.com/services/a/uid/0000008d7409cb2a" target="_blank"><img src="pic/dictionary.png"class="carousel-img"/></a></div>
+		</div> </br></br>
+		 <a href="https://assistant.google.com/explore/search?q=AtesX%20Team" target="_blank">
+		
+		<div align="center"><button class="mdc-button mdc-button--outlined">
+		 <div class="mdc-button__ripple" style="margin:0px auto;">
+		  <span class="mdc-button__label">查看所有作品</span>
+		  </div></button></a></div>
+		</br>
+		<h2>登上Google台灣部落格</h2>
+      	</br><table>
+		<tr><td align="center"><div class="mdc-card element-card wind">
+        <div class="mdc-card__media mdc-theme--primary-bg mdc-theme--on-primary">
+          <h4 class="mdc-typography--headline4">2019年7月31日</h4>
+          <h5 class="mdc-typography--headline9">Google 助理連結台灣在地服務</br> 吃喝玩樂一問就知</h5>
+        </div>
+        <div align="center"><a href="https://taiwan.googleblog.com/2019/07/google_31.html" target="_blank" style="text-decoration:none;text-align: center;">
+		<button class="mdc-button mdc-card__actions">
+		<i class="material-icons mdc-button__icon" aria-hidden="true">open_in_new</i>查看文章
+        </button></a> </div></div></td>
+		<td align="center"><div class="mdc-card element-card wind">
+        <div class="mdc-card__media mdc-theme--primary-bg mdc-theme--on-primary">
+          <h4 class="mdc-typography--headline4">2020年3月31日</h4>
+          <h5 class="mdc-typography--headline9">共同守護健康 善用 Google 不無聊</h5>
+        </div>
+        <div align="center"><a href="https://taiwan.googleblog.com/2020/03/tips-for-home-entertainment.html?fbclid=IwAR3S6u6NuAm8fCKOuRePjseSoDyMmnvgE16oYXs7Eafthw9IFFtfAB71Neo" target="_blank" style="text-decoration:none;text-align: center;">
+		<button class="mdc-button mdc-card__actions">
+		<i class="material-icons mdc-button__icon" aria-hidden="true">open_in_new</i>查看文章
+        </button></a> </div></div></td></tr>				
+		 </table>
+	</div>
+</section>
+
+<section class="section" id="skill-section">
+		<div class="container">
+		<h1 class="section-title">技能</h1>
+			<div class="title">
+				<h2>Fusce ultrices fringilla metus</h2>
+				<span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span> </div>
+			<p>This is <strong>BarbedFlower</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
 		</div>
 		
-				
-		
-	</div>
 </section>
 
 <div id="copyright" class="container">
 	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
 </div>
 <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="js/script.js"></script>
-</body>
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<!-- Instantiate single textfield component rendered in the document -->
+<script>
+  mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
+</script></body>
 </html>
