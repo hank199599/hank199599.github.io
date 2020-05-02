@@ -146,14 +146,14 @@ nav a{
 	}
 	
 	.image-ncnu
-	{	width: 52px;
+	{	width: 5vw;
 		display: block;
 		margin: 0 0 0 0;
 		position:fix;
 	}
 	
 	.image-centered
-	{	width: 10vh;
+	{	width: 7vw;
 		display: block;
 		margin: 0 0 2em 0;
 	}
