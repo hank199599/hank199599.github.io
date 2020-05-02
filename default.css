@@ -16,7 +16,7 @@
 	}
 
 nav{
-	height:30px;
+	height:1vh;
     position: fixed;
     top: 100;
     left: 0;
@@ -33,11 +33,12 @@ nav a{
 
 #nav>ul{
     display: flex;
+    background-color: #4e4c52;
 
 }
 
 .nav_item{
-    font-size: 21px;
+    font-size: 4vh;
     list-style: none;
     padding: 0 10px;
     color: #e0e0e0;
@@ -57,18 +58,19 @@ nav a{
 }
 
 .section-title{
-		font-weight: 700;
+		font-weight: 800;
 		color: #2B3F48;
-	
+		font-size: 6vh;
+
 }	
 
 	h1, h2, h3
 	{
 		margin: 0;
 		padding: 0;
-		font-weight: 700;
+		font-weight: 500;
 		color: #2B3F48;
-		font-size: 5em;
+		font-size: 2em;
 	}
 	
 	p, ol, ul
@@ -114,7 +116,7 @@ nav a{
 	{
 		overflow: hidden;
 		margin: 0em auto;
-		width: 1000px;
+		width: 80vw;
 	}
 	
 /*********************************************************************************/
@@ -123,7 +125,11 @@ nav a{
 
 	.image
 	{
-		display: inline-block;
+		display: block;
+		height: auto;
+		max-width: 100%;
+		margin: 0em auto;
+
 	}
 	
 	.image img
@@ -139,15 +145,15 @@ nav a{
 		margin: 0 0 2em 0;
 	}
 	
-	.image-left
-	{
-		float: left;
-		margin: 0 2em 2em 0;
+	.image-ncnu
+	{	width: 52px;
+		display: block;
+		margin: 0 0 0 0;
+		position:fix;
 	}
 	
 	.image-centered
-	{	width: 5vw;
-		width: 5vw;
+	{	width: 10vh;
 		display: block;
 		margin: 0 0 2em 0;
 	}
@@ -238,11 +244,11 @@ nav a{
 		background: #387dcc;
 		border-radius: 7px;
 		letter-spacing: 0.20em;
-		line-height: 4em;
+		line-height: 9vh;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-weight: 400;
-		font-size: 1em;
+		font-size: 2vw;
 		color: #ffffff;
 	}
 	
@@ -265,25 +271,26 @@ nav a{
 
 	.title
 	{
-		margin-bottom: 3em;
+		margin-bottom: 4vh;
 	}
 	
 	.main
 	{
-		font-size: 5em;
+		font-size: 10vh;
 		color: #FFFFFF;
 		}
 	
 	.title .byline
 	{
-		font-size: 1.7em;
+		font-size: 4vh;
 		color: #6F6F6F;
 	}
 
 	.school_link
 	{
-		font-size: 1.7em;
+		font-size: 3.2vh;
 		text-decoration:none;
+		list-style: none;
 		color:#6F6F6F
 	}
 		
@@ -296,20 +303,20 @@ nav a{
 	.box3,
 	.box4
 	{
-		width: 235px;
+		width: 10vw;
 	}
 	
 	.box1,
 	.box2,
 	.box3,
 	{
-		float: left;
-		margin-right: 20px;
+		float: center;
+		margin: 0em auto;
 	}
 	
 	.box4
 	{
-		float: right;
+		float: center;
 	}
 	
 /*********************************************************************************/
@@ -602,7 +609,7 @@ nav a{
 	padding: 3em 2em 2em 2em;
 	border: 1px solid rgba(0,0,0,0.1);
 	border-radius: 8px;
-		text-align: center;
+	text-align: center;
 }
 
 
