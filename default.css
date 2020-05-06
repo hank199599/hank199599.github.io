@@ -158,7 +158,14 @@ nav a{
 		margin: 0 0 0 0;
 		position:fix;
 	}
-	
+
+	.image-assistant
+	{	width: 100px;
+		height:31px;
+		display: block;
+		margin: 0 0 0 0;
+		position:fix;
+	}	
 	.image-centered
 	{	width: 7vw;
 		display: block;
