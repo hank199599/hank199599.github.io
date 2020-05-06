@@ -26,3 +26,5 @@ function buttonClick(){
     splash.style.transitionDuration=".5s";
   }, 1200);
 }
+
+
