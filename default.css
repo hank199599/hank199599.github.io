@@ -279,6 +279,11 @@ nav a{
 		color: #6F6F6F;
 	}
 
+	.title .bysub
+	{
+		font-size: 8vw;
+		color: #FFFFFF;
+	}
 	.school_link
 	{
 		font-size: 2vw;
