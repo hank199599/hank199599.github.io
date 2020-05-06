@@ -23,7 +23,6 @@ nav{
     width: 100%;
     z-index: 3;
     transition: background-color ease 0.8s;
-	background-color: #4e4c52;
 }
 
 nav a{
