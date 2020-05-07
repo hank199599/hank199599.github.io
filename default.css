@@ -167,6 +167,13 @@ nav a{
 		position:fix;
 	}
 
+	.image-catagory
+	{	width: 3vw;
+		display: block;
+		margin: 0 0 0 0;
+		position:fix;
+	}
+
 	.image-assistant
 	{	width: 300px;
 		height:94px;
