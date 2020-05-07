@@ -72,14 +72,23 @@ nav a{
 		font-size: 3vh;
 	}
 	
-	h4, h5
+	h4
+	{
+		margin: 0;
+		padding: 0;
+		font-weight: 500;
+		color: #ffffff;
+		font-size: 3vh;
+	}	
+
+	h5
 	{
 		margin: 0;
 		padding: 0;
 		font-weight: 500;
 		color: #ffffff;
 		font-size: 1vw;
-	}	
+	}
 	h6
 	{
 		margin: 0;
@@ -168,7 +177,7 @@ nav a{
 	}
 
 	.image-catagory
-	{	width: 3vw;
+	{	width: 3vh;
 		display: block;
 		margin: 0 0 0 0;
 		position:fix;
