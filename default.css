@@ -58,6 +58,34 @@ nav a{
     transition: background-color ease 1s;
 }
 
+.nav_item1{
+ 	text-decoration:none;
+	color:#e0e0e0;
+   font-size: 4vh;
+    list-style: none;
+    padding: 0 10px;
+    color: #e0e0e0;
+    cursor: pointer;
+    height: 3px;
+    width: 100%;
+    display: block;
+    content:"";
+    transition: background-color ease 1s;
+}
+
+.nav_item1:hover:after,.nav_active:after{
+    background-color: #e0e0e0;
+}
+
+
+.nav_item1:after{
+    height: 3px;
+    width: 100%;
+    display: block;
+    content:"";
+    transition: background-color ease 1s;
+}
+
 .section-title{
 		font-weight: 800;
 		color: #2B3F48;
