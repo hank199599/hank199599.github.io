@@ -21,8 +21,6 @@ nav{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 3;
-    transition: background-color ease 0.8s;
 }
 
 nav a{
@@ -36,7 +34,9 @@ nav a{
 }
 
 .nav_item{
-    font-size: 4vh;
+ 	text-decoration:none;
+	color:#e0e0e0;
+   font-size: 4vh;
     list-style: none;
     padding: 0 10px;
     color: #e0e0e0;
