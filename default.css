@@ -93,7 +93,7 @@ nav a{
 
 }	
 
-	h1, h2, h3
+	h1, h2
 	{
 		margin: 0;
 		padding: 0;
@@ -101,7 +101,14 @@ nav a{
 		color: #2B3F48;
 		font-size: 3vh;
 	}
-	
+	h3
+	{
+		margin: 0;
+		padding: 0;
+		font-weight: 500;
+		color: #ffffff;
+		font-size: 2vw;
+	}		
 	h4
 	{
 		margin: 0;
@@ -127,14 +134,7 @@ nav a{
 		color: #ffffff;
 		font-size: 4vh;
 	}	
-	h7
-	{
-		margin: 0;
-		padding: 0;
-		font-weight: 500;
-		color: #ffffff;
-		font-size: 2vw;
-	}	
+
 	p, ol, ul
 	{
 		margin-top: 0;
