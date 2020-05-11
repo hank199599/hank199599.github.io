@@ -17,9 +17,9 @@ Released   : 20140322
 <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
 <link href="../../default.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../../fonts.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <style>
   .mdc-button--raised {
@@ -131,8 +131,10 @@ Released   : 20140322
 		  <span class="mdc-button__label">查看背後原理</span>
 		</button>
 
-	 <h2>精選作品</h2></br>
-
+<button class="mdc-button--outlined">
+  <div class="mdc-button__ripple"></div>
+  <span class="mdc-button__label">Outlined Button</span>
+</button>
 		<div class="carousel"  align="center" data-flickity='{ "wrapAround": true}'>
 		  <div class="carousel-cell"><a href="https://assistant.google.com/services/a/uid/00000058f29109ab" target="_blank"><img src="https://lh3.googleusercontent.com/Su8Kk5qg5K0Jsg45TftpCbxsP_F0Q9Z54VTfFcpFdl0IKYZK1xJBGvwHmua3oxOLgzN9v4SxPTAW5HpD69uaRsegIoKwcDj81oycdNREGS_xPNtK57GBl7tK5DeJsVaYRCpPOuA7ijyaNv5RbAGoOUZc23Goos2KjQEcni_PT-7apT2FG3H9rGH6wNGySedwKhcyLHxkl5fWZ2R2W7H5mwtPJIl1OJSIVVf8ydrfoOxRRUVL2rlVuLtutFmEU6gIDnvQzlJWIjx3srYsiP6ie75w5h17zCeakeRaa3MnA_s709F2udrrYqr4fKFh2eJCAoVXxi8AV4gYCJ5Ge4bDysRd-jxH3WzltCVLVD6lZ9B6CN-3Uq2cxzPRreihjMpYpxVs_SpEXNIon7CiDQikKNBWHmxtX9VVom780Igx55B6TkigFqZ0ye_BgrVLAiV-DngLL1DWosnxOtmNnyTi6XUhYd8PHCo3gSbryJxWF9bKWusWhsGHuqSO2c4fkqqN0Tu08pFo4ytdcJLs6ztLYXRrayQSDOw_Yd8CvNQIE2Culu-R20muMfaOCWEem7w9deorL7IMKkYq9Ea6cMy4YS-9WXRAFtvJUno-ZuDIDTnJyh2hJtHwJl3C1YCJcKSqgAJMYyg0ebuL3AHg2G4t8uNGN08PH1f3j_3JwJQqs_MYFk-BPCSP59wGTVZMy7-NxpAhf3Px9bGL5sxYKSS9YqJMAMMweqH4svpZjtlqElIc-afu-j9ci0Y=w1499-h843-no" class="carousel-img"/></a></div>
 		  <div class="carousel-cell"><a href="https://assistant.google.com/services/a/uid/000000b5033b5e97" target="_blank"><img src="https://lh3.googleusercontent.com/zjvBB7HjY0KYFSjQIkM0bhQQA3qEa48yQvp9am7BfSGFxMyupl41jihXBFYg685VSwpZMVkjSOAF-BAAb1JfynFui1fpvlTRlIUsvNWk3IIgean7RWlbnwDD4TqkW84_-fKJulmK7p3gk1XsP4CP653uCEtXSNNy2uQZPTxw0DvAcSm-FWsI4eHygBs1p67CNeJu7H9G4ELq_qPomXFFDtVF8xZ5MrXMhLSZqSohV-X8zuSiP5axyEKKvqFCDS0g5vfe2aZCyhGSDo1naLmX81KxcEwq8PiYAvqVGcSL0PtYW1yJQOUD3TCMC_J4aDUNfQbYrud7n_KV0hDpUqezrYDLVZ4w5BNYCpo-ooRXTNnFcTN6UlakNGJhCcinBUUEjWxaEismrKFmghNeTB5dHQLagYnhMKHwUg4agRGJx5p5CeKriQ3Wl2C-f_sKbVMGDXee3wwRlNa6HVrsKaoY-ayMxYP98mgI1YUi01MmUra6qRtSXUXfDyEyOvDk4PoLzmgg6jfXpnpW2XkpBt3YAiBsu9LCucqXKMBX4y_QuwyoiW4jQbp1Kxqvg8uoUWsgZvodNM53hRrNhf4k7weAOYqgBH1Cgra1QCMF55eYW35xGcPydSPvl4DMiVFpw0gAvrsSvKPbNf55e5ZudU-McAtPmOJTtJkvnYoZLx-_s6rk-ZaC6g9VGiHgourdtzLdtXyIYr9vIw3KRuHpAVcmyRIeAUIdq-pykiCuu9m0jtQbIeIIGQ6UyIw=w1499-h843-no" class="carousel-img"/></a></div>
@@ -228,7 +230,6 @@ Released   : 20140322
 <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="../../js/script.js"></script>
-<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 <!-- Instantiate single textfield component rendered in the document -->
 <script>
   mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
