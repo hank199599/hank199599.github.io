@@ -176,6 +176,13 @@ nav a{
 		position:fix;
 	}
 
+	.image-big
+	{	width: 5vw;
+		display: block;
+		margin: 0 0 0 0;
+		position:fix;
+	}
+
 	.image-catagory
 	{	width: 5vw;
 		display: block;
