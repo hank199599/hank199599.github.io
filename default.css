@@ -30,7 +30,8 @@ nav a{
 
 #nav>ul{
     display: flex;
-
+	background: #000000;
+	opacity:0.5;
 }
 
 .nav_item{
