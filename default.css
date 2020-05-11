@@ -17,7 +17,7 @@ html, body
 
 nav{
 	height:1vh;
-    position: fixed;
+    position: static;
     top: 100;
     left: 0;
     width: 100%;
@@ -28,12 +28,6 @@ nav{
 nav a{
 	text-decoration:none;
 	color:#e0e0e0
-}
-
-#nav>ul{
-    display: flex;
-    background-color: #4e4c52;
-
 }
 
 .nav_item{
