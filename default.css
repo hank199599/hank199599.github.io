@@ -242,8 +242,7 @@ nav a{
 	}
 
 	.image-icons
-	{   width: 30vw;
-		display: block;
+	{ 	display: block;
 		margin: 0 0 0 0;
 		position:fix;
 	}
