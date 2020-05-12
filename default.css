@@ -240,7 +240,13 @@ nav a{
 		display: block;
 		margin: 0 0 2em 0;
 	}
-	
+
+	.image-icons
+	{   width: 30vw;
+		display: block;
+		margin: 0 0 0 0;
+		position:fix;
+	}
 	.image-centered img
 	{
 		margin: 0 auto;
