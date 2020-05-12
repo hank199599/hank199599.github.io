@@ -22,33 +22,13 @@ Released   : 20140322
  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <style>
-  .mdc-button.mdc-button--outlined {
-  		width:30vw;
-		height:4vw;
-		font-size:3vw;
-		text-align: center;
-		margin: 0 auto;
-        --mdc-theme-primary: #795548;
-        --mdc-theme-on-primary: var(--mdc-theme-text-primary-on-dark);
-		font-weight:bold;
+  .mdc-button.mdc-card__action.mdc-card__action--button {
+        --mdc-theme-primary: #ef6c00;
       }
      .cards {
-        display: center;
+        display: left;
         flex-wrap: wrap;
       }
-
-      .element-card {
-        width: 20em;
-        margin: 16px;
-      }
-
-      .element-card > .mdc-card__media {
-        height: 9em;
-      }
-	  .element-card.wind {
-        --mdc-theme-primary: #4e4c52;
-        --mdc-theme-on-primary: var(--mdc-theme-text-primary-on-dark);
-      }  
 </style>
 <body>
 <!--home section-->
@@ -70,24 +50,72 @@ Released   : 20140322
 		</div>		
 	</div>
 		<div class="container">
+		</br>
     <div class=" mdc-card">
 		<div class=" mdc-card mdc-card--outlined">
 	  <table>
 		 <tr>
 		 <td align="left" style="width:30vw;height:auto"><h1>概略流程</h1>
 		<h5>
-			1.Google助理：作為使用者的輸入介面(語音或文字)</br>
+			1.使用者：輸入語音或文字</br>
 			2.Google助理：傳遞輸入給Dialogflow</br>
-			3.Dialogflow：透過自行預先訓練的機器學習模型分辨使用者意圖(Intent)</br>
+			3.Dialogflow：透過預先訓練的模型分辨使用者意圖(Intent)</br>
 			4.Dialogflow：將對應到的意圖與文字資訊傳遞給Fulfillment</br>
-			5.Fulfillment：根據意圖對應到相應的客製化回應，並返還給Google助理</br>
-			6.Google助理：作為輸出回應的介面給予使用者	</br>
+			5.Fulfillment：根據意圖返還相應的客製化回應</br>
+			6.使用者：透過Google助理看見回應</br>
 			</h5>
 			</td><td align="center" style="width:30vw;height:auto">
 			<img src="https://camo.githubusercontent.com/101c2228d618a22caae9a5d873ba00ba358c5efb/68747470733a2f2f646576656c6f706572732e676f6f676c652e636f6d2f617373697374616e742f636f6e766572736174696f6e616c2f696d616765732f616f672d757365722d71756572792d746f2d66756c66696c6c6d656e742e706e67" class="image-big" />
 	        </td></tr></table>     
-        </div></div>
-	 </div>		
+        </div></div></br>
+	 </div>
+	<div id="banner" style="background:#ef6c00;">
+		<div class="container">
+	  <table>
+		 <tr><td align="center" style="width:30vw;height:auto">
+			<img src="../../pic/dialogflow.png" class="image-big" />
+	        </td>
+		 <td align="left" style="width:40vw;height:auto">
+		     <div class=" mdc-card">
+				<div class=" mdc-card mdc-card--outlined">
+					<h1>Dialogflow</h1>
+				 <div class="mdc-chip-set mdc-chip-set--filter" role="grid">
+		  <div class="mdc-chip mdc-chip--selected" role="row">
+			<div class="mdc-chip__ripple"></div>
+			<i class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
+			<span class="mdc-chip__checkmark">
+			  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30"><path class="mdc-chip__checkmark-path" fill="none" stroke="black"d="M1.73,12.91 8.1,19.28 22.79,4.59"/></svg>
+			</span>
+			<span role="gridcell">
+			  <span role="checkbox" tabindex="0" aria-checked="true" class="mdc-chip__primary-action">
+				<span class="mdc-chip__text">自然語言處理(NLP)</span>
+			  </span>
+			</span>
+		  </div>
+		  <div class="mdc-chip mdc-chip--selected" role="row">
+			<div class="mdc-chip__ripple"></div>
+			<i class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
+			<span class="mdc-chip__checkmark">
+			  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30"><path class="mdc-chip__checkmark-path" fill="none" stroke="black"d="M1.73,12.91 8.1,19.28 22.79,4.59"/></svg>
+			</span>
+			<span role="gridcell">
+			  <span role="checkbox" tabindex="0" aria-checked="true" class="mdc-chip__primary-action">
+				<span class="mdc-chip__text">機器學習(ML)</span>
+			  </span>
+			</span>
+		  </div></div>
+				<h5>是一項在Google Cloud Platform上運行的Google服務</br>使用機器學習來理解用戶所輸入的內容。</br>
+				</h5>
+				</div>
+			<div class="mdc-card__actions">
+			  <a href="https://dialogflow.com/" target="_blank" style="text-decoration:none;text-align: center;"><button class="mdc-button mdc-card__action mdc-card__action--button">
+				<div class="mdc-button__ripple"></div>
+				<span class="mdc-button__label",style="font-weight: bloder;">了解更多</span>
+			  </button></a>	
+			</div>			
+			 </div>
+			</td></tr></table> 		</div>		
+	</div>	 
 </section>		
  
 
