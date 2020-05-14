@@ -20,7 +20,17 @@ Released   : 20140322
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head>
+<!--時間軸 js/css, Copyright (c) 2016 eeyellow-->
+<style>
+.VivaTimeline dl{position:relative;top:0;padding:20px 0;margin:0}.VivaTimeline dl:before{position:absolute;top:0;bottom:0;left:50%;z-index:1;width:2px;margin-left:-1px;content:'';background-color:#ccd1d9}.VivaTimeline dl dt{position:relative;top:30px;z-index:2;width:120px;padding:3px 5px;margin:0 auto 30px;font-weight:400;color:#fff;text-align:center;background-color:#aab2bd;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}.VivaTimeline dl dd{position:relative;z-index:2}.VivaTimeline dl dd .circ{position:absolute;top:40px;left:50%;z-index:2;width:22px;height:22px;margin-left:-11px;background-color:#4fc1e9;border:4px solid #f5f7fa;border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%}.VivaTimeline dl dd .time{position:absolute;top:31px;left:50%;display:inline-block;width:100px;padding:10px 20px;color:#4fc1e9}.VivaTimeline dl dd .events{position:relative;width:47%;padding:10px 0 0;margin-top:31px;background-color:#CCC;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}.VivaTimeline dl dd .events:before{position:absolute;top:12px;width:0;height:0;content:'';border-style:solid;border-width:6px}.VivaTimeline dl dd .events .events-object{margin:0 auto}.VivaTimeline dl dd .events .events-header{min-height:30px;line-height:20px;text-align:center;font-size:16px;font-weight:bold;cursor:pointer}.VivaTimeline dl dd .events .events-body{overflow:hidden;zoom:1;background-color:#EEE;padding:10px}.VivaTimeline dl dd .events .events-body .row{display:none}.VivaTimeline dl dd .events .events-body .events-desc{text-indent:2em;padding:0 15px}.VivaTimeline dl dd .events .events-footer{text-align:center}.VivaTimeline dl dd .events .events-footer ol{list-style:none;margin:0 auto;padding:0}.VivaTimeline dl dd .events .events-footer ol li{background:#32b487;border-radius:5px;margin:10px;display:inline-block;width:10px;height:10px;cursor:pointer}.VivaTimeline dl dd .events .events-footer ol .active{transform:scale(2)}.VivaTimeline dl dd.pos-right .time{margin-left:-100px;text-align:right}.VivaTimeline dl dd.pos-right .events{float:right}.VivaTimeline dl dd.pos-right .events:before{left:-12px;border-color:transparent #CCC transparent transparent}.VivaTimeline dl dd.pos-left .time{margin-left:0;text-align:left}.VivaTimeline dl dd.pos-left .events{float:left}.VivaTimeline dl dd.pos-left .events:before{right:-12px;border-color:transparent transparent transparent #CCC}.VivaTimeline .carousel-indicators{bottom:0}@media screen and (max-width:767px){.VivaTimeline dl:before{left:90px}.VivaTimeline dl dt{margin:0 30px 30px}.VivaTimeline dl dd .circ{left:90px}.VivaTimeline dl dd .time{left:20px}.VivaTimeline dl dd.pos-left .time{padding:10px 0;margin-left:0;text-align:left}.VivaTimeline dl dd.pos-left .events{float:right;width:73%;margin-right:4%}.VivaTimeline dl dd.pos-left .events:before{left:-12px;border-color:transparent #CCC transparent transparent}.VivaTimeline dl dd.pos-right .time{padding:10px 0;margin-left:0;text-align:left}.VivaTimeline dl dd.pos-right .events{float:right;width:73%;margin-right:4%}/* .VivaTimeline dl dd .events .events-body{display:none}.VivaTimeline dl dd .events .events-footer{display:none}*/}
+@media screen and (max-width:500px){.VivaTimeline dl dd.pos-left .events{float:right;width:63%;margin-right:4%}.VivaTimeline dl dd.pos-right .events{float:right;width:63%;margin-right:4%}}
+</style>
+<script>
+//<![CDATA[
+(function(e,b,a,f){var d="vivaTimeline";var c=function(h,g){this.target=h;this.carouselInterval;this.checkImgLoad;this.imgLoad=false;this._init(g);this._event()};c.options={carousel:true,carouselTime:10000};c.prototype={_init:function(h){var g=this;g.options=e.extend(true,{},c.options,h);g.target.find(".events-body").each(function(){var l=e(this).find(".row").length;if(l>1){var k="<ol>";for(var j=0;j<l;j++){k+="<li data-target='"+j+"'></li>"}k+="</ol>";e(this).siblings(".events-footer").html(k).find("li").first().addClass("active")}});g.target.find(".events-body").each(function(){e(this).find(".row").first().show().siblings().hide()});g.target.find("img").on("load",function(){g.target.find(".events-body").each(function(){var i=0;e(this).find(".row").each(function(){if(e(this).height()>i){i=e(this).height()}});e(this).find(".row").height(i)})})},_event:function(){var g=this;g.target.find(".events-header").click(function(){e(this).siblings(".events-body").slideToggle().end().siblings(".events-footer").toggle()});g.target.find(".events-footer li").click(function(){g._carousel(e(this))});if(g.options.carousel){g.carouselInterval=setInterval(function(){g._carousel()},g.options.carouselTime);g.target.find(".events").hover(function(){clearInterval(g.carouselInterval);g.carouselInterval=null},function(){if(g.carouselInterval==f){g.carouselInterval=setInterval(function(){g._carousel()},g.options.carouselTime)}})}},_carousel:function(h){var g=this;if(h==f){g.target.find(".events-footer .active").each(function(){var j;if(e(this).is(":last-child")){j=e(this).siblings().first()}else{j=e(this).next()}g._carousel(j)})}else{var i=h.data().target;h.addClass("active").siblings().removeClass("active");h.closest(".events-footer").siblings(".events-body").find(".row").eq(i).show().siblings().hide()}}};e.fn[d]=function(h,g){var i;this.each(function(){i=new c(e(this),h)});return this}})(jQuery,window,document);
+//]]>
+</script>
+<!--時間軸 js/css--></head>
 <style>
   .mdc-button.mdc-button--outlined {
   		width:30vw;
@@ -81,7 +91,258 @@ Released   : 20140322
 
   </div>
  </div>
+<div class="VivaTimeline">
+<dl>
 
+<!--月份 1-->
+<dt>2014</dt>
+
+<!--左側文章 start-->
+<dd class="pos-left clearfix">
+<div class="circ"></div>
+<div class="time">九月</div><!--填入日期-->
+<div class="events-header">就讀於國立暨南國際大學</div><!--填入標題-->
+<div class="events-body">
+<div class="row">
+<div class="events-desc">應用材料與光電工程學系</div><!--填入描述-->
+</div>
+</div>
+<div class="events-footer"><a href="https://www.amoe.ncnu.edu.tw/" target="_blank" title="NCNU" >查看校系網頁</a></div><!--可填底部標題 或刪除-->
+</dd>
+<!--左側文章 end-->
+
+<!--右側文章 start-->
+<dd class="pos-right clearfix">
+<div class="circ"></div>
+<div class="time">2014/11~2015/06</div><!--填入日期-->
+<div class="events">
+	<div class="events-header">國立暨南國際大學圖書館 工讀生</div><!--填入標題-->
+	<div class="events-body">
+		<div class="row">
+		<div class="events-desc">1.跨館的借書、還書協助</br>2.圖書館閉館協助</div><!--填入描述-->
+		</div>
+	</div>
+</div>
+</dd>
+<dd class="pos-right clearfix">
+<div class="circ"></div>
+<div class="time">2016/02~2018/06</div><!--填入日期-->
+<div class="events">
+	<div class="events-header">國立暨南國際大學 教學助理</div><!--填入標題-->
+	<div class="events-body">
+		<div class="row">
+		<div class="events-desc">1.Moodle課程網資訊管理</br> 2.作業及考卷批改</br> 3.監試 </div><!--填入描述-->
+		</div>
+	</div>
+</div>
+</dd>
+<!--右側文章 end-->
+
+<!--月份 2-->
+<dt>2018</dt>
+
+<!--左側文章 start-->
+
+<!--左側文章 end-->
+
+<!--右側文章 start-->
+<dd class="pos-left clearfix">
+<div class="circ"></div>
+<div class="time">1月16日</div><!--填入日期-->
+<div class="events">
+<div class="events-header">參與微軟主辦的「微軟未來AI人先修班」</div><!--填入標題-->
+<div class="events-body">
+<div class="row">
+<div class="col-md-6 pull-left">
+<img class="events-object img-responsive img-rounded" src="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/74/2018/01/3-5a5d900eecd19-1024x576.jpg" /><!--填入圖片網址-->
+</div>
+<div class="events-desc">在這短短一天的馬拉松課程中，接收到很多新的想法。讓曾經迷惘的我找到前進的目標</div><!--填入描述-->
+</div>
+</div>
+<div class="events-footer"><a href="https://docs.google.com/document/d/1rlMQa9qRnbS8kegDe2N0T-5WkPX9jyhugA1vFtKydxo/edit?usp=sharing" target="_blank" title="在當時所作的筆記" >當天所做的筆記電子檔</a></div><!--可填底部標題 或刪除-->
+</div>
+</dd>
+
+<dd class="pos-right clearfix">
+<div class="circ"></div>
+<div class="time">2月~6月</div><!--填入日期-->
+<div class="events">
+<div class="events-header">找到未來方向，開始修習線上課程</div><!--填入標題-->
+<div class="events-body">
+<div class="row">
+<div class="col-md-6 pull-left">
+<img class="events-object img-responsive img-rounded" src="../../pic/edx.png" /><!--填入圖片網址-->
+</div>
+<div class="events-desc">這段時間內學習到的工具或程式語言：
+◾ Transact-SQL (T-SQL)
+◾ Microsoft Azure Machine Learning Studio
+◾ Microsoft SQL Server
+◾ Microsoft Power BI
+◾ SQL
+◾ Python
+</div><!--填入描述-->
+</div>
+</div>
+<div class="events-footer">
+<a title="EDX證照連結" href="https://drive.google.com/file/d/1gvh8BDTiXr284X9fW3XZ8wL_QjwQQvyc/view?usp=sharing" target="_blank" class="school_link"><span>EDX線上課程證書</span></a>
+</div><!--可填底部標題 或刪除-->
+</div>
+</dd>
+<dd class="pos-right clearfix">
+<div class="circ"></div>
+<div class="time">6月</div><!--填入日期-->
+<div class="events">
+<div class="events-header">離開國立暨南國際大學</div><!--填入標題-->
+</div>
+</dd>
+<dd class="pos-left clearfix">
+<div class="circ"></div>
+<div class="time">7月~10月</div><!--填入日期-->
+<div class="events">
+<div class="events-header">當兵</div><!--填入標題-->
+</div>
+</dd>
+
+<!--月份 3-->
+<dt>2019</dt>
+<dd class="pos-left clearfix">
+<div class="circ"></div>
+<div class="time">一整年</div><!--填入日期-->
+<div class="events">
+<div class="events-header">準備資工所考試</div><!--填入標題-->
+<div class="events-body">
+<div class="row">
+<div class="events-desc">當完兵後決定給自己一年時間準備資工所考試，</br>在此同時自己找網路資源繼續自學程式相關技能。</div><!--填入描述-->
+</div>
+</div></div>
+</dd>
+<dd class="pos-right clearfix">
+<div class="circ"></div>
+<div class="time">三月左右</div><!--填入日期-->
+<div class="events">
+<div class="events-header">接觸到「Actions On Google」平台</div><!--填入標題-->
+</div>
+<div class="events-body">
+<div class="row">
+<div class="events-desc">在偶然間接觸到oogle在台灣發布不久的</div><!--填入描述-->
+</div>
+</div>
+<div class="events-footer">
+<a title="第一支Chatbot" href="https://assistant.google.com/services/a/uid/00000058f29109ab" target="_blank" class="school_link"><span>第一支自己的聊天機器人</span></a>
+</div>
+</dd>
+
+<dd class="pos-right clearfix">
+<div class="circ"></div>
+<div class="time">五月左右</div><!--填入日期-->
+<div class="events">
+<div class="events-header">接觸到「Node.js」與「Firebase」</div><!--填入標題-->
+</div>
+<div class="events-body">
+<div class="row">
+<div class="events-desc">
+第一支語音應用程式發布後，意外得到的正面反饋。</br>
+讓我開始想試著讓它變得更好用。</br>於是開始接觸到後端的程式語言Node.js與無伺服器部屬平台Firebase。</br>
+由於考量到未來要往資工領域走，因此決定利用這個平台開發更多作品並訓練自己的邏輯能力。</br>
+於是慢慢地製作出多個遊戲類型的作品
+</div><!--填入描述-->
+</div>
+</div>
+<div class="events-footer">
+<a title="遊戲類型的作品範例" href="https://assistant.google.com/services/a/uid/000000603cba0b27" target="_blank" class="school_link"><span>遊戲類型的作品範例</span></a>
+</div>
+</dd>
+<dd class="pos-left clearfix">
+<div class="circ"></div>
+<div class="time">7月31日</div><!--填入日期-->
+<div class="events">
+<div class="events-header">作品登上「Google台灣官方部落格」</div><!--填入標題-->
+</div>
+<div class="events-body">
+<div class="row">
+<div class="events-desc">• 美食決定器
+• 1A2B猜數
+• 燈謎大師
+• 大腦運動會</div><!--填入描述-->
+</div>
+</div>
+<div class="events-footer">
+<a title="登上Google部落格" href="https://taiwan.googleblog.com/2019/07/google_31.html" target="_blank" class="school_link"><span>查看文章</span></a>
+</div>
+</dd>
+<dd class="pos-right clearfix">
+<div class="circ"></div>
+<div class="time">七月左右</div><!--填入日期-->
+<div class="events">
+<div class="events-header">接觸到「Firebase Database」</div><!--填入標題-->
+</div>
+<div class="events-body">
+<div class="row">
+<div class="events-desc">
+在製作數款遊戲類的作品後，</br>
+試著突破舒適圈開始嘗試接入Cloud Database</br>在不斷地上網學習與修正錯誤後。</br>
+成功地學會這項技能，並用於台灣AQI指數的查詢服務。</br>
+後來將這項技巧用於多個查詢天氣資訊的姊妹產品
+</div><!--填入描述-->
+</div>
+</div>
+<div class="events-footer">
+<a title="使用Firebase類型的作品範例" href="https://assistant.google.com/services/a/uid/000000fa049fc5e5" target="_blank" class="school_link"><span>作品範例</span></a>
+</div>
+</dd>
+<dd class="pos-right clearfix">
+<div class="circ"></div>
+<div class="time">九月左右</div><!--填入日期-->
+<div class="events">
+<div class="events-header">學會Node.js的Promise技巧</div><!--填入標題-->
+</div>
+<div class="events-body">
+<div class="row">
+<div class="events-desc">
+在撰寫作品時，發現有時執行較久的程式會被忽視，</br>
+導致在呼叫API時常常無法得到正確的結果。</br>
+由於身邊沒有人得以請教，因此在多天不斷地尋找相關教學與Debug後。</br>
+後來將這項技巧用於多個即時查詢資訊的姊妹作品
+</div><!--填入描述-->
+</div>
+</div>
+<div class="events-footer">
+<a title="使用Promise技巧的作品範例" href="https://assistant.google.com/services/a/uid/0000008d7409cb2a" target="_blank" class="school_link"><span>作品範例</span></a>
+</div>
+</dd>
+<dd class="pos-right clearfix">
+<div class="circ"></div>
+<div class="time">十月左右</div><!--填入日期-->
+<div class="events">
+<div class="events-header">參加題庫班</div><!--填入標題-->
+</div>
+</dd>
+<!--月份 4-->
+<dt>2020</dt>
+<dd class="pos-left clearfix">
+<div class="circ"></div>
+<div class="time">二月</div><!--填入日期-->
+<div class="events">
+<div class="events-header">參加資工所考試</div><!--填入標題-->
+</div>
+</dd>'
+<dd class="pos-left clearfix">
+<div class="circ"></div>
+<div class="time">3月31日</div><!--填入日期-->
+<div class="events">
+<div class="events-header">作品再次登上「Google台灣官方部落格」</div><!--填入標題-->
+</div>
+<div class="events-body">
+<div class="row">
+<div class="events-desc">• 詞語接龍</div><!--填入描述-->
+</div>
+</div>
+<div class="events-footer">
+<a title="登上Google部落格" href="https://assistant.google.com/services/a/uid/000000ca4e8b5d65" target="_blank" class="school_link"><span>查看文章</span></a>
+</div>
+</dd>
+</dl>
+</div>
 </section>
 
 <div id="copyright" class="container">
@@ -94,5 +355,11 @@ Released   : 20140322
 <!-- Instantiate single textfield component rendered in the document -->
 <script>
   mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
+</script>
+<script>
+//<![CDATA[
+/*執行時間軸*/
+$(".VivaTimeline").vivaTimeline();
+//]]>
 </script></body>
 </html>
