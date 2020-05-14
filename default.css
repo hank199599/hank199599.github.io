@@ -779,7 +779,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a9196', end
 .timeline-month{
   position:relative;
   padding:4px 15px 4px 35px;
-  background-color:#444950;
+  background-color:#0d0f0e;
+  color:white;
   display:inline-block;
   width:auto;
   border-radius:40px;
@@ -795,7 +796,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a9196', end
   z-index:-1;
   white-space:nowrap;
   display:inline-block;
-  background-color:#111;
+  background-color:#ffffff;
   padding:4px 10px 4px 20px;
   border-top-right-radius:40px;
   border-bottom-right-radius:40px;
@@ -883,6 +884,7 @@ text-shadow:1px 1px 1px rgba(0,0,0,0.3);
 .box-title{
   padding:5px 15px;
   border-bottom: 1px solid #17191B;
+  color:white;
 }
 
 .box-title i{
@@ -891,7 +893,8 @@ text-shadow:1px 1px 1px rgba(0,0,0,0.3);
 
 .box-content{
   padding:5px 15px;
-  background-color:#17191B;
+  background-color:#010101;
+  color:white;
 }
 
 .box-content strong{
