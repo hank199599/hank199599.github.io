@@ -779,8 +779,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a9196', end
 .timeline-month{
   position:relative;
   padding:4px 15px 4px 35px;
-  background-color:#0d0f0e;
-  color:white;
+  background-color:#444950;
   display:inline-block;
   width:auto;
   border-radius:40px;
@@ -796,7 +795,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a9196', end
   z-index:-1;
   white-space:nowrap;
   display:inline-block;
-  background-color:#ffffff;
+  background-color:#111;
   padding:4px 10px 4px 20px;
   border-top-right-radius:40px;
   border-bottom-right-radius:40px;
@@ -824,6 +823,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a9196', end
   display:block;
   position:relative;
   margin-bottom:30px;
+  color:white;
 }
 
 .timeline-date{
@@ -834,7 +834,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a9196', end
   display:inline-block;
   border-radius:20px;
   border:1px solid #17191B;
-  color:#fff;
+  color:#ffffff;
 text-shadow:1px 1px 1px rgba(0,0,0,0.3);
 }
 .timeline-section:before{
@@ -873,6 +873,7 @@ text-shadow:1px 1px 1px rgba(0,0,0,0.3);
   border:1px solid #17191B;
   transition:all 0.3s ease;
   overflow:hidden;
+  color:white;
 }
 
 .box-icon{
@@ -889,11 +890,12 @@ text-shadow:1px 1px 1px rgba(0,0,0,0.3);
 
 .box-title i{
   margin-right:5px;
+  color:white;
 }
 
 .box-content{
   padding:5px 15px;
-  background-color:#010101;
+  background-color:#17191B;
   color:white;
 }
 
@@ -905,6 +907,7 @@ text-shadow:1px 1px 1px rgba(0,0,0,0.3);
 
 .box-item{
   margin-bottom:5px;
+  color:white;
 }
 
 .box-footer{
