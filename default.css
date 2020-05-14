@@ -801,6 +801,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a9196', end
   border-bottom-right-radius:40px;
   border:1px solid black;
   box-sizing:border-box;
+  color:white;
 }
 
 .timeline-month:before{
