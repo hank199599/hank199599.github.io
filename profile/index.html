@@ -20,17 +20,7 @@ Released   : 20140322
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<!--時間軸 js/css, Copyright (c) 2016 eeyellow-->
-<style>
-.VivaTimeline dl{position:relative;top:0;padding:20px 0;margin:0}.VivaTimeline dl:before{position:absolute;top:0;bottom:0;left:50%;z-index:1;width:2px;margin-left:-1px;content:'';background-color:#ccd1d9}.VivaTimeline dl dt{position:relative;top:30px;z-index:2;width:120px;padding:3px 5px;margin:0 auto 30px;font-weight:400;color:#fff;text-align:center;background-color:#aab2bd;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}.VivaTimeline dl dd{position:relative;z-index:2}.VivaTimeline dl dd .circ{position:absolute;top:40px;left:50%;z-index:2;width:22px;height:22px;margin-left:-11px;background-color:#4fc1e9;border:4px solid #f5f7fa;border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%}.VivaTimeline dl dd .time{position:absolute;top:31px;left:50%;display:inline-block;width:100px;padding:10px 20px;color:#4fc1e9}.VivaTimeline dl dd .events{position:relative;width:47%;padding:10px 0 0;margin-top:31px;background-color:#CCC;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px}.VivaTimeline dl dd .events:before{position:absolute;top:12px;width:0;height:0;content:'';border-style:solid;border-width:6px}.VivaTimeline dl dd .events .events-object{margin:0 auto}.VivaTimeline dl dd .events .events-header{min-height:30px;line-height:20px;text-align:center;font-size:16px;font-weight:bold;cursor:pointer}.VivaTimeline dl dd .events .events-body{overflow:hidden;zoom:1;background-color:#EEE;padding:10px}.VivaTimeline dl dd .events .events-body .row{display:none}.VivaTimeline dl dd .events .events-body .events-desc{text-indent:2em;padding:0 15px}.VivaTimeline dl dd .events .events-footer{text-align:center}.VivaTimeline dl dd .events .events-footer ol{list-style:none;margin:0 auto;padding:0}.VivaTimeline dl dd .events .events-footer ol li{background:#32b487;border-radius:5px;margin:10px;display:inline-block;width:10px;height:10px;cursor:pointer}.VivaTimeline dl dd .events .events-footer ol .active{transform:scale(2)}.VivaTimeline dl dd.pos-right .time{margin-left:-100px;text-align:right}.VivaTimeline dl dd.pos-right .events{float:right}.VivaTimeline dl dd.pos-right .events:before{left:-12px;border-color:transparent #CCC transparent transparent}.VivaTimeline dl dd.pos-left .time{margin-left:0;text-align:left}.VivaTimeline dl dd.pos-left .events{float:left}.VivaTimeline dl dd.pos-left .events:before{right:-12px;border-color:transparent transparent transparent #CCC}.VivaTimeline .carousel-indicators{bottom:0}@media screen and (max-width:767px){.VivaTimeline dl:before{left:90px}.VivaTimeline dl dt{margin:0 30px 30px}.VivaTimeline dl dd .circ{left:90px}.VivaTimeline dl dd .time{left:20px}.VivaTimeline dl dd.pos-left .time{padding:10px 0;margin-left:0;text-align:left}.VivaTimeline dl dd.pos-left .events{float:right;width:73%;margin-right:4%}.VivaTimeline dl dd.pos-left .events:before{left:-12px;border-color:transparent #CCC transparent transparent}.VivaTimeline dl dd.pos-right .time{padding:10px 0;margin-left:0;text-align:left}.VivaTimeline dl dd.pos-right .events{float:right;width:73%;margin-right:4%}/* .VivaTimeline dl dd .events .events-body{display:none}.VivaTimeline dl dd .events .events-footer{display:none}*/}
-@media screen and (max-width:500px){.VivaTimeline dl dd.pos-left .events{float:right;width:63%;margin-right:4%}.VivaTimeline dl dd.pos-right .events{float:right;width:63%;margin-right:4%}}
-</style>
-<script>
-//<![CDATA[
-(function(e,b,a,f){var d="vivaTimeline";var c=function(h,g){this.target=h;this.carouselInterval;this.checkImgLoad;this.imgLoad=false;this._init(g);this._event()};c.options={carousel:true,carouselTime:10000};c.prototype={_init:function(h){var g=this;g.options=e.extend(true,{},c.options,h);g.target.find(".events-body").each(function(){var l=e(this).find(".row").length;if(l>1){var k="<ol>";for(var j=0;j<l;j++){k+="<li data-target='"+j+"'></li>"}k+="</ol>";e(this).siblings(".events-footer").html(k).find("li").first().addClass("active")}});g.target.find(".events-body").each(function(){e(this).find(".row").first().show().siblings().hide()});g.target.find("img").on("load",function(){g.target.find(".events-body").each(function(){var i=0;e(this).find(".row").each(function(){if(e(this).height()>i){i=e(this).height()}});e(this).find(".row").height(i)})})},_event:function(){var g=this;g.target.find(".events-header").click(function(){e(this).siblings(".events-body").slideToggle().end().siblings(".events-footer").toggle()});g.target.find(".events-footer li").click(function(){g._carousel(e(this))});if(g.options.carousel){g.carouselInterval=setInterval(function(){g._carousel()},g.options.carouselTime);g.target.find(".events").hover(function(){clearInterval(g.carouselInterval);g.carouselInterval=null},function(){if(g.carouselInterval==f){g.carouselInterval=setInterval(function(){g._carousel()},g.options.carouselTime)}})}},_carousel:function(h){var g=this;if(h==f){g.target.find(".events-footer .active").each(function(){var j;if(e(this).is(":last-child")){j=e(this).siblings().first()}else{j=e(this).next()}g._carousel(j)})}else{var i=h.data().target;h.addClass("active").siblings().removeClass("active");h.closest(".events-footer").siblings(".events-body").find(".row").eq(i).show().siblings().hide()}}};e.fn[d]=function(h,g){var i;this.each(function(){i=new c(e(this),h)});return this}})(jQuery,window,document);
-//]]>
-</script>
-<!--時間軸 js/css--></head>
+</head>
 <style>
   .mdc-button.mdc-button--outlined {
   		width:30vw;
@@ -95,165 +85,175 @@ Released   : 20140322
 <div class="container">
   <div class="timeline">
     <div class="timeline-month">
-      August, 2018
-      <span>3 Entries</span>
+      2014
     </div>
     <div class="timeline-section">
       <div class="timeline-date">
-        21, Tuesday
+        六月
       </div>
       <div class="row">
         <div class="col-sm-4">
           <div class="timeline-box">
             <div class="box-title">
-              <i class="fa fa-asterisk text-success" aria-hidden="true"></i> Job Created
+              <i class="fa fa-asterisk text-success" aria-hidden="true"></i> 就讀於國立暨南國際大學
             </div>
             <div class="box-content">
-              <a class="btn btn-xs btn-default pull-right">Details</a>
-              <div class="box-item"><strong>Loss Type</strong>: A/C Leak</div>
-              <div class="box-item"><strong>Loss Territory</strong>: Texas</div>
-              <div class="box-item"><strong>Start Date</strong>: 08/22/2018</div>
+              <a class="btn btn-xs btn-default pull-right">詳細資訊</a>
+              <div class="box-item"><strong>科系</strong>: 應用材料與光電工程學系</div>
+              <div class="box-item"><strong>學習方向</strong>: 具材料背景之光電人才。</div>
             </div>
-            <div class="box-footer">- Tyler</div>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="timeline-box">
-            <div class="box-title">
-              <i class="fa fa-pencil text-info" aria-hidden="true"></i> Job Edited
-            </div>
-            <div class="box-content">
-              <a class="btn btn-xs btn-default pull-right">Details</a>
-              <div class="box-item"><strong>Project Manager</strong>: Marlyn</div>
-              <div class="box-item"><strong>Supervisor</strong>: Carol</div>
-            </div>
-            <div class="box-footer">- Tyler</div>
-          </div>
-        </div>
-
       </div>
 
     </div>
-
     <div class="timeline-section">
       <div class="timeline-date">
-        22, Wednesday
+        十一月
       </div>
       <div class="row">
         <div class="col-sm-4">
           <div class="timeline-box">
             <div class="box-title">
-              <i class="fa fa-pencil text-info" aria-hidden="true"></i> Job Edited
+              <i class="fa fa-asterisk text-success" aria-hidden="true"></i> 於國立暨南國際大學工讀
             </div>
             <div class="box-content">
-              <a class="btn btn-xs btn-default pull-right">Details</a>
-              <div class="box-item"><strong>Extraction Type</strong>: Carpet Heavy</div>
-              <div class="box-item"><strong>Water Category</strong>: 4</div>
-              <div class="box-item"><strong>No. Of Tech</strong>: 6</div>
-              <div class="box-item"><strong>Est. Complation</strong>: 09/01/2018</div>
+              <a class="btn btn-xs btn-default pull-right">工作內容</a>
+              <div class="box-item"><strong>1.</strong> 跨館的借書、還書協助</div>
+              <div class="box-item"><strong>2.</strong> 圖書館閉館協助</div>
             </div>
-            <div class="box-footer">- Carol</div>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="timeline-box">
-            <div class="box-title">
-              <i class="fa fa-tasks text-primary" aria-hidden="true"></i> New Job To Do
-            </div>
-            <div class="box-content">
-              <a class="btn btn-xs btn-default pull-right">Details</a>
-              <div class="box-item"><strong>Employee</strong>: Sam</div>
-              <div class="box-item"><strong>To Do</strong>: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisi nulla, viverra quis felis sit amet, lacinia feugiat odio. Aliquam sed orci elementum, volutpat dolor eget, venenatis nunc</div>
-            </div>
-            <div class="box-footer">- Marlyn</div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="timeline-box">
-            <div class="box-title">
-              <i class="fa fa-tasks text-primary" aria-hidden="true"></i> New Job To Do
-            </div>
-            <div class="box-content">
-              <a class="btn btn-xs btn-default pull-right">Details</a>
-              <div class="box-item"><strong>Employee</strong>: Jones</div>
-              <div class="box-item"><strong>To Do</strong>: Proin sit amet aliquet neque, eget sagittis nunc. Proin convallis lectus quis volutpat pharetra. Donec quis ultrices eros. Ut eget mi faucibus.</div>
-            </div>
-            <div class="box-footer">- Marlyn</div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="timeline-box">
-            <div class="box-title">
-              <i class="fa fa-thermometer-half text-warning" aria-hidden="true"></i> Pschrometrics
-            </div>
-            <div class="box-content">
-              <div class="box-item"><strong>Temp.</strong>: 23 <sup>o</sup>C</div>
-              <div class="box-item"><strong>Rh </strong>: 42</div>
-              <div class="box-item"><strong>Comments</strong>: Integer nec placerat ipsum. Aliquam id ligula suscipit, ornare dui nec, laoreet tortor.</div>
-            </div>
-            <div class="box-footer">- Jones</div>
-          </div>
-        </div>
-        
-                <div class="col-sm-4">
-          <div class="timeline-box">
-            <div class="box-title">
-              <i class="fa fa-building-o text-default" aria-hidden="true"></i> Room Created
-            </div>
-            <div class="box-content">
-              <div class="box-item"><strong>Name</strong>: Kitchen</div>
-              <div class="box-item"><strong>Floor Level </strong>: 2</div>
-              <div class="box-item"><strong>Dimensions</strong>: 26 x 11 x 8</div>
-            </div>
-            <div class="box-footer">- Sam</div>
-          </div>
-        </div>
-        
       </div>
 
     </div>
-    
+	
+    <div class="timeline-month">
+      2015
+      <span></span>
+    </div>	
     <div class="timeline-section">
       <div class="timeline-date">
-        23, Thursday
+        6月
       </div>
       <div class="row">
         <div class="col-sm-4">
           <div class="timeline-box">
             <div class="box-title">
-              <i class="fa fa-tasks text-success" aria-hidden="true"></i> Job To Do Completed
+              <i class="fa fa-pencil text-info" aria-hidden="true"></i> 結束圖書館工讀
             </div>
-            <div class="box-content">
-              <a class="btn btn-xs btn-default pull-right">Details</a>
-              <div class="box-item"><strong>Employee</strong>: Sam</div>
-              <div class="box-item"><strong>Employee Response</strong>: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nisi nulla, viverra quis felis sit amet, lacinia feugiat odio. Aliquam sed orci elementum, volutpat dolor eget, venenatis nunc</div>
-            </div>
-            <div class="box-footer">- Carol</div>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="timeline-box">
             <div class="box-title">
-              <i class="fa fa-cogs text-info" aria-hidden="true"></i> Equipment Entry
+              <i class="fa fa-tasks text-primary" aria-hidden="true"></i>開始進行專題
             </div>
             <div class="box-content">
-              <a class="btn btn-xs btn-default pull-right">Details</a>
-              <div class="box-item"><strong>ID</strong>: TW-3232</div>
-              <div class="box-item"><strong>Name</strong>: HEPA 600</div>
-                            <div class="box-item"><strong>Date In</strong>: 08/22/2018</div>
+              <a class="btn btn-xs btn-default pull-right">專題內容</a>
+              <div class="box-item"><strong>理論：</strong>檢測各種材料薄膜的物理與化學性質</div>
+              <div class="box-item"><strong>實務：</strong>操作濺鍍機、真空爐等設備來得到所需材料薄膜，再進行檢測等</div>
             </div>
-            <div class="box-footer">- Jones</div>
           </div>
         </div>
-
       </div>
-
+	  <div class="timeline-date">
+       9月
+      </div>
+      <div class="row">
+		 <div class="col-sm-4">
+          <div class="timeline-box">
+            <div class="box-title">
+              <i class="fa fa-tasks text-primary" aria-hidden="true">協助進行教學助理工作(無支薪)</i>
+            </div>
+            <div class="box-content">
+              <a class="btn btn-xs btn-default pull-right">內容</a>
+              <div class="box-item"><strong>1.</strong>協助出題與批改考卷</div>
+              <div class="box-item"><strong>2.</strong>Moodle教學系統的操作</div>
+            </div>
+          </div>
+        </div>
+		 <div class="col-sm-4">
+          <div class="timeline-box">
+            <div class="box-title">
+              <i class="fa fa-tasks text-primary" aria-hidden="true">帶大三學長進行專題</i>
+            </div>
+            <div class="box-content">
+              <a class="btn btn-xs btn-default pull-right">內容</a>
+              <div class="box-item"><strong>理論：</strong>檢測各種材料薄膜的物理與化學性質</div>
+              <div class="box-item"><strong>實務：</strong>操作濺鍍機、真空爐等設備來得到所需材料薄膜，再進行檢測等</div>
+            </div>
+          </div>
+        </div>
+	  </div>
+	</div>
+    <div class="timeline-month">
+      2016
+      <span></span>
+    </div>	
+	  <div class="timeline-date">
+       2月
+      </div>
+ 	   <div class="row">
+		 <div class="col-sm-4">
+          <div class="timeline-box">
+            <div class="box-title">
+              <i class="fa fa-tasks text-primary" aria-hidden="true">擔任教學助理(一直持續到畢業)</i>
+            </div>
+            <div class="box-content">
+              <a class="btn btn-xs btn-default pull-right">內容</a>
+              <div class="box-item"><strong>1.</strong>協助出題與批改考卷</div>
+              <div class="box-item"><strong>2.</strong>Moodle教學系統的操作</div>
+              <div class="box-item"><strong>3.</strong>曾擔任普通物理、材料科學導論等課程的教學助理</div>
+              <div class="box-item"><strong>4.</strong>這幾堂課是專題指導教授的課</div>
+            </div>
+          </div>
+        </div>
+	  </div>
+    <div class="timeline-date">
+       6月
+    </div>
+ 	   <div class="row">
+	   <div class="col-sm-4">
+          <div class="timeline-box">
+            <div class="box-title">
+              <i class="fa fa-tasks text-primary" aria-hidden="true"></i>結束專題，留在實驗室幫忙
+            </div>
+          </div>
+        </div>
     </div>
 
-  </div>
-</div>
+   <div class="timeline-month">
+      2017
+      <span></span>
+    </div>
+	<div class="timeline-month">
+      2018
+      <span></span>
+    </div>
+	  <div class="timeline-date">
+       1月16日
+      </div>
+ 	   <div class="row">
+		 <div class="col-sm-4">
+          <div class="timeline-box">
+            <div class="box-title">
+              <i class="fa fa-tasks text-primary" aria-hidden="true">參與「微軟未來AI人先修班」</i>
+            </div>
+            <div class="box-content">
+              <a class="btn btn-xs btn-default pull-right">心得</a>
+              <div class="box-item"><strong>1.</strong>Coding是未來的基礎必備能力。</div>
+              <div class="box-item"><strong>2.</strong></div>
+              <div class="box-item"><strong>3.</strong></div>
+              <div class="box-item"><strong>4.</strong>確定自己未來努力的目標</div>
+            </div>
+          </div>
+        </div>
+	  </div>
+
+	  
+	</div>	
+   </div>
 
 
 </section>
