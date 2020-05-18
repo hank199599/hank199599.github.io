@@ -222,7 +222,7 @@ nav a{
 	}
 
 	.image-catagory
-	{	width: 5vw;
+	{	width: 10vw;
 		display: block;
 		margin: 0 0 0 0;
 		position:fix;
@@ -254,7 +254,7 @@ nav a{
 	
 	.image_diagram
 	{
-		width: 10vw;
+		width: 40vw;
 		display: block;
 		margin: 0 0 0 0;
 	}
