@@ -252,11 +252,11 @@ nav a{
 		width: auto;
 	}
 	
-	.image-radius
+	.image_diagram
 	{
-	border-radius: 50px;
-	-webkit-border-radius: 50px;
-	-moz-border-radius: 50px;
+		width: 10vw;
+		display: block;
+		margin: 0 0 0 0;
 	}
 	
 /*********************************************************************************/
