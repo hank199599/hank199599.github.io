@@ -99,7 +99,7 @@ nav a{
 		padding: 0;
 		font-weight: bloder;
 		color: #2B3F48;
-		font-size: 3vh;
+		font-size: 3vw;
 	}
 	h3
 	{
@@ -107,7 +107,7 @@ nav a{
 		padding: 0;
 		font-weight: 500;
 		color: #ffffff;
-		font-size: 1vw;
+		font-size: 1.7vw;
 	}		
 	h4
 	{
@@ -115,7 +115,7 @@ nav a{
 		padding: 0;
 		font-weight: 900;
 		color: #4e4c52;
-		font-size: 4vh;
+		font-size: 4vw;
 	}	
 
 	h5
@@ -132,7 +132,7 @@ nav a{
 		padding: 0;
 		font-weight: 500;
 		color: #ffffff;
-		font-size: 4vh;
+		font-size: 4vw;
 	}	
 
 	p, ol, ul
