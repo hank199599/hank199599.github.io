@@ -206,10 +206,11 @@ nav a{
 
 	.image-assistant
 	{	width: 300px;
-		height:94px;
+		margin-left: auto;
+		margin-right: auto;
 		display: block;
-		margin: 0 0 0 0;
-		position:fix;
+		position: relative;
+		bottom:0px;
 	}	
 	.image-centered
 	{	width: 7vw;
