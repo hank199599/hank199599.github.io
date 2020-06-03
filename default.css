@@ -952,7 +952,7 @@ ul.tabs li {
 }
 ul.tabs li a {
 	display: block;
-	width: 11.429vw;
+	width: auto;
 	padding-bottom: 0;
 	color: #000000;
 	text-decoration: none;
