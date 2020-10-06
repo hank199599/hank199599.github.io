@@ -127,10 +127,6 @@ ul.actions {
     text-align: center;
 }
 
-ul.actions li {}
-
-strong {}
-
 a {
     color: #0000FF;
 }
@@ -324,7 +320,7 @@ ul.contact li a.icon-rss:before {
     margin: 0px;
     padding: 0px;
     margin: 0em auto;
-    color: #6F6F6F z-index: 2;
+    color: #6F6F6F z-index;
 }
 
 
@@ -380,8 +376,7 @@ ul.contact li a.icon-rss:before {
 
 .box1,
 .box2,
-.box3,
-{
+.box3 {
     float: center;
     margin: 0em auto;
 }
@@ -532,8 +527,6 @@ ul.contact li a.icon-rss:before {
     color: #FFF;
 }
 
-#menu .icon {}
-
 
 /*********************************************************************************/
 
@@ -588,42 +581,6 @@ ul.contact li a.icon-rss:before {
     display: inline-block;
     text-align: center;
 }
-
-
-/*********************************************************************************/
-
-
-/* Content                                                                       */
-
-
-/*********************************************************************************/
-
-#content {}
-
-
-/*********************************************************************************/
-
-
-/* Sidebar                                                                       */
-
-
-/*********************************************************************************/
-
-#sidebar {}
-
-
-/*********************************************************************************/
-
-
-/* Footer                                                                        */
-
-
-/*********************************************************************************/
-
-#footer {}
-
-
-/*********************************************************************************/
 
 
 /* Copyright                                                                     */
@@ -765,11 +722,6 @@ body {
 .carousel-img {
     width: 50vw;
     height: 28.12vw;
-}
-
-@use "@material/button";
-.my-custom-button {
-    @include button.shape-radius(50%);
 }
 
 
