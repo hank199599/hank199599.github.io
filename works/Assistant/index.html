@@ -9,611 +9,1238 @@ Version    : 1.0
 Released   : 20140322
 -->
 <html xmlns="https://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
-<link href="../../default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="../../fonts.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
+	<link href="../../default.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../../fonts.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <style>
-  .mdc-button.mdc-button--raised {
-  		width:30vw;
-		height:auto;
-		font-size:3vw;
+	.mdc-button.mdc-button--raised {
+		width: 30vw;
+		height: auto;
+		font-size: 3vw;
 		text-align: center;
 		margin: 0 auto;
-        --mdc-theme-primary: #4e4c52;
-        --mdc-theme-on-primary: var(--mdc-theme-text-primary-on-dark);
-		font-weight:bold;
-      }
-  .mdc-button.mdc-card__action.mdc-card__action--button {
-        --mdc-theme-primary: #4e4c52;
-      }
+		--mdc-theme-primary: #4e4c52;
+		--mdc-theme-on-primary: var(--mdc-theme-text-primary-on-dark);
+		font-weight: bold;
+	}
 
-	  .cards {
-        display: center;
-        flex-wrap: wrap;
-      }
+	.mdc-button.mdc-card__action.mdc-card__action--button {
+		--mdc-theme-primary: #4e4c52;
+	}
 
-      .element-card {
-        width: 20em;
-        margin: 16px;
-      }
+	.cards {
+		display: center;
+		flex-wrap: wrap;
+	}
 
-      .element-card > .mdc-card__media {
-        height: 9em;
-      }
-	  .element-card.wind {
-        --mdc-theme-primary: #4e4c52;
-        --mdc-theme-on-primary: var(--mdc-theme-text-primary-on-dark);
-      }  
+	.element-card {
+		width: 20em;
+		margin: 16px;
+	}
+
+	.element-card>.mdc-card__media {
+		height: 9em;
+	}
+
+	.element-card.wind {
+		--mdc-theme-primary: #4e4c52;
+		--mdc-theme-on-primary: var(--mdc-theme-text-primary-on-dark);
+	}
 </style>
+
 <body>
-<!--home section-->
-	
-<section class="section" id="home-section">
-	<nav id="nav">
-		<ul>
-			<li class="nav_item"><a href="https://hank199599.github.io/">首頁</a></li>
-			<li class="nav_item"><a href="https://hank199599.github.io/profile/">簡歷</a></li>
-			<li class="nav_item"><a href="https://hank199599.github.io/works/Assistant">Google 助理</a></li>
-			<li class="nav_item"><a href="https://hank199599.github.io/works/Alexa">Alexa</a></li>
-		</ul>
-	</nav>	
-	<div id="banner" style="height:100vh;background-image: url('https://lh3.googleusercontent.com/pw/ACtC-3cApKP1SLshMtkW5BGW97qG8fVo2ntPSvmAwCPvwZqPpt85b26q_k0eL5x4huArMHSaNS_MpJdd-rL0a6Ef66d19QWuubmy-x58_Y_nqxbbiWQQ3rJLaDAQAzJbVUK71-VsGqOuL1ULBQy-TgcXp21UOw=w1355-h903-no?authuser=0');">
-		<div class="container">
-			<div class="title">
-				<span class="byline">OK Google</span></br></br>
-				<span class="bysub">有甚麼需要我幫忙的嗎?</span> </div>
-<div style="position:absolute;bottom:0;margin:0 auto;">
-	<table valign="bottom">
-	<tr><td style="width:80vw;text-align:center;">
-	<a href="https://assistant.google.com/explore/search?q=AtesX%20Team" target="_blank"><img class="image-assistant" src="../../pic/XPM_BADGING_GoogleAssistant_HOR.png"/></a></br>
-	<img src="../../pic/baseline_expand_more_white_48dp.png" alt="往下" style="vertical-align:bottom;width:5vw;"></td></tr></table>
-	</br></br>
-	 </div>
-	</div>		
-  </div>	
-</section>
-<!--about section-->			
-</br></br></br>
+	<!--home section-->
 
-<section class="section" id="works-section">
-
-   <div class="container">
-	 </br>  
-	  
-    <div class=" mdc-card">
-		<div class=" mdc-card mdc-card--outlined" style="padding: 10px 10px;">
-	  <table>
-		 <tr>
-		 <td align="left" style="width:30vw;height:auto;"><h1>Google助理語音應用程式</h1>
-		  <div class="mdc-chip-set mdc-chip-set--filter" role="grid">
-		  <div class="mdc-chip mdc-chip--selected" role="row">
-			<div class="mdc-chip__ripple"></div>
-			<i class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
-			<span class="mdc-chip__checkmark">
-			  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30"><path class="mdc-chip__checkmark-path" fill="none" stroke="black"d="M1.73,12.91 8.1,19.28 22.79,4.59"/></svg>
-			</span>
-			<span role="gridcell">
-			  <span role="checkbox" tabindex="0" aria-checked="true" class="mdc-chip__primary-action">
-				<span class="mdc-chip__text">Node.js</span>
-			  </span>
-			</span>
-		  </div>
-		  <div class="mdc-chip mdc-chip--selected" role="row">
-			<div class="mdc-chip__ripple"></div>
-			<i class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
-			<span class="mdc-chip__checkmark">
-			  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30"><path class="mdc-chip__checkmark-path" fill="none" stroke="black"d="M1.73,12.91 8.1,19.28 22.79,4.59"/></svg>
-			</span>
-			<span role="gridcell">
-			  <span role="checkbox" tabindex="0" aria-checked="true" class="mdc-chip__primary-action">
-				<span class="mdc-chip__text">Dialogflow</span>
-			  </span>
-			</span>
-		  </div>  <div class="mdc-chip mdc-chip--selected" role="row">
-			<div class="mdc-chip__ripple"></div>
-			<i class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
-			<span class="mdc-chip__checkmark">
-			  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30"><path class="mdc-chip__checkmark-path" fill="none" stroke="black"d="M1.73,12.91 8.1,19.28 22.79,4.59"/></svg>
-			</span>
-			<span role="gridcell">
-			  <span role="checkbox" tabindex="0" aria-checked="true" class="mdc-chip__primary-action">
-				<span class="mdc-chip__text">Firebase</span>
-			  </span>
-			</span>
-		   </div>
-		  </div><h5>是Google開發的智慧型個人助理。</br>在2018年10月16日於臺灣上線。</br>其後在隔年三月開放台灣的第三方程式可以與其介接。</br>
-			在任意支援Google助理的裝置上都能無縫使用。</br>Google助理本身目前止已支援30+種語言，可以輕易提供跨語言的使用體驗。</h5>
-			</td><td align="center" style="width:30vw;height:auto">
-			<img src="../../pic/assistant_device.png" class="image-big" />
-	        </td></tr></table>     
-        </div>
-			<div class="mdc-card__actions">
-		  <a href="https://hank199599.github.io/priciple/" style="text-decoration:none;text-align: center;"><button class="mdc-button mdc-card__action mdc-card__action--button">
-			<div class="mdc-button__ripple"></div>
-			<i class="material-icons mdc-button__icon" aria-hidden="true">emoji_objects</i><span class="mdc-button__label",style="font-weight: bloder;">查看背後原理</span>
-		  </button></a>	
-			</div></div></br>
-
-	 <h1>登上<font color="#4781f2">G</font ><font color="#e44134">o</font ><font color="#f4b705">o</font ><font color="#4781f2">g</font ><font color="#33a351">l</font ><font color="#e44134">e</font>台灣部落格</h1>
-		<table>
-		<tr><td align="left"><div class="mdc-card element-card wind">
-        <div class="mdc-card__media mdc-theme--primary-bg mdc-theme--on-primary" style="padding: 10px 10px;">
-          <h3>&nbsp;• 美食決定器</br> 
-			  &nbsp;• 1A2B猜數</br> 
-			  &nbsp;• 燈謎大師</br> 
-			  &nbsp;• 大腦運動會</h3>
-        </div>
-        <a href="https://taiwan.googleblog.com/2019/07/google_31.html" target="_blank" style="text-decoration:none;text-align: center;">
-		<button class="mdc-button mdc-card__actions">
-		<div align="center"><i class="material-icons mdc-button__icon" aria-hidden="true">open_in_new</i>2019年7月31日
-        </div></button></a> </div></td>
-		<td align="left"><div class="mdc-card element-card wind">
-        <div class="mdc-card__media mdc-theme--primary-bg mdc-theme--on-primary" style="padding: 10px 10px;">
-          <h3>&nbsp;• 詞語接龍</h3>
-        </div>
-        <a href="https://taiwan.googleblog.com/2020/03/tips-for-home-entertainment.html?fbclid=IwAR3S6u6NuAm8fCKOuRePjseSoDyMmnvgE16oYXs7Eafthw9IFFtfAB71Neo" target="_blank" style="text-decoration:none;text-align: center;">
-		<button class="mdc-button mdc-card__actions">
-		<div align="center"><i class="material-icons mdc-button__icon" aria-hidden="true">open_in_new</i>2020年3月31日
-        </div></button></a> </div></td></tr>				
-		 </table></div>
-	 </br></br>
-
-<section class="section" id="about-section">
-	<div class="container"></br><h1>所有作品列表</h1><font color="#4e4c52" size="4" face="serif" style="font-weight: bloder;">可根據語系自動變更顯示內容與回應</font></br></br>
-	<div class="abgne_tab">
-		<ul class="tabs">
-			<li><a href="#tab1" class="nav_item1">繁體中文</a></li>
-			<li><a href="#tab2" class="nav_item1">廣東話</a></li>
-			<li><a href="#tab3" class="nav_item1">日文</a></li>
-			<li><a href="#tab4" class="nav_item1">韓文</a></li>
-			<li><a href="#tab5" class="nav_item1">泰文</a></li>
-			<li><a href="#tab6" class="nav_item1" >英文</a></li>
-			<li><a href="#tab7" class="nav_item1" >德文</a></li>
-			<li><a href="#tab8" class="nav_item1" >丹麥文</a></li>
-			<li><a href="#tab9" class="nav_item1" >西班牙文</a></li>
-			<li><a href="#tab10" class="nav_item1" >法文</a></li>
-			<li><a href="#tab11" class="nav_item1" >荷蘭文</a></li>
-		</ul>
-		<div class="tab_container">
-			<div style="background:#f1f3f4;height:auto">
-				<div id="tab1" class="tab_content">
-				 <table>
-				 <tr>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_fastfood_black_36dp.png"/><h4>取得餐飲建議</h4></br>
-					 <table><tr>
-					 <td align="center"><a title="美食決定器" href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81" class="carousel-ncnu"/></a></td>
-					 </tr>
-					 </table></div>
-				</br>
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_school_black_36dp.png"/><h4>參考資料</h4></br>
-				<table><tr>
-					 <td align="center"><a title="每日大事記" href="https://assistant.google.com/services/a/uid/000000d67993a1d2?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/1U6-HhkKdaVzPMMsz5XmKZ31lTnOkXWz4eTuDcNTejlgatqouaKoniXkxfMC0AKvRx4wSjHmynvs=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="臺灣國語辭典" href="https://assistant.google.com/services/a/uid/0000008d7409cb2a?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/b5mi7bsFMvz5vbzdQYkGvRTCZQlwgCOvIlmNAds6dvjuLGwC-gzhYDMowSi7_e4OR1o9fY0ecBY=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="鐵道辭典" href="https://assistant.google.com/services/a/uid/000000862113b0f6?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/RD6WQND-5BmBiDt2UfnbrqnMIWquswEXE1hySqSCBHwLMgQLeS0taGu6y2Ezgqnr-ADzo637fVp1=s90" class="carousel-ncnu"/></a></td>
-				</tr><tr>
-					 <td align="center"><a title="倉頡字典" href="https://assistant.google.com/services/a/uid/0000009932f37dce?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/UVAu76LGBKhH-4DRHihBAQhF3tKBrjxr1ZE3n2N_o2QPbCSpbYl8Ue6_TD5YULulFmwupCoRbhI1=s90" class="carousel-ncnu"/></a></td>
-				</tr></table></div>	 
-				</br>
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_chrome_reader_mode_black_36dp.png"/><h4>朗讀語錄</h4></br> <table><tr>
-					 <td align="center"><a title="正能量語錄" href="https://assistant.google.com/services/a/uid/000000b877fb7629?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/XAylvXmY2tTWiQVtuwbcan_nno8pM7q9Qro6aEBECzTEN-x8jqAjuMm-ZqL_qCVvvkYhgw1_VVNI=s90" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="負能量語錄" href="https://assistant.google.com/services/a/uid/000000e8f5894304?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/9eRDWvPEh3jeQmuBcpiXtX4gH9yTGqvyO1ur_PQ-K7H9KiR6A24zluD7ENZeIr0nNvshlOLH-yrw=s90" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="今日名言" href="https://assistant.google.com/services/a/uid/0000002a10f761c0?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/DPDoPBFLpDglYGoU2zNdzACtOFfE-rsPvK2kJC1jA_scJTJM69x8SmycybTIipNMC0LsJdz06j5qwQ=s90" class="carousel-ncnu"/></a></td>
-					 </tr></table></div>	 
-				</br>
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_color_lens_black_36dp.png"/><h4>藝術與生活品味</h4></br> <table><tr>
-					 <td align="center"><a title="每日天文圖" href="https://assistant.google.com/services/a/uid/00000011ac49f35c?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/NnDqEoQYzER27FJ8X-6fAxdRkSQ35j6MbiMfwMu5V_tqLZDopKQ1YcCPMLwwmIA-WQmEFaJ1Y6YA=s90" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="運勢大師" href="https://assistant.google.com/services/a/uid/00000084fd2effe4?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/hKT5442d4Mmrmx6tCPV6Ft-ZUwvR6zps3pmArImOjbCTKS5SjQM_bvUEmYixA8fDzwCwJoAPmR5I=s90" class="carousel-ncnu"/></a></td>
-					 </tr></table></div>	 
-				</td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_sports_esports_black_36dp.png"/><h4>休閒娛樂</h4></br> <table><tr>
-					 <td align="center"><a title="大腦運動會" href="https://assistant.google.com/services/a/uid/000000603cba0b27?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/IC_vSx1qVU6iTofmMzVjUIDjEcQ33KicmwUQS8CInXLghiMVayuCmn2aXEMTqp6DTrg7fbFLBxUT=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="燈謎大師" href="https://assistant.google.com/services/a/uid/00000046536e4ef2?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/5Iy10xZI4gE58MPb2-j5Sd6SrKPg7dSHzcfp7woqTqQiHf4w4dh6r-UPALvtp0X38NtKNt8zsguz=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="數字精靈" href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81" class="carousel-ncnu"/></a></td>
-					 </tr><tr>
-					 <td align="center"><a title="1A2B猜數" href="https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/37WMonxA2I_uxBu1YQNZ6QGikAIvYLYAz_3xQf5pzKI-ce8ziO7zT-0fGeddbXGL-ggwQvYS37zH7A=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="國旗達人" href="https://assistant.google.com/services/a/uid/0000008b6d90ac06?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/8p8IQ-hEspewNRYI77jtHy7W1cM8jBWP6lVxLXXqQ9K5GjwCxlIOqUx3QxGLx8_gyuoQq_MUXFVxmQ=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="詞語接龍" href="https://assistant.google.com/services/a/uid/000000ca4e8b5d65?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/Cc6BaW2bvr3i7N5V0pPb9RDtIZo8wIVFPFPV9Ev9tWtYgMvRBf8kCnhBpldEV-dG0eqDNlchpXQlhw=s81" class="carousel-ncnu"/></a></td>
-					 </tr><tr>
-					 <td align="center"><a title="成語接龍" href="https://assistant.google.com/services/a/uid/0000005fc779da97?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/jgOHyXLYLFSqbnQFpS8ax8Y_I0nT7UYcPqyzSNjoOBx0Od3CnMQ05OiL6DV8rg_L2gHrVgyt9CY1=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="讀音接龍" href="https://assistant.google.com/services/a/uid/000000f85bd23edc?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/RaAMZ5KmCKWojxT-Zv-dwv5Pxqpvgc-sdWIgp_E0HOGyXERr0btrkcxQQRZJ4FLPAERm8q1XbuQ=s81" class="carousel-ncnu"/></a></td>
-					 </tr></table></div>
-				 </br>
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_casino_black_36dp.png"/><h4>科技資訊</h4></br>
-				<table>
-				<tr>
-					 <td align="center"><a title="洞察號" href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="國際太空站" href="https://assistant.google.com/services/a/uid/000000ee35748109?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/Hs7eFeeWgCKl_-Ir4ngXl3lXkLeG7SLrQKo84kMIfOONu4A6zpa6OftHrZNBDoMVYqoT151huMjt=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="熱搜趨勢" href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81" class="carousel-ncnu"/></a></td>
-				</tr><tr>
-					 <td align="center"><a title="月相精靈" href="https://assistant.google.com/services/a/uid/0000004eb1cefaba?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/P_cYQtn-NsKHndUqeytSl6e62UhHA9DDhsEF9_ensKoV6Rjitd79gZwHtjD3XDqsG7c4Zi6ByGrRdw=s90" class="carousel-ncnu"/></a></td>
-				</tr></table></div>
-				</br>
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_public_black_36dp.png"/><h4>公共資訊</h4></br> <table><tr>
-					<td align="center"><a title="郵遞區號查詢器" href="https://assistant.google.com/services/a/uid/000000ccf8e1037c?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/I_NnCp30icOJul74LqvuhrXakeM0xhFWBKp0nRQ8dGMoqAqg4BSmwG4UyRvZYpTuluSfXS-CERDu=s90" class="carousel-ncnu"/></a></td>
-					<td align="center"><a title="捐血幫手" href="https://assistant.google.com/services/a/uid/00000038f48e6d7d?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/oI6uG6rwPuex3kpDmn2TkL_0zJVmYP7wEWTMQ5D05zSNOAk6hA_1vlQhBXAQOwVVnz5rEprvUSIZ=s90" class="carousel-ncnu"/></a></td>
-					<td align="center"><a title="電力精靈" href="https://assistant.google.com/services/a/uid/0000008efe74c3bf?hl=zh-TW" target="_blank"><img src="https://lh3.googleusercontent.com/uaOnDI3M7mPHQlIuuu6ruOD_DPFYjUinRZl1-M7YH-oTr_Qqzq0dlQK05cMr5jbi7WBl81W9Rgg=s90" class="carousel-ncnu"//></a></td>
-				</tr></table></div>
-				 </br>
-				 </td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_cloud_black_36dp.png"/><h4>查詢天氣資訊</h4></br>
-					<table><tr>
-					 <td align="center"><a title="空污查詢精靈" href="https://assistant.google.com/services/a/uid/000000fa049fc5e5?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/1eK9cMVUJJAmPWbp-kbseKXH7qFjByWkpgSEnamflSYF22jkcDkmazAfw_W2VGK2ILIoIUhUBIU=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="紫外線精靈" href="https://assistant.google.com/services/a/uid/00000008b2c308d2?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/tFLlLU7i_2G20MQdyc2cslBtZfxXKvSHbQfe42DT4A5q6iSUNxSeh7jxzBQUuiv-XuC83NOwnTGy=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="輻射精靈" href="https://assistant.google.com/services/a/uid/000000a573924fc8?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/CnIRqKjc5uGejjiit-asiFCMDAFH_1HCLEK5kA0vTH32dJw_UVA4Ylp_oVMN_c8Xs9cdKHShpJfh=s81" class="carousel-ncnu"/></a></td>
-					 </tr><tr>
-					 <td align="center"><a title="海象精靈" href="https://assistant.google.com/services/a/uid/0000003f49171d8f?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/PAh2x6gmA8Tjw_ogniq_utapmAFmJj4SXIz_m3xOgsWR5PH-eeXDwpgDwhJ05rGJDzBPk9fonWQ=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="世界空氣品質指數" href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="天氣小幫手" href="https://assistant.google.com/services/a/uid/000000971a4ed57e" target="_blank"><img src="https://lh3.googleusercontent.com/v3moXhFOp3ADc_GaPjTNxwx53JRIkJtpP1IN7zok_7mm2KJrX9t7b81VitsXoCAtNF-H5aMSpoCK5g=s90"   class="carousel-ncnu"/></a></td>
-					 </tr>
-					</table></div>
-				</br>
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_translate_black_36dp.png"/><h4>進行翻譯</h4></br> <table><tr>
-					 <td align="center"><a title="護照英文翻譯機" href="https://assistant.google.com/services/a/uid/000000835c0b1f9e?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/cf1EkCmbRkqQ_ghf8h-SwKs7pBHwEPwJPbNDCveVBewPLCfeWJXsuoJHK5QkrgLEWkAcz5xOYI9U=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="摩斯密碼翻譯機" href="https://assistant.google.com/services/a/uid/0000003c8f1151a9?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/fxyZgV3doVdffoeB6fwcCOQnAn58ih5LaJAYgzg0qi2tA02XH4BEz2jgFW0ac2rTSP7Jarc2EnI1=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="二進制翻譯機" href="https://assistant.google.com/services/a/uid/000000974738914a?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/A4HU334fqf4ZNvkpEL2nfsfy_x1DRilzSKxO_kAi48SYDpZa4GLb80D_AF1ntC72Pcqr-hy3G_EZ5A=s81" class="carousel-ncnu"/></a></td>
-					 </tr></table></div>	
-				</br>
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/sharp_date_range_black_36dp.png"/><h4>提升生產力</h4></br> <table><tr>
-					<td align="center"><a title="發票對獎機" href="https://assistant.google.com/services/a/uid/000000f3dc6153fc?hl=zh-tw" target="_blank"><img src="https://lh3.googleusercontent.com/YeR_buvHOHYKwXPox9bmeiW-qnYxgd0wmQlnAzPHXPNoNRq6Dydxgdz6wLH4EBSV8875ugxtS3eC=s90" class="carousel-ncnu"/></a></td>
-					 </tr></table></div>
-					 </td>
-				 </tr>
-				 </table>
+	<section class="section" id="home-section">
+		<nav id="nav">
+			<ul>
+				<li class="nav_item"><a href="https://hank199599.github.io/">首頁</a></li>
+				<li class="nav_item"><a href="https://hank199599.github.io/profile/">簡歷</a></li>
+				<li class="nav_item"><a href="https://hank199599.github.io/works/Assistant">Google 助理</a></li>
+				<li class="nav_item"><a href="https://hank199599.github.io/works/Alexa">Alexa</a></li>
+			</ul>
+		</nav>
+		<div id="banner"
+			style="height:100vh;background-image: url('https://lh3.googleusercontent.com/pw/ACtC-3cApKP1SLshMtkW5BGW97qG8fVo2ntPSvmAwCPvwZqPpt85b26q_k0eL5x4huArMHSaNS_MpJdd-rL0a6Ef66d19QWuubmy-x58_Y_nqxbbiWQQ3rJLaDAQAzJbVUK71-VsGqOuL1ULBQy-TgcXp21UOw=w1355-h903-no?authuser=0');">
+			<div class="container">
+				<div class="title">
+					<span class="byline">OK Google</span></br></br>
+					<span class="bysub">有甚麼需要我幫忙的嗎?</span> </div>
+				<div style="position:absolute;bottom:0;margin:0 auto;">
+					<table valign="bottom">
+						<tr>
+							<td style="width:80vw;text-align:center;">
+								<a href="https://assistant.google.com/explore/search?q=AtesX%20Team"
+									target="_blank"><img class="image-assistant"
+										src="../../pic/XPM_BADGING_GoogleAssistant_HOR.png" /></a></br>
+								<a href="#works-section"><img src="../../pic/baseline_expand_more_white_48dp.png"
+										alt="往下" style="vertical-align:bottom;width:5vw;"></a>
+							</td>
+						</tr>
+					</table>
+					</br></br>
+				</div>
 			</div>
-			<div id="tab2" class="tab_content">
+		</div>
+	</section>
+	<!--about section-->
+	<section class="section" id="works-section">
+		</br></br></br>
+		<div class="container">
+			</br>
+
+			<div class=" mdc-card">
+				<div class=" mdc-card mdc-card--outlined" style="padding: 10px 10px;">
+					<table>
+						<tr>
+							<td align="left" style="width:30vw;height:auto;">
+								<h1>Google助理語音應用程式</h1>
+								<div class="mdc-chip-set mdc-chip-set--filter" role="grid">
+									<div class="mdc-chip mdc-chip--selected" role="row">
+										<div class="mdc-chip__ripple"></div>
+										<i
+											class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
+										<span class="mdc-chip__checkmark">
+											<svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+												<path class="mdc-chip__checkmark-path" fill="none" stroke="black"
+													d="M1.73,12.91 8.1,19.28 22.79,4.59" /></svg>
+										</span>
+										<span role="gridcell">
+											<span role="checkbox" tabindex="0" aria-checked="true"
+												class="mdc-chip__primary-action">
+												<span class="mdc-chip__text">Node.js</span>
+											</span>
+										</span>
+									</div>
+									<div class="mdc-chip mdc-chip--selected" role="row">
+										<div class="mdc-chip__ripple"></div>
+										<i
+											class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
+										<span class="mdc-chip__checkmark">
+											<svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+												<path class="mdc-chip__checkmark-path" fill="none" stroke="black"
+													d="M1.73,12.91 8.1,19.28 22.79,4.59" /></svg>
+										</span>
+										<span role="gridcell">
+											<span role="checkbox" tabindex="0" aria-checked="true"
+												class="mdc-chip__primary-action">
+												<span class="mdc-chip__text">Dialogflow</span>
+											</span>
+										</span>
+									</div>
+									<div class="mdc-chip mdc-chip--selected" role="row">
+										<div class="mdc-chip__ripple"></div>
+										<i
+											class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
+										<span class="mdc-chip__checkmark">
+											<svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+												<path class="mdc-chip__checkmark-path" fill="none" stroke="black"
+													d="M1.73,12.91 8.1,19.28 22.79,4.59" /></svg>
+										</span>
+										<span role="gridcell">
+											<span role="checkbox" tabindex="0" aria-checked="true"
+												class="mdc-chip__primary-action">
+												<span class="mdc-chip__text">Firebase</span>
+											</span>
+										</span>
+									</div>
+								</div>
+								<h5>是Google開發的智慧型個人助理。</br>在2018年10月16日於臺灣上線。</br>其後在隔年三月開放台灣的第三方程式可以與其介接。</br>
+									在任意支援Google助理的裝置上都能無縫使用。</br>Google助理本身目前止已支援30+種語言，可以輕易提供跨語言的使用體驗。</h5>
+							</td>
+							<td align="center" style="width:30vw;height:auto">
+								<img src="../../pic/assistant_device.png" class="image-big" />
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="mdc-card__actions">
+					<a href="https://hank199599.github.io/priciple/"
+						style="text-decoration:none;text-align: center;"><button
+							class="mdc-button mdc-card__action mdc-card__action--button">
+							<div class="mdc-button__ripple"></div>
+							<i class="material-icons mdc-button__icon" aria-hidden="true">emoji_objects</i><span
+								class="mdc-button__label" ,style="font-weight: bloder;">查看背後原理</span>
+						</button></a>
+				</div>
+			</div></br>
+
+			<h1>登上<font color="#4781f2">G</font>
+				<font color="#e44134">o</font>
+				<font color="#f4b705">o</font>
+				<font color="#4781f2">g</font>
+				<font color="#33a351">l</font>
+				<font color="#e44134">e</font>台灣部落格
+			</h1>
 			<table>
-				 <tr>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_fastfood_black_36dp.png"/><h4>取得餐飲建議</h4></br>
-					 <table><tr>
-					 <td align="center"><a title="美食決定器" href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=zh-hk" target="_blank"><img src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81" class="carousel-ncnu"/></a></td>
-					 </tr></table>
+				<tr>
+					<td align="left">
+						<div class="mdc-card element-card wind">
+							<div class="mdc-card__media mdc-theme--primary-bg mdc-theme--on-primary"
+								style="padding: 10px 10px; height:auto;">
+								<h3>&nbsp;• 美食決定器</br>
+									&nbsp;• 1A2B猜數</br>
+									&nbsp;• 燈謎大師</br>
+									&nbsp;• 大腦運動會</h3>
+							</div>
+							<a href="https://taiwan.googleblog.com/2019/07/google_31.html" target="_blank"
+								style="text-decoration:none;text-align: center;">
+								<button class="mdc-button mdc-card__actions">
+									<div align="center"><i class="material-icons mdc-button__icon"
+											aria-hidden="true">open_in_new</i>2019年7月31日
+									</div>
+								</button></a>
+						</div>
+					</td>
+					<td align="left">
+						<div class="mdc-card element-card wind">
+							<div class="mdc-card__media mdc-theme--primary-bg mdc-theme--on-primary"
+								style="padding: 10px 10px; height:auto;">
+								<h3>&nbsp;• 詞語接龍</h3></br>　</br>　</br>　</br>
+							</div>
+							<a href="https://taiwan.googleblog.com/2020/03/tips-for-home-entertainment.html?fbclid=IwAR3S6u6NuAm8fCKOuRePjseSoDyMmnvgE16oYXs7Eafthw9IFFtfAB71Neo"
+								target="_blank" style="text-decoration:none;text-align: center;">
+								<button class="mdc-button mdc-card__actions">
+									<div align="center"><i class="material-icons mdc-button__icon"
+											aria-hidden="true">open_in_new</i>2020年3月31日
+									</div>
+								</button></a>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		</br></br>
+		<div class="container">
+			<div class=" mdc-card">
+				<div class=" mdc-card mdc-card--outlined"
+					style="padding: 10px 10px;
+						   height:30vh;
+						   background-image: url('https://lh3.googleusercontent.com/jaO6kUs6Yf64LZs2Josq6R9GnVrkUXKySQRVuAM3O2U1xYkmfzCNaRr9S6qfvCDTADG0Z16lFPdYImXG7BKrzgH_Qwt0-CrsDXUdNnNYk7W4NHBodGhVVnMv2POLC9Jt2_kSWw1LJAQS6zkYZT-9YEtPl4U2yPmgmYZrGhRVKq05j4bGm-4Jn_VvleOjr3uECxvFvftwhNgchp2r5DIyvnO-pWnIVEdesYP55-L7_weG9P_Rwa0qBEfh6XQjBc5LiYWfJH8gOMuppbhe-ogWyHAfgNLITOa24yTgXsd7Amqj2TXE7TezCN8YcRjPgivZj47rcc0SZ_vPf8FdUARZIf-rAyyMPbwj7uM9G1GMXmg1EbgMrfb-mMSKkGIKFYHeMfJgODZrZuzq7TretuqR2IMZOKkgPw91DL4lPvBQsLV6gx7hViZBKwfJfxbqSVjQN1DsNckQJZeWzlS9gwJxGRpW_ACXR03IOFI51B6NL-RstlvEveZ0IK363mMy1ZpQLSHOR1FQfE0WOmA3CUVlbuENhZy-Xc414LV-Gyfjlt4uywhNmwS2bATlGzfM2Hujd638ebfmjRWq1tSh03fBnF8CfnIKAWy8iRkZY_-rSJGMYtb83QAY4aOtp3V_dx08a69_pcQVM3HsujlPj5oQRqw9TxbkJmNRddp3d_fkAJqrboX614BNNTpdrsescg=w1659-h937-no?authuser=0');">
+					安安
+				</div>
+			</div>
+		</div>
+
+		<section class="section" id="about-section">
+			<div class="container"></br>
+				<h1>作品列表</h1>
+				<font color="#4e4c52" size="4" face="serif" style="font-weight: bloder;">根據使用者語系，顯示相對應內容</font>
+				</br></br>
+				<div class="abgne_tab">
+					<ul class="tabs">
+						<li><a href="#tab1" class="nav_item1">繁體中文</a></li>
+						<li><a href="#tab2" class="nav_item1">廣東話</a></li>
+						<li><a href="#tab3" class="nav_item1">日文</a></li>
+						<li><a href="#tab4" class="nav_item1">韓文</a></li>
+						<li><a href="#tab5" class="nav_item1">泰文</a></li>
+						<li><a href="#tab6" class="nav_item1">英文</a></li>
+						<li><a href="#tab7" class="nav_item1">德文</a></li>
+						<li><a href="#tab8" class="nav_item1">丹麥文</a></li>
+						<li><a href="#tab9" class="nav_item1">西班牙文</a></li>
+						<li><a href="#tab10" class="nav_item1">法文</a></li>
+						<li><a href="#tab11" class="nav_item1">荷蘭文</a></li>
+					</ul>
+					<div class="tab_container">
+						<div style="background:#f1f3f4;height:auto">
+							<div id="tab1" class="tab_content">
+								<table>
+									<tr>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_fastfood_black_36dp.png" />
+												<h4>取得餐飲建議</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="美食決定器"
+																href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_school_black_36dp.png" />
+												<h4>參考資料</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="每日大事記"
+																href="https://assistant.google.com/services/a/uid/000000d67993a1d2?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/1U6-HhkKdaVzPMMsz5XmKZ31lTnOkXWz4eTuDcNTejlgatqouaKoniXkxfMC0AKvRx4wSjHmynvs=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="臺灣國語辭典"
+																href="https://assistant.google.com/services/a/uid/0000008d7409cb2a?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/b5mi7bsFMvz5vbzdQYkGvRTCZQlwgCOvIlmNAds6dvjuLGwC-gzhYDMowSi7_e4OR1o9fY0ecBY=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="鐵道辭典"
+																href="https://assistant.google.com/services/a/uid/000000862113b0f6?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/RD6WQND-5BmBiDt2UfnbrqnMIWquswEXE1hySqSCBHwLMgQLeS0taGu6y2Ezgqnr-ADzo637fVp1=s90"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+													<tr>
+														<td align="center"><a title="倉頡字典"
+																href="https://assistant.google.com/services/a/uid/0000009932f37dce?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/UVAu76LGBKhH-4DRHihBAQhF3tKBrjxr1ZE3n2N_o2QPbCSpbYl8Ue6_TD5YULulFmwupCoRbhI1=s90"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_chrome_reader_mode_black_36dp.png" />
+												<h4>朗讀語錄</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="正能量語錄"
+																href="https://assistant.google.com/services/a/uid/000000b877fb7629?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/XAylvXmY2tTWiQVtuwbcan_nno8pM7q9Qro6aEBECzTEN-x8jqAjuMm-ZqL_qCVvvkYhgw1_VVNI=s90"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="負能量語錄"
+																href="https://assistant.google.com/services/a/uid/000000e8f5894304?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/9eRDWvPEh3jeQmuBcpiXtX4gH9yTGqvyO1ur_PQ-K7H9KiR6A24zluD7ENZeIr0nNvshlOLH-yrw=s90"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="今日名言"
+																href="https://assistant.google.com/services/a/uid/0000002a10f761c0?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/DPDoPBFLpDglYGoU2zNdzACtOFfE-rsPvK2kJC1jA_scJTJM69x8SmycybTIipNMC0LsJdz06j5qwQ=s90"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_color_lens_black_36dp.png" />
+												<h4>藝術與生活品味</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="每日天文圖"
+																href="https://assistant.google.com/services/a/uid/00000011ac49f35c?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/NnDqEoQYzER27FJ8X-6fAxdRkSQ35j6MbiMfwMu5V_tqLZDopKQ1YcCPMLwwmIA-WQmEFaJ1Y6YA=s90"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="運勢大師"
+																href="https://assistant.google.com/services/a/uid/00000084fd2effe4?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/hKT5442d4Mmrmx6tCPV6Ft-ZUwvR6zps3pmArImOjbCTKS5SjQM_bvUEmYixA8fDzwCwJoAPmR5I=s90"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_sports_esports_black_36dp.png" />
+												<h4>休閒娛樂</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="大腦運動會"
+																href="https://assistant.google.com/services/a/uid/000000603cba0b27?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/IC_vSx1qVU6iTofmMzVjUIDjEcQ33KicmwUQS8CInXLghiMVayuCmn2aXEMTqp6DTrg7fbFLBxUT=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="燈謎大師"
+																href="https://assistant.google.com/services/a/uid/00000046536e4ef2?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/5Iy10xZI4gE58MPb2-j5Sd6SrKPg7dSHzcfp7woqTqQiHf4w4dh6r-UPALvtp0X38NtKNt8zsguz=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="數字精靈"
+																href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+													<tr>
+														<td align="center"><a title="1A2B猜數"
+																href="https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/37WMonxA2I_uxBu1YQNZ6QGikAIvYLYAz_3xQf5pzKI-ce8ziO7zT-0fGeddbXGL-ggwQvYS37zH7A=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="國旗達人"
+																href="https://assistant.google.com/services/a/uid/0000008b6d90ac06?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/8p8IQ-hEspewNRYI77jtHy7W1cM8jBWP6lVxLXXqQ9K5GjwCxlIOqUx3QxGLx8_gyuoQq_MUXFVxmQ=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="詞語接龍"
+																href="https://assistant.google.com/services/a/uid/000000ca4e8b5d65?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/Cc6BaW2bvr3i7N5V0pPb9RDtIZo8wIVFPFPV9Ev9tWtYgMvRBf8kCnhBpldEV-dG0eqDNlchpXQlhw=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+													<tr>
+														<td align="center"><a title="成語接龍"
+																href="https://assistant.google.com/services/a/uid/0000005fc779da97?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/jgOHyXLYLFSqbnQFpS8ax8Y_I0nT7UYcPqyzSNjoOBx0Od3CnMQ05OiL6DV8rg_L2gHrVgyt9CY1=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="讀音接龍"
+																href="https://assistant.google.com/services/a/uid/000000f85bd23edc?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/RaAMZ5KmCKWojxT-Zv-dwv5Pxqpvgc-sdWIgp_E0HOGyXERr0btrkcxQQRZJ4FLPAERm8q1XbuQ=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_casino_black_36dp.png" />
+												<h4>科技資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="洞察號"
+																href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="國際太空站"
+																href="https://assistant.google.com/services/a/uid/000000ee35748109?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/Hs7eFeeWgCKl_-Ir4ngXl3lXkLeG7SLrQKo84kMIfOONu4A6zpa6OftHrZNBDoMVYqoT151huMjt=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="熱搜趨勢"
+																href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+													<tr>
+														<td align="center"><a title="月相精靈"
+																href="https://assistant.google.com/services/a/uid/0000004eb1cefaba?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/P_cYQtn-NsKHndUqeytSl6e62UhHA9DDhsEF9_ensKoV6Rjitd79gZwHtjD3XDqsG7c4Zi6ByGrRdw=s90"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_public_black_36dp.png" />
+												<h4>公共資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="郵遞區號查詢器"
+																href="https://assistant.google.com/services/a/uid/000000ccf8e1037c?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/I_NnCp30icOJul74LqvuhrXakeM0xhFWBKp0nRQ8dGMoqAqg4BSmwG4UyRvZYpTuluSfXS-CERDu=s90"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="捐血幫手"
+																href="https://assistant.google.com/services/a/uid/00000038f48e6d7d?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/oI6uG6rwPuex3kpDmn2TkL_0zJVmYP7wEWTMQ5D05zSNOAk6hA_1vlQhBXAQOwVVnz5rEprvUSIZ=s90"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="電力精靈"
+																href="https://assistant.google.com/services/a/uid/0000008efe74c3bf?hl=zh-TW"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/uaOnDI3M7mPHQlIuuu6ruOD_DPFYjUinRZl1-M7YH-oTr_Qqzq0dlQK05cMr5jbi7WBl81W9Rgg=s90"
+																	class="carousel-ncnu" / /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_cloud_black_36dp.png" />
+												<h4>查詢天氣資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="空污查詢精靈"
+																href="https://assistant.google.com/services/a/uid/000000fa049fc5e5?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/1eK9cMVUJJAmPWbp-kbseKXH7qFjByWkpgSEnamflSYF22jkcDkmazAfw_W2VGK2ILIoIUhUBIU=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="紫外線精靈"
+																href="https://assistant.google.com/services/a/uid/00000008b2c308d2?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/tFLlLU7i_2G20MQdyc2cslBtZfxXKvSHbQfe42DT4A5q6iSUNxSeh7jxzBQUuiv-XuC83NOwnTGy=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="輻射精靈"
+																href="https://assistant.google.com/services/a/uid/000000a573924fc8?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/CnIRqKjc5uGejjiit-asiFCMDAFH_1HCLEK5kA0vTH32dJw_UVA4Ylp_oVMN_c8Xs9cdKHShpJfh=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+													<tr>
+														<td align="center"><a title="海象精靈"
+																href="https://assistant.google.com/services/a/uid/0000003f49171d8f?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/PAh2x6gmA8Tjw_ogniq_utapmAFmJj4SXIz_m3xOgsWR5PH-eeXDwpgDwhJ05rGJDzBPk9fonWQ=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="世界空氣品質指數"
+																href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="天氣小幫手"
+																href="https://assistant.google.com/services/a/uid/000000971a4ed57e"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/v3moXhFOp3ADc_GaPjTNxwx53JRIkJtpP1IN7zok_7mm2KJrX9t7b81VitsXoCAtNF-H5aMSpoCK5g=s90"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_translate_black_36dp.png" />
+												<h4>進行翻譯</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="護照英文翻譯機"
+																href="https://assistant.google.com/services/a/uid/000000835c0b1f9e?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/cf1EkCmbRkqQ_ghf8h-SwKs7pBHwEPwJPbNDCveVBewPLCfeWJXsuoJHK5QkrgLEWkAcz5xOYI9U=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="摩斯密碼翻譯機"
+																href="https://assistant.google.com/services/a/uid/0000003c8f1151a9?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/fxyZgV3doVdffoeB6fwcCOQnAn58ih5LaJAYgzg0qi2tA02XH4BEz2jgFW0ac2rTSP7Jarc2EnI1=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="二進制翻譯機"
+																href="https://assistant.google.com/services/a/uid/000000974738914a?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/A4HU334fqf4ZNvkpEL2nfsfy_x1DRilzSKxO_kAi48SYDpZa4GLb80D_AF1ntC72Pcqr-hy3G_EZ5A=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/sharp_date_range_black_36dp.png" />
+												<h4>提升生產力</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="發票對獎機"
+																href="https://assistant.google.com/services/a/uid/000000f3dc6153fc?hl=zh-tw"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/YeR_buvHOHYKwXPox9bmeiW-qnYxgd0wmQlnAzPHXPNoNRq6Dydxgdz6wLH4EBSV8875ugxtS3eC=s90"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div id="tab2" class="tab_content">
+								<table>
+									<tr>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_fastfood_black_36dp.png" />
+												<h4>取得餐飲建議</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="美食決定器"
+																href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=zh-hk"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_school_black_36dp.png" />
+												<h4>參考資料</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="倉頡字典"
+																href="https://assistant.google.com/services/a/uid/0000009932f37dce?hl=zh-hk"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/UVAu76LGBKhH-4DRHihBAQhF3tKBrjxr1ZE3n2N_o2QPbCSpbYl8Ue6_TD5YULulFmwupCoRbhI1=s90"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div></br>
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_color_lens_black_36dp.png" />
+												<h4>藝術與生活品味</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="朝朝天文圖"
+																href="https://assistant.google.com/services/a/uid/00000011ac49f35c?hl=zh-hk"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/NnDqEoQYzER27FJ8X-6fAxdRkSQ35j6MbiMfwMu5V_tqLZDopKQ1YcCPMLwwmIA-WQmEFaJ1Y6YA=s90"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="運勢Master"
+																href="https://assistant.google.com/services/a/uid/00000084fd2effe4?hl=zh-hk"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/hKT5442d4Mmrmx6tCPV6Ft-ZUwvR6zps3pmArImOjbCTKS5SjQM_bvUEmYixA8fDzwCwJoAPmR5I=s90"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_sports_esports_black_36dp.png" />
+												<h4>休閒娛樂</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="數字精靈"
+																href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=zh-hk"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="1A2B猜數"
+																href="https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=zh-hk"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/37WMonxA2I_uxBu1YQNZ6QGikAIvYLYAz_3xQf5pzKI-ce8ziO7zT-0fGeddbXGL-ggwQvYS37zH7A=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_casino_black_36dp.png" />
+												<h4>科技資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="洞察號"
+																href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=zh-hk"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="國際太空站"
+																href="https://assistant.google.com/services/a/uid/000000ee35748109?hl=zh-hk"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/Hs7eFeeWgCKl_-Ir4ngXl3lXkLeG7SLrQKo84kMIfOONu4A6zpa6OftHrZNBDoMVYqoT151huMjt=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="熱搜趨勢"
+																href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=zh-hk"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_cloud_black_36dp.png" />
+												<h4>查詢天氣資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="世界空氣質素指數"
+																href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=zh-hk"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="紫外線精靈"
+																href="https://assistant.google.com/services/a/uid/00000051da36fe70?hl=zh-hk"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/tFLlLU7i_2G20MQdyc2cslBtZfxXKvSHbQfe42DT4A5q6iSUNxSeh7jxzBQUuiv-XuC83NOwnTGy=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_translate_black_36dp.png" />
+												<h4>進行翻譯</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="摩斯密碼繙譯機"
+																href="https://assistant.google.com/services/a/uid/0000003c8f1151a9?hl=zh-hk"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/fxyZgV3doVdffoeB6fwcCOQnAn58ih5LaJAYgzg0qi2tA02XH4BEz2jgFW0ac2rTSP7Jarc2EnI1=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="二進制繙譯機"
+																href="https://assistant.google.com/services/a/uid/000000974738914a?hl=zh-hk"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/A4HU334fqf4ZNvkpEL2nfsfy_x1DRilzSKxO_kAi48SYDpZa4GLb80D_AF1ntC72Pcqr-hy3G_EZ5A=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div id="tab3" class="tab_content">
+								<table>
+									<tr>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_fastfood_black_36dp.png" />
+												<h4>取得餐飲建議</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="グルメ決定者"
+																href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=ja-jp"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_sports_esports_black_36dp.png" />
+												<h4>休閒娛樂</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="数字エルフ"
+																href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=ja-jp"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="数を推測する"
+																href="https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=ja-jp"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/37WMonxA2I_uxBu1YQNZ6QGikAIvYLYAz_3xQf5pzKI-ce8ziO7zT-0fGeddbXGL-ggwQvYS37zH7A=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_casino_black_36dp.png" />
+												<h4>科技資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="インサイト探査機"
+																href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=ja-jp"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="上位の検索トレンド"
+																href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=ja-jp"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_cloud_black_36dp.png" />
+												<h4>查詢天氣資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="世界空気質指数"
+																href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=ja-jp"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div id="tab4" class="tab_content">
+								<table>
+									<tr>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_sports_esports_black_36dp.png" />
+												<h4>休閒娛樂</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="숫자엘프"
+																href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=ko-kr"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_casino_black_36dp.png" />
+												<h4>科技資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="인사이트는"
+																href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=ko-kr"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="주요 검색 트렌드"
+																href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=ko-kr"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_cloud_black_36dp.png" />
+												<h4>查詢天氣資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="세계 대기질 지수"
+																href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=ko-kr"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div id="tab5" class="tab_content">
+								<table>
+									<tr>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_sports_esports_black_36dp.png" />
+												<h4>休閒娛樂</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="เทพดาดิจิตอล"
+																href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=th"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_casino_black_36dp.png" />
+												<h4>科技資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="สถานี Insight"
+																href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=th"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="ค้นหาด้านบน"
+																href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=th"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_cloud_black_36dp.png" />
+												<h4>查詢天氣資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="ดัชนีโลกคุณภาพอากาศ"
+																href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=th"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div id="tab6" class="tab_content">
+								<table>
+									<tr>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_fastfood_black_36dp.png" />
+												<h4>取得餐飲建議</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="The Meal Decider "
+																href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=en"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_sports_esports_black_36dp.png" />
+												<h4>休閒娛樂</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="Number Elfs"
+																href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=en"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="Cows and Bulls"
+																href="https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=en"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/37WMonxA2I_uxBu1YQNZ6QGikAIvYLYAz_3xQf5pzKI-ce8ziO7zT-0fGeddbXGL-ggwQvYS37zH7A=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+											</br>
+
+											</br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_casino_black_36dp.png" />
+												<h4>科技資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="The Insight Station"
+																href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=en"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="the search leaderboard"
+																href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=en"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div id="tab7" class="tab_content">
+								</br>
+								<table>
+									<tr>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_sports_esports_black_36dp.png" />
+												<h4>休閒娛樂</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="Nummer Elf"
+																href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=de"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_casino_black_36dp.png" />
+												<h4>科技資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="Insight Station"
+																href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=de"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="die Such-Bestenliste"
+																href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=de"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div></br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+
+
+											</br>
+
+											</br>
+										</td>
+									</tr>
+								</table>'
+							</div>
+							<div id="tab8" class="tab_content">
+								</br>
+								<table>
+									<tr>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_casino_black_36dp.png" />
+												<h4>科技資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="InSight station"
+																href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=da"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="tjek søgetendenser"
+																href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=da"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div></br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+
+
+											</br>
+
+											</br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+
+										</td>
+									</tr>
+								</table>'
+							</div>
+							<div id="tab9" class="tab_content">
+								</br>
+								<table>
+									<tr>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_casino_black_36dp.png" />
+												<h4>科技資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="Estación InSight"
+																href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=es"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div></br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+
+
+											</br>
+
+											</br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+
+										</td>
+									</tr>
+								</table>'
+							</div>
+							<div id="tab10" class="tab_content">
+								</br>
+								<table>
+									<tr>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_casino_black_36dp.png" />
+												<h4>科技資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="Station InSight"
+																href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=fr"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="le classement de recherche"
+																href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=fr"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div></br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+
+
+											</br>
+
+											</br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+
+										</td>
+									</tr>
+								</table>'
+							</div>
+							<div id="tab11" class="tab_content">
+								</br>
+								<table>
+									<tr>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+											<div class=" mdc-card"><img class="image-catagory"
+													src="../../pic/baseline_casino_black_36dp.png" />
+												<h4>科技資訊</h4></br>
+												<table>
+													<tr>
+														<td align="center"><a title="Insight Station"
+																href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=nl"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
+																	class="carousel-ncnu" /></a></td>
+														<td align="center"><a title="populaire zoektrends"
+																href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=nl"
+																target="_blank"><img
+																	src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
+																	class="carousel-ncnu" /></a></td>
+													</tr>
+												</table>
+											</div></br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+
+
+											</br>
+
+											</br>
+										</td>
+										<td align="center" style="width:30vw;height:auto;" valign="top">
+
+										</td>
+									</tr>
+								</table>'
+							</div>
+						</div>
+					</div>
 				</div>
 				</br>
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_school_black_36dp.png"/><h4>參考資料</h4></br>
-				<table><tr>
-					 <td align="center"><a title="倉頡字典" href="https://assistant.google.com/services/a/uid/0000009932f37dce?hl=zh-hk" target="_blank"><img src="https://lh3.googleusercontent.com/UVAu76LGBKhH-4DRHihBAQhF3tKBrjxr1ZE3n2N_o2QPbCSpbYl8Ue6_TD5YULulFmwupCoRbhI1=s90" class="carousel-ncnu"/></a></td>
-				</tr></table></div></br>
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_color_lens_black_36dp.png"/><h4>藝術與生活品味</h4></br> <table><tr>
-					 <td align="center"><a title="朝朝天文圖" href="https://assistant.google.com/services/a/uid/00000011ac49f35c?hl=zh-hk" target="_blank"><img src="https://lh3.googleusercontent.com/NnDqEoQYzER27FJ8X-6fAxdRkSQ35j6MbiMfwMu5V_tqLZDopKQ1YcCPMLwwmIA-WQmEFaJ1Y6YA=s90" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="運勢Master" href="https://assistant.google.com/services/a/uid/00000084fd2effe4?hl=zh-hk" target="_blank"><img src="https://lh3.googleusercontent.com/hKT5442d4Mmrmx6tCPV6Ft-ZUwvR6zps3pmArImOjbCTKS5SjQM_bvUEmYixA8fDzwCwJoAPmR5I=s90" class="carousel-ncnu"/></a></td>
-					 </tr></table></div>					
-				</td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_sports_esports_black_36dp.png"/><h4>休閒娛樂</h4></br> <table><tr>
-					 <td align="center"><a title="數字精靈" href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=zh-hk" target="_blank"><img src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="1A2B猜數" href="https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=zh-hk" target="_blank"><img src="https://lh3.googleusercontent.com/37WMonxA2I_uxBu1YQNZ6QGikAIvYLYAz_3xQf5pzKI-ce8ziO7zT-0fGeddbXGL-ggwQvYS37zH7A=s81" class="carousel-ncnu"/></a></td>
-					 </tr></table></div>
-				 </br>
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_casino_black_36dp.png"/><h4>科技資訊</h4></br>
-				<table>
-				<tr>
-					 <td align="center"><a title="洞察號" href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=zh-hk" target="_blank"><img src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="國際太空站" href="https://assistant.google.com/services/a/uid/000000ee35748109?hl=zh-hk" target="_blank"><img src="https://lh3.googleusercontent.com/Hs7eFeeWgCKl_-Ir4ngXl3lXkLeG7SLrQKo84kMIfOONu4A6zpa6OftHrZNBDoMVYqoT151huMjt=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="熱搜趨勢" href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=zh-hk" target="_blank"><img src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81" class="carousel-ncnu"/></a></td>
-				</tr></table></div>
-				 </br>
-				 </td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_cloud_black_36dp.png"/><h4>查詢天氣資訊</h4></br>
-					<table><tr>
-					 <td align="center"><a title="世界空氣質素指數" href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=zh-hk" target="_blank"><img src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="紫外線精靈" href="https://assistant.google.com/services/a/uid/00000051da36fe70?hl=zh-hk" target="_blank"><img src="https://lh3.googleusercontent.com/tFLlLU7i_2G20MQdyc2cslBtZfxXKvSHbQfe42DT4A5q6iSUNxSeh7jxzBQUuiv-XuC83NOwnTGy=s81" class="carousel-ncnu"/></a></td>
-					</tr>
-					</table></div>
-				</br>
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_translate_black_36dp.png"/><h4>進行翻譯</h4></br> <table><tr>
-					 <td align="center"><a title="摩斯密碼繙譯機" href="https://assistant.google.com/services/a/uid/0000003c8f1151a9?hl=zh-hk" target="_blank"><img src="https://lh3.googleusercontent.com/fxyZgV3doVdffoeB6fwcCOQnAn58ih5LaJAYgzg0qi2tA02XH4BEz2jgFW0ac2rTSP7Jarc2EnI1=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="二進制繙譯機" href="https://assistant.google.com/services/a/uid/000000974738914a?hl=zh-hk" target="_blank"><img src="https://lh3.googleusercontent.com/A4HU334fqf4ZNvkpEL2nfsfy_x1DRilzSKxO_kAi48SYDpZa4GLb80D_AF1ntC72Pcqr-hy3G_EZ5A=s81" class="carousel-ncnu"/></a></td>
-					 </tr></table></div>	
-					 </td>
-				 </tr>
-				 </table>
-			 </div>
-			<div id="tab3" class="tab_content">
-			<table>
-				 <tr>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_fastfood_black_36dp.png"/><h4>取得餐飲建議</h4></br>
-					 <table><tr>
-					 <td align="center"><a title="グルメ決定者" href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=ja-jp" target="_blank"><img src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81" class="carousel-ncnu"/></a></td>
-					 </tr>
-					 </table></div>
-				</br> 
-				</td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_sports_esports_black_36dp.png"/><h4>休閒娛樂</h4></br> <table><tr>
-					 <td align="center"><a title="数字エルフ" href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=ja-jp" target="_blank"><img src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="数を推測する" href="https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=ja-jp" target="_blank"><img src="https://lh3.googleusercontent.com/37WMonxA2I_uxBu1YQNZ6QGikAIvYLYAz_3xQf5pzKI-ce8ziO7zT-0fGeddbXGL-ggwQvYS37zH7A=s81" class="carousel-ncnu"/></a></td>
-					 </tr></table></div>
-				 </br>
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_casino_black_36dp.png"/><h4>科技資訊</h4></br>
-				<table>
-				<tr>
-					 <td align="center"><a title="インサイト探査機" href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=ja-jp" target="_blank"><img src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="上位の検索トレンド" href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=ja-jp" target="_blank"><img src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81" class="carousel-ncnu"/></a></td>
-				</tr></table></div>
-				 </br>
-				 </td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_cloud_black_36dp.png"/><h4>查詢天氣資訊</h4></br>
-					<table><tr>
-					 <td align="center"><a title="世界空気質指数" href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=ja-jp" target="_blank"><img src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81" class="carousel-ncnu"/></a></td>
-					 </tr>
-					</table></div>
-				</br>
-				 </td></tr>
-				 </table>
-			 </div>
-			<div id="tab4" class="tab_content">
-			<table>
-				 <tr>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_sports_esports_black_36dp.png"/><h4>休閒娛樂</h4></br> <table><tr>
-					 <td align="center"><a title="숫자엘프" href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=ko-kr" target="_blank"><img src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81" class="carousel-ncnu"/></a></td>
-					 </tr></table></div>
-				</td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_casino_black_36dp.png"/><h4>科技資訊</h4></br>
-				<table>
-				<tr>
-					 <td align="center"><a title="인사이트는" href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=ko-kr" target="_blank"><img src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="주요 검색 트렌드" href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=ko-kr" target="_blank"><img src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81" class="carousel-ncnu"/></a></td>
-				</tr></table></div>
-				 </br>
-				 </td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_cloud_black_36dp.png"/><h4>查詢天氣資訊</h4></br>
-					<table><tr>
-					 <td align="center"><a title="세계 대기질 지수" href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=ko-kr" target="_blank"><img src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81" class="carousel-ncnu"/></a></td>
-					 </tr>
-					</table></div>
-				</td></tr>
-			</table>
-		 </div>
-			<div id="tab5" class="tab_content">
-			<table>
-				 <tr>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_sports_esports_black_36dp.png"/><h4>休閒娛樂</h4></br> <table><tr>
-					 <td align="center"><a title="เทพดาดิจิตอล" href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=th" target="_blank"><img src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81" class="carousel-ncnu"/></a></td>
-					 </tr></table></div>
-				</td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_casino_black_36dp.png"/><h4>科技資訊</h4></br>
-				<table>
-				<tr>
-					 <td align="center"><a title="สถานี Insight" href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=th" target="_blank"><img src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="ค้นหาด้านบน" href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=th" target="_blank"><img src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81" class="carousel-ncnu"/></a></td>
-				</tr></table></div>
-				 </br>
-				 </td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_cloud_black_36dp.png"/><h4>查詢天氣資訊</h4></br>
-					<table><tr>
-					 <td align="center"><a title="ดัชนีโลกคุณภาพอากาศ" href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=th" target="_blank"><img src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81" class="carousel-ncnu"/></a></td>
-					 </tr>
-					</table></div>
-				</td></tr>
-			</table>
-		 </div>
-			<div id="tab6" class="tab_content">
-			<table>
-				 <tr>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_fastfood_black_36dp.png"/><h4>取得餐飲建議</h4></br>
-					 <table><tr>
-					 <td align="center"><a title="The Meal Decider " href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=en" target="_blank"><img src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81" class="carousel-ncnu"/></a></td>
-					 </tr>
-					 </table></div>
-				</br> 
-				</td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_sports_esports_black_36dp.png"/><h4>休閒娛樂</h4></br> <table><tr>
-					 <td align="center"><a title="Number Elfs" href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=en" target="_blank"><img src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="Cows and Bulls" href="https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=en" target="_blank"><img src="https://lh3.googleusercontent.com/37WMonxA2I_uxBu1YQNZ6QGikAIvYLYAz_3xQf5pzKI-ce8ziO7zT-0fGeddbXGL-ggwQvYS37zH7A=s81" class="carousel-ncnu"/></a></td>
-					 </tr></table></div>
-				 </br>
+			</div>
+			<div style="height:15vh">
+				<div class="container"></br>
+					<h1>使用者反饋</h1>
+					<font color="#4e4c52" size="4" face="serif" style="font-weight: bloder;">各地使用者的評論</font></br></br>
+				</div>
 
-				 </br>
-				 </td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_casino_black_36dp.png"/><h4>科技資訊</h4></br>
-				<table>
-				<tr>
-					 <td align="center"><a title="The Insight Station" href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=en" target="_blank"><img src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="the search leaderboard" href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=en" target="_blank"><img src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81" class="carousel-ncnu"/></a></td>
-				</tr></table></div>
-				</td></tr>
-			</table>
-		 </div>
-			<div id="tab7" class="tab_content">
-			</br>
-			<table>
-				 <tr>
-			    <td align="center" style="width:30vw;height:auto;" valign="top">
-				 <div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_sports_esports_black_36dp.png"/><h4>休閒娛樂</h4></br> <table><tr>
-					 <td align="center"><a title="Nummer Elf" href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=de" target="_blank"><img src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81" class="carousel-ncnu"/></a></td>
-					 </tr></table></div>
-				</td> <td align="center" style="width:30vw;height:auto;" valign="top">
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_casino_black_36dp.png"/><h4>科技資訊</h4></br>
-				<table>
-				<tr>
-					 <td align="center"><a title="Insight Station" href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=de" target="_blank"><img src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="die Such-Bestenliste" href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=de" target="_blank"><img src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81" class="carousel-ncnu"/></a></td>
-				</tr></table></div></br> 
-				</td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
+				<div style="background:#656468;height:auto">
+					<div class="container">
+						</br></br>
+						<table>
+							<tr>
+								<td align="left" style="width:30vw;height:auto;" valign="top">
+									<font color="#ffffff" size="5"
+										style="font-family: 'Varela', sans-serif;font-weight: bloder;">美食決定器</font>
+									<div class="mdc-card" style="padding: 10px 10px;"></br>
+										<h2>可以使用，解決了現代人的日常難題。</h2></br></br>
+										<font color="#656468" size="4"
+											style="font-family: 'Varela', sans-serif;font-weight: bloder;">Pichu Baby •
+											2019年3月6日</br>來自台灣</font>
+									</div>
+									</br>
+									<font color="#ffffff" size="5"
+										style="font-family: 'Varela', sans-serif;font-weight: bloder;">詞語接龍</font>
+									<div class=" mdc-card" style="padding: 10px 10px;"></br>
+										<h2>挑戰你腦海中的詞語資料庫!</h2></br></br>
+										<font color="#656468" size="4"
+											style="font-family: 'Varela', sans-serif;font-weight: bloder;">Google Taiwan
+											• 2020年3月31日</br>來自台灣</font>
+									</div>
+									</br>
+									<font color="#ffffff" size="5"
+										style="font-family: 'Varela', sans-serif;font-weight: bloder;">大腦運動會</font>
+									<div class=" mdc-card" style="padding: 10px 10px;"></br>
+										<h2>好玩長知識!</h2></br></br>
+										<font color="#656468" size="4"
+											style="font-family: 'Varela', sans-serif;font-weight: bloder;">Marco Kao •
+											2019年5月3日</br>來自台灣</font>
+									</div>
+								</td>
+								<td align="left" style="width:30vw;height:auto;" valign="top">
+									<font color="#ffffff" size="5"
+										style="font-family: 'Varela', sans-serif;font-weight: bloder;">數字精靈</font>
+									<div class=" mdc-card" style="padding: 10px 10px;"></br>
+										<h2>當你冇人同你玩嗰陣時候呢個遊戲就啱你啦！</h2></br></br>
+										<font color="#656468" size="4"
+											style="font-family: 'Varela', sans-serif;font-weight: bloder;">the ink! fox
+											fluttersamuel • 2020年5月4日</br>來自香港</font>
+									</div>
+									</br>
+									<font color="#ffffff" size="5"
+										style="font-family: 'Varela', sans-serif;font-weight: bloder;">熱搜趨勢</font>
+									<div class=" mdc-card" style="padding: 10px 10px;"></br>
+										<h2>ข้อความสนทนาที่ลบ</h2></br></br>
+										<font color="#656468" size="4"
+											style="font-family: 'Varela', sans-serif;font-weight: bloder;">Arexxy
+											Sudsuykramsig • 2020年5月7日</br>來自泰國</font>
+									</div>
+									</br>
+									<font color="#ffffff" size="5"
+										style="font-family: 'Varela', sans-serif;font-weight: bloder;">國際太空站</font>
+									<div class=" mdc-card" style="padding: 10px 10px;"></br>
+										<h2>對於要觀看國際空間站的朋友來說，可以準確的知道過境時間。很棒</h2></br></br>
+										<font color="#656468" size="4"
+											style="font-family: 'Varela', sans-serif;font-weight: bloder;">林政宏 •
+											2020年5月3日</br>來自台灣</font>
+									</div>
+								</td>
+								<td align="left" style="width:30vw;height:auto;" valign="top">
+									<font color="#ffffff" size="5"
+										style="font-family: 'Varela', sans-serif;font-weight: bloder;">洞察號</font>
+									<div class=" mdc-card" style="padding: 10px 10px;"></br>
+										<h2>하장실 문이애기하나 그대로 생각을치타하면</h2></br></br>
+										<font color="#656468" size="4"
+											style="font-family: 'Varela', sans-serif;font-weight: bloder;">정 jung을선
+											eelsun • 2020年5月29日</br>來自南韓</font>
+									</div>
+									</br>
+									<font color="#ffffff" size="5"
+										style="font-family: 'Varela', sans-serif;font-weight: bloder;">空汙查詢精靈</font>
+									<div class=" mdc-card" style="padding: 10px 10px;"></br>
+										<h2>開啟自己神之模式</h2></br></br>
+										<font color="#656468" size="4"
+											style="font-family: 'Varela', sans-serif;font-weight: bloder;">張育維 •
+											2020年3月3日</br>來自台灣</font>
+									</div>
+									</br>
+									<font color="#ffffff" size="5"
+										style="font-family: 'Varela', sans-serif;font-weight: bloder;">世界空氣質量指數</font>
+									<div class=" mdc-card" style="padding: 10px 10px;"></br>
+										<h2>ดีมากเลยครับ</h2></br></br>
+										<font color="#656468" size="4"
+											style="font-family: 'Varela', sans-serif;font-weight: bloder;">Somyose
+											Saenghkam • 2020年7月5日</br>來自泰國</font>
+									</div>
+								</td>
+							</tr>
+						</table>
+						</br></br>
+					</div>
+				</div>
+				<div id="copyright" class="container">
+					<p>&copy; Google助理是Google的產品。 | 圖片來自 <a href="http://shutterstock.com/">shutterstock</a></p>
+				</div>
+				<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+				<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+				<script src="../../js/script.js"></script>
+				<script
+					src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+				<!-- Instantiate single textfield component rendered in the document -->
+				<script>
+					mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
+				</script>
+</body>
 
-
-				 </br>
-
-				 </br>
-				 </td>
-			  </tr>
-			</table>'
-		 </div>
-			<div id="tab8" class="tab_content">
-			</br>
-			<table>
-				 <tr>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_casino_black_36dp.png"/><h4>科技資訊</h4></br>
-				<table>
-				<tr>
-					 <td align="center"><a title="InSight station" href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=da" target="_blank"><img src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="tjek søgetendenser" href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=da" target="_blank"><img src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81" class="carousel-ncnu"/></a></td>
-				</tr></table></div></br> 
-				</td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-
-
-				 </br>
-
-				 </br>
-				 </td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-
-				</td></tr>
-			</table>'
-		 </div>
-		 <div id="tab9" class="tab_content">
-			</br>
-			<table>
-				 <tr>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_casino_black_36dp.png"/><h4>科技資訊</h4></br>
-				<table>
-				<tr>
-					 <td align="center"><a title="Estación InSight" href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=es" target="_blank"><img src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81" class="carousel-ncnu"/></a></td>
-				</tr></table></div></br> 
-				</td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-
-
-				 </br>
-
-				 </br>
-				 </td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-
-				</td></tr>
-			</table>'
-		 </div>
-		 <div id="tab10" class="tab_content">
-			</br>
-			<table>
-				 <tr>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_casino_black_36dp.png"/><h4>科技資訊</h4></br>
-				<table>
-				<tr>
-					 <td align="center"><a title="Station InSight" href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=fr" target="_blank"><img src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="le classement de recherche" href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=fr" target="_blank"><img src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81" class="carousel-ncnu"/></a></td>
-				</tr></table></div></br> 
-				</td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-
-
-				 </br>
-
-				 </br>
-				 </td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-
-				</td></tr>
-			</table>'
-		 </div>
-		 <div id="tab11" class="tab_content">
-			</br>
-			<table>
-				 <tr>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-				<div class=" mdc-card"><img class="image-catagory" src="../../pic/baseline_casino_black_36dp.png"/><h4>科技資訊</h4></br>
-				<table>
-				<tr>
-					 <td align="center"><a title="Insight Station" href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=nl" target="_blank"><img src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81" class="carousel-ncnu"/></a></td>
-					 <td align="center"><a title="populaire zoektrends" href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=nl" target="_blank"><img src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81" class="carousel-ncnu"/></a></td>
-				</tr></table></div></br> 
-				</td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-
-
-				 </br>
-
-				 </br>
-				 </td>
-				 <td align="center" style="width:30vw;height:auto;" valign="top">
-
-				</td></tr>
-			</table>'
-		 </div>		 </div>
-	 </div>
-    </div>
-  </br>
- </div>
- 	<div style="height:15vh">
-	<div class="container"></br><h1>使用者反饋</h1><font color="#4e4c52" size="4" face="serif" style="font-weight: bloder;">各地使用者的評論</font></br></br></div>
-		
-	<div style="background:#656468;height:auto">
-	 <div class="container">
-	 </br></br>
-	 <table>
-	 <tr>
-	 <td align="left" style="width:30vw;height:auto;" valign="top">
-		<font color="#ffffff" size="5" style="font-family: 'Varela', sans-serif;font-weight: bloder;">美食決定器</font>
-			<div class="mdc-card" style="padding: 10px 10px;"></br><h2>可以使用，解決了現代人的日常難題。</h2></br></br><font color="#656468" size="4" style="font-family: 'Varela', sans-serif;font-weight: bloder;">Pichu Baby • 2019年3月6日</br>來自台灣</font></div>
-			</br>
-		<font color="#ffffff" size="5" style="font-family: 'Varela', sans-serif;font-weight: bloder;">詞語接龍</font>
-			<div class=" mdc-card" style="padding: 10px 10px;"></br><h2>挑戰你腦海中的詞語資料庫!</h2></br></br><font color="#656468" size="4" style="font-family: 'Varela', sans-serif;font-weight: bloder;">Google Taiwan • 2020年3月31日</br>來自台灣</font></div>
-			</br>
-		<font color="#ffffff" size="5" style="font-family: 'Varela', sans-serif;font-weight: bloder;">大腦運動會</font>
-			<div class=" mdc-card" style="padding: 10px 10px;"></br><h2>好玩長知識!</h2></br></br><font color="#656468" size="4" style="font-family: 'Varela', sans-serif;font-weight: bloder;">Marco Kao • 2019年5月3日</br>來自台灣</font></div>
-			</td>
-	 <td align="left" style="width:30vw;height:auto;" valign="top">
-		<font color="#ffffff" size="5" style="font-family: 'Varela', sans-serif;font-weight: bloder;">數字精靈</font>
-			<div class=" mdc-card" style="padding: 10px 10px;"></br><h2>當你冇人同你玩嗰陣時候呢個遊戲就啱你啦！</h2></br></br><font color="#656468" size="4" style="font-family: 'Varela', sans-serif;font-weight: bloder;">the ink! fox fluttersamuel • 2020年5月4日</br>來自香港</font></div>
-		</br>
-		<font color="#ffffff" size="5" style="font-family: 'Varela', sans-serif;font-weight: bloder;">熱搜趨勢</font>
-			<div class=" mdc-card" style="padding: 10px 10px;"></br><h2>ข้อความสนทนาที่ลบ</h2></br></br><font color="#656468" size="4" style="font-family: 'Varela', sans-serif;font-weight: bloder;">Arexxy Sudsuykramsig • 2020年5月7日</br>來自泰國</font></div>
-		</br>
-		<font color="#ffffff" size="5" style="font-family: 'Varela', sans-serif;font-weight: bloder;">國際太空站</font>
-			<div class=" mdc-card" style="padding: 10px 10px;"></br><h2>對於要觀看國際空間站的朋友來說，可以準確的知道過境時間。很棒</h2></br></br><font color="#656468" size="4" style="font-family: 'Varela', sans-serif;font-weight: bloder;">林政宏 • 2020年5月3日</br>來自台灣</font></div>
-		</td>
-	<td align="left" style="width:30vw;height:auto;" valign="top">
-		<font color="#ffffff" size="5" style="font-family: 'Varela', sans-serif;font-weight: bloder;">洞察號</font>
-			<div class=" mdc-card" style="padding: 10px 10px;"></br><h2>하장실 문이애기하나 그대로 생각을치타하면</h2></br></br><font color="#656468" size="4" style="font-family: 'Varela', sans-serif;font-weight: bloder;">정 jung을선 eelsun • 2020年5月29日</br>來自南韓</font></div>
-		</br>
-		<font color="#ffffff" size="5" style="font-family: 'Varela', sans-serif;font-weight: bloder;">空汙查詢精靈</font>
-			<div class=" mdc-card" style="padding: 10px 10px;"></br><h2>開啟自己神之模式</h2></br></br><font color="#656468" size="4" style="font-family: 'Varela', sans-serif;font-weight: bloder;">張育維 • 2020年3月3日</br>來自台灣</font></div>
-		</br>
-		<font color="#ffffff" size="5" style="font-family: 'Varela', sans-serif;font-weight: bloder;">世界空氣質量指數</font>
-			<div class=" mdc-card" style="padding: 10px 10px;"></br><h2>ดีมากเลยครับ</h2></br></br><font color="#656468" size="4" style="font-family: 'Varela', sans-serif;font-weight: bloder;">Somyose Saenghkam • 2020年7月5日</br>來自泰國</font></div></td>
-	 </tr></table>
-	 </br></br>
-	 </div>
-	</div>
-<div id="copyright" class="container">
-	<p>&copy; Google助理是Google的產品。 | 圖片來自 <a href="http://shutterstock.com/">shutterstock</a></p>
-</div>
-<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="../../js/script.js"></script>
-<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-<!-- Instantiate single textfield component rendered in the document -->
-<script>
-  mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
-</script></body>
 </html>
