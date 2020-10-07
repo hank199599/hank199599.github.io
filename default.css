@@ -198,6 +198,15 @@ a:hover {
     bottom: 0px;
 }
 
+.image-dialog {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+}
+
 .image-centered {
     width: 7vw;
     display: block;
