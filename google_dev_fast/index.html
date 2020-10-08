@@ -1,1220 +1,1314 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
-Design by TEMPLATED
-http://templated.co
-Released for free under the Creative Commons Attribution License
-Name       : BarbedFlower 
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20140322
--->
-<html xmlns="https://www.w3.org/1999/xhtml">
+=========================================================
+Material Kit - v2.0.7
+=========================================================
+
+Product Page: https://www.creative-tim.com/product/material-kit
+Copyright 2020 Creative Tim (https://www.creative-tim.com/)
+
+Coded by Creative Tim
+
+=========================================================
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title></title>
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
-	<link href="../default.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="../fonts.css" rel="stylesheet" type="text/css" media="all" />
-	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-	<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        Google Assistant Voice APP | 藉由語音互動的新形態應用程式
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link href="./assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="./assets/demo/demo.css" rel="stylesheet" />
 </head>
-<style>
-	.mdc-button.mdc-button--raised {
-		width: 30vw;
-		height: auto;
-		font-size: 3vw;
-		text-align: center;
-		margin: 0 auto;
-		--mdc-theme-primary: #4e4c52;
-		--mdc-theme-on-primary: var(--mdc-theme-text-primary-on-dark);
-		font-weight: bold;
-	}
 
-	.mdc-button.mdc-card__action.mdc-card__action--button {
-		--mdc-theme-primary: #4e4c52;
-	}
+<body class="profile-page sidebar-collapse">
+    <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="./index.html">
+                    Google Assistant Voice APP</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="dropdown nav-item">
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            <i class="material-icons">apps</i> Components
+                        </a>
+                        <div class="dropdown-menu dropdown-with-icons">
+                            <a href="./index.html" class="dropdown-item">
+                                <i class="material-icons">category</i> 綜覽
+                            </a>
+                            <a href="https://demos.creative-tim.com/material-kit/docs/2.0/getting-started/introduction.html" class="dropdown-item">
+                                <i class="material-icons">content_paste</i> Documentation
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/profile.php?id=100000555093316" target="_blank" data-original-title="Facebook Page" rel="nofollow">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.linkedin.com/in/%E7%B4%B9%E5%AE%8F-%E6%B8%B8-74679110b/?fbclid=IwAR1gX28ejiM8GUGlRSSTcnzWYCcL71aOzHWX_RHMNz_lIf-fXgFVCT8Uf3A" target="_blank" data-original-title="LinkledIn"
+                            rel="nofollow">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://github.com/hank199599?fbclid=IwAR3-AxcDip2WRdTcYVnHe0KSjnnHlPX-eVUYXo7FvRmjvDFBN_MqMEYirGA" target="_blank" data-original-title="Github" rel="nofollow">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="page-header header-filter" data-parallax="true" style="background-image: url('./assets/img/assistant_background.jpg');"></div>
+    <div class="main main-raised">
+        <div class="profile-content">
 
-	.cards {
-		display: center;
-		flex-wrap: wrap;
-	}
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 mr-auto ml-auto">
+                        <div class="row">
+                            <div class="col-md-6 ml-auto" style="margin: auto;">
+                                <h3>作品總覽</br>
+                                    <small>能依據使用者語系自動切換回應語言!</small>
+                                </h3>
+                            </div>
+                            <d iv class="col-md-2 mr-auto" style="margin: auto;">
+                                <img src="./assets/img/XPM_BADGING_GoogleAssistant_HOR.png" alt="Brand Image" class="img-raised rounded" style="width: 200px;">
+                        </div>
 
-	.element-card {
-		width: 20em;
-		margin: 16px;
-	}
+                        <div class="card card-nav-tabs">
+                            <div class="card-header card-header-success">
+                                <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                                <div class="nav-tabs-navigation">
+                                    <div class="nav-tabs-wrapper">
+                                        <ul class="nav nav-tabs" data-tabs="tabs">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" href="#food" data-toggle="tab">
+                                                    <i class="material-icons">fastfood</i> 取得餐飲建議
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#school" data-toggle="tab">
+                                                    <i class="material-icons">school</i> 參考資料
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#reader" data-toggle="tab">
+                                                    <i class="material-icons">chrome_reader_mode</i> 朗讀語錄
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#color_lens" data-toggle="tab">
+                                                    <i class="material-icons">color_lens</i> 藝術與生活品味
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#sports_esports" data-toggle="tab">
+                                                    <i class="material-icons">sports_esports</i> 休閒娛樂
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#casino" data-toggle="tab">
+                                                    <i class="material-icons">casino</i> 科技資訊
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#public" data-toggle="tab">
+                                                    <i class="material-icons">public</i> 公共資訊
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#cloud" data-toggle="tab">
+                                                    <i class="material-icons">cloud</i> 查詢天氣資訊
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#translate" data-toggle="tab">
+                                                    <i class="material-icons">translate</i> 進行翻譯
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#date_range" data-toggle="tab">
+                                                    <i class="material-icons">date_range</i> 提升生產力
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body ">
+                                <div class="tab-content text-center">
+                                    <div class="tab-pane active" id="food">
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider"><img
+                                                src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81"
+                                                data-toggle="tooltip" data-placement="top" title="Google官方推薦"
+                                                data-container="body" />
+                                        </button>
+                                    </div>
+                                    <div class="tab-pane" id="school">
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Daily_History">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/1U6-HhkKdaVzPMMsz5XmKZ31lTnOkXWz4eTuDcNTejlgatqouaKoniXkxfMC0AKvRx4wSjHmynvs=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Taiwan_Dictoinary">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/b5mi7bsFMvz5vbzdQYkGvRTCZQlwgCOvIlmNAds6dvjuLGwC-gzhYDMowSi7_e4OR1o9fY0ecBY=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Taiwan_Rail_Dictoinary">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/RD6WQND-5BmBiDt2UfnbrqnMIWquswEXE1hySqSCBHwLMgQLeS0taGu6y2Ezgqnr-ADzo637fVp1=s90" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Cangjie_Dictoinary">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/UVAu76LGBKhH-4DRHihBAQhF3tKBrjxr1ZE3n2N_o2QPbCSpbYl8Ue6_TD5YULulFmwupCoRbhI1=s90" />
+                                        </button>
+                                    </div>
+                                    <div class="tab-pane" id="reader">
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Positive_Quote">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/XAylvXmY2tTWiQVtuwbcan_nno8pM7q9Qro6aEBECzTEN-x8jqAjuMm-ZqL_qCVvvkYhgw1_VVNI=s90" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Negative_Quote">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/9eRDWvPEh3jeQmuBcpiXtX4gH9yTGqvyO1ur_PQ-K7H9KiR6A24zluD7ENZeIr0nNvshlOLH-yrw=s90" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Today_Quote">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/DPDoPBFLpDglYGoU2zNdzACtOFfE-rsPvK2kJC1jA_scJTJM69x8SmycybTIipNMC0LsJdz06j5qwQ=s90" />
+                                        </button>
+                                    </div>
+                                    <div class="tab-pane" id="color_lens">
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#NASA_daily">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/NnDqEoQYzER27FJ8X-6fAxdRkSQ35j6MbiMfwMu5V_tqLZDopKQ1YcCPMLwwmIA-WQmEFaJ1Y6YA=s90" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Fortune_Master">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/hKT5442d4Mmrmx6tCPV6Ft-ZUwvR6zps3pmArImOjbCTKS5SjQM_bvUEmYixA8fDzwCwJoAPmR5I=s90" />
+                                        </button>
+                                    </div>
+                                    <div class="tab-pane" id="sports_esports">
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Brain_Game">
+                                            <img src="https://lh3.googleusercontent.com/IC_vSx1qVU6iTofmMzVjUIDjEcQ33KicmwUQS8CInXLghiMVayuCmn2aXEMTqp6DTrg7fbFLBxUT=s81"
+                                                data-toggle="tooltip" data-placement="top" title="Google官方推薦"
+                                                data-container="body" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Riddle_Game">
+                                            <img src="https://lh3.googleusercontent.com/5Iy10xZI4gE58MPb2-j5Sd6SrKPg7dSHzcfp7woqTqQiHf4w4dh6r-UPALvtp0X38NtKNt8zsguz=s81"
+                                                data-toggle="tooltip" data-placement="top" title="Google官方推薦"
+                                                data-container="body" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Number_Elf">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#1A2B">
+                                            <img src="https://lh3.googleusercontent.com/37WMonxA2I_uxBu1YQNZ6QGikAIvYLYAz_3xQf5pzKI-ce8ziO7zT-0fGeddbXGL-ggwQvYS37zH7A=s81"
+                                                data-toggle="tooltip" data-placement="top" title="Google官方推薦"
+                                                data-container="body" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Flag_Game">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/8p8IQ-hEspewNRYI77jtHy7W1cM8jBWP6lVxLXXqQ9K5GjwCxlIOqUx3QxGLx8_gyuoQq_MUXFVxmQ=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#text_solitaire">
+                                            <img src="https://lh3.googleusercontent.com/Cc6BaW2bvr3i7N5V0pPb9RDtIZo8wIVFPFPV9Ev9tWtYgMvRBf8kCnhBpldEV-dG0eqDNlchpXQlhw=s81"
+                                                data-toggle="tooltip" data-placement="top" title="Google官方推薦"
+                                                data-container="body" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#idiom_solitaire">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/jgOHyXLYLFSqbnQFpS8ax8Y_I0nT7UYcPqyzSNjoOBx0Od3CnMQ05OiL6DV8rg_L2gHrVgyt9CY1=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#easy_text_solitaire">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/RaAMZ5KmCKWojxT-Zv-dwv5Pxqpvgc-sdWIgp_E0HOGyXERr0btrkcxQQRZJ4FLPAERm8q1XbuQ=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#24_points">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/CceE_F175HAi1aWL5cA6wFCJMi85emmsVkUdyMfr1t7WqdegcVHZKaFUtLm7fZBjewXO4aSGU_eDdw=s90" />
+                                        </button>
+                                    </div>
+                                    <div class="tab-pane" id="casino">
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/Hs7eFeeWgCKl_-Ir4ngXl3lXkLeG7SLrQKo84kMIfOONu4A6zpa6OftHrZNBDoMVYqoT151huMjt=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/P_cYQtn-NsKHndUqeytSl6e62UhHA9DDhsEF9_ensKoV6Rjitd79gZwHtjD3XDqsG7c4Zi6ByGrRdw=s90" />
+                                        </button>
+                                    </div>
+                                    <div class="tab-pane" id="public">
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/I_NnCp30icOJul74LqvuhrXakeM0xhFWBKp0nRQ8dGMoqAqg4BSmwG4UyRvZYpTuluSfXS-CERDu=s90" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/oI6uG6rwPuex3kpDmn2TkL_0zJVmYP7wEWTMQ5D05zSNOAk6hA_1vlQhBXAQOwVVnz5rEprvUSIZ=s90" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img src="https://lh3.googleusercontent.com/uaOnDI3M7mPHQlIuuu6ruOD_DPFYjUinRZl1-M7YH-oTr_Qqzq0dlQK05cMr5jbi7WBl81W9Rgg=s90"
+                                                class="carousel-ncnu" / /></a>
+                                        </button>
+                                    </div>
+                                    <div class="tab-pane" id="cloud">
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/1eK9cMVUJJAmPWbp-kbseKXH7qFjByWkpgSEnamflSYF22jkcDkmazAfw_W2VGK2ILIoIUhUBIU=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/tFLlLU7i_2G20MQdyc2cslBtZfxXKvSHbQfe42DT4A5q6iSUNxSeh7jxzBQUuiv-XuC83NOwnTGy=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/CnIRqKjc5uGejjiit-asiFCMDAFH_1HCLEK5kA0vTH32dJw_UVA4Ylp_oVMN_c8Xs9cdKHShpJfh=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/PAh2x6gmA8Tjw_ogniq_utapmAFmJj4SXIz_m3xOgsWR5PH-eeXDwpgDwhJ05rGJDzBPk9fonWQ=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/v3moXhFOp3ADc_GaPjTNxwx53JRIkJtpP1IN7zok_7mm2KJrX9t7b81VitsXoCAtNF-H5aMSpoCK5g=s90" />
+                                        </button>
+                                    </div>
+                                    <div class="tab-pane" id="translate">
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/cf1EkCmbRkqQ_ghf8h-SwKs7pBHwEPwJPbNDCveVBewPLCfeWJXsuoJHK5QkrgLEWkAcz5xOYI9U=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/fxyZgV3doVdffoeB6fwcCOQnAn58ih5LaJAYgzg0qi2tA02XH4BEz2jgFW0ac2rTSP7Jarc2EnI1=s81" />
+                                        </button>
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/A4HU334fqf4ZNvkpEL2nfsfy_x1DRilzSKxO_kAi48SYDpZa4GLb80D_AF1ntC72Pcqr-hy3G_EZ5A=s81" />
+                                        </button>
+                                    </div>
+                                    <div class="tab-pane" id="date_range">
+                                        <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider">
+                                            <img
+                                                src="https://lh3.googleusercontent.com/YeR_buvHOHYKwXPox9bmeiW-qnYxgd0wmQlnAzPHXPNoNRq6Dydxgdz6wLH4EBSV8875ugxtS3eC=s90" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--modals -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 mr-auto ml-auto">
 
-	.element-card>.mdc-card__media {
-		height: 9em;
-	}
+                                    <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#Assistant_detail">
+                                            <i class="material-icons">library_books</i>
+                                            有關 Google語音助理
+                                        </button>
 
-	.element-card.wind {
-		--mdc-theme-primary: #4e4c52;
-		--mdc-theme-on-primary: var(--mdc-theme-text-primary-on-dark);
-	}
-</style>
-
-<body>
-
-	<section class="section" id="works-section">
-
-		<div id="copyright" class="container">
-			<table class="links" align="center">
-				<tr>
-					<td style="text-align: center;  vertical-align: middle;">
-						<h1>
-							<font color="#FFFFFF" size="7">游紹宏</br>Shao-Hung,Yu</font>
-						</h1></br>
-					</td>
-				</tr>
-			</table>
-			<table class="links" align="center">
-
-				<tr>
-					<td><a title="Facebook" href="https://www.facebook.com/profile.php?id=100000555093316"
-							target="_blank"><img class="image-centered" src="../pic/facebook.png" /></a></td>
-					<td><a title="LinkedIn"
-							href="https://www.linkedin.com/in/%E7%B4%B9%E5%AE%8F-%E6%B8%B8-74679110b/?fbclid=IwAR1gX28ejiM8GUGlRSSTcnzWYCcL71aOzHWX_RHMNz_lIf-fXgFVCT8Uf3A"
-							target="_blank"><img class="image-centered" src="../pic/linkedin.png" /></a></td>
-					<td><a title="Github"
-							href="https://github.com/hank199599?fbclid=IwAR3-AxcDip2WRdTcYVnHe0KSjnnHlPX-eVUYXo7FvRmjvDFBN_MqMEYirGA"
-							target="_blank"><img class="image-centered" src="../pic/github.png" /></a></td>
-					<td><a title="Blogger" href="https://atesxassistantproject.blogspot.com/" target="_blank"><img
-								class="image-centered" src="../pic/google_blogger.png" /></a></td>
-					<td><a title="Email" href="mailto:hank199599@gmail.com" target="_blank"><img class="image-centered"
-								src="../pic/email.png" /></a></td>
-				</tr>
-			</table>
-		</div>
-	</section>
-	<div class="container">
-		</br>
-		</br>
-		<div class=" mdc-card">
-			<div class=" mdc-card mdc-card--outlined" style="padding: 10px 10px;">
-				<table>
-					<tr>
-						<td align="left" style="width:30vw;height:auto;">
-							<h1>Google助理語音應用程式</h1>
-							<div class="mdc-chip-set mdc-chip-set--filter" role="grid">
-								<div class="mdc-chip mdc-chip--selected" role="row">
-									<div class="mdc-chip__ripple"></div>
-									<i
-										class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
-									<span class="mdc-chip__checkmark">
-										<svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
-											<path class="mdc-chip__checkmark-path" fill="none" stroke="black"
-												d="M1.73,12.91 8.1,19.28 22.79,4.59" /></svg>
-									</span>
-									<span role="gridcell">
-										<span role="checkbox" tabindex="0" aria-checked="true"
-											class="mdc-chip__primary-action">
-											<span class="mdc-chip__text">Node.js</span>
-										</span>
-									</span>
-								</div>
-								<div class="mdc-chip mdc-chip--selected" role="row">
-									<div class="mdc-chip__ripple"></div>
-									<i
-										class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
-									<span class="mdc-chip__checkmark">
-										<svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
-											<path class="mdc-chip__checkmark-path" fill="none" stroke="black"
-												d="M1.73,12.91 8.1,19.28 22.79,4.59" /></svg>
-									</span>
-									<span role="gridcell">
-										<span role="checkbox" tabindex="0" aria-checked="true"
-											class="mdc-chip__primary-action">
-											<span class="mdc-chip__text">Dialogflow</span>
-										</span>
-									</span>
-								</div>
-								<div class="mdc-chip mdc-chip--selected" role="row">
-									<div class="mdc-chip__ripple"></div>
-									<i
-										class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
-									<span class="mdc-chip__checkmark">
-										<svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
-											<path class="mdc-chip__checkmark-path" fill="none" stroke="black"
-												d="M1.73,12.91 8.1,19.28 22.79,4.59" /></svg>
-									</span>
-									<span role="gridcell">
-										<span role="checkbox" tabindex="0" aria-checked="true"
-											class="mdc-chip__primary-action">
-											<span class="mdc-chip__text">Firebase</span>
-										</span>
-									</span>
-								</div>
-							</div>
-							<h5>是Google開發的智慧型個人助理。</br>在2018年10月16日於臺灣上線。</br>其後在隔年三月開放台灣的第三方程式可以與其介接。</br>
-								在任何支援Google助理的裝置上都能無縫使用。</br>Google助理本身目前止已支援30+種語言，可以輕易提供跨語言的使用體驗。</h5>
-						</td>
-						<td align="center" style="width:30vw;height:auto">
-							<img src="../pic/assistant_device.png" class="image-big" />
-						</td>
-					</tr>
-				</table>
-			</div>
-		</div></br>
-
-		<h1>登上<font color="#4781f2">G</font>
-			<font color="#e44134">o</font>
-			<font color="#f4b705">o</font>
-			<font color="#4781f2">g</font>
-			<font color="#33a351">l</font>
-			<font color="#e44134">e</font>台灣部落格
-		</h1>
-		<table>
-			<tr>
-				<td align="left">
-					<div class="mdc-card element-card wind">
-						<div class="mdc-card__media mdc-theme--primary-bg mdc-theme--on-primary"
-							style="padding: 10px 10px;">
-							<h3>&nbsp;• 美食決定器</br>
-								&nbsp;• 1A2B猜數</br>
-								&nbsp;• 燈謎大師</br>
-								&nbsp;• 大腦運動會</h3>
-						</div>
-						<a href="https://taiwan.googleblog.com/2019/07/google_31.html" target="_blank"
-							style="text-decoration:none;text-align: center;">
-							<button class="mdc-button mdc-card__actions">
-								<div align="center"><i class="material-icons mdc-button__icon"
-										aria-hidden="true">open_in_new</i>2019年7月31日
-								</div>
-							</button></a>
-					</div>
-				</td>
-				<td align="left">
-					<div class="mdc-card element-card wind">
-						<div class="mdc-card__media mdc-theme--primary-bg mdc-theme--on-primary"
-							style="padding: 10px 10px;">
-							<h3>&nbsp;• 詞語接龍</h3>
-						</div>
-						<a href="https://taiwan.googleblog.com/2020/03/tips-for-home-entertainment.html?fbclid=IwAR3S6u6NuAm8fCKOuRePjseSoDyMmnvgE16oYXs7Eafthw9IFFtfAB71Neo"
-							target="_blank" style="text-decoration:none;text-align: center;">
-							<button class="mdc-button mdc-card__actions">
-								<div align="center"><i class="material-icons mdc-button__icon"
-										aria-hidden="true">open_in_new</i>2020年3月31日
-								</div>
-							</button></a>
-					</div>
-				</td>
-			</tr>
-		</table>
-	</div>
-	</br></br>
-	</div>
-	<section class="section" id="about-section">
-		<div class="container"></br>
-			<h1>所有作品列表</h1>
-			<font color="#4e4c52" size="4" face="serif" style="font-weight: bloder;">可根據語系自動變更顯示內容與回應</font></br></br>
-			<div class="abgne_tab">
-				<ul class="tabs">
-					<li><a href="#tab1" class="nav_item1">繁體中文</a></li>
-					<li><a href="#tab2" class="nav_item1">廣東話</a></li>
-					<li><a href="#tab3" class="nav_item1">日文</a></li>
-					<li><a href="#tab4" class="nav_item1">韓文</a></li>
-					<li><a href="#tab5" class="nav_item1">泰文</a></li>
-					<li><a href="#tab6" class="nav_item1">英文</a></li>
-					<li><a href="#tab7" class="nav_item1">德文</a></li>
-					<li><a href="#tab8" class="nav_item1">丹麥文</a></li>
-					<li><a href="#tab9" class="nav_item1">西班牙文</a></li>
-					<li><a href="#tab10" class="nav_item1">法文</a></li>
-					<li><a href="#tab11" class="nav_item1">荷蘭文</a></li>
-				</ul>
-				<div class="tab_container">
-					<div style="background:#f1f3f4;height:auto">
-						<div id="tab1" class="tab_content">
-							<table>
-								<tr>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_fastfood_black_36dp.png" />
-											<h4>取得餐飲建議</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="美食決定器"
-															href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_school_black_36dp.png" />
-											<h4>參考資料</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="每日大事記"
-															href="https://assistant.google.com/services/a/uid/000000d67993a1d2?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/1U6-HhkKdaVzPMMsz5XmKZ31lTnOkXWz4eTuDcNTejlgatqouaKoniXkxfMC0AKvRx4wSjHmynvs=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="臺灣國語辭典"
-															href="https://assistant.google.com/services/a/uid/0000008d7409cb2a?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/b5mi7bsFMvz5vbzdQYkGvRTCZQlwgCOvIlmNAds6dvjuLGwC-gzhYDMowSi7_e4OR1o9fY0ecBY=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="鐵道辭典"
-															href="https://assistant.google.com/services/a/uid/000000862113b0f6?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/RD6WQND-5BmBiDt2UfnbrqnMIWquswEXE1hySqSCBHwLMgQLeS0taGu6y2Ezgqnr-ADzo637fVp1=s90"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-												<tr>
-													<td align="center"><a title="倉頡字典"
-															href="https://assistant.google.com/services/a/uid/0000009932f37dce?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/UVAu76LGBKhH-4DRHihBAQhF3tKBrjxr1ZE3n2N_o2QPbCSpbYl8Ue6_TD5YULulFmwupCoRbhI1=s90"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_chrome_reader_mode_black_36dp.png" />
-											<h4>朗讀語錄</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="正能量語錄"
-															href="https://assistant.google.com/services/a/uid/000000b877fb7629?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/XAylvXmY2tTWiQVtuwbcan_nno8pM7q9Qro6aEBECzTEN-x8jqAjuMm-ZqL_qCVvvkYhgw1_VVNI=s90"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="負能量語錄"
-															href="https://assistant.google.com/services/a/uid/000000e8f5894304?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/9eRDWvPEh3jeQmuBcpiXtX4gH9yTGqvyO1ur_PQ-K7H9KiR6A24zluD7ENZeIr0nNvshlOLH-yrw=s90"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="今日名言"
-															href="https://assistant.google.com/services/a/uid/0000002a10f761c0?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/DPDoPBFLpDglYGoU2zNdzACtOFfE-rsPvK2kJC1jA_scJTJM69x8SmycybTIipNMC0LsJdz06j5qwQ=s90"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_color_lens_black_36dp.png" />
-											<h4>藝術與生活品味</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="每日天文圖"
-															href="https://assistant.google.com/services/a/uid/00000011ac49f35c?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/NnDqEoQYzER27FJ8X-6fAxdRkSQ35j6MbiMfwMu5V_tqLZDopKQ1YcCPMLwwmIA-WQmEFaJ1Y6YA=s90"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="運勢大師"
-															href="https://assistant.google.com/services/a/uid/00000084fd2effe4?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/hKT5442d4Mmrmx6tCPV6Ft-ZUwvR6zps3pmArImOjbCTKS5SjQM_bvUEmYixA8fDzwCwJoAPmR5I=s90"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_sports_esports_black_36dp.png" />
-											<h4>休閒娛樂</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="大腦運動會"
-															href="https://assistant.google.com/services/a/uid/000000603cba0b27?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/IC_vSx1qVU6iTofmMzVjUIDjEcQ33KicmwUQS8CInXLghiMVayuCmn2aXEMTqp6DTrg7fbFLBxUT=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="燈謎大師"
-															href="https://assistant.google.com/services/a/uid/00000046536e4ef2?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/5Iy10xZI4gE58MPb2-j5Sd6SrKPg7dSHzcfp7woqTqQiHf4w4dh6r-UPALvtp0X38NtKNt8zsguz=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="數字精靈"
-															href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-												<tr>
-													<td align="center"><a title="1A2B猜數"
-															href="https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/37WMonxA2I_uxBu1YQNZ6QGikAIvYLYAz_3xQf5pzKI-ce8ziO7zT-0fGeddbXGL-ggwQvYS37zH7A=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="國旗達人"
-															href="https://assistant.google.com/services/a/uid/0000008b6d90ac06?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/8p8IQ-hEspewNRYI77jtHy7W1cM8jBWP6lVxLXXqQ9K5GjwCxlIOqUx3QxGLx8_gyuoQq_MUXFVxmQ=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="詞語接龍"
-															href="https://assistant.google.com/services/a/uid/000000ca4e8b5d65?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/Cc6BaW2bvr3i7N5V0pPb9RDtIZo8wIVFPFPV9Ev9tWtYgMvRBf8kCnhBpldEV-dG0eqDNlchpXQlhw=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-												<tr>
-													<td align="center"><a title="成語接龍"
-															href="https://assistant.google.com/services/a/uid/0000005fc779da97?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/jgOHyXLYLFSqbnQFpS8ax8Y_I0nT7UYcPqyzSNjoOBx0Od3CnMQ05OiL6DV8rg_L2gHrVgyt9CY1=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="讀音接龍"
-															href="https://assistant.google.com/services/a/uid/000000f85bd23edc?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/RaAMZ5KmCKWojxT-Zv-dwv5Pxqpvgc-sdWIgp_E0HOGyXERr0btrkcxQQRZJ4FLPAERm8q1XbuQ=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_casino_black_36dp.png" />
-											<h4>科技資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="洞察號"
-															href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="國際太空站"
-															href="https://assistant.google.com/services/a/uid/000000ee35748109?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/Hs7eFeeWgCKl_-Ir4ngXl3lXkLeG7SLrQKo84kMIfOONu4A6zpa6OftHrZNBDoMVYqoT151huMjt=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="熱搜趨勢"
-															href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-												<tr>
-													<td align="center"><a title="月相精靈"
-															href="https://assistant.google.com/services/a/uid/0000004eb1cefaba?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/P_cYQtn-NsKHndUqeytSl6e62UhHA9DDhsEF9_ensKoV6Rjitd79gZwHtjD3XDqsG7c4Zi6ByGrRdw=s90"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_public_black_36dp.png" />
-											<h4>公共資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="郵遞區號查詢器"
-															href="https://assistant.google.com/services/a/uid/000000ccf8e1037c?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/I_NnCp30icOJul74LqvuhrXakeM0xhFWBKp0nRQ8dGMoqAqg4BSmwG4UyRvZYpTuluSfXS-CERDu=s90"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="捐血幫手"
-															href="https://assistant.google.com/services/a/uid/00000038f48e6d7d?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/oI6uG6rwPuex3kpDmn2TkL_0zJVmYP7wEWTMQ5D05zSNOAk6hA_1vlQhBXAQOwVVnz5rEprvUSIZ=s90"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="電力精靈"
-															href="https://assistant.google.com/services/a/uid/0000008efe74c3bf?hl=zh-TW"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/uaOnDI3M7mPHQlIuuu6ruOD_DPFYjUinRZl1-M7YH-oTr_Qqzq0dlQK05cMr5jbi7WBl81W9Rgg=s90"
-																class="carousel-ncnu" / /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_cloud_black_36dp.png" />
-											<h4>查詢天氣資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="空污查詢精靈"
-															href="https://assistant.google.com/services/a/uid/000000fa049fc5e5?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/1eK9cMVUJJAmPWbp-kbseKXH7qFjByWkpgSEnamflSYF22jkcDkmazAfw_W2VGK2ILIoIUhUBIU=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="紫外線精靈"
-															href="https://assistant.google.com/services/a/uid/00000008b2c308d2?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/tFLlLU7i_2G20MQdyc2cslBtZfxXKvSHbQfe42DT4A5q6iSUNxSeh7jxzBQUuiv-XuC83NOwnTGy=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="輻射精靈"
-															href="https://assistant.google.com/services/a/uid/000000a573924fc8?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/CnIRqKjc5uGejjiit-asiFCMDAFH_1HCLEK5kA0vTH32dJw_UVA4Ylp_oVMN_c8Xs9cdKHShpJfh=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-												<tr>
-													<td align="center"><a title="海象精靈"
-															href="https://assistant.google.com/services/a/uid/0000003f49171d8f?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/PAh2x6gmA8Tjw_ogniq_utapmAFmJj4SXIz_m3xOgsWR5PH-eeXDwpgDwhJ05rGJDzBPk9fonWQ=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="世界空氣品質指數"
-															href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="天氣小幫手"
-															href="https://assistant.google.com/services/a/uid/000000971a4ed57e"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/v3moXhFOp3ADc_GaPjTNxwx53JRIkJtpP1IN7zok_7mm2KJrX9t7b81VitsXoCAtNF-H5aMSpoCK5g=s90"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_translate_black_36dp.png" />
-											<h4>進行翻譯</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="護照英文翻譯機"
-															href="https://assistant.google.com/services/a/uid/000000835c0b1f9e?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/cf1EkCmbRkqQ_ghf8h-SwKs7pBHwEPwJPbNDCveVBewPLCfeWJXsuoJHK5QkrgLEWkAcz5xOYI9U=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="摩斯密碼翻譯機"
-															href="https://assistant.google.com/services/a/uid/0000003c8f1151a9?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/fxyZgV3doVdffoeB6fwcCOQnAn58ih5LaJAYgzg0qi2tA02XH4BEz2jgFW0ac2rTSP7Jarc2EnI1=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="二進制翻譯機"
-															href="https://assistant.google.com/services/a/uid/000000974738914a?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/A4HU334fqf4ZNvkpEL2nfsfy_x1DRilzSKxO_kAi48SYDpZa4GLb80D_AF1ntC72Pcqr-hy3G_EZ5A=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/sharp_date_range_black_36dp.png" />
-											<h4>提升生產力</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="發票對獎機"
-															href="https://assistant.google.com/services/a/uid/000000f3dc6153fc?hl=zh-tw"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/YeR_buvHOHYKwXPox9bmeiW-qnYxgd0wmQlnAzPHXPNoNRq6Dydxgdz6wLH4EBSV8875ugxtS3eC=s90"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-									</td>
-								</tr>
-							</table>
-						</div>
-						<div id="tab2" class="tab_content">
-							<table>
-								<tr>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../../pic/baseline_fastfood_black_36dp.png" />
-											<h4>尋找餐飲美食</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="美食決定器"
-															href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=zh-hk"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../../pic/baseline_school_black_36dp.png" />
-											<h4>參考資料</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="倉頡字典"
-															href="https://assistant.google.com/services/a/uid/0000009932f37dce?hl=zh-hk"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/UVAu76LGBKhH-4DRHihBAQhF3tKBrjxr1ZE3n2N_o2QPbCSpbYl8Ue6_TD5YULulFmwupCoRbhI1=s90"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div></br>
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../../pic/baseline_color_lens_black_36dp.png" />
-											<h4>藝術與生活品味</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="朝朝天文圖"
-															href="https://assistant.google.com/services/a/uid/00000011ac49f35c?hl=zh-hk"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/NnDqEoQYzER27FJ8X-6fAxdRkSQ35j6MbiMfwMu5V_tqLZDopKQ1YcCPMLwwmIA-WQmEFaJ1Y6YA=s90"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="運程Master"
-															href="https://assistant.google.com/services/a/uid/00000084fd2effe4?hl=zh-hk"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/hKT5442d4Mmrmx6tCPV6Ft-ZUwvR6zps3pmArImOjbCTKS5SjQM_bvUEmYixA8fDzwCwJoAPmR5I=s90"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../../pic/baseline_sports_esports_black_36dp.png" />
-											<h4>休閑娛樂</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="數字精靈"
-															href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=zh-hk"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="1A2B猜數"
-															href="https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=zh-hk"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/37WMonxA2I_uxBu1YQNZ6QGikAIvYLYAz_3xQf5pzKI-ce8ziO7zT-0fGeddbXGL-ggwQvYS37zH7A=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../../pic/baseline_casino_black_36dp.png" />
-											<h4>科技資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="洞察號"
-															href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=zh-hk"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="國際太空站"
-															href="https://assistant.google.com/services/a/uid/000000ee35748109?hl=zh-hk"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/Hs7eFeeWgCKl_-Ir4ngXl3lXkLeG7SLrQKo84kMIfOONu4A6zpa6OftHrZNBDoMVYqoT151huMjt=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="熱搜趨勢"
-															href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=zh-hk"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../../pic/baseline_cloud_black_36dp.png" />
-											<h4>搵吓天氣資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="世界空氣質素指數"
-															href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=zh-hk"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="紫外線精靈"
-															href="https://assistant.google.com/services/a/uid/00000051da36fe70?hl=zh-hk"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/tFLlLU7i_2G20MQdyc2cslBtZfxXKvSHbQfe42DT4A5q6iSUNxSeh7jxzBQUuiv-XuC83NOwnTGy=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../../pic/baseline_translate_black_36dp.png" />
-											<h4>進行繙譯</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="摩斯密碼繙譯機"
-															href="https://assistant.google.com/services/a/uid/0000003c8f1151a9?hl=zh-hk"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/fxyZgV3doVdffoeB6fwcCOQnAn58ih5LaJAYgzg0qi2tA02XH4BEz2jgFW0ac2rTSP7Jarc2EnI1=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="二進制繙譯機"
-															href="https://assistant.google.com/services/a/uid/000000974738914a?hl=zh-hk"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/A4HU334fqf4ZNvkpEL2nfsfy_x1DRilzSKxO_kAi48SYDpZa4GLb80D_AF1ntC72Pcqr-hy3G_EZ5A=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-									</td>
-								</tr>
-							</table>
-						</div>
-						<div id="tab3" class="tab_content">
-							<table>
-								<tr>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_fastfood_black_36dp.png" />
-											<h4>取得餐飲建議</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="グルメ決定者"
-															href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=ja-jp"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_sports_esports_black_36dp.png" />
-											<h4>休閒娛樂</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="数字エルフ"
-															href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=ja-jp"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="数を推測する"
-															href="https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=ja-jp"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/37WMonxA2I_uxBu1YQNZ6QGikAIvYLYAz_3xQf5pzKI-ce8ziO7zT-0fGeddbXGL-ggwQvYS37zH7A=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_casino_black_36dp.png" />
-											<h4>科技資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="インサイト探査機"
-															href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=ja-jp"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="上位の検索トレンド"
-															href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=ja-jp"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_cloud_black_36dp.png" />
-											<h4>查詢天氣資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="世界空気質指数"
-															href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=ja-jp"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-									</td>
-								</tr>
-							</table>
-						</div>
-						<div id="tab4" class="tab_content">
-							<table>
-								<tr>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_sports_esports_black_36dp.png" />
-											<h4>休閒娛樂</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="숫자엘프"
-															href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=ko-kr"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_casino_black_36dp.png" />
-											<h4>科技資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="인사이트는"
-															href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=ko-kr"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="주요 검색 트렌드"
-															href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=ko-kr"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_cloud_black_36dp.png" />
-											<h4>查詢天氣資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="세계 대기질 지수"
-															href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=ko-kr"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-									</td>
-								</tr>
-							</table>
-						</div>
-						<div id="tab5" class="tab_content">
-							<table>
-								<tr>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_sports_esports_black_36dp.png" />
-											<h4>休閒娛樂</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="เทพดาดิจิตอล"
-															href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=th"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_casino_black_36dp.png" />
-											<h4>科技資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="สถานี Insight"
-															href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=th"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="ค้นหาด้านบน"
-															href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=th"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_cloud_black_36dp.png" />
-											<h4>查詢天氣資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="ดัชนีโลกคุณภาพอากาศ"
-															href="https://assistant.google.com/services/a/uid/000000b85163c25c?hl=th"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-									</td>
-								</tr>
-							</table>
-						</div>
-						<div id="tab6" class="tab_content">
-							<table>
-								<tr>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_fastfood_black_36dp.png" />
-											<h4>取得餐飲建議</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="The Meal Decider "
-															href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=en"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_sports_esports_black_36dp.png" />
-											<h4>休閒娛樂</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="Number Elfs"
-															href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=en"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="Cows and Bulls"
-															href="https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=en"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/37WMonxA2I_uxBu1YQNZ6QGikAIvYLYAz_3xQf5pzKI-ce8ziO7zT-0fGeddbXGL-ggwQvYS37zH7A=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-										</br>
-
-										</br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_casino_black_36dp.png" />
-											<h4>科技資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="The Insight Station"
-															href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=en"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="the search leaderboard"
-															href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=en"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-									</td>
-								</tr>
-							</table>
-						</div>
-						<div id="tab7" class="tab_content">
-							</br>
-							<table>
-								<tr>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_sports_esports_black_36dp.png" />
-											<h4>休閒娛樂</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="Nummer Elf"
-															href="https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=de"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_casino_black_36dp.png" />
-											<h4>科技資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="Insight Station"
-															href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=de"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="die Such-Bestenliste"
-															href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=de"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div></br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-
-
-										</br>
-
-										</br>
-									</td>
-								</tr>
-							</table>'
-						</div>
-						<div id="tab8" class="tab_content">
-							</br>
-							<table>
-								<tr>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_casino_black_36dp.png" />
-											<h4>科技資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="InSight station"
-															href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=da"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="tjek søgetendenser"
-															href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=da"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div></br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-
-
-										</br>
-
-										</br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-
-									</td>
-								</tr>
-							</table>'
-						</div>
-						<div id="tab9" class="tab_content">
-							</br>
-							<table>
-								<tr>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_casino_black_36dp.png" />
-											<h4>科技資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="Estación InSight"
-															href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=es"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div></br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-
-
-										</br>
-
-										</br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-
-									</td>
-								</tr>
-							</table>'
-						</div>
-						<div id="tab10" class="tab_content">
-							</br>
-							<table>
-								<tr>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_casino_black_36dp.png" />
-											<h4>科技資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="Station InSight"
-															href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=fr"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="le classement de recherche"
-															href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=fr"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div></br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-
-
-										</br>
-
-										</br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-
-									</td>
-								</tr>
-							</table>'
-						</div>
-						<div id="tab11" class="tab_content">
-							</br>
-							<table>
-								<tr>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-										<div class=" mdc-card"><img class="image-catagory"
-												src="../pic/baseline_casino_black_36dp.png" />
-											<h4>科技資訊</h4></br>
-											<table>
-												<tr>
-													<td align="center"><a title="Insight Station"
-															href="https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=nl"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81"
-																class="carousel-ncnu" /></a></td>
-													<td align="center"><a title="populaire zoektrends"
-															href="https://assistant.google.com/services/a/uid/000000fe8bfde8db?hl=nl"
-															target="_blank"><img
-																src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81"
-																class="carousel-ncnu" /></a></td>
-												</tr>
-											</table>
-										</div></br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-
-
-										</br>
-
-										</br>
-									</td>
-									<td align="center" style="width:30vw;height:auto;" valign="top">
-
-									</td>
-								</tr>
-							</table>'
-						</div>
-					</div>
-				</div>
-			</div>
-			</br>
-		</div>
-		<div style="height:15vh">
-			<div class="container"></br>
-				<h1>使用者反饋</h1>
-				<font color="#4e4c52" size="4" face="serif" style="font-weight: bloder;">各地使用者的評論</font></br></br>
-			</div>
-
-			<div style="background:#656468;height:auto">
-				<div class="container">
-					</br></br>
-					<table>
-						<tr>
-							<td align="left" style="width:30vw;height:auto;" valign="top">
-								<font color="#ffffff" size="5"
-									style="font-family: 'Varela', sans-serif;font-weight: bloder;">美食決定器</font>
-								<div class="mdc-card" style="padding: 10px 10px;height:auto;"></br>
-									<h2>可以使用，解決了現代人的日常難題。</h2></br></br>
-									<font color="#656468" size="4"
-										style="font-family: 'Varela', sans-serif;font-weight: bloder;">Pichu Baby •
-										2019年3月6日</br>來自台灣</font>
-								</div>
-								</br>
-								<font color="#ffffff" size="5"
-									style="font-family: 'Varela', sans-serif;font-weight: bloder;">詞語接龍</font>
-								<div class=" mdc-card" style="padding: 10px 10px;height:auto;"></br>
-									<h2>挑戰你腦海中的詞語資料庫!</h2></br></br>
-									<font color="#656468" size="4"
-										style="font-family: 'Varela', sans-serif;font-weight: bloder;">Google Taiwan •
-										2020年3月31日</br>來自台灣</font>
-								</div>
-								</br>
-								<font color="#ffffff" size="5"
-									style="font-family: 'Varela', sans-serif;font-weight: bloder;">大腦運動會</font>
-								<div class=" mdc-card" style="padding: 10px 10px;height:auto;"></br>
-									<h2>好玩長知識!</h2></br></br>
-									<font color="#656468" size="4"
-										style="font-family: 'Varela', sans-serif;font-weight: bloder;">Marco Kao •
-										2019年5月3日</br>來自台灣</font>
-								</div>
-							</td>
-							<td align="left" style="width:30vw;height:auto;" valign="top">
-								<font color="#ffffff" size="5"
-									style="font-family: 'Varela', sans-serif;font-weight: bloder;">數字精靈</font>
-								<div class=" mdc-card" style="padding: 10px 10px;height:auto;"></br>
-									<h2>當你冇人同你玩嗰陣時候呢個遊戲就啱你啦！</h2></br></br>
-									<font color="#656468" size="4"
-										style="font-family: 'Varela', sans-serif;font-weight: bloder;">the ink! fox
-										fluttersamuel • 2020年5月4日</br>來自香港</font>
-								</div>
-								</br>
-								<font color="#ffffff" size="5"
-									style="font-family: 'Varela', sans-serif;font-weight: bloder;">熱搜趨勢</font>
-								<div class=" mdc-card" style="padding: 10px 10px;height:auto;"></br>
-									<h2>ข้อความสนทนาที่ลบ</h2></br></br>
-									<font color="#656468" size="4"
-										style="font-family: 'Varela', sans-serif;font-weight: bloder;">Arexxy
-										Sudsuykramsig • 2020年5月7日</br>來自泰國</font>
-								</div>
-								</br>
-								<font color="#ffffff" size="5"
-									style="font-family: 'Varela', sans-serif;font-weight: bloder;">國際太空站</font>
-								<div class=" mdc-card" style="padding: 10px 10px;height:auto;"></br>
-									<h2>對於要觀看國際空間站的朋友來說，可以準確的知道過境時間。很棒</h2></br></br>
-									<font color="#656468" size="4"
-										style="font-family: 'Varela', sans-serif;font-weight: bloder;">林政宏 •
-										2020年5月3日</br>來自台灣</font>
-								</div>
-							</td>
-							<td align="left" style="width:30vw;height:auto;" valign="top">
-								<font color="#ffffff" size="5"
-									style="font-family: 'Varela', sans-serif;font-weight: bloder;">洞察號</font>
-								<div class=" mdc-card" style="padding: 10px 10px; height:auto;"></br>
-									<h2>하장실 문이애기하나 그대로 생각을치타하면</h2></br></br>
-									<font color="#656468" size="4"
-										style="font-family: 'Varela', sans-serif;font-weight: bloder;">정 jung을선 eelsun •
-										2020年5月29日</br>來自南韓</font>
-								</div>
-								</br>
-								<font color="#ffffff" size="5"
-									style="font-family: 'Varela', sans-serif;font-weight: bloder;">空汙查詢精靈</font>
-								<div class=" mdc-card" style="padding: 10px 10px;height:auto;"></br>
-									<h2>開啟自己神之模式</h2></br></br>
-									<font color="#656468" size="4"
-										style="font-family: 'Varela', sans-serif;font-weight: bloder;">張育維 •
-										2020年3月3日</br>來自台灣</font>
-								</div>
-								</br>
-								<font color="#ffffff" size="5"
-									style="font-family: 'Varela', sans-serif;font-weight: bloder;">世界空氣質量指數</font>
-								<div class=" mdc-card" style="padding: 10px 10px;height:auto;"></br>
-									<h2>ดีมากเลยครับ</h2></br></br>
-									<font color="#656468" size="4"
-										style="font-family: 'Varela', sans-serif;font-weight: bloder;">Somyose Saenghkam
-										• 2020年7月5日</br>來自泰國</font>
-								</div>
-							</td>
-						</tr>
-					</table>
-					</br></br>
-				</div>
-			</div>
-			<div id="copyright" class="container">
-				<p>&copy; Google助理是Google的產品。</p>
-			</div>
-			<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-			<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-			<script src="../js/script.js"></script>
-			<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-			<!-- Instantiate single textfield component rendered in the document -->
-			<script>
-				mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
-			</script>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end modals-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 mr-auto ml-auto">
+                                    <div class="card card-raised card-carousel">
+                                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                            </ol>
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img class="d-block w-100" src="./assets/img/bg1.png" alt="Second slide">
+                                                    <div class="carousel-caption d-none d-md-block">
+                                                        <h4>
+                                                            <i class="material-icons">turned_in</i>台灣國語辭典</br>
+                                                            使用語音查詢《重編國語辭典修訂本》
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img class="d-block w-100" src="./assets/img/bg2.png" alt="Second slide">
+                                                    <div class="carousel-caption d-none d-md-block">
+                                                        <h4>
+                                                            <i class="material-icons">stars</i>數字精靈</br>
+                                                            來自數個國家，超過50人好評推薦的趣味遊戲
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img class="d-block w-100" src="./assets/img/bg3.png" alt="Third slide">
+                                                    <div class="carousel-caption d-none d-md-block">
+                                                        <h4>
+                                                            <i class="material-icons">brush</i>運勢大師</br>
+                                                            由科技紫薇網授權，可隨時查詢近三日星座運勢
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                <i class="material-icons">keyboard_arrow_left</i>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                                <i class="material-icons">keyboard_arrow_right</i>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- 彈跳式視窗的內容 -->
+    <div class="modal fade" id="Assistant_detail" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Google助理語音應用程式</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="material-icons">clear</i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span class="badge badge-pill badge-secondary">Node.js</span>
+                    <span class="badge badge-pill badge-secondary">Dialogflow</span>
+                    <span class="badge badge-pill badge-secondary">Firebase</span>
+                    <p>
+                        </br>是Google開發的智慧型個人助理。</br>在2018年10月16日於臺灣上線。</br>其後在隔年三月開放台灣的第三方程式可以與其介接。</br>
+                        在任意支援Google助理的裝置上都能無縫使用。</br>Google助理本身目前止已支援30+種語言，可以輕易提供跨語言的使用體驗。
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link"><a href="https://developers.google.com/assistant"
+                            target="_blank">查看官方文件</a></button>
+                    <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Food_Decider" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <table>
+                        <tr>
+                            <td> <img style="width: 50px;" src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81" />
+                            </td>
+                            <td width="5px"></td>
+                            <td style="vertical-align:center;">
+                                <h3 class="modal-title">美食決定器</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="material-icons">clear</i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>只要簡單詢問即可快速得到建議，</br>是個可幫助你減少思考時間的小幫手!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link">
+                        <a title="Github原始碼"
+                            href="https://github.com/hank199599/Google-Assistant-APP/tree/master/%E7%BE%8E%E9%A3%9F%E6%B1%BA%E5%AE%9A%E5%99%A8"
+                            target="_blank"><i class="fa fa-github"></i></a>
+                    </button>
+                    <button type="button" class="btn btn-link">
+                        <a title="美食決定器 | Google助理"
+                            href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=zh-TW"
+                            target="_blank">繁體中文(台灣)</a>
+                    </button>
+                    <button type="button" class="btn btn-link">
+                        <a title="美食決定器 | Google助理"
+                            href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=zh-HK"
+                            target="_blank">繁體中文(香港)</a>
+                    </button>
+                    <button type="button" class="btn btn-link">
+                        <a title="グルメ決定者 | Googleアシスタント"
+                            href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=ja-JP"
+                            target="_blank">日文</a>
+                    </button>
+                    <button type="button" class="btn btn-link">
+                        <a title="Meal Decider | Google Assistant"
+                            href="https://assistant.google.com/services/a/uid/00000058f29109ab?hl=en"
+                            target="_blank">英文</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Daily_History" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src=" https://lh3.googleusercontent.com/1U6-HhkKdaVzPMMsz5XmKZ31lTnOkXWz4eTuDcNTejlgatqouaKoniXkxfMC0AKvRx4wSjHmynvs=s81 " />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">每日大事記</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>透過對話快速查詢曾經發生的歷史事件!</br>資訊來源：維基百科</br>https://zh.wikipedia.org/wiki/歷史上的今天
+                    </p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/%E7%BE%8E%E9%A3%9F%E6%B1%BA%E5%AE%9A%E5%99%A8 "
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 每日大事記 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/000000d67993a1d2?hl=zh-TW "
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade " id="Taiwan_Dictoinary" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/b5mi7bsFMvz5vbzdQYkGvRTCZQlwgCOvIlmNAds6dvjuLGwC-gzhYDMowSi7_e4OR1o9fY0ecBY=s81 " />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">臺灣國語辭典</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>這是介接《萌典》所提供之API所達成的字典詞條查詢服務。</br>使用者可以透過對話、直接輸入或利用麥克風等方式來進行查詢。</br>查詢之詞彙及詞條內容來自《重編國語辭典修訂本》。
+                    </p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/臺灣國語辭典 "
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 臺灣國語辭典 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/0000008d7409cb2a?hl=zh-TW "
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Taiwan_Rail_Dictoinary" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/RD6WQND-5BmBiDt2UfnbrqnMIWquswEXE1hySqSCBHwLMgQLeS0taGu6y2Ezgqnr-ADzo637fVp1=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">鐵道詞典</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>由交通部鐵路改建工程局提供，</br>
+                        主要內容為傳統鐵路、高速鐵路、捷運系統等相關名詞</br>
+                        </br>
+                        Ⓒ授權資訊：政府資料開放授權條款-第1版</p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/鐵道詞典"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 鐵道詞典 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/000000862113b0f6?hl=zh-TW "
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Cangjie_Dictoinary" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/RD6WQND-5BmBiDt2UfnbrqnMIWquswEXE1hySqSCBHwLMgQLeS0taGu6y2Ezgqnr-ADzo637fVp1=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">倉頡字典</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>透過對話查詢每個字在「倉頡第五代」對應的倉頡碼。</br>
+                        </br>
+                        有關倉頡輸入法：</br>
+                        是一種相當有效率的中文輸入法，此種方法利用英文拼字的觀念，巧妙的將每個中文字拆開來，然後歸納且編列出二十四個中文字母，並衍生出七十五個輔助字形，使得中文字形皆可以用二十四個中文字母，依一定的取碼規則而得到該字。
+                    </p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/倉頡字典"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 倉頡字典 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/0000009932f37dce?hl=zh-TW "
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 倉頡字典 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/0000009932f37dce?hl=zh-HK "
+                            target=" _blank ">繁體中文(香港)</a></button> </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Positive_Quote" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/XAylvXmY2tTWiQVtuwbcan_nno8pM7q9Qro6aEBECzTEN-x8jqAjuMm-ZqL_qCVvvkYhgw1_VVNI=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">正能量語錄</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>網羅來自網路上的正能量語錄，</br>
+                        每次使用本服務即隨機挑選一則語錄作為輸出。</br>
+                        </br>
+                        同時使用來自Youtube 音效庫的免費授權音樂作為背景音樂。</br>
+                        提供使用者截然不同的感受!
+                    </p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/正能量語錄"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 正能量語錄 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/000000b877fb7629?hl=zh-TW "
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Negative_Quote" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/XAylvXmY2tTWiQVtuwbcan_nno8pM7q9Qro6aEBECzTEN-x8jqAjuMm-ZqL_qCVvvkYhgw1_VVNI=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">負能量語錄</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>網羅來自網路上的負能量語錄，</br>
+                        每次使用本服務即隨機挑選一則語錄作為輸出。</br>
+                        </br>
+                        同時使用來自Youtube 音效庫的免費授權音樂作為背景音樂。</br>
+                        提供使用者截然不同的感受!
+                    </p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/負能量語錄"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 負能量語錄 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/000000e8f5894304?hl=zh-TW "
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Today_Quote" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/DPDoPBFLpDglYGoU2zNdzACtOFfE-rsPvK2kJC1jA_scJTJM69x8SmycybTIipNMC0LsJdz06j5qwQ=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">今日名言</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>隨時呼叫Google助理，即可存取《維基語錄》收錄的每日名言。</br>
+                        查看名言的同時也可以前往維基百科上該名人的對應頁面連結了解更多資訊。</br>
+                        </br>
+                        每日更新一次(以台北標準時間為基準)
+                    </p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/今日名言"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 今日名言 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/0000002a10f761c0?hl=zh-TW "
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="NASA_daily" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/NnDqEoQYzER27FJ8X-6fAxdRkSQ35j6MbiMfwMu5V_tqLZDopKQ1YcCPMLwwmIA-WQmEFaJ1Y6YA=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">每日天文圖</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>為使用者提供來自「每日一天文圖(APOD)」的每日精選圖片，</br>
+                        並附上由專業的天文學家寫上的一份扼要說明。</br>
+                        帶你遨遊迷人的宇宙!</br>
+                        </br>
+                        有關「每日一天文圖(APOD)」：</br>
+                        源自於美國國家航空暨太空總署與密西根科技大學（MTU）所提供的服務，自1995年6月16日開始，這個網站每天會提供一張宇宙不同的影像並附上簡要說明。
+                    </p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/每日天文圖"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 每日天文圖 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/00000011ac49f35c?hl=zh-TW "
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 朝朝天文圖 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/00000011ac49f35c?hl=zh-TW "
+                            target=" _blank ">繁體中文(香港)</a></button> </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Fortune_Master" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/hKT5442d4Mmrmx6tCPV6Ft-ZUwvR6zps3pmArImOjbCTKS5SjQM_bvUEmYixA8fDzwCwJoAPmR5I=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">運勢大師</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p> 本服務提供今天與後兩日的星座運勢。</br>
+                        使用者亦可透過透過生日查詢對應的運勢!</br>
+                        </br>
+                        星座運勢內容授權：科技紫微網</br>
+                        http://click108.tw/RiYbJ
+                    </p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 (不開放)" target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 運勢大師 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/00000084fd2effe4?hl=zh-TW "
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 運程Master | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/00000084fd2effe4?hl=zh-HK "
+                            target=" _blank ">繁體中文(香港)</a></button> </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Brain_Game" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/IC_vSx1qVU6iTofmMzVjUIDjEcQ33KicmwUQS8CInXLghiMVayuCmn2aXEMTqp6DTrg7fbFLBxUT=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">大腦運動會</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>
+                        使用來自網路上或維基百科的題庫，</br>
+                        透過簡易選擇題或對話機制進行遊戲。</br>
+                        玩家可以選擇無限題目或是最多十題題目的模式。</br>
+                        每個題目在選擇後會判別錯誤與否並提供相關連結供參考(大多來自維基百科)。
+                    </p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/大腦運動會"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 大腦運動會 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/000000603cba0b27?hl=zh-TW "
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Riddle_Game" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/5Iy10xZI4gE58MPb2-j5Sd6SrKPg7dSHzcfp7woqTqQiHf4w4dh6r-UPALvtp0X38NtKNt8zsguz=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">燈謎大師</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>
+                        網羅網路上的各式謎語，</br>
+                        不必再翻找書本即能享有猜謎樂趣!</br>
+                        </br>
+                        特殊設計</br>
+                        可提示謎底之字數，若猜測的答案接近正解亦可算答對。</br>
+                        若想跳過題目亦可提出需求，本服務會直接給予答案。</p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/燈謎大師"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 燈謎大師 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/00000046536e4ef2?hl=zh-TW "
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Number_Elf" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">數字精靈</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>
+                        在遊戲開始前，使用者必須選擇一個數字做為上限。</br>
+                        接著程式會依據這個上限自其中隨機挑選一個數字做為答案。</br>
+                        </br>
+                        隨著猜測的數字，程式會予以提示接近答案的區間。</br>
+                        直到使用者猜測到答案。</br>
+                        中途如果想放棄亦可直接看到答案。</p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/數字精靈"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 數字精靈 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=zh-TW"
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 數字精靈 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=zh-TW"
+                            target=" _blank ">繁體中文(香港)</a></button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Number Elf | Google Assistant "
+                            href=" https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=en"
+                            target=" _blank ">英文</a></button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 数字エルフ | Google アシスタント "
+                            href=" https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=ja-JP"
+                            target=" _blank ">日文</a></button>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 숫자엘프 | Google 어시스턴트 "
+                            href=" https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=ko"
+                            target=" _blank ">韓文</a></button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" เทพดาดิจิตอล | Google Assistant "
+                            href=" https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=th"
+                            target=" _blank ">泰文</a></button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Nummer Elf | Google Assistant "
+                            href=" https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=de"
+                            target=" _blank ">德文</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="1A2B" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/bq7AdNyaNrET2f4F55Eq27vxnfA-G3odqoOZPA9_hl3sadVsSHzoFWEOeseoootSzwuewJyxfIU=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">1A2B猜數</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>
+                        遊戲開始時，會產生一個四位數字，其中：</br>
+                        </br>
+                        每個數字範圍：0 ~ 9</br>
+                        數字間關係：彼此不能重複</br>
+                        整體範圍：0123 ~ 9876</br>
+                        答案可能性：5040種</br>
+                        「A」：代表有數值在答案中且位置正確</br>
+                        「B」：代表有數值在答案中但位置不正確</br>
+                        </br>
+                        玩家在這個遊戲中要做的，即利用隨機的數字與系統給予的提示，</br>
+                        推敲出唯一的答案!</p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/1A2B"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 1A2B猜數 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=zh-TW"
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 1A2B猜數 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=zh-TW"
+                            target=" _blank ">繁體中文(香港)</a></button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Cows and Bulls | Google Assistant "
+                            href=" https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=en"
+                            target=" _blank ">英文</a></button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 数を推測する | Google アシスタント "
+                            href=" https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=ja-JP"
+                            target=" _blank ">日文</a></button>
+                </div>
+                </br>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 숫자를 맞춰보세요 | Google 어시스턴트 "
+                            href=" https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=ko"
+                            target=" _blank ">韓文</a></button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" เดาหนึ่ง | Google Assistant "
+                            href=" https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=th"
+                            target=" _blank ">泰文</a></button>
+                    <button type=" button " class=" btn btn-link ">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Flag_Game" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; "
+                                    src="https://lh3.googleusercontent.com/8p8IQ-hEspewNRYI77jtHy7W1cM8jBWP6lVxLXXqQ9K5GjwCxlIOqUx3QxGLx8_gyuoQq_MUXFVxmQ=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">國旗達人</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>
+                        透過隨機生成的選項與答案，</br>
+                        以全世界各地的旗幟做題題目的益智遊戲。</br>
+                        在每個作答結束後，亦提供簡易說明與維基百科連結供使用。</p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/國旗達人"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 國旗達人 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/000000b5033b5e97?hl=zh-TW"
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="text_solitaire" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/Cc6BaW2bvr3i7N5V0pPb9RDtIZo8wIVFPFPV9Ev9tWtYgMvRBf8kCnhBpldEV-dG0eqDNlchpXQlhw=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">詞語接龍</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>
+                        使用來自《教育部重編國語辭典修訂本》收錄的詞彙，</br>
+                        與使用者進行接龍的文字遊戲。</br>
+                        在遊戲中不能輸入重複的詞彙，但可以隨時中斷遊戲。</br>
+                        玩家在每回合有三次跳過詞彙的機會，本服務會自動給予提示以便繼續進行。</p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/詞語接龍"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 詞語接龍 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/000000ca4e8b5d65?hl=zh-TW"
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="idiom_solitaire" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/jgOHyXLYLFSqbnQFpS8ax8Y_I0nT7UYcPqyzSNjoOBx0Od3CnMQ05OiL6DV8rg_L2gHrVgyt9CY1=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">成語接龍</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>
+                        使用來自《成語典》收錄的詞彙，</br>
+                        與使用者進行接龍的文字遊戲。</br>
+                        在遊戲中不能輸入重複的成語，但可以隨時中斷遊戲。</br>
+                        如果玩家連續三次無法輸入正確的接續詞，本服務會自動給予提示以便繼續進行。</p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/成語接龍"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 成語接龍 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/0000005fc779da97?hl=zh-TW"
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="easy_text_solitaire" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/RaAMZ5KmCKWojxT-Zv-dwv5Pxqpvgc-sdWIgp_E0HOGyXERr0btrkcxQQRZJ4FLPAERm8q1XbuQ=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">讀音接龍</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>
+                        使用來自《教育部重編國語辭典修訂本》收錄的詞彙，</br>
+                        與使用者進行接龍的文字遊戲。</br>
+                        在遊戲中不能輸入重複的詞彙，但可以隨時中斷遊戲。</br>
+                        </br>
+                        範例 歲歲平安>黯然消魂>魂歸來兮>喜出望外>歪頭</p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/讀音接龍"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 讀音接龍 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/000000f85bd23edc?hl=zh-TW"
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="24_points" tabindex=" -1 " role=" dialog ">
+        <div class=" modal-dialog modal-dialog-centered " role=" document ">
+            <div class=" modal-content ">
+                <div class=" modal-header ">
+                    <table>
+                        <tr>
+                            <td> <img style=" width: 50px; " src="https://lh3.googleusercontent.com/CceE_F175HAi1aWL5cA6wFCJMi85emmsVkUdyMfr1t7WqdegcVHZKaFUtLm7fZBjewXO4aSGU_eDdw=s90" />
+                            </td>
+                            <td width=" 5px "></td>
+                            <td style=" vertical-align:center; ">
+                                <h3 class=" modal-title ">24點巧算</h3>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type=" button " class=" close " data-dismiss=" modal " aria-label=" Close ">
+                        <i class=" material-icons ">clear</i>
+                    </button>
+                </div>
+                <div class=" modal-body ">
+                    <p>
+                        遊戲開始時，會產生一組固定順序的四個數字，其中：</br>
+                        </br>
+                        每個數字範圍：1 ~ 13</br>
+                        數字間關係：彼此可重複</br>
+                        組合可能性：28561種</br>
+                        玩家在這個遊戲中要做的，即利用指定順序的數字進行加減乘除，</br>
+                        得到指定的答案! (例如24)</p>
+                </div>
+                <div class=" modal-footer ">
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" Github原始碼 "
+                            href=" https://github.com/hank199599/Google-Assistant-APP/tree/master/24點巧算"
+                            target=" _blank "><i class=" fa fa-github "></i></a>
+                    </button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 24點巧算 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/000000c29cce8146?hl=zh-TW"
+                            target=" _blank ">繁體中文(台灣)</a></button>
+                    <button type=" button " class=" btn btn-link ">
+                        <a title=" 24點巧算 | Google助理 "
+                            href=" https://assistant.google.com/services/a/uid/000000c29cce8146?hl=zh-hk"
+                            target=" _blank ">繁體中文(香港)</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  End Modal -->
+    <footer class=" footer footer-default ">
+        <div class=" container ">
+            <nav class=" float-left ">
+                <ul>
+                    <li>
+                        <a href=" https://www.creative-tim.com/ ">
+                            Creative Tim
+                        </a>
+                    </li>
+                    <li>
+                        <a href=" https://www.creative-tim.com/presentation ">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href=" https://www.creative-tim.com/blog ">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href=" https://www.creative-tim.com/license ">
+                            Licenses
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class=" copyright float-right ">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>, made with <i class=" material-icons ">favorite</i> by
+                <a href=" https://www.creative-tim.com/ " target=" _blank ">Creative Tim</a> for a better web.
+            </div>
+        </div>
+    </footer>
+    <!--   Core JS Files   -->
+    <script src=" ./assets/js/core/jquery.min.js " type=" text/javascript "></script>
+    <script src=" ./assets/js/core/popper.min.js " type=" text/javascript "></script>
+    <script src=" ./assets/js/core/bootstrap-material-design.min.js " type=" text/javascript "></script>
+    <script src=" ./assets/js/plugins/moment.min.js "></script>
+    <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+    <script src=" ./assets/js/plugins/bootstrap-datetimepicker.js " type=" text/javascript "></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src=" ./assets/js/plugins/nouislider.min.js " type=" text/javascript "></script>
+    <!--  Google Maps Plugin    -->
+    <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+    <script src=" ./assets/js/material-kit.js?v=2.0.7 " type=" text/javascript "></script>
 </body>
 
 </html>
