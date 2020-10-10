@@ -109,9 +109,19 @@ The above copyright notice and this permission notice shall be included in all c
 
             <div class="row">
                 <div class="col-md-10 mr-auto ml-auto">
-                    <h3>作品總覽</br>
-                        <small>能依據使用者語系自動切換回應語言!</small>
-                    </h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>作品總覽</br>
+                                <small>能依據使用者語系自動切換回應語言!</small>
+                            </h3>
+                        </div>
+                        <div class="col-md-4" style="display: flex;align-items: center; ">
+                            <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#Assistant_detail">
+                                                <i class="material-icons">library_books</i>
+                                                有關 Google語音助理
+                        </button>
+                        </div>
+                    </div>
                     <div class="card card-nav-tabs">
                         <div class="card-header card-header-success">
                             <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
@@ -346,20 +356,6 @@ The above copyright notice and this permission notice shall be included in all c
                             </div>
                         </div>
                     </div>
-                    <!--modals -->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 mr-auto ml-auto">
-
-                                <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#Assistant_detail">
-                                            <i class="material-icons">library_books</i>
-                                            有關 Google語音助理
-                                        </button>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!--end modals-->
                     <!--start card-->
                     <h3>登上Google官方部落格</br>
                         <small>被官方宣傳的作品</small>
@@ -395,60 +391,9 @@ The above copyright notice and this permission notice shall be included in all c
                         </div>
                     </div>
                     <!--end card-->
-                    <!--start carousel-->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 mr-auto ml-auto">
-                                <div class="card card-raised card-carousel">
-                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                        </ol>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img class="d-block w-100" src="../assets/img/bg1.png" alt="Second slide">
-                                                <div class="carousel-caption d-none d-md-block">
-                                                    <h4>
-                                                        <i class="material-icons">turned_in</i>台灣國語辭典</br>
-                                                        使用語音查詢《重編國語辭典修訂本》
-                                                    </h4>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block w-100" src="../assets/img/bg2.png" alt="Second slide">
-                                                <div class="carousel-caption d-none d-md-block">
-                                                    <h4>
-                                                        <i class="material-icons">stars</i>數字精靈</br>
-                                                        來自數個國家，超過50人好評推薦的趣味遊戲
-                                                    </h4>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block w-100" src="../assets/img/bg3.png" alt="Third slide">
-                                                <div class="carousel-caption d-none d-md-block">
-                                                    <h4>
-                                                        <i class="material-icons">brush</i>運勢大師</br>
-                                                        由科技紫薇網授權，可隨時查詢近三日星座運勢
-                                                    </h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                            <i class="material-icons">keyboard_arrow_left</i>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                            <i class="material-icons">keyboard_arrow_right</i>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end carousel-->
+                    <h3>使用者評論</br>
+                        <small>世界各地使用者的反饋</small>
+                    </h3>
                     <!-- Tabs on Plain Card -->
                     <div class="card card-nav-tabs card-plain">
                         <div class="card-header card-header-success">
@@ -482,62 +427,318 @@ The above copyright notice and this permission notice shall be included in all c
                             </div>
                         </div>
                         <div class="card-body ">
-                            <div class="tab-content text-center">
+                            <div class="tab-content">
                                 <div class="tab-pane active" id="1">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <div class="card">
-                                                <div class="card-header card-header-icon card-header-danger">
-                                                    <div class="card-icon">
-                                                        <i class="material-icons">public</i>詞語接龍
-                                                    </div>
-                                                </div>
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                    color:white;
+                                                    background: linear-gradient(60deg, #a6afb1, #505657);">詞語接龍</h4>
                                                 <div class="card-body">
-                                                    <p class="card-text">
-                                                        &nbsp;• 詞語接龍</br>
-                                                    </p>
-                                                    <h4 class="card-title">2020年3月31日</h4>
-                                                    <h6 class="card-subtitle mb-2 text-muted">共同守護健康 善用 Google 不無聊</h6>
-
+                                                    <h4 class="card-title">挑戰你腦海中的詞語資料庫!</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        Google Taiwan</br>
+                                                        <small>2020年3月31日</small>
+                                                    </h6>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
-                                            <div class="card">
-                                                <div class="card-header card-header-icon card-header-info">
-                                                    <div class="card-icon">
-                                                        <i class="material-icons">language</i>
-                                                    </div>
-                                                </div>
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #e51516, #a20102);">數字精靈</h4>
                                                 <div class="card-body">
-                                                    The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona...
+                                                    <h4 class="card-title">很好玩啊，這根本就是終極密碼!</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        洪那馬</br>
+                                                        <small>2019年8月17日</small>
+                                                    </h6>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
-                                            <div class="card">
-                                                <div class="card-header card-header-icon card-header-info">
-                                                    <div class="card-icon">
-                                                        <i class="material-icons">language</i>
-                                                    </div>
-                                                </div>
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #4d4d4d, #000000);">1A2B猜數</h4>
                                                 <div class="card-body">
-                                                    The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona...
+                                                    <h4 class="card-title">很有趣可以得到特別的驚喜</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        winnie the pooh</br>
+                                                        <small>2020年9月7日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                    color:white;
+                                                    background: linear-gradient(60deg, #4aa8bc, #327280);">空汙查詢精靈</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">開啟自己神之模式!</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        張育維</br>
+                                                        <small>2020年3月3日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #4d4d4d, #000000);">國際太空站</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">對於要觀看國際空間站的朋友來說，可以準確的知道過境時間。很棒!</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        林政宏</br>
+                                                        <small>2020年5月3日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:#000000;
+                                                background: linear-gradient(60deg, #eaeaf3, #9494b6);">臺灣國語辭典</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">很好用</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        菘菘</br>
+                                                        <small>2020年1月22日</small>
+                                                    </h6>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="2">
-                                    <p> I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&#x2019;s a responsibility that I have, to push possibilities,
-                                        to show people, this is the level that things could be at. I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. </p>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #e51516, #a20102);">數字精靈</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">當你冇人同你玩嗰陣時候呢個遊戲就啱你啦！</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        the ink! fox fluttersamuel</br>
+                                                        <small>2020年5月4日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="tab-pane" id="3">
-                                    <p> I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I will be the leader of a company that ends up being worth billions of dollars, because
-                                        I got the answers. I understand culture. I am the nucleus. I think that&#x2019;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.</p>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #e51516, #a20102);">數字精靈</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">this app is making me smarter!</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        Keith Lloyd</br>
+                                                        <small>2019年9月10日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #c23c02, #732503);">洞察號</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">why u dont working with your God</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        karlz suffianz</br>
+                                                        <small>2020年8月28日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="4">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #e51516, #a20102);">數字精靈</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">普通に楽しい。時間潰しに最適なアプリ。</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        山下友都</br>
+                                                        <small>2020年9月27日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #c23c02, #732503);">洞察號</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">全集中　水の呼吸　捨ノ型　生生流転</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        名探偵α</br>
+                                                        <small>2019年11月10日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="5">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #e51516, #a20102);">數字精靈</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">재미있었어요😃😃😃😃😃😃😃😃😃</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        hj lee</br>
+                                                        <small>2020年8月2日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #c23c02, #732503);">洞察號</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">하장실 문이애기하나 그대로 생각을치타하면</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        7730 정 jung</br>
+                                                        <small>2020年5月29日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:black;
+                                                background: linear-gradient(60deg, #f8edef, #cdc2c4);">世界空氣質量指數</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">감사합니다</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        정재형 (부동산)</br>
+                                                        <small>2020年7月13日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="6">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #e51516, #a20102);">數字精靈</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">ชอบมาก</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        สิบเอกดนัย ทองหนุน (แม๊กเหนือเมฆ)</br>
+                                                        <small>2020年9月5日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #c23c02, #732503);">洞察號</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">ใช้ได้ดีมากครับ</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        รังสันต์ โพธิ์ศรี</br>
+                                                        <small>2020年8月24日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:black;
+                                                background: linear-gradient(60deg, #f8edef, #cdc2c4);">世界空氣質量指數</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">ดีมากสิคะเลยติ</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        เนตรแก้ว สังขกุล</br>
+                                                        <small>2020年9月15日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #4d4d4d, #000000);">1A2B猜數</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">ยากสุด</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        Mai VIp (Mai)</br>
+                                                        <small>2020年9月28日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #1b53b0, #143f87);">熱搜趨勢</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">ชอบมากครับ ได้ความรู้และได้แนะนำ และได้เจอกับสิ่งใหม่ๆ</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        Freedom Mobile</br>
+                                                        <small>2020年8月19日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="7">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card" style="padding: 10px 10px;">
+                                                <h4 class="card-header" style="
+                                                color:white;
+                                                background: linear-gradient(60deg, #e51516, #a20102);">數字精靈</h4>
+                                                <div class="card-body">
+                                                    <h4 class="card-title">Super spiel</h4>
+                                                    <h6 class="card-subtitle mb-2 text-muted">
+                                                        Constantin Gamer</br>
+                                                        <small>2020年9月21日</small>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
