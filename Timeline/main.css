@@ -8,8 +8,8 @@ body {
 
 
 /*——————————————
-  TimeLine CSS
-  ———————————————*/
+TimeLine CSS
+———————————————*/
 
 
 /* Base */
@@ -99,8 +99,8 @@ h1.header {
 
 
 /*——————————————
-  Responsive Stuff
-  ———————————————*/
+Responsive Stuff
+———————————————*/
 
 @media (max-width: 945px) {
     .timeline .event::before {
@@ -143,8 +143,8 @@ h1.header {
 
 
 /*——————————————
-  others
-  ———————————————*/
+others
+———————————————*/
 
 a.portfolio-link {
     margin: 0 auto;
