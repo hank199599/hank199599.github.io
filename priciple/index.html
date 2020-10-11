@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+Name       : BarbedFlower 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140322
+-->
+<html xmlns="https://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Google助理執行原理 | 游紹宏</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
+    <link href="../default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<style>
+    .mdc-button.mdc-card__action.mdc-card__action--button {
+        --mdc-theme-primary: #4e4c52;
+    }
+    
+    .cards {
+        display: left;
+        flex-wrap: wrap;
+    }
+    
+    .mdc-button.mdc-button--raised {
+        width: 30vw;
+        height: 4vw;
+        font-size: 3vw;
+        text-align: center;
+        margin: 0 auto;
+        --mdc-theme-primary: #4e4c52;
+        --mdc-theme-on-primary: var(--mdc-theme-text-primary-on-dark);
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <!--home section-->
+
+    <section class="section" id="home-section">
+
+        <nav id="nav">
+            <ul>
+                <li class="nav_item"><a href="https://hank199599.github.io/">首頁</a></li>
+                <li class="nav_item"><a href="https://hank199599.github.io/profile/">簡歷</a></li>
+                <li class="nav_item"><a href="https://hank199599.github.io/works/Assistant">Google 助理</a></li>
+                <li class="nav_item"><a href="https://hank199599.github.io/works/Alexa">Alexa</a></li>
+            </ul>
+        </nav>
+        <div id="banner" style="background-image: url('https://lh3.googleusercontent.com/pw/ACtC-3eUjlFQMTBKfA3MYsBd7XgOE9RKP_hNxu0IyaZgYivn6sQ0g0ZdayFc9OcHqYjJBs6mcZjStEG_2h12rqc2BTd1kEgf2J2dZKHRDAComFmh1VOl7SZeecYSzij9nKuhE14GdVerfJScHysSdO9cfoiXWg=w1605-h903-no?authuser=0);">
+            <div class="container">
+                <div class="title">
+                    <span class="byline">語音應用程式</span></br>
+                    <span class="bysub">執行原理</span></br>
+                    </br>
+                </div>
+            </div>
+            <table style="width:100vw;">
+                <tr>
+                    <td align="center" style="width:15vw;"></td>
+                    <td align="center" style="width:70vw;">
+                        <div class=" mdc-card" style="width:70vw;">
+                            <div class=" mdc-card mdc-card--outlined">
+                                <table>
+                                    <tr>
+                                        <td align="left" style="width:50vw;height:auto;padding: 10px 10px;">
+                                            <h1>概略流程</h1>
+                                            <h5>
+                                                1.使用者：輸入語音或文字</br>
+                                                2.Google助理：傳遞輸入給Dialogflow</br>
+                                                3.Dialogflow：透過預先訓練的模型分辨使用者意圖(Intent)</br>
+                                                4.Dialogflow：將對應到的意圖與文字資訊傳遞給Fulfillment</br>
+                                                5.Fulfillment：根據意圖返還相應的客製化回應</br>
+                                                6.使用者：透過Google助理看見回應</br>
+                                            </h5>
+                                        </td>
+                                        <td align="center" style="width:20vw;height:auto">
+                                            <img src="https://camo.githubusercontent.com/101c2228d618a22caae9a5d873ba00ba358c5efb/68747470733a2f2f646576656c6f706572732e676f6f676c652e636f6d2f617373697374616e742f636f6e766572736174696f6e616c2f696d616765732f616f672d757365722d71756572792d746f2d66756c66696c6c6d656e742e706e67"
+                                                class="image-big" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                    <td align="center" style="width:15vw;">
+                </tr>
+            </table>
+            </br>
+            </br>
+        </div>
+        <div style="height:auto; background-image:url('https://lh3.googleusercontent.com/pw/ACtC-3e4jlOtD-P08Gwn0jthOJVEdeE8uMW2GZu3xUwGqEvJ2EJH-ffptF_x7HdJJyVK624cUDWM_NKmyNdzFtPKsVbdjHI4tQN6K-Dpe8aZWiRCGI_xwzoyV00nb_qEkmFihTTE9KshCmFsd0gNdb3Kk7B_Qg=w1278-h903-no?authuser=0')">
+            </br>
+            <div class="container">
+                <table style="width:100vw;">
+                    <tr>
+                        <td align="left" style="width:70vw;">
+                            <div class=" mdc-card" style="width:70vw;">
+                                <div class=" mdc-card mdc-card--outlined " style="padding: 10px 10px;">
+                                    <h1>Actions On Google</h1>
+                                    <div class="mdc-chip-set mdc-chip-set--filter" role="grid">
+                                        <div class="mdc-chip mdc-chip--selected" role="row">
+                                            <div class="mdc-chip__ripple"></div>
+                                            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
+                                            <span class="mdc-chip__checkmark">
+			  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30"><path class="mdc-chip__checkmark-path" fill="none" stroke="black"d="M1.73,12.91 8.1,19.28 22.79,4.59"/></svg>
+			</span>
+                                            <span role="gridcell">
+			  <span role="checkbox" tabindex="0" aria-checked="true" class="mdc-chip__primary-action">
+				<span class="mdc-chip__text">語音應用程式</span>
+                                            </span>
+                                            </span>
+                                        </div>
+                                        <div class="mdc-chip mdc-chip--selected" role="row">
+                                            <div class="mdc-chip__ripple"></div>
+                                            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
+                                            <span class="mdc-chip__checkmark">
+			  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30"><path class="mdc-chip__checkmark-path" fill="none" stroke="black"d="M1.73,12.91 8.1,19.28 22.79,4.59"/></svg>
+			</span>
+                                            <span role="gridcell">
+			  <span role="checkbox" tabindex="0" aria-checked="true" class="mdc-chip__primary-action">
+				<span class="mdc-chip__text">物聯網(IOT)</span>
+                                            </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h5>Google助理的第三方開發者平台，</br>
+                                        開發者可以開發語音應用程式、或者將Android APP介接到Google助理上讓使用者能以對話方式互動。</br>
+                                        此外這個平台也支援IOT裝置的介接。</br>
+                                        凡是支援Google助理的裝置都能呼叫語音應用程式。</br>
+                                    </h5>
+                                </div>
+                                <div class="mdc-card__actions">
+                                    <a href="https://developers.google.com/assistant" target="_blank" style="text-decoration:none;text-align: center;"><button class="mdc-button mdc-card__action mdc-card__action--button">
+				<div class="mdc-button__ripple"></div>
+				<span class="mdc-button__label",style="font-weight: bloder;"><i class="material-icons mdc-button__icon" aria-hidden="true">open_in_new</i>了解更多</span>
+			  </button></a>
+                                </div>
+                            </div>
+                        </td>
+                        <td align="center" style="width:30vw;"><img src="../pic/Assistant.png" class="image-centered" /></td>
+                    </tr>
+                </table>
+            </div>
+            </br>
+        </div>
+        <div style="background:#ef6c00;height:auto">
+            <div class="container">
+                </br>
+                <table>
+                    <tr>
+                        <td align="center" style="width:30vw;height:auto">
+                            <img src="https://lh3.googleusercontent.com/pw/ACtC-3fJNxG9RZbcuf7RNhWQla1egUERpYaa5nUK8lDDtJ1wH86SsZ0ceurZ0UOs79bFhIWEmu3SUjTCVtH8tpsYrVjt2TKUK7Eb7JFEzg1a_U6nzBthXcOATB9ZihUr3IC_vpu5-rrdD3NgSZGCJLJ9G31E7w=s192-no?authuser=0" class="image-icons" />
+                        </td>
+                        <td align="left" style="width:50vw;height:auto">
+                            <div class=" mdc-card" style="width:70vw;">
+                                <div class=" mdc-card mdc-card--outlined " style="padding: 10px 10px;">
+                                    <h1>Dialogflow</h1>
+                                    <div class="mdc-chip-set mdc-chip-set--filter" role="grid">
+                                        <div class="mdc-chip mdc-chip--selected" role="row">
+                                            <div class="mdc-chip__ripple"></div>
+                                            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
+                                            <span class="mdc-chip__checkmark">
+			  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30"><path class="mdc-chip__checkmark-path" fill="none" stroke="black"d="M1.73,12.91 8.1,19.28 22.79,4.59"/></svg>
+			</span>
+                                            <span role="gridcell">
+			  <span role="checkbox" tabindex="0" aria-checked="true" class="mdc-chip__primary-action">
+				<span class="mdc-chip__text">自然語言處理(NLP)</span>
+                                            </span>
+                                            </span>
+                                        </div>
+                                        <div class="mdc-chip mdc-chip--selected" role="row">
+                                            <div class="mdc-chip__ripple"></div>
+                                            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
+                                            <span class="mdc-chip__checkmark">
+			  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30"><path class="mdc-chip__checkmark-path" fill="none" stroke="black"d="M1.73,12.91 8.1,19.28 22.79,4.59"/></svg>
+			</span>
+                                            <span role="gridcell">
+			  <span role="checkbox" tabindex="0" aria-checked="true" class="mdc-chip__primary-action">
+				<span class="mdc-chip__text">機器學習(ML)</span>
+                                            </span>
+                                            </span>
+                                        </div>
+                                        <div class="mdc-chip mdc-chip--selected" role="row">
+                                            <div class="mdc-chip__ripple"></div>
+                                            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
+                                            <span class="mdc-chip__checkmark">
+			  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30"><path class="mdc-chip__checkmark-path" fill="none" stroke="black"d="M1.73,12.91 8.1,19.28 22.79,4.59"/></svg>
+			</span>
+                                            <span role="gridcell">
+			  <span role="checkbox" tabindex="0" aria-checked="true" class="mdc-chip__primary-action">
+				<span class="mdc-chip__text">Node.js</span>
+                                            </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h5>它是一項在GCP上運行的Google服務。</br>開發者可以訓練自己的機器學習模型，</br>使對話機器人能分辨用戶的內容並將其對應正確回應。</br>作為使用者，能以對話形式互動獲取資訊!</br>不再需要透過才能關鍵字觸發回應。</br>而且這項服務支援多個語言可以輕鬆擴展對話機器人的服務範圍!
+                                    </h5>
+                                </div>
+                                <div class="mdc-card__actions">
+                                    <a href="https://dialogflow.com/" target="_blank" style="text-decoration:none;text-align: center;"><button class="mdc-button mdc-card__action mdc-card__action--button">
+				<div class="mdc-button__ripple"></div>
+				<span class="mdc-button__label",style="font-weight: bloder;"><i class="material-icons mdc-button__icon" aria-hidden="true">open_in_new</i>了解更多</span>
+			  </button></a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                </br>
+            </div>
+        </div>
+        <div style="background:#fdfdfd;height:15vh">
+        </div>
+
+        <div style="background:#1a73e8;height:auto">
+            <div class="container">
+                </br>
+                <table>
+                    <tr>
+                        <td align="center" style="width:30vw;height:auto">
+                            <img src="https://lh3.googleusercontent.com/pw/ACtC-3eal4SnKTK0_N_Q108NFl0X_798MJaKSm2yvDN2PQBj4m2kuMwC17iQSEhqg8IFYQKufQOWyqeawIHnIGGqM72pUZDQb6ZvLmPaMphOWOkprpsebdgo0WF2cMBGVnTHAvYhd_Kyh5jVAIkA1eQwqUjZLA=s192-no?authuser=0" class="image-icons" />
+                        </td>
+                        <td align="left" style="width:50vw;height:auto">
+                            <div class=" mdc-card" style="width:70vw;">
+                                <div class=" mdc-card mdc-card--outlined " style="padding: 10px 10px;">
+                                    <h1>Firebase</h1>
+                                    <div class="mdc-chip-set mdc-chip-set--filter" role="grid">
+                                        <div class="mdc-chip mdc-chip--selected" role="row">
+                                            <div class="mdc-chip__ripple"></div>
+                                            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
+                                            <span class="mdc-chip__checkmark">
+			  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30"><path class="mdc-chip__checkmark-path" fill="none" stroke="black"d="M1.73,12.91 8.1,19.28 22.79,4.59"/></svg>
+			</span>
+                                            <span role="gridcell">
+			  <span role="checkbox" tabindex="0" aria-checked="true" class="mdc-chip__primary-action">
+				<span class="mdc-chip__text">Cloud Functions</span>
+                                            </span>
+                                            </span>
+                                        </div>
+                                        <div class="mdc-chip mdc-chip--selected" role="row">
+                                            <div class="mdc-chip__ripple"></div>
+                                            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
+                                            <span class="mdc-chip__checkmark">
+			  <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30"><path class="mdc-chip__checkmark-path" fill="none" stroke="black"d="M1.73,12.91 8.1,19.28 22.79,4.59"/></svg>
+			</span>
+                                            <span role="gridcell">
+			  <span role="checkbox" tabindex="0" aria-checked="true" class="mdc-chip__primary-action">
+				<span class="mdc-chip__text">實時資料庫(Real-time database)</span>
+                                            </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h5>它是一個行動和網路應用程式開發者平台。</br>開發者能快速建立無伺服器的後端服務，</br>亦可透過該平台提供的資料庫工具進行跨裝置即時資料同步，</br>在對話機器人的應用上可以作為處理回應的終端。</br>
+                                    </h5>
+                                </div>
+                                <div class="mdc-card__actions">
+                                    <a href="https://firebase.google.com/?hl=zh-Hant" target="_blank" style="text-decoration:none;text-align: center;"><button class="mdc-button mdc-card__action mdc-card__action--button">
+				<div class="mdc-button__ripple"></div>
+				<span class="mdc-button__label",style="font-weight: bloder;"><i class="material-icons mdc-button__icon" aria-hidden="true">open_in_new</i>了解更多</span>
+			  </button></a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                </br>
+            </div>
+        </div>
+        <div style="background:#fdfdfd;height:30vh">
+            </br>
+            </br>
+            </br>
+            <div class="container">
+
+                <table>
+                    <tr>
+                        <td align="center" style="width:100;height:auto">
+                            <a href="https://assistant.google.com/explore/search?q=AtesX%20Team" target="_blank" style="text-decoration:none;"><button class="mdc-button mdc-button--raised" align="center">
+		  <span class="mdc-button__label">查看作品集</span>
+		 </button></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            </br>
+            </br>
+            </br>
+            </br>
+        </div>
+    </section>
+
+
+    <div id="copyright" class="container">
+        <p>圖片來自 <a href="http://shutterstock.com/">shutterstock</a></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <!-- Instantiate single textfield component rendered in the document -->
+    <script>
+        mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
+    </script>
+</body>
+
+</html>
