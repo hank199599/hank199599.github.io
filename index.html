@@ -125,91 +125,84 @@ The above copyright notice and this permission notice shall be included in all c
                 <br>
                 <br>
 
-                <div id="navigation-pills">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <ul class="nav nav-pills nav-pills-icons flex-column" role="tablist">
-                                        <!--
-                                        color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
-                                    -->
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="#eduction" role="tab" data-toggle="tab">
-                                                <i class="material-icons">school</i> 學歷
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#works" role="tab" data-toggle="tab">
-                                                <i class="material-icons">work</i> 工作經歷
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#schedule" role="tab" data-toggle="tab">
-                                                <i class="material-icons">today</i> 近期活動
-                                            </a>
-                                        </li>
-                                    </ul>
+                <div class="card card-nav-tabs card-plain">
+                    <div class="card-header card-header-success">
+                        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#eduction" data-toggle="tab">
+                                            <i class="material-icons">school</i> 學歷
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#works" data-toggle="tab">
+                                            <i class="material-icons">work</i> 工作經歷
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#schedule" data-toggle="tab">
+                                            <i class="material-icons">today</i> 近期活動
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="eduction">
+                                <div class="col-lg-12">
+
+                                    <table>
+                                        <tr>
+                                            <td><img src="./assets/img/NTUST.png" style="display: block;width:10vh;"></td>
+                                            <td></td>
+                                            <td>
+                                                <h3 class="title">國立台灣科技大學</br><small>資訊工程學系</br>碩士 • 2020-就讀中</small></h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="./assets/img/NCNU.png" style="display: block;width:10vh;"></td>
+                                            <td style="width: 5%;"></td>
+                                            <td>
+                                                <h3 class="title">國立暨南國際大學</br><small>應用材料與光電工程學系</br>學士 • 2013-2018</small></h3>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
-                                </br>
-                                </br>
-                                <div class="col-md-9">
-                                    <div class="tab-content">
-                                        <div class="tab-pane active" id="eduction">
-                                            <div class="col-lg-12">
-
-                                                <table>
-                                                    <tr>
-                                                        <td><img src="./assets/img/NTUST.png" style="display: block;width:10vh;"></td>
-                                                        <td></td>
-                                                        <td>
-                                                            <h3 class="title">國立台灣科技大學</br><small>資訊工程學系</br>碩士 • 2020-就讀中</small></h3>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><img src="./assets/img/NCNU.png" style="display: block;width:10vh;"></td>
-                                                        <td style="width: 5%;"></td>
-                                                        <td>
-                                                            <h3 class="title">國立暨南國際大學</br><small>應用材料與光電工程學系</br>學士 • 2013-2018</small></h3>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
+                            </div>
+                            <div class="tab-pane" id="works">
+                                <div class="col-lg-12">
+                                    <h3 class="title">教學助理(TA) </br>
+                                        <small> 國立暨南國際大學</br>2016/02~2018/06 • 2年5個月</small>
+                                    </h3>
+                                    <h3 class="title"> 工讀生</br>
+                                        <small>國立暨南國際大學 圖書館 </br>2014/12~2015/06 • 7個月</small>
+                                    </h3>
+                                    <h3 class="title">SONY手機論壇 版主 </br>
+                                        <small>apk.tw</br>2014/03~2016/06 • 2年4個月</small>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="schedule">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            </br>
+                                            <img src="./assets/img/gdg_taiwan_2020.png" alt="Raised Image" class="rounded img-fluid" style="display: flex;align-items: center; ">
                                         </div>
-                                        <div class="tab-pane" id="works">
-                                            <div class="col-lg-12">
-                                                <h3 class="title">教學助理(TA) </br>
-                                                    <small> 國立暨南國際大學</br>2016/02~2018/06 • 2年5個月</small>
-                                                </h3>
-                                                <h3 class="title"> 工讀生</br>
-                                                    <small>國立暨南國際大學 圖書館 </br>2014/12~2015/06 • 7個月</small>
-                                                </h3>
-                                                <h3 class="title">SONY手機論壇 版主 </br>
-                                                    <small>apk.tw</br>2014/03~2016/06 • 2年4個月</small>
-                                                </h3>
-                                            </div>
-                                        </div>
-
-                                        <div class="tab-pane" id="schedule">
-                                            <div class="col-lg-12">
-                                                <div class="row">
-                                                    <div class="col-lg-5">
-                                                        </br>
-                                                        <img src="./assets/img/gdg_taiwan_2020.png" alt="Raised Image" class="rounded img-fluid" style="display: flex;align-items: center; ">
-                                                    </div>
-                                                    <div class="col-lg-5">
-                                                        <h3 class="title">講者 </br>
-                                                            <small> DevFest Taiwan 2020</br>2020/10/17 • 台北(現場直播)</small>
-                                                            <br>
-                                                            <a href="https://gdg.community.dev/events/details/google-gdg-taipei-presents-devfest-taiwan-2020/#0" target="_blank">
-                                                                <button class="btn btn-primary btn-round">
-                                                        <i class="material-icons">launch</i> 官方頁面
-                                                        </button>
-                                                            </a>
-                                                        </h3>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <div class="col-lg-5">
+                                            <h3 class="title">講者 </br>
+                                                <small> DevFest Taiwan 2020</br>2020/10/17 • 台北(現場直播)</small>
+                                                <br>
+                                                <a href="https://gdg.community.dev/events/details/google-gdg-taipei-presents-devfest-taiwan-2020/#0" target="_blank">
+                                                    <button class="btn btn-primary btn-round">
+                                            <i class="material-icons">launch</i> 官方頁面
+                                            </button>
+                                                </a>
+                                            </h3>
                                         </div>
                                     </div>
                                 </div>
@@ -217,7 +210,6 @@ The above copyright notice and this permission notice shall be included in all c
                         </div>
                     </div>
                 </div>
-
 
                 <br>
                 <br>
