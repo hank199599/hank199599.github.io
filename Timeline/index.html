@@ -33,7 +33,7 @@ The above copyright notice and this permission notice shall be included in all c
     <link href="./main.css" rel="stylesheet" />
     <style type="text/css">
         .btn.btn-primary:focus,
-        .btn.btn-primary.focus,
+        .btn.btn-primary.active,
         .btn.btn-primary:hover {
             color: #fff;
             background-color: #2e3746;
@@ -49,12 +49,22 @@ The above copyright notice and this permission notice shall be included in all c
         .btn.btn-primary:focus,
         .btn.btn-primary:active,
         .btn.btn-primary:hover {
-            box-shadow: 0 14px 26px -12px rgba(33, 33, 33, 0.42), 0 4px 23px 0px rgba(33, 33, 33, 0.12), 0 8px 10px -5px rgba(39, 65, 176, 0.2);
+            box-shadow: 0 14px 26px -12px rgba(33, 33, 33, 0.42), 0 4px 23px 0px rgba(33, 33, 33, 0.12), 0 8px 10px -5px rgba(33, 33, 33, 0.2);
         }
         
         .btn.btn-primary {
             color: #fff;
             background-color: #2e3746;
+            border-color: #2e3746;
+            box-shadow: 0 2px 2px 0 rgba(33, 33, 33, 0.14), 0 3px 1px -2px rgba(33, 33, 33, 0.2), 0 1px 5px 0 rgba(33, 33, 33, 0.12);
+        }
+        
+        .btn.btn-primary:active,
+        .btn.btn-primary.active,
+        .open>.btn.btn-primary.dropdown-toggle,
+        .show>.btn.btn-primary.dropdown-toggle {
+            color: #fff;
+            background-color: #58595b;
             border-color: #2e3746;
             box-shadow: 0 2px 2px 0 rgba(33, 33, 33, 0.14), 0 3px 1px -2px rgba(33, 33, 33, 0.2), 0 1px 5px 0 rgba(33, 33, 33, 0.12);
         }
@@ -68,6 +78,27 @@ The above copyright notice and this permission notice shall be included in all c
             border-bottom-color: rgb(33, 33, 33);
             border-left-color: rgb(33, 33, 33);
             box-shadow: none;
+        }
+        
+        .btn.btn-primary:active:hover,
+        .btn.btn-primary:active:focus,
+        .btn.btn-primary:active.focus,
+        .btn.btn-primary.active:hover,
+        .btn.btn-primary.active:focus,
+        .btn.btn-primary.active.focus,
+        .open>.btn.btn-primary.dropdown-toggle:hover,
+        .open>.btn.btn-primary.dropdown-toggle:focus,
+        .open>.btn.btn-primary.dropdown-toggle.focus,
+        .show>.btn.btn-primary.dropdown-toggle:hover,
+        .show>.btn.btn-primary.dropdown-toggle:focus,
+        .show>.btn.btn-primary.dropdown-toggle.focus {
+            color: #fff;
+            background-color: #58595b;
+            border-color: #2e3746;
+        }
+        
+        .open>.btn.btn-primary.dropdown-toggle.bmd-btn-icon:hover {
+            background-color: #58595b;
         }
     </style>
 </head>
