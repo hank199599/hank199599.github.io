@@ -30,6 +30,11 @@ The above copyright notice and this permission notice shall be included in all c
     <link href="./assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="./assets/demo/demo.css" rel="stylesheet" />
+    <style type="text/css">
+        .bg-success {
+            background-color: #3e3da0 !important;
+        }
+    </style>
 </head>
 
 <body class="profile-page sidebar-collapse">
@@ -163,6 +168,9 @@ The above copyright notice and this permission notice shall be included in all c
                                             <td></td>
                                             <td>
                                                 <h3 class="title">國立台灣科技大學</br><small>資訊工程學系</br>碩士 • 2020-就讀中</small></h3>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 2%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="progressbar"></div>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -170,6 +178,9 @@ The above copyright notice and this permission notice shall be included in all c
                                             <td style="width: 5%;"></td>
                                             <td>
                                                 <h3 class="title">國立暨南國際大學</br><small>應用材料與光電工程學系</br>學士 • 2013-2018</small></h3>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
                                             </td>
                                         </tr>
                                     </table>
@@ -268,6 +279,38 @@ The above copyright notice and this permission notice shall be included in all c
     <script src="./assets/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
     <!--icon挿件 -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <!-- 進度條-->
+    <script>
+        var DateDiff = function(sDate1, sDate2) { // sDate1 和 sDate2 是 2016-06-18 格式
+            var aDate, oDate1, oDate2, iDays
+            aDate = sDate1.split("/")
+            oDate1 = new Date(aDate[1] + '/' + aDate[2] + '/' + aDate[0]) // 轉換為 06/18/2016 格式
+            aDate = sDate2.split("/")
+            oDate2 = new Date(aDate[1] + '/' + aDate[2] + '/' + aDate[0])
+            iDays = parseInt(Math.abs(oDate1 - oDate2) / 1000 / 60 / 60 / 24) // 把相差的毫秒數轉換為天數
+            return iDays;
+        };
+
+        var roundDecimal = function(val, precision) { //進行四捨五入的函式呼叫
+            return Math.round(Math.round(val * Math.pow(10, (precision || 0) + 1)) / 10) / Math.pow(10, (precision || 0));
+        };
+
+        function getDay() {
+            var today = new Date();
+            var nowTime = today.getTime() + 8 * 3600 * 1000;
+            today.setTime(parseInt(nowTime));
+            var oYear = today.getFullYear();
+            var oMoth = (today.getMonth() + 1).toString();
+            var oDay = today.getDate().toString();
+            return oYear + "/" + oMoth + '/' + oDay + '/';
+        }
+
+        var now = DateDiff("2020/9/14", getDay())
+        var total = DateDiff("2020/9/14", "2022/6/30")
+        var diff = roundDecimal((now / total) * 100, 1)
+        document.getElementById("progressbar").style["width"] = diff + "%";
+        document.getElementById("progressbar").style["width"] = diff + "%";
+    </script>
 
 </body>
 
