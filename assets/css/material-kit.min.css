@@ -14842,7 +14842,7 @@ h2.title {
 }
 
 .progress .progress-bar.progress-bar-success {
-    background: #4caf50
+    background: linear-gradient(60deg, #2741b0, #56388e)
 }
 
 .progress .progress-bar.progress-bar-warning {
