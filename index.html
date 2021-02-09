@@ -34,6 +34,26 @@ The above copyright notice and this permission notice shall be included in all c
         .bg-success {
             background-color: #3e3da0 !important;
         }
+        
+        label {
+            color: #000000;
+        }
+        
+        .form-check-input:disabled~.form-check-label {
+            color: #3e3da0;
+        }
+        
+        .form-check .form-check-input[disabled]~.check {
+            background-color: #3e3da0;
+        }
+        
+        .form-check .form-check-sign:before {
+            background-color: rgba(62, 61, 160, 0.84);
+        }
+        
+        .form-check .form-check-sign:before {
+            background-color: rgba(62, 61, 160, 0.84);
+        }
     </style>
 </head>
 
@@ -134,7 +154,7 @@ The above copyright notice and this permission notice shall be included in all c
 
                 <div class="card card-nav-tabs card-plain">
                     <div class="card-header card-header-success">
-                        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                        <!-- colors:"header-primary","header-info","header-success","header-warning","header-danger" -->
                         <div class="nav-tabs-navigation">
                             <div class="nav-tabs-wrapper">
                                 <ul class="nav nav-tabs" data-tabs="tabs">
@@ -146,6 +166,11 @@ The above copyright notice and this permission notice shall be included in all c
                                     <li class="nav-item">
                                         <a class="nav-link" href="#works" data-toggle="tab">
                                             <i class="material-icons">work</i> 工作經歷
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#code" data-toggle="tab">
+                                            <i class="material-icons">build</i> 技能
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -161,81 +186,313 @@ The above copyright notice and this permission notice shall be included in all c
                         <div class="tab-content">
                             <div class="tab-pane active" id="eduction">
                                 <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <div class="card" style="width: auto;">
+                                                <div class="card-body" style="padding: 15px 30px;">
 
-                                    <table>
-                                        <tr>
-                                            <td><img src="./assets/img/NTUST.png" style="display: block;width:10vh;"></td>
-                                            <td></td>
-                                            <td>
-                                                <h3 class="title">國立台灣科技大學</br><small>資訊工程學系</br>碩士 • 2020-就讀中</small></h3>
-                                                <div class="progress-wrapper">
-                                                    <div class="progress-info">
-                                                        <div id="progressnum">
-                                                            <span>40%</span>
-                                                        </div>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 2%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="progressbar"></div>
-                                                        </div>
-
-                                                    </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img src="./assets/img/NCNU.png" style="display: block;width:10vh;"></td>
-                                            <td style="width: 5%;"></td>
-                                            <td>
-                                                <h3 class="title">國立暨南國際大學</br><small>應用材料與光電工程學系</br>學士 • 2013-2018</small></h3>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="works">
-                                    <div class="col-lg-12">
-                                        <h3 class="title">教學助理(TA) </br>
-                                            <small> 國立暨南國際大學</br>2016/02~2018/06 • 2年5個月</small>
-                                        </h3>
-                                        <h3 class="title"> 工讀生</br>
-                                            <small>國立暨南國際大學 圖書館 </br>2014/12~2015/06 • 7個月</small>
-                                        </h3>
-                                        <h3 class="title">SONY手機論壇 版主 </br>
-                                            <small>apk.tw</br>2014/03~2016/06 • 2年4個月</small>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="schedule">
-                                    <div class="col-lg-12">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <br>
-                                                <p style="font-size: 200px; color:#2741b0">
-                                                    <span class="iconify" data-icon="simple-icons:tensorflow" data-inline="false"></span> </p>
+                                                    <table>
+                                                        <tr>
+                                                            <td><img src="./assets/img/NTUST.png" style="display: block;width:10vh;"></td>
+                                                            <td></td>
+                                                            <td>
+                                                                <h3 class="title">國立台灣科技大學</br><small>資訊工程學系</br>碩士 • 2020-就讀中</small></h3>
+                                                                <div class="progress-wrapper">
+                                                                    <div class="progress-info">
+                                                                        <div id="progressnum">
+                                                                            <span>40%</span>
+                                                                        </div>
+                                                                        <div class="progress">
+                                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 2%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="progressbar"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="./assets/img/NCNU.png" style="display: block;width:10vh;"></td>
+                                                            <td style="width: 5%;"></td>
+                                                            <td>
+                                                                <h3 class="title">國立暨南國際大學</br><small>應用材料與光電工程學系</br>學士 • 2013-2018</small></h3>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
                                             </div>
-                                            <div class="col-lg-5">
-                                                <h3 class="title">副召集人/講者 </br>
-                                                    <small> 「從Python到Tensorflow」線上讀書會</br>2020/11/10 ~ 現正進行中 • Google Meet</small>
-                                                    <br>
-                                                    <a href="https://tensorflowbookclub.ml/" target="_blank">
-                                                        <button class="btn btn-primary btn-round">
+                                        </div>
+                                        <div class="col-md">
+                                            <div class="card  text-center" style="width: auto;">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">TOEIC</h4>
+                                                    <h2 class="card-subtitle mb-2 " style="color: #6cadc4;"><b>825</b></h2>
+                                                    <h5><small>下載「<b>TOEIC成績單查驗</b>」應用程式<br>即可掃描下方QR CODE查驗資訊</small></h5>
+                                                    <img class="card-img-bottom" src="./assets/img/TOEIC VERIFY CODE.png" style="width: 199.675px;" /> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="works">
+                                <div class="col-lg-12">
+                                    <h3 class="title">教學助理(TA) </br>
+                                        <small> 國立暨南國際大學</br>2016/02~2018/06 • 2年5個月</small>
+                                    </h3>
+                                    <h3 class="title"> 工讀生</br>
+                                        <small>國立暨南國際大學 圖書館 </br>2014/12~2015/06 • 7個月</small>
+                                    </h3>
+                                    <h3 class="title">SONY手機論壇 版主 </br>
+                                        <small>apk.tw</br>2014/03~2016/06 • 2年4個月</small>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="code">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="card  text-center" style="width: auto;">
+                                            <div class="card-body">
+                                                <img class="card-img-top" src="../../assets/img/XPM_BADGING_GoogleAssistant_HOR.png" style="width: 20vw;">
+                                                <h4 class="card-title">Google Assistant Developer</h4>
+                                                <h4 class="card-subtitle mb-2 " style="color: #3e3da0;"><b>語音應用程式開發者</b><br><small></small></h4>
+                                                <h5><small> 是Google開發的智慧型個人助理。</br>在2018年10月16日於臺灣上線。</br>其後在隔年三月開放台灣的第三方程式可以與其介接。</br>
+                                                    在任意支援Google助理的裝置上都能無縫使用。</br>Google助理本身目前止已支援30+種語言，可以輕易提供跨語言的使用體驗。</small></h5>
+                                                <a href="./Projects/google_assistant/index.html" class="card-link">查看所有作品</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="row">
+                                            <div class="col-md">
+                                                <div class="card text-left" style="width: auto;">
+                                                    <div class="card-body" style="padding: 15px 30px;">
+                                                        <div class="info" style="padding: 0px 30px;">
+                                                            <div class="icon icon-primary">
+                                                                <i class="material-icons">code</i>
+                                                            </div>
+                                                            <div class="description" style="margin: 0px;">
+                                                                <h4 class="info-title" style="margin: auto;">程式語言</h4>
+                                                                <div id="checkRadios">
+                                                                    <div class="form-check disabled">
+                                                                        <label class="form-check-label">
+                                                                    <input class="form-check-input" type="checkbox" value="" disabled checked>
+                                                                    Python
+                                                                    <span class="form-check-sign">
+                                                                      <span class="check"></span>
+                                                                    </span>
+                                                                  </label>
+                                                                    </div>
+                                                                    <div class="form-check disabled">
+                                                                        <label class="form-check-label">
+                                                                    <input class="form-check-input" type="checkbox" value="" disabled checked>
+                                                                    Javascript
+                                                                    <span class="form-check-sign">
+                                                                      <span class="check"></span>
+                                                                    </span>
+                                                                  </label>
+                                                                    </div>
+                                                                    <div class="form-check disabled">
+                                                                        <label class="form-check-label">
+                                                                    <input class="form-check-input" type="checkbox" value="" disabled checked>
+                                                                    HTML5
+                                                                    <span class="form-check-sign">
+                                                                      <span class="check"></span>
+                                                                    </span>
+                                                                  </label>
+                                                                    </div>
+                                                                    <div class="form-check disabled">
+                                                                        <label class="form-check-label">
+                                                                    <input class="form-check-input" type="checkbox" value="" disabled checked>
+                                                                    CSS
+                                                                    <span class="form-check-sign">
+                                                                      <span class="check"></span>
+                                                                    </span>
+                                                                  </label>
+                                                                    </div>
+                                                                </div>
+                                                                <!--a href="#pablo">Find more...</a-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="card text-left" style="width: auto;">
+                                                    <div class="card-body" style="padding: 15px 30px;">
+                                                        <div class="info" style="padding: 0px 30px;">
+                                                            <div class="icon icon-primary">
+                                                                <i class="material-icons">crop_free</i>
+                                                            </div>
+                                                            <div class="description" style="margin: 0px;">
+                                                                <h4 class="info-title" style="margin: auto;">框架</h4>
+                                                                <div id="checkRadios">
+                                                                    <div class="form-check disabled">
+                                                                        <label class="form-check-label">
+                                                                    <input class="form-check-input" type="checkbox" value="" disabled checked>
+                                                                    Node.js
+                                                                    <span class="form-check-sign">
+                                                                      <span class="check"></span>
+                                                                    </span>
+                                                                  </label>
+                                                                    </div>
+                                                                    <div class="form-check disabled">
+                                                                        <label class="form-check-label">
+                                                                    <input class="form-check-input" type="checkbox" value="" disabled checked>
+                                                                    Keras
+                                                                    <span class="form-check-sign">
+                                                                      <span class="check"></span>
+                                                                    </span>
+                                                                  </label>
+                                                                    </div>
+                                                                </div>
+                                                                <!--a href="#pablo">Find more...</a-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md">
+                                                <div class="card text-left" style="width: auto;">
+                                                    <div class="card-body" style="padding: 15px 30px;">
+                                                        <div class="info" style="padding: 0px 30px;">
+                                                            <div class="icon icon-primary">
+                                                                <i class="material-icons">construction</i>
+                                                            </div>
+                                                            <div class="description" style="margin: 0px;">
+                                                                <h4 class="info-title" style="margin: auto;">開發者工具</h4>
+                                                                <div id="checkRadios">
+                                                                    <div class="form-check disabled">
+                                                                        <label class="form-check-label">
+                                                                    <input class="form-check-input" type="checkbox" value="" disabled checked>
+                                                                    Google Cloud Platform
+                                                                    <span class="form-check-sign">
+                                                                      <span class="check"></span>
+                                                                    </span>
+                                                                  </label>
+                                                                    </div>
+                                                                    <div class="form-check disabled">
+                                                                        <label class="form-check-label">
+                                                                    <input class="form-check-input" type="checkbox" value="" disabled checked>
+                                                                   Amazom AWS
+                                                                    <span class="form-check-sign">
+                                                                      <span class="check"></span>
+                                                                    </span>
+                                                                  </label>
+                                                                    </div>
+                                                                    <div class="form-check disabled">
+                                                                        <label class="form-check-label">
+                                                                    <input class="form-check-input" type="checkbox" value="" disabled checked>
+                                                                    Microsoft Azure
+                                                                    <span class="form-check-sign">
+                                                                      <span class="check"></span>
+                                                                    </span>
+                                                                  </label>
+                                                                    </div>
+                                                                    <div class="form-check disabled">
+                                                                        <label class="form-check-label">
+                                                                    <input class="form-check-input" type="checkbox" value="" disabled checked>
+                                                                    Firebase
+                                                                    <span class="form-check-sign">
+                                                                      <span class="check"></span>
+                                                                    </span>
+                                                                  </label>
+                                                                    </div>
+                                                                    <div class="form-check disabled">
+                                                                        <label class="form-check-label">
+                                                                    <input class="form-check-input" type="checkbox" value="" disabled checked>
+                                                                    Actions On Google
+                                                                    <span class="form-check-sign">
+                                                                      <span class="check"></span>
+                                                                    </span>
+                                                                  </label>
+                                                                    </div>
+                                                                    <div class="form-check disabled">
+                                                                        <label class="form-check-label">
+                                                                    <input class="form-check-input" type="checkbox" value="" disabled checked>
+                                                                    Dialogflow
+                                                                    <span class="form-check-sign">
+                                                                      <span class="check"></span>
+                                                                    </span>
+                                                                  </label>
+                                                                    </div>
+                                                                </div>
+                                                                <!--a href="#pablo">Find more...</a-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="card text-left" style="width: auto;">
+                                                    <div class="card-body" style="padding: 15px 30px;">
+                                                        <div class="info" style="padding: 0px 30px;">
+                                                            <div class="icon icon-primary">
+                                                                <i class="material-icons">architecture</i>
+                                                            </div>
+                                                            <div class="description" style="margin: 0px;">
+                                                                <h4 class="info-title" style="margin: auto;">ideas</h4>
+                                                                <div id="checkRadios">
+                                                                    <div class="form-check disabled">
+                                                                        <label class="form-check-label">
+                                                                    <input class="form-check-input" type="checkbox" value="" disabled checked>
+                                                                    NodePad++
+                                                                    <span class="form-check-sign">
+                                                                      <span class="check"></span>
+                                                                    </span>
+                                                                  </label>
+                                                                    </div>
+                                                                    <div class="form-check disabled">
+                                                                        <label class="form-check-label">
+                                                                    <input class="form-check-input" type="checkbox" value="" disabled checked>
+                                                                   VS code
+                                                                    <span class="form-check-sign">
+                                                                      <span class="check"></span>
+                                                                    </span>
+                                                                  </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="schedule">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <br>
+                                            <p style="font-size: 200px; color:#2741b0">
+                                                <span class="iconify" data-icon="simple-icons:tensorflow" data-inline="false"></span> </p>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <h3 class="title">副召集人/講者 </br>
+                                                <small> 「從Python到Tensorflow」線上讀書會</br>2020/11/10 ~ 現正進行中 • Google Meet</small>
+                                                <br>
+                                                <a href="https://tensorflowbookclub.ml/" target="_blank">
+                                                    <button class="btn btn-primary btn-round">
                                                         參與讀書會 <i class="material-icons">launch</i>
                                             </button>
-                                                    </a>
-                                                </h3>
-                                            </div>
+                                                </a>
+                                            </h3>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <br>
-                    <br>
-                    <br>
-
                 </div>
+
+                <br>
+                <br>
+                <br>
+
             </div>
         </div>
+    </div>
     </div>
     </div>
     </div>
@@ -313,7 +570,7 @@ The above copyright notice and this permission notice shall be included in all c
         var total = DateDiff("2020/9/14", "2022/6/30")
         var diff = roundDecimal((now / total) * 100, 1)
         document.getElementById("progressbar").style["width"] = diff + "%";
-        document.getElementById("progressnum").innerHTML = "現在進度 • " + diff + "%";
+        document.getElementById("progressnum").innerHTML = "現在進度 •" + diff + "%";
     </script>
 
 </body>
