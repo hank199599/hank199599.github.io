@@ -175,11 +175,18 @@ The above copyright notice and this permission notice shall be included in all c
         <div class="container">
             <div class="row">
                 <div class="col-md-10 mr-auto ml-auto">
-
-                    <h3><b>學習紀錄</b></br>
-                        <small>學習歷程記錄與線上展示</small>
-                    </h3>
-
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3><b>學習紀錄</b></br>
+                                <small>學習歷程記錄與線上展示</small>
+                            </h3>
+                        </div>
+                        <div class="col-md-4" style="display: flex;align-items: center; ">
+                            <button class="btn btn-block btn-warning" data-toggle="modal" data-target="#Colab_detail">
+                                有關 Colab
+                            </button>
+                        </div>
+                    </div>
                     <div class="card card-nav-tabs">
                         <div class="card-header card-header-primary">
                             <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
@@ -704,7 +711,31 @@ The above copyright notice and this permission notice shall be included in all c
                 </script>, 使用由
                 <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a> 提供的設計工具
             </div>
-
+        </div>
+        <div class="modal fade" id="Colab_detail" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content" style="text-align: left;">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Colaboratory</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="material-icons">clear</i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <span class="badge badge-pill badge-secondary">Python</span>
+                        <span class="badge badge-pill badge-secondary">TensorFlow</span>
+                        <p>
+                            </br>它是一個免費的Jupyter Notebook環境。</br>它在雲端運行，並將筆記本存儲在Google雲端硬碟上。</br>
+                            具備下列優點： </br>- 不必進行任何設定 </br>- 免費使用 GPU </br>- 輕鬆共用
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-link"><a href="https://colab.research.google.com/"
+                                target="_blank">立即體驗Colab</a></button>
+                        <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">關閉</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
     <!--   Core JS Files   -->
