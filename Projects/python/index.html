@@ -86,6 +86,12 @@ The above copyright notice and this permission notice shall be included in all c
         .card.card-rotate.bg-primary .back {
             background: linear-gradient( 60deg, #4b7597, #356c99);
         }
+        
+        .nav-pills .nav-item .nav-link.active {
+            color: #ffffff;
+            background-color: #356c99;
+            box-shadow: 0 5px 20px 0px rgb(0 0 0 / 20%), 0 13px 24px -11px rgb(39 65 176 / 60%);
+        }
     </style>
 </head>
 
@@ -187,11 +193,29 @@ The above copyright notice and this permission notice shall be included in all c
                             </button>
                         </div>
                     </div>
+                    <div class="profile-tabs">
+                        <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#python" role="tab" data-toggle="tab">
+                                    <i class="fab fa-python"></i> Python 基礎
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#data_science" role="tab" data-toggle="tab">
+                                    <i class="fas fa-chart-bar"></i> 資料科學
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tensorflow" role="tab" data-toggle="tab">
+                                    <i class="fas fa-cogs"></i> 機器學習
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="card card-nav-tabs">
-                        <div class="card-header card-header-primary">
-                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-                            <div class="nav-tabs-navigation">
-                                <div class="nav-tabs-wrapper">
+                        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+
+                        <!--div class="nav-tabs-wrapper">
                                     <ul class="nav nav-tabs" data-tabs="tabs">
                                         <li class="nav-item">
                                             <a class="nav-link active" href="#python" data-toggle="tab">Python 基礎</a>
@@ -203,12 +227,12 @@ The above copyright notice and this permission notice shall be included in all c
                                             <a class="nav-link" href="#tensorflow" data-toggle="tab">TensorFlow</a>
                                         </li>
                                     </ul>
-                                </div>
-                            </div>
-                        </div>
+                                </div-->
+
                         <div class="card-body">
                             <div class="tab-content text-center">
                                 <div class="tab-pane active" id="python">
+                                    <h3 style="margin-bottom: 0rem !important;" class="text-center"><small><b>精通 Python：運用簡單的套件進行現代運算（第二版）</b></small></h3>
                                     <table class="table" style="text-align: left;">
                                         <thead>
                                             <tr>
@@ -333,6 +357,7 @@ The above copyright notice and this permission notice shall be included in all c
                                     </table>
                                 </div>
                                 <div class="tab-pane" id="data_science">
+                                    <h3 style="margin-bottom: 0rem !important;" class="text-center"><small><b>Data Science from Scratch中文版（第二版）</b></small></h3>
                                     <table class="table" style="text-align: left;">
                                         <thead>
                                             <tr>
@@ -578,6 +603,7 @@ The above copyright notice and this permission notice shall be included in all c
                                     </table>
                                 </div>
                                 <div class="tab-pane" id="tensorflow">
+                                    <h3 style="margin-bottom: 0rem !important;" class="text-center"><small><b>Deep learning 深度學習必讀：<br>Keras 大神帶你用 Python 實作</b></small></h3>
                                     <table class="table" style="text-align: left;">
                                         <thead>
                                             <tr>
@@ -752,6 +778,7 @@ The above copyright notice and this permission notice shall be included in all c
     <script src="../../assets/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
     <!--icon挿件 -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://kit.fontawesome.com/28b9df9e1d.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
