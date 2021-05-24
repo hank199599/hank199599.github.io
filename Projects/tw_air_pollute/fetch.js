@@ -16,24 +16,6 @@ function picture_generator(number) {
     }
 }
 
-function big_picture_generator(number) {
-    if (number >= 0 && number <= 50) {
-        return "https://dummyimage.com/1037x539/1e9165/ffffff.png&text=" + number;
-    } else if (number >= 51 && number <= 100) {
-        return "https://dummyimage.com/1037x539/fc920b/ffffff.png&text=" + number;
-    } else if (number >= 100 && number <= 150) {
-        return "https://dummyimage.com/1037x539/ef4621/ffffff.png&text=" + number;
-    } else if (number >= 151 && number <= 199) {
-        return "https://dummyimage.com/1037x539/b71411/ffffff.png&text=" + number;
-    } else if (number >= 200 && number <= 300) {
-        return "https://dummyimage.com/1037x539/5b0e31/ffffff.png&text=" + number;
-    } else if (number > 301) {
-        return "https://dummyimage.com/1037x539/4f1770/ffffff.png&text=" + number;
-    } else {
-        return "https://dummyimage.com/1037x539/232830/ffffff.png&text=NaN";
-    }
-}
-
 function info_generator(number) {
 
     if (number >= 0 && number <= 50) {
