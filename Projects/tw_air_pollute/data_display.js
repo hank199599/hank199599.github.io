@@ -6,7 +6,7 @@ var firebaseConfig = {
     projectId: "b1a2b-krmfch",
     storageBucket: "b1a2b-krmfch.appspot.com",
     messagingSenderId: "777443303063",
-    appId: "1:777443303063:web:ad45bae1d1dd1f85ded3d2"
+    appId: "1:777443303063:web:da8a0160d289078cded3d2"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
