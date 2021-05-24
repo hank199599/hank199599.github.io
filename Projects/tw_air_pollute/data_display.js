@@ -78,13 +78,14 @@ myData.once('value', function(snapshot) {
                 '</button>' +
                 '</div>' +
                 '<div class="modal-body" style="padding-top: 0;">' +
-                '<table><tr><td style="width:70%">' +
+                '<table><tr><td style="width:60%">' +
                 '<h2  style="margin: 0 0 ">' + station + '</h2>' +
                 '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data.AQI) + '</small></h3>' +
-                '<p class="card-text">' + info_generator(data.AQI) + '</p>' +
+                '<p class="card-text">' + info_output_generator(data.AQI) + '</p>' +
                 '<p class="card-text" style="margin: 0 0 "> PM₁₀ ' + data.PM10 + '(μg/m³) • PM₂.₅ ' + data.PM25 + '(μg/m³) • 臭氧 ' + data.O3 + '(ppb) </p>' +
-                '</td><td>' +
-                '<img class="img-container" src="' + picture_generator(data.AQI) + '" rel="nofollow" style="width:80%;" alt="Card image cap">' +
+                '</td>' +
+                '<td style="width:40%">' +
+                '<img class="img-container" src="' + picture_generator(data.AQI) + '" rel="nofollow" style="width:100%; padding:20px 20px" alt="Card image cap">' +
                 '</td></tr></table>' + '</div>' +
                 '<div class="modal-footer">' +
                 '<button type="button" class="btn btn-danger btn-link" data-dismiss="modal">關閉頁面</button>' +

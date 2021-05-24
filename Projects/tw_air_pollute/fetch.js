@@ -16,24 +16,6 @@ function picture_generator(number) {
     }
 }
 
-function info_generator(number) {
-
-    if (number >= 0 && number <= 50) {
-        return "對一般民眾身體健康無影響。";
-    } else if (number >= 51 && number <= 100) {
-        return "可能對極敏感族群產生咳嗽或呼吸急促等症狀，但仍可正常戶外活動。";
-    } else if (number >= 101 && number <= 150) {
-        return "若出現眼痛，咳嗽或喉嚨痛等症狀，英減少戶外活動，避免在戶外劇烈運動，敏感族群必要外出時英配戴口罩。";
-    } else if (number >= 151 && number <= 199) {
-        return "若出現眼痛，咳嗽或喉嚨痛等症狀，英減少體力消耗及戶外活動，在戶外避免長時間劇烈運動，敏感族群建議留在室內並減少體力消耗活動，必要外出英配戴口罩。"
-    } else if (number >= 200 && number <= 300) {
-        return "對敏感族群會有明顯惡化的現象，建議留在室內並減少體力消耗活動；一般大眾則視身體狀況，可能產生眼睛不適、氣喘、咳嗽、痰多、喉痛等症狀。";
-    } else if (number > 301) {
-        return "健康威脅達到緊急，所有人都可能受到影響。應避免戶外活動，室內應緊閉門窗，必要外出應配戴口罩等防護用具。應避免戶外活動，室內應緊閉門窗，必要外出應配戴口罩等防護用具。";
-    }
-
-}
-
 function info_output_generator(number) {
     if (number >= 0 && number <= 50) {
         return "對一般民眾身體健康無影響。";
