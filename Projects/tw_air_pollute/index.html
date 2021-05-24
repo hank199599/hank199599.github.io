@@ -12,7 +12,7 @@ Coded by Creative Tim
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="utf-8" />
@@ -20,7 +20,7 @@ The above copyright notice and this permission notice shall be included in all c
     <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Material Kit by Creative Tim
+        空汙查詢精靈
     </title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' station='viewport' />
     <!--     Fonts and icons     -->
@@ -45,7 +45,7 @@ The above copyright notice and this permission notice shall be included in all c
         <div class="container">
             <div class="navbar-translate">
                 <a class="navbar-brand" href="../../index.html">
-                   Google Assistant Voice APP</a>
+                   Air Pollute Index</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="navbar-toggler-icon"></span>
@@ -117,9 +117,9 @@ The above copyright notice and this permission notice shall be included in all c
     <div class="page-header header-filter" data-parallax="true" style="background-image: url('../../assets/img/air_pollute.jpg')">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" id="weather_report">
                     <h1 class="title">現在天氣概況</h1>
-                    <div id="weather_report"></div>
+                    <h4>資料獲取中...</h4>
                 </div>
             </div>
         </div>
@@ -141,7 +141,21 @@ The above copyright notice and this permission notice shall be included in all c
                         <div class="card-body ">
                             <div class="tab-content text-center" id="county_content">
                                 <div class="tab-pane active" id="臺北市">
-                                    資料載入中...
+                                    <div class="col-md-3 ml-auto mr-auto">
+                                        <div class="card">
+                                            <div class="card-body" style="padding: 0;">
+                                                <img class="card-img-top" src="https://dummyimage.com/1933x1068/232830/ffffff.png&text=NaN" rel="nofollow" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <p class="card-text">
+                                                        <h3 class="card-title" style="margin: 0 0 "> station </h3>
+                                                        <h2 class="card-text" style="margin: 0 0 "><small class="text-muted"> status_generator(data.AQI) </small></h2>
+                                                        <h7 class="card-text"> info_output_generator(data.AQI) </h7>
+                                                    </p>
+                                                    <a href="# station " data-toggle="modal">詳細資訊</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>;
                                 </div>
                             </div>
                         </div>
@@ -211,6 +225,7 @@ The above copyright notice and this permission notice shall be included in all c
     <script src="../../assets/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
     <!--icon挿件 -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <!--天氣資訊讀取套件 -->
     <script src="./fetch.js"></script>
     <script>
         // Your web app's Firebase configuration
@@ -290,7 +305,7 @@ The above copyright notice and this permission notice shall be included in all c
 
             var snapshot_data = snapshot.val();
 
-            document.getElementById("weather_report").innerHTML = snapshot_data.report + "<br><br> 更新時間 •  <b>" + FormatTime() + '</b>';
+            document.getElementById("weather_report").innerHTML = '<h1 class="title">現在天氣概況</h1><h4>' + snapshot_data.report + "<br><br> 更新時間 •  <b>" + FormatTime() + '</b></h4>';
 
             var mobile_array = machine(Object.keys(snapshot_data.data))
 
