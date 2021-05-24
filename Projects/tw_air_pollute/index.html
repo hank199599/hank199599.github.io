@@ -122,6 +122,8 @@ The above copyright notice and this permission notice shall be included in all c
                     <h4>資料獲取中...</h4>
                 </div>
             </div>
+            <a href="https://assistant.google.com/services/invoke/uid/000000fa049fc5e5" class="btn btn-white btn-round"><b><span class="iconify" data-icon="mdi-google-assistant" target="_blank" data-inline="false"></span>&emsp;Try it on Google Assistant</b></a>
+
         </div>
     </div>
     <div class="main main-raised">
@@ -206,146 +208,8 @@ The above copyright notice and this permission notice shall be included in all c
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <!--天氣資訊讀取套件 -->
     <script src="./fetch.js"></script>
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyD7QTtDBeC-O0tjPGfr6HjO-tK3Qz8J_L0",
-            authDomain: "b1a2b-krmfch.firebaseapp.com",
-            databaseURL: "https://b1a2b-krmfch.firebaseio.com",
-            projectId: "b1a2b-krmfch",
-            storageBucket: "b1a2b-krmfch.appspot.com",
-            messagingSenderId: "777443303063",
-            appId: "1:777443303063:web:ad45bae1d1dd1f85ded3d2"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-
-        var database = firebase.database();
-        var test_list = {
-            "臺北市": ["士林", "大同", "中山", "古亭", "松山", "陽明", "萬華"],
-            "基隆市": ["基隆"],
-            "新北市": ["三重", "土城", "永和", "汐止", "板橋", "林口", "淡水", "富貴角", "菜寮", "新店", "新莊", "萬里"],
-            "桃園市": ["大園", "中壢", "平鎮", "桃園", "龍潭", "觀音"],
-            "新竹縣市": ["新竹", "竹東", "湖口"],
-            "苗栗縣": ["三義", "苗栗", "頭份"],
-            "臺中市": ["大里", "西屯", "沙鹿", "忠明", "豐原"],
-            "彰化縣": ["二林", "彰化", "線西", "大城"],
-            "南投縣": ["竹山", "南投", "埔里"],
-            "雲林縣": ["斗六", "崙背", "麥寮", "臺西"],
-            "嘉義縣市": ["嘉義", "朴子", "新港"],
-            "臺南市": ["安南", "善化", "新營", "臺南"],
-            "高雄市": ["美濃", "橋頭", "楠梓", "仁武", "左營", "前金", "鳳山", "復興", "前鎮", "小港", "大寮", "林園"],
-            "屏東縣": ["屏東", "恆春", "潮州"],
-            "宜蘭縣": ["冬山", "宜蘭"],
-            "花蓮縣": ["花蓮"],
-            "臺東縣": ["臺東", "關山"],
-            "離島地區": ["金門", "馬公", "馬祖"]
-        };
-        var tab_list = {
-            "臺北市": "Taipei",
-            "基隆市": "Keelung",
-            "新北市": "New_Taipei",
-            "桃園市": "Taoyuan",
-            "新竹縣市": "Hsinchu",
-            "苗栗縣": "Miaoli",
-            "臺中市": "Taichung",
-            "彰化縣": "Changhua",
-            "南投縣": "Nantou",
-            "雲林縣": "Yunlin",
-            "嘉義縣市": "Chiayi",
-            "臺南市": "Tainan ",
-            "高雄市": "Kaohsiung ",
-            "屏東縣": "Pingtung ",
-            "宜蘭縣": "Yilan",
-            "花蓮縣": "Hualien",
-            "臺東縣": "Taitung",
-            "離島地區": "Outlying_islands"
-        }
-        var county_list = Object.keys(test_list);
-        var nav_items = '';
-        var nav_content = '';
-        var modal_content = '';
-        for (var i = 0; i < county_list.length; i++) {
-            nav_items = nav_items + '<li class="nav-item';
-            nav_content = nav_content + '<div class="tab-pane';
-            if (i === 0) {
-                nav_items = nav_items + ' active'
-                nav_content = nav_content + ' active'
-            }
-            nav_items = nav_items + '" > <a class="nav-link" href="#' + tab_list[county_list[i]] + '" data-toggle="tab">' + county_list[i] + '</a></li>'
-            nav_content = nav_content + '" id="' + tab_list[county_list[i]] + '">' + '<p></p></div>'
-        }
-        document.getElementById('county_list').innerHTML = nav_items
-        document.getElementById('county_content').innerHTML = nav_content
-
-        var myData = firebase.database().ref('/TWair');
-
-        myData.once('value', function(snapshot) {
-
-            var snapshot_data = snapshot.val();
-
-            document.getElementById("weather_report").innerHTML = '<h1 class="title">現在天氣概況</h1><h4>' + snapshot_data.report + "<br><br> 更新時間 •  <b>" + FormatTime() + '</b></h4>';
-
-            var mobile_array = machine(Object.keys(snapshot_data.data))
-
-            for (var i = 0; i < county_list.length; i++) {
-                var station_array = test_list[county_list[i]];
-                var content = '';
-                station_array = station_array.concat(matcher(county_list[i], mobile_array))
-
-                for (var j = 0; j < station_array.length; j++) {
-                    var station = station_array[j];
-                    var data = snapshot_data.data[station];
-
-                    if (station.indexOf('(') !== -1) {
-                        station = station.split('(')[1].replace(')', '(行動站)')
-                    }
-
-                    content = content +
-                        '<div class="col-md-3 ml-auto mr-auto">' +
-                        '<div class="card">' +
-                        '<div class="card-body" style="padding: 0;">' +
-                        '<img class="card-img-top" src="' + picture_generator(data.AQI) + '" rel="nofollow" alt="Card image cap">' +
-                        ' <div class = "card-body" >' +
-                        '<p class = "card-text">' +
-                        '<h3 class="card-title" style="margin: 0 0 ">' + station + '</h3>' +
-                        '<h2 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data.AQI) + '</small></h2>' +
-                        '<h7 class="card-text">' + info_output_generator(data.AQI) + '</h7>' +
-                        '</p>' +
-                        '<a href="#' + station + '"  data-toggle="modal" >詳細資訊</a>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>';
-                    modal_content = modal_content +
-                        '<div class="modal fade" id="' + station + '" tabindex="-1" role="dialog">' +
-                        '<div class="modal-dialog modal-dialog-centered" role="document">' +
-                        '<div class="modal-content">' +
-                        '<div class="modal-header">' +
-                        '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
-                        '<i class="material-icons">clear</i>' +
-                        '</button>' +
-                        '</div>' +
-                        '<div class="modal-body" style="padding-top: 0;">' +
-                        '<h2  style="margin: 0 0 ">' + station + '</h2>' +
-                        '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data.AQI) + '</small></h3>' +
-                        '<p class="card-text">' + info_generator(data.AQI) + '</p>' +
-                        '<p class="card-text" style="margin: 0 0 "> PM₁₀ ' + data.PM10 + '(μg/m³) • PM₂.₅ ' + data.PM25 + '(μg/m³) • 臭氧 ' + data.O3 + '(ppb) </p>' +
-                        '</div>' +
-                        '<div class="modal-footer">' +
-                        '<button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>' +
-                        '</div>'
-                }
-
-                document.getElementById(tab_list[county_list[i]]).innerHTML = '<div class="row">' + content + '</div>'
-            }
-
-            document.getElementById('modal creator').innerHTML = modal_content
-        })
-    </script>
+    <script src="./json.js"></script>
+    <script src="./data_display.js"></script>
 </body>
 
 </html>
