@@ -68,6 +68,7 @@ myData.once('value', function(snapshot) {
                 '</div>' +
                 '</div>' +
                 '</div>';
+
             modal_content = modal_content +
                 '<div class="modal fade" id="' + station + '" tabindex="-1" role="dialog">' +
                 '<div class="modal-dialog modal-dialog-centered" role="document">' +
@@ -80,7 +81,11 @@ myData.once('value', function(snapshot) {
                 '<div class="modal-body" style="padding-top: 0;">' +
                 '<table><tr><td style="width:60%">' +
                 '<h2  style="margin: 0 0 ">' + station + '</h2>' +
-                '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data.AQI) + '</small></h3>' +
+                '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data.AQI)
+            if (data.AQI > 50) {
+                modal_content = modal_content + ' • ' + pollutant_dict[data.Pollutant];
+            }
+            modal_content = modal_content + '</small></h3>' +
                 '<p class="card-text">' + info_output_generator(data.AQI) + '</p>'
             if (status_generator(data.AQI) !== "有效數據不足") {
                 modal_content = modal_content + '<p class="card-text" style="margin: 0 0 "> PM₁₀ ' + data.PM10 + '(μg/m³) • PM₂.₅ ' + data.PM25 + '(μg/m³) • 臭氧 ' + data.O3 + '(ppb) </p>'
