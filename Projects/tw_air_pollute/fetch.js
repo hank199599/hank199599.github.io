@@ -1,5 +1,5 @@
 function picture_generator(number) {
-    if (number >= 0 && number <= 50) {
+    if (number > 0 && number <= 50) {
         return "https://dummyimage.com/1933x1068/1e9165/ffffff.png&text=" + number;
     } else if (number >= 51 && number <= 100) {
         return "https://dummyimage.com/1933x1068/fc920b/ffffff.png&text=" + number;
@@ -17,7 +17,7 @@ function picture_generator(number) {
 }
 
 function info_output_generator(number) {
-    if (number >= 0 && number <= 50) {
+    if (number > 0 && number <= 50) {
         return "對一般民眾身體健康無影響。";
     } else if (number >= 51 && number <= 100) {
         return "極特殊敏感族群建議注意  <br>可能產生的咳嗽或呼吸急促症狀。";
@@ -29,11 +29,13 @@ function info_output_generator(number) {
         return "1.一般民眾應減少戶外活動。  <br>2.學生應立即停止戶外活動，並將課程調整於室內進行。  <br>3.有心臟、呼吸道及心血管疾病患者、孩童及老年人應留在室內並減少體力消耗活動，外出應配戴口罩。  <br>4.具有氣喘的人應增加使用吸入劑的頻率。";
     } else if (number > 301) {
         return "1.一般民眾應避免戶外活動，室內應緊閉門窗，必要外出應配戴口罩等防護用具。  <br>2.學生應立即停止戶外活動，並將課程調整於室內進行。  <br>3.有心臟、呼吸道及心血管疾病患者、孩童及老年人應留在室內並避免體力消耗活動，外出應配戴口罩。  <br>4.具有氣喘的人應增加使用吸入劑的頻率。";
+    } else {
+        return "設備維護、儀器校正、儀器異常、傳輸異常、電力異常 \n或有效數據不足等需查修維護情形，以致資料暫時中斷服務。"
     }
 }
 
 function status_generator(number) {
-    if (number >= 0 && number <= 50) {
+    if (number > 0 && number <= 50) {
         return "良好";
     } else if (number >= 51 && number <= 100) {
         return "普通";
