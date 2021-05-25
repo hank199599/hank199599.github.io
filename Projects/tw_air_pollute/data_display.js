@@ -58,11 +58,18 @@ myData.once('value', function(snapshot) {
                 '<div class="card">' +
                 '<div class="card-body" style="padding: 0;">' +
                 '<img class="card-img-top" src="' + picture_generator(data.AQI) + '" rel="nofollow" alt="Card image cap">' +
-                ' <div class = "card-body" >' +
+                ' <div class = "card-body" style="padding : 5px 5px;">' +
                 '<p class = "card-text">' +
                 '<h2 class="card-title" style="margin: 0 0 ">' + station + '</h2>' +
                 '<h2 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data.AQI) + '</small></h2>' +
                 '</p>' +
+                '</div>' +
+                '<div class="center" style="' +
+                'padding: 1.25rem 1.5rem;' +
+                'background-color: #f6f9fc;' +
+                'border-top: 0.0625rem solid rgba(0, 0, 0, 0.05);' +
+                'text-align: center !important;' +
+                '">' +
                 '<a href="#' + station + '"  data-toggle="modal" >詳細資訊</a>' +
                 '</div>' +
                 '</div>' +
