@@ -38,3 +38,9 @@ var tab_list = {
     "臺東縣": "Taitung",
     "離島地區": "Outlying_islands"
 }
+
+var pollutant_dict = {
+    "臭氧八小時": "臭氧 (O₃)",
+    "細懸浮微粒": "細懸浮微粒(PM₂.₅)",
+    "懸浮微粒": "懸浮微粒(PM₁₀)"
+}
