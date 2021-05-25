@@ -36,7 +36,7 @@ myData.once('value', function(snapshot) {
 
     var snapshot_data = snapshot.val();
 
-    document.getElementById("weather_report").innerHTML = '<h1 class="title">現在天氣概況</h1><h4>' + snapshot_data.report + "<br><br> 更新時間 •  <b>" + FormatTime() + '</b></h4>';
+    document.getElementById("weather_report").innerHTML = '<h1 class="title">現在空品概況</h1><h4>' + snapshot_data.report + "<br><br> 更新時間 •  <b>" + FormatTime() + '</b></h4>';
 
     var mobile_array = machine(Object.keys(snapshot_data.data))
 
