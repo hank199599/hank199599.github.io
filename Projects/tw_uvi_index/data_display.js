@@ -30,38 +30,30 @@ for (var i = 0; i < county_list.length; i++) {
 document.getElementById('county_list').innerHTML = nav_items
 document.getElementById('county_content').innerHTML = nav_content
 
-var myData = firebase.database().ref('/TWair');
+var myData = firebase.database().ref('/TWuvi');
 
 myData.on('value', function(snapshot) {
 
     var snapshot_data = snapshot.val();
-
-    document.getElementById("weather_report").innerHTML = '<h1 class="title">全台空氣品質概要</h1><h4>' + snapshot_data.report + "<br><br> 更新時間 •  <b>" + FormatTime() + '</b></h4>';
-
-    var mobile_array = machine(Object.keys(snapshot_data.data))
+    document.getElementById("uvi_report").innerHTML = '<h1 class="title">紫外線指數查詢精靈</h1>更新時間 •  <b>' + snapshot_data.PublishTime + '</b></h4>';
 
     for (var i = 0; i < county_list.length; i++) {
         var station_array = test_list[county_list[i]];
         var content = '';
-        station_array = station_array.concat(matcher(county_list[i], mobile_array))
 
         for (var j = 0; j < station_array.length; j++) {
             var station = station_array[j];
             var data = snapshot_data.data[station];
 
-            if (station.indexOf('(') !== -1) {
-                station = station.split('(')[1].replace(')', '(行動站)')
-            }
-
             content = content +
                 '<div class="col-md-3 ml-auto mr-auto">' +
                 '<div class="card">' +
                 '<div class="card-body" style="padding: 0;">' +
-                '<img class="card-img-top" src="' + picture_generator(data.AQI) + '" rel="nofollow" alt="Card image cap">' +
+                '<img class="card-img-top" src="' + picture_generator(data) + '" rel="nofollow" alt="Card image cap">' +
                 ' <div class = "card-body" style="padding : 5px 5px;">' +
                 '<p class = "card-text">' +
                 '<h2 class="card-title" style="margin: 0 0 ">' + station + '</h2>' +
-                '<h2 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data.AQI) + '</small></h2>' +
+                '<h2 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data) + '</small></h2>' +
                 '</p>' +
                 '</div>' +
                 '<div class="center" style="' +
@@ -88,18 +80,11 @@ myData.on('value', function(snapshot) {
                 '<div class="modal-body" style="padding-top: 0;">' +
                 '<table><tr><td style="width:60%">' +
                 '<h2  style="margin: 0 0 ">' + station + '</h2>' +
-                '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data.AQI)
-            if (data.AQI > 50) {
-                modal_content = modal_content + ' • ' + pollutant_dict[data.Pollutant];
-            }
-            modal_content = modal_content + '</small></h3>' +
-                '<p class="card-text">' + info_output_generator(data.AQI) + '</p>'
-            if (status_generator(data.AQI) !== "有效數據不足") {
-                modal_content = modal_content + '<p class="card-text" style="margin: 0 0 "> PM₁₀ ' + data.PM10 + '(μg/m³) • PM₂.₅ ' + data.PM25 + '(μg/m³) • 臭氧 ' + data.O3 + '(ppb) </p>'
-            }
-            modal_content = modal_content + '</td>' +
+                '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data) + '</small></h3>' +
+                '<p class="card-text">' + info_output_generator(data) + '</p>' +
+                '</td>' +
                 '<td style="width:40%">' +
-                '<img class="img-container" src="' + picture_generator(data.AQI) + '" rel="nofollow" style="width:100%; padding:20px 20px" alt="Card image cap">' +
+                '<img class="img-container" src="' + picture_generator(data) + '" rel="nofollow" style="width:100%; padding:20px 20px" alt="Card image cap">' +
                 '</td></tr></table>' + '</div>' +
                 '<div class="modal-footer">' +
                 '<button type="button" class="btn btn-danger btn-link" data-dismiss="modal">關閉頁面</button>' +
