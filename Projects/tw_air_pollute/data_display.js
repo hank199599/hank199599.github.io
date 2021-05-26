@@ -61,7 +61,7 @@ myData.on('value', function(snapshot) {
                 ' <div class = "card-body" style="padding : 5px 5px;">' +
                 '<p class = "card-text">' +
                 '<h2 class="card-title" style="margin: 0 0 ">' + station + '</h2>' +
-                '<h2 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data.AQI) + '</small></h2>' +
+                '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data.AQI) + '</small></h3>' +
                 '</p>' +
                 '</div>' +
                 '<div class="center" style="' +
@@ -86,7 +86,7 @@ myData.on('value', function(snapshot) {
                 '</button>' +
                 '</div>' +
                 '<div class="modal-body" style="padding-top: 0;">' +
-                '<table><tr><td style="width:60%">' +
+                '<div class="row"><div class="col-md-6 ml-auto mr-auto">' +
                 '<h2  style="margin: 0 0 ">' + station + '</h2>' +
                 '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data.AQI)
             if (data.AQI > 50) {
@@ -97,10 +97,11 @@ myData.on('value', function(snapshot) {
             if (status_generator(data.AQI) !== "有效數據不足") {
                 modal_content = modal_content + '<p class="card-text" style="margin: 0 0 "> PM₁₀ ' + data.PM10 + '(μg/m³) • PM₂.₅ ' + data.PM25 + '(μg/m³) • 臭氧 ' + data.O3 + '(ppb) </p>'
             }
-            modal_content = modal_content + '</td>' +
-                '<td style="width:40%">' +
-                '<img class="img-container" src="' + picture_generator(data.AQI) + '" rel="nofollow" style="width:100%; padding:20px 20px" alt="Card image cap">' +
-                '</td></tr></table>' + '</div>' +
+            modal_content = modal_content + '</div>' +
+                '<div class="col-md-4 ml-auto mr-auto">' +
+                '<img class="img-container" src="' + picture_generator(data.AQI) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
+                '</div></div>' +
+                '</div>' +
                 '<div class="modal-footer">' +
                 '<button type="button" class="btn btn-danger btn-link" data-dismiss="modal">關閉頁面</button>' +
                 '</div>' +
