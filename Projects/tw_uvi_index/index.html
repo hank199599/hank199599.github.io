@@ -16,7 +16,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 <head>
     <title>
-        空汙查詢精靈 | 網頁版
+        紫外線精靈 | 網頁版
     </title>
     <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
@@ -35,7 +35,7 @@ The above copyright notice and this permission notice shall be included in all c
         .card.bg-info,
         .card.card-rotate.bg-info .front,
         .card.card-rotate.bg-info .back {
-            background: linear-gradient(60deg, #292d2e, #424444);
+            background: linear-gradient(60deg, #010316, #11132b);
         }
         
         .dropdown-menu .dropdown-item:hover,
@@ -47,12 +47,12 @@ The above copyright notice and this permission notice shall be included in all c
         .dropdown-menu a:focus,
         .dropdown-menu a:active {
             box-shadow: 0 4px 20px 0px rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(39 65 176 / 40%);
-            background-color: #292d2e;
+            background-color: #010316;
             color: #fff !important;
         }
         
         a {
-            color: #292d2e;
+            color: #010316;
         }
     </style>
 </head>
@@ -62,7 +62,7 @@ The above copyright notice and this permission notice shall be included in all c
         <div class="container">
             <div class="navbar-translate">
                 <a class="navbar-brand" href="../../index.html">
-                    Air Pollute Index</a>
+                    UVI Index Service</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="navbar-toggler-icon"></span>
@@ -101,10 +101,10 @@ The above copyright notice and this permission notice shall be included in all c
                             <a href="../../Projects/python/index.html" class="dropdown-item">
                                 <span class="iconify" data-icon="simple-icons:python" data-inline="false"></span>&emsp;Python學習紀錄
                             </a>
-                            <a href="../../Projects/tw_air_pollute/index.html" class="dropdown-item active">
+                            <a href="../../Projects/tw_air_pollute/index.html" class="dropdown-item">
                                 <span class="iconify" data-icon="oi-cloud" data-inline="false"></span>&emsp;空汙即時查詢
                             </a>
-                            <a href="../../Projects/tw_uvi_index/index.html" class="dropdown-item">
+                            <a href="../../Projects/tw_uvi_index/index.html" class="dropdown-item active">
                                 <span class="iconify" data-icon="uil-sun" data-inline="false"></span>&emsp;紫外線即時查詢
                             </a>
                         </div>
@@ -133,15 +133,14 @@ The above copyright notice and this permission notice shall be included in all c
             </div>
         </div>
     </nav>
-    <div class="page-header" data-parallax="true" style="background-image: url('../../assets/img/air_pollute.jpg')">
+    <div class="page-header" data-parallax="true" style="background-image: url('https://raw.githubusercontent.com/hank199599/Google-Assistant-APP/master/%E7%B4%AB%E5%A4%96%E7%B7%9A%E7%B2%BE%E9%9D%88/assets/0Is452b.jpg')">
         <div class="container">
             <div class="row">
-                <div class="col-md-6" id="weather_report">
-                    <h1 class="title">全台空氣品質概要</h1>
-                    <h4>資料獲取中...</h4>
+                <div class="col-md-6" id="uvi_report">
+                    <h1 class="title">紫外線指數查詢精靈</h1>
                 </div>
             </div>
-            <a href="https://assistant.google.com/services/invoke/uid/000000fa049fc5e5" class="btn btn-white btn-round" target="_blank"><b><span class="iconify" data-icon="mdi-google-assistant" data-inline="false"></span>&emsp;Try it on Google Assistant</b></a>
+            <a href="https://assistant.google.com/services/invoke/uid/00000008b2c308d2" class="btn btn-white btn-round" target="_blank"><b><span class="iconify" data-icon="mdi-google-assistant" data-inline="false"></span>&emsp;Try it on Google Assistant</b></a>
 
         </div>
     </div>
