@@ -16,7 +16,6 @@ var database = firebase.database();
 var county_list = Object.keys(test_list);
 var nav_items = '';
 var nav_content = '';
-var modal_content = '';
 for (var i = 0; i < county_list.length; i++) {
     nav_items = nav_items + '<li class="nav-item" > <a class="nav-link';
     nav_content = nav_content + '<div class="tab-pane';
@@ -36,6 +35,7 @@ myData.on('value', function(snapshot) {
 
     var snapshot_data = snapshot.val();
     document.getElementById("uvi_report").innerHTML = '<h1 class="title">紫外線精靈</h1><h4>更新時間 •  <b>' + snapshot_data.PublishTime + '</b></h4>';
+    var modal_content = '';
 
     for (var i = 0; i < county_list.length; i++) {
         var station_array = test_list[county_list[i]];
