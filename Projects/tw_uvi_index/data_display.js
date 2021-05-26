@@ -35,7 +35,7 @@ var myData = firebase.database().ref('/TWuvi');
 myData.on('value', function(snapshot) {
 
     var snapshot_data = snapshot.val();
-    document.getElementById("uvi_report").innerHTML = '<h1 class="title">紫外線指數查詢精靈</h1>更新時間 •  <b>' + snapshot_data.PublishTime + '</b></h4>';
+    document.getElementById("uvi_report").innerHTML = '<h1 class="title">紫外線精靈</h1><h4>更新時間 •  <b>' + snapshot_data.PublishTime + '</b></h4>';
 
     for (var i = 0; i < county_list.length; i++) {
         var station_array = test_list[county_list[i]];
