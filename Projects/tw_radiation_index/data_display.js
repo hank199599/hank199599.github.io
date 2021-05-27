@@ -80,13 +80,13 @@ myData.on('value', function(snapshot) {
                 '<div class="modal-body" style="padding-top: 0;">' +
                 '<div class="row"><div class="col-md-6 ml-auto mr-auto">' +
                 '<h2  style="margin: 0 0 ">' + station + '</h2>' +
-                '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(parseFloat(data)) + '</small></h3>' +
+                '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data) + '</small></h3>' +
                 '<p class="card-text">' + info_output_generator(data) + '</p>' +
                 '<br><br>' +
                 '<p> 更新時間 •  ' + snapshot_data.PublishTime[station_list.indexOf(station)] + '</p>' +
                 '</div>' +
                 '<div class="col-md-4 ml-auto mr-auto">' +
-                '<img class="img-container" src="' + picture_generator(data) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
+                '<img class="img-container" src="' + picture_generator(parseFloat(data)) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
                 '</div></div>' +
                 '</div>' +
                 '<div class="modal-footer">' +
