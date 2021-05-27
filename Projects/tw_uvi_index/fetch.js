@@ -1,18 +1,8 @@
 function picture_generator(UVI) {
-    if (UVI === 0) {
-        return "https://dummyimage.com/1037x539/1e9165/ffffff.png&text=%200%20";
-    } else if (UVI > 0 && UVI < 3) {
-        return "https://dummyimage.com/1037x539/1e9165/ffffff.png&text=" + UVI;
-    } else if (UVI >= 3 && UVI < 6) {
-        return "https://dummyimage.com/1037x539/fc920b/ffffff.png&text=" + UVI;
-    } else if (UVI >= 6 && UVI < 8) {
-        return "https://dummyimage.com/1037x539/ef4621/ffffff.png&text=" + UVI;
-    } else if (UVI >= 8 && UVI < 11) {
-        return "https://dummyimage.com/1037x539/b71411/ffffff.png&text=" + UVI;
-    } else if (UVI >= 11) {
-        return "https://dummyimage.com/1037x539/4f1770/ffffff.png&text=" + UVI;
+    if (UVI >= 0 && UVI <= 15) {
+        return "https://raw.githubusercontent.com/hank199599/Google-Assistant-APP/master/%E7%B4%AB%E5%A4%96%E7%B7%9A%E7%B2%BE%E9%9D%88/UVI/small/" + UVI + ".jpg";
     } else {
-        return "https://dummyimage.com/1037x539/232830/ffffff.png&text=NaN"
+        return "https://raw.githubusercontent.com/hank199599/Google-Assistant-APP/master/%E7%B4%AB%E5%A4%96%E7%B7%9A%E7%B2%BE%E9%9D%88/UVI/small/NaN.jpg"
     }
 }
 
