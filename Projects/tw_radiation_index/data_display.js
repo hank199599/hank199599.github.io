@@ -86,7 +86,7 @@ myData.on('value', function(snapshot) {
                 '<p> 更新時間 •  ' + data["PublishTime"] + '</p>' +
                 '</div>' +
                 '<div class="col-md-4 ml-auto mr-auto">' +
-                '<img class="img-container" src="' + picture_generator(parseFloat(data)) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
+                '<img class="img-container" src="' + picture_generator(parseFloat(data["SVC"])) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
                 '</div></div>' +
                 '</div>' +
                 '<div class="modal-footer">' +
