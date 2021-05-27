@@ -49,7 +49,7 @@ myData.on('value', function(snapshot) {
                 '<div class="col-md-3 ml-auto mr-auto">' +
                 '<div class="card">' +
                 '<div class="card-body" style="padding: 0;">' +
-                '<img class="card-img-top" src="' + picture_generator(data) + '" rel="nofollow" alt="Card image cap">' +
+                '<img class="card-img-top" src="' + picture_generator(parseFloat(data)) + '" rel="nofollow" alt="Card image cap">' +
                 ' <div class = "card-body" style="padding : 5px 5px;">' +
                 '<p class = "card-text">' +
                 '<h2 class="card-title" style="margin: 0 0 ">' + station + '</h2>' +
@@ -80,7 +80,7 @@ myData.on('value', function(snapshot) {
                 '<div class="modal-body" style="padding-top: 0;">' +
                 '<div class="row"><div class="col-md-6 ml-auto mr-auto">' +
                 '<h2  style="margin: 0 0 ">' + station + '</h2>' +
-                '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data) + '</small></h3>' +
+                '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(parseFloat(data)) + '</small></h3>' +
                 '<p class="card-text">' + info_output_generator(data) + '</p>' +
                 '<br><br>' +
                 '<p> 更新時間 •  ' + snapshot_data.PublishTime[station_list.indexOf(station)] + '</p>' +
