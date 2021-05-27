@@ -1,14 +1,9 @@
 function picture_generator(number) {
-    if (number < 0.2) {
-        return "https://dummyimage.com/1933x1068/1e9165/ffffff.png&text=" + number;
-    } else if (number >= 0.2 && number < 20) {
-        return "https://dummyimage.com/1933x1068/fc920b/ffffff.png&text=" + number;
-    } else if (number >= 20) {
-        return "https://dummyimage.com/1933x1068/b71411/ffffff.png&text=" + number;
+    if (number >= 0) {
+        return "https://raw.githubusercontent.com/hank199599/Google-Assistant-APP/master/%E8%BC%BB%E5%B0%84%E7%B2%BE%E9%9D%88/SVC/big/" + number + ".jpg";
     } else {
-        return "https://dummyimage.com/1933x1068/232830/ffffff.png&text=NaN"
+        return "https://raw.githubusercontent.com/hank199599/Google-Assistant-APP/master/%E8%BC%BB%E5%B0%84%E7%B2%BE%E9%9D%88/SVC/big/NaN.jpg"
     }
-
 }
 
 function info_output_generator(number) {
