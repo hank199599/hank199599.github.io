@@ -34,7 +34,7 @@ var myData = firebase.database().ref('/TWradiation');
 myData.on('value', function(snapshot) {
 
     var snapshot_data = snapshot.val();
-    document.getElementById("uvi_report").innerHTML = '<h1 class="title">輻射精靈</h1><h4>更新時間 •  <b>' + snapshot_data.PublishTime[0] + '</b></h4>';
+    document.getElementById("uvi_report").innerHTML = '<h1 class="title">輻射精靈</h1><h4>更新時間 •  <b>' + snapshot_data.PublishTime + '</b></h4>';
     var modal_content = '';
 
     for (var i = 0; i < county_list.length; i++) {
@@ -43,17 +43,17 @@ myData.on('value', function(snapshot) {
 
         for (var j = 0; j < station_array.length; j++) {
             var station = station_array[j];
-            var data = snapshot_data.data[station_list.indexOf(station)];
+            var data = snapshot_data.data[station];
 
             content = content +
                 '<div class="col-md-3 ml-auto mr-auto">' +
                 '<div class="card">' +
                 '<div class="card-body" style="padding: 0;">' +
-                '<img class="card-img-top" src="' + picture_generator(parseFloat(data)) + '" rel="nofollow" alt="Card image cap">' +
+                '<img class="card-img-top" src="' + picture_generator(parseFloat(data["SVC"])) + '" rel="nofollow" alt="Card image cap">' +
                 ' <div class = "card-body" style="padding : 5px 5px;">' +
                 '<p class = "card-text">' +
                 '<h2 class="card-title" style="margin: 0 0 ">' + station + '</h2>' +
-                '<h2 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data) + '</small></h2>' +
+                '<h2 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data["SVC"]) + '</small></h2>' +
                 '</p>' +
                 '</div>' +
                 '<div class="center" style="' +
@@ -80,10 +80,10 @@ myData.on('value', function(snapshot) {
                 '<div class="modal-body" style="padding-top: 0;">' +
                 '<div class="row"><div class="col-md-6 ml-auto mr-auto">' +
                 '<h2  style="margin: 0 0 ">' + station + '</h2>' +
-                '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data) + '</small></h3>' +
-                '<p class="card-text">' + info_output_generator(data) + '</p>' +
+                '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data["SVC"]) + '</small></h3>' +
+                '<p class="card-text">' + info_output_generator(data["SVC"]) + '</p>' +
                 '<br><br>' +
-                '<p> 更新時間 •  ' + snapshot_data.PublishTime[station_list.indexOf(station)] + '</p>' +
+                '<p> 更新時間 •  ' + data["PublishTime"] + '</p>' +
                 '</div>' +
                 '<div class="col-md-4 ml-auto mr-auto">' +
                 '<img class="img-container" src="' + picture_generator(parseFloat(data)) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
