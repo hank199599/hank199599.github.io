@@ -164,7 +164,7 @@ var detail_dict = {
         "src": "https://lh3.googleusercontent.com/Hs7eFeeWgCKl_-Ir4ngXl3lXkLeG7SLrQKo84kMIfOONu4A6zpa6OftHrZNBDoMVYqoT151huMjt=s90",
         "Titile": "國際太空站",
         "Language": ["中文(台灣)", "廣東話"],
-        "content": "<div class='blockquote undefined'>製作緣由</br>仿造美國區的「ISS Info」Action<br>1.查詢國際太空站目前所在位置</br>2.查詢所在位置何時能看見國際太空站</br>3.查詢國際太空站上有幾個人</br>4.可自動判斷是否是「直接查詢」來決定是否要繼續對話",
+        "content": "<div class='blockquote undefined'>製作緣由</br>仿造美國區的「ISS Info」Action</div><br>1.查詢國際太空站目前所在位置</br>2.查詢所在位置何時能看見國際太空站</br>3.查詢國際太空站上有幾個人</br>4.可自動判斷是否是「直接查詢」來決定是否要繼續對話",
         "Github_link": "https://github.com/hank199599/Google-Assistant-APP/tree/master/國際太空站",
         "Action_link": "https://assistant.google.com/services/invoke/uid/000000ee35748109"
     },
@@ -188,7 +188,7 @@ var detail_dict = {
         "src": "https://lh3.googleusercontent.com/I_NnCp30icOJul74LqvuhrXakeM0xhFWBKp0nRQ8dGMoqAqg4BSmwG4UyRvZYpTuluSfXS-CERDu=s90",
         "Titile": "郵遞區號查詢器",
         "Language": ["中文(台灣)"],
-        "content": "透過政府資料開放平台取得各縣市的郵遞區號資訊，</br>本服務提供使用者以口語快速查詢所需測站，</br>或是透過區域查詢、GPS查詢等方式尋找測站。</br>也可以加入日常安排以自定義的詞彙呼叫本服務。</br> <div class='blockquote undefined'> 有關五碼郵遞區號查詢</br>這是由台灣 3+2郵遞區號 查詢所提供的查詢服務。</br>透過他們所開放的API來查詢任意地址的五碼郵遞區號",
+        "content": "透過政府資料開放平台取得各縣市的郵遞區號資訊，</br>本服務提供使用者以口語快速查詢所需測站，</br>或是透過區域查詢、GPS查詢等方式尋找測站。</br>也可以加入日常安排以自定義的詞彙呼叫本服務。</br> <div class='blockquote undefined'> 有關五碼郵遞區號查詢</br>這是由台灣 3+2郵遞區號 查詢所提供的查詢服務。</br>透過他們所開放的API來查詢任意地址的五碼郵遞區號</div>",
         "Github_link": "https://github.com/hank199599/Google-Assistant-APP/tree/master/郵遞區號查詢器",
         "Action_link": "https://assistant.google.com/services/invoke/uid/000000ccf8e1037c"
     },
@@ -257,7 +257,7 @@ var detail_dict = {
         "Action_link": "https://assistant.google.com/services/invoke/uid/000000971a4ed57e"
     },
     "TW_WG_Translator": {
-        "src ": "https://lh3.googleusercontent.com/cf1EkCmbRkqQ_ghf8h-SwKs7pBHwEPwJPbNDCveVBewPLCfeWJXsuoJHK5QkrgLEWkAcz5xOYI9U=s90",
+        "src": "https://lh3.googleusercontent.com/cf1EkCmbRkqQ_ghf8h-SwKs7pBHwEPwJPbNDCveVBewPLCfeWJXsuoJHK5QkrgLEWkAcz5xOYI9U=s90",
         "Titile": "護照英文翻譯機",
         "Language": ["中文(台灣)"],
         "content": "使用來自外交部的「護照外文姓名拼音對照表」，</br>提供快速便捷的翻譯功能!",
