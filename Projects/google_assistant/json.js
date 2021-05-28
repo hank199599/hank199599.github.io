@@ -1,3 +1,17 @@
+var tab_dict = {
+    "food": { "tag": "fastfood", "name": "取得餐飲建議" },
+    "school": { "tag": "school", "name": "參考資料" },
+    "reader": { "tag": "chrome_reader_mode", "name": "朗讀語錄" },
+    "color_lens": { "tag": "color_lens", "name": "藝術與生活品味" },
+    "sports_esports": { "tag": "sports_esports", "name": "休閒娛樂" },
+    "science": { "tag": "science", "name": "科技資訊" },
+    "public": { "tag": "public", "name": "公共資訊" },
+    "cloud": { "tag": "cloud", "name": "查詢天氣資訊" },
+    "translate": { "tag": "translate", "name": "進行翻譯" },
+    "date_range": { "tag": "date_range", "name": "提升生產力" }
+}
+
+
 var detail_dict = {
     "Food_Decider": {
         "src": "https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81",
