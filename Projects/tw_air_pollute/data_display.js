@@ -36,7 +36,7 @@ myData.on('value', function(snapshot) {
 
     var snapshot_data = snapshot.val();
 
-    document.getElementById("weather_report").innerHTML = '<h1 class="title">全台空氣品質概要</h1><h4>' + snapshot_data.report + "<br><br></h4><h4> 更新時間 •  <b>" + FormatTime() + '</b></h4>';
+    document.getElementById("weather_report").innerHTML = '<h4>' + snapshot_data.report + '</h4>';
 
     var mobile_array = machine(Object.keys(snapshot_data.data))
     var modal_content = '';
