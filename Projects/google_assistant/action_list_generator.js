@@ -1,9 +1,7 @@
 var action_list = Object.keys(detail_dict)
-
 var modal_content = "";
 
 for (var i = 0; i < action_list.length; i++) {
-
     var temp = detail_dict[action_list[i]]
 
     var badge_content = "";
@@ -53,4 +51,5 @@ for (var i = 0; i < action_list.length; i++) {
         '</div>'
 }
 
+display_generator("中文(台灣)")
 document.getElementById('Action_details').innerHTML = modal_content

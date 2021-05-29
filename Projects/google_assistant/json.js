@@ -11,6 +11,66 @@ var tab_dict = {
     "date_range": { "tag": "date_range", "name": "提升生產力" }
 }
 
+var langeuage_dict={
+    "中文(台灣)":{
+        "food":["Food_Decider"],
+        "school":["Daily_History","Taiwan_Dictoinary",  "Taiwan_Rail_Dictoinary","Cangjie_Dictoinary"],
+        "reader":["Positive_Quote","Negative_Quote","Today_Quote"],
+        "color_lens":["NASA_daily","Fortune_Master"],
+        "sports_esports":["Brain_Game","Riddle_Game","Number_Elf","1A2B","Flag_Game","text_solitaire","idiom_solitaire","easy_text_solitaire","24_points"],
+        "science":["Insight_Station","ISS_Info", "Google_Trend","Moon_info"],
+        "public":["Zip_code","Blood_Index","Power_Index"],
+        "cloud":["TW_AQI_index",  "TW_UVI_index","TW_Radiation_index", "TW_Sea_Waether","World_AQI_index","TW_Weather_helper"],
+        "translate":["TW_WG_Translator","Morse_Translator","Binary_Translator"],
+        "date_range":["Invoice-redemptioner"]
+    },
+    "廣東話":{
+        "food":["Food_Decider"],
+        "school":["Cangjie_Dictoinary"],
+        "color_lens":["NASA_daily","Fortune_Master"],
+        "sports_esports":["Number_Elf","1A2B","24_points"],
+        "science":["Insight_Station","ISS_Info", "Google_Trend"],
+        "cloud":["World_AQI_index"],
+        "translate":["Morse_Translator","Binary_Translator"],
+    },
+    "英文":{
+        "food":["Food_Decider"],
+        "sports_esports":["Number_Elf","1A2B"],
+        "science":["Insight_Station", "Google_Trend"]
+    },
+    "日文":{
+        "food":["Food_Decider"],
+        "sports_esports":["Number_Elf","1A2B"],
+        "cloud":["World_AQI_index"],
+        "science":["Insight_Station", "Google_Trend"]
+    },
+    "韓文":{
+        "sports_esports":["Number_Elf","1A2B"],
+        "cloud":["World_AQI_index"],
+        "science":["Insight_Station", "Google_Trend"]
+    },
+    "泰文":{
+        "sports_esports":["Number_Elf","1A2B"],
+        "cloud":["World_AQI_index"],
+        "science":["Insight_Station", "Google_Trend"]
+    },
+    "德文":{
+        "sports_esports":["Number_Elf"],
+        "science":["Insight_Station", "Google_Trend"]
+    },
+    "西班牙文":{
+        "science":["Insight_Station", "Google_Trend"]
+    },
+    "荷蘭文":{
+        "science":["Insight_Station", "Google_Trend"]
+    },
+    "丹麥文":{
+        "science":["Insight_Station", "Google_Trend"]
+    },
+    "法文":{
+        "science":["Insight_Station", "Google_Trend"]
+    }
+}
 
 var detail_dict = {
     "Food_Decider": {
