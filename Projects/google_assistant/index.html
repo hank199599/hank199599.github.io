@@ -133,252 +133,61 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
     <div class="main main-raised">
         <div class="container">
-
             <div class="row">
                 <div class="col-md-10 mr-auto ml-auto">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <h3><b>作品總覽</b></br>
                                 <small>能依據使用者語系自動切換回應語言!</small>
                             </h3>
                         </div>
-                        <div class="col-md-4" style="display: flex;align-items: center; ">
+                        <!--div class="col-md-4" style="display: flex;align-items: center; ">
                             <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#Assistant_detail">
                                 有關 Google語音助理
                             </button>
-                        </div>
+                        </div-->
+                       
+                    <div class="col-md-2" style="display: flex; align-items: center; ">
+                        <ul class="nav">
+                            <li class="nav-item dropdown">
+                                <a class="btn btn-block btn-primary btn-lg nav-link dropdown-toggle" href="javascript:;" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                選擇對應語系
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="display_generator('中文(台灣)');">中文(台灣)</a>
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="display_generator('廣東話');">廣東話</a>
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="display_generator('日文');">日文</a>
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="display_generator('韓文');">韓文</a>
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="display_generator('泰文');">泰文</a>
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="display_generator('德文');">德文</a>
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="display_generator('西班牙文');">西班牙文</a>
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="display_generator('荷蘭文');">荷蘭文</a>
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="display_generator('丹麥文');">丹麥文</a>
+                                <a class="dropdown-item" href="javascript:void(0)" onclick="display_generator('法文');">法文</a>
+                                </div>
+                            </li>
+                      </ul>
                     </div>
+                </div>
                     <div class="card card-nav-tabs">
                         <div class="card-header card-header-success">
                             <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
                             <div class="nav-tabs-navigation">
-                                <div class="nav-tabs-wrapper">
-                                    <ul class="nav nav-tabs" data-tabs="tabs">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="#food" data-toggle="tab">
-                                                <i class="material-icons">fastfood</i> 取得餐飲建議
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#school" data-toggle="tab">
-                                                <i class="material-icons">school</i> 參考資料
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#reader" data-toggle="tab">
-                                                <i class="material-icons">chrome_reader_mode</i> 朗讀語錄
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#color_lens" data-toggle="tab">
-                                                <i class="material-icons">color_lens</i> 藝術與生活品味
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#sports_esports" data-toggle="tab">
-                                                <i class="material-icons">sports_esports</i> 休閒娛樂
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#science" data-toggle="tab">
-                                                <i class="material-icons">science</i> 科技資訊
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#public" data-toggle="tab">
-                                                <i class="material-icons">public</i> 公共資訊
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#cloud" data-toggle="tab">
-                                                <i class="material-icons">cloud</i> 查詢天氣資訊
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#translate" data-toggle="tab">
-                                                <i class="material-icons">translate</i> 進行翻譯
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#date_range" data-toggle="tab">
-                                                <i class="material-icons">date_range</i> 提升生產力
-                                            </a>
-                                        </li>
-                                    </ul>
+                                <div id="navbar-brand" style="
+                                margin-bottom: 20px;
+                                margin-left: 10px;
+                                padding: 0px 0px;
+                                border: 5px;
+                                font-size: 2.25rem;">中文(台灣)</div>
+
+                                <div class="nav-tabs-wrapper" id="nav_items">
+                                    <!--透過JS自動生成內容-->
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body ">
-                            <div class="tab-content text-center">
-                                <div class="tab-pane active" id="food">
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Food_Decider"><img
-                                            src="https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81"
-                                            data-toggle="tooltip" data-placement="top" title="Google官方推薦"
-                                            data-container="body" />
-                                    </button>
-                                </div>
-                                <div class="tab-pane" id="school">
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Daily_History">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/1U6-HhkKdaVzPMMsz5XmKZ31lTnOkXWz4eTuDcNTejlgatqouaKoniXkxfMC0AKvRx4wSjHmynvs=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Taiwan_Dictoinary">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/b5mi7bsFMvz5vbzdQYkGvRTCZQlwgCOvIlmNAds6dvjuLGwC-gzhYDMowSi7_e4OR1o9fY0ecBY=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Taiwan_Rail_Dictoinary">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/RD6WQND-5BmBiDt2UfnbrqnMIWquswEXE1hySqSCBHwLMgQLeS0taGu6y2Ezgqnr-ADzo637fVp1=s90" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Cangjie_Dictoinary">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/UVAu76LGBKhH-4DRHihBAQhF3tKBrjxr1ZE3n2N_o2QPbCSpbYl8Ue6_TD5YULulFmwupCoRbhI1=s90" />
-                                    </button>
-                                </div>
-                                <div class="tab-pane" id="reader">
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Positive_Quote">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/XAylvXmY2tTWiQVtuwbcan_nno8pM7q9Qro6aEBECzTEN-x8jqAjuMm-ZqL_qCVvvkYhgw1_VVNI=s90" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Negative_Quote">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/9eRDWvPEh3jeQmuBcpiXtX4gH9yTGqvyO1ur_PQ-K7H9KiR6A24zluD7ENZeIr0nNvshlOLH-yrw=s90" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Today_Quote">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/DPDoPBFLpDglYGoU2zNdzACtOFfE-rsPvK2kJC1jA_scJTJM69x8SmycybTIipNMC0LsJdz06j5qwQ=s90" />
-                                    </button>
-                                </div>
-                                <div class="tab-pane" id="color_lens">
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#NASA_daily">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/NnDqEoQYzER27FJ8X-6fAxdRkSQ35j6MbiMfwMu5V_tqLZDopKQ1YcCPMLwwmIA-WQmEFaJ1Y6YA=s90" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Fortune_Master">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/hKT5442d4Mmrmx6tCPV6Ft-ZUwvR6zps3pmArImOjbCTKS5SjQM_bvUEmYixA8fDzwCwJoAPmR5I=s90" />
-                                    </button>
-                                </div>
-                                <div class="tab-pane" id="sports_esports">
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Brain_Game">
-                                        <img src="https://lh3.googleusercontent.com/IC_vSx1qVU6iTofmMzVjUIDjEcQ33KicmwUQS8CInXLghiMVayuCmn2aXEMTqp6DTrg7fbFLBxUT=s81"
-                                            data-toggle="tooltip" data-placement="top" title="Google官方推薦"
-                                            data-container="body" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Riddle_Game">
-                                        <img src="https://lh3.googleusercontent.com/5Iy10xZI4gE58MPb2-j5Sd6SrKPg7dSHzcfp7woqTqQiHf4w4dh6r-UPALvtp0X38NtKNt8zsguz=s81"
-                                            data-toggle="tooltip" data-placement="top" title="Google官方推薦"
-                                            data-container="body" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Number_Elf">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/98fcN9pEn4mfaJJxil5jvKD6PADUa7d2LfMexZriVgMxXw47y8_If3bxuhibtClnscx4TvE0d7cP=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#1A2B">
-                                        <img src="https://lh3.googleusercontent.com/37WMonxA2I_uxBu1YQNZ6QGikAIvYLYAz_3xQf5pzKI-ce8ziO7zT-0fGeddbXGL-ggwQvYS37zH7A=s81"
-                                            data-toggle="tooltip" data-placement="top" title="Google官方推薦"
-                                            data-container="body" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Flag_Game">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/8p8IQ-hEspewNRYI77jtHy7W1cM8jBWP6lVxLXXqQ9K5GjwCxlIOqUx3QxGLx8_gyuoQq_MUXFVxmQ=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#text_solitaire">
-                                        <img src="https://lh3.googleusercontent.com/Cc6BaW2bvr3i7N5V0pPb9RDtIZo8wIVFPFPV9Ev9tWtYgMvRBf8kCnhBpldEV-dG0eqDNlchpXQlhw=s81"
-                                            data-toggle="tooltip" data-placement="top" title="Google官方推薦"
-                                            data-container="body" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#idiom_solitaire">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/jgOHyXLYLFSqbnQFpS8ax8Y_I0nT7UYcPqyzSNjoOBx0Od3CnMQ05OiL6DV8rg_L2gHrVgyt9CY1=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#easy_text_solitaire">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/RaAMZ5KmCKWojxT-Zv-dwv5Pxqpvgc-sdWIgp_E0HOGyXERr0btrkcxQQRZJ4FLPAERm8q1XbuQ=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#24_points">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/CceE_F175HAi1aWL5cA6wFCJMi85emmsVkUdyMfr1t7WqdegcVHZKaFUtLm7fZBjewXO4aSGU_eDdw=s90" />
-                                    </button>
-                                </div>
-                                <div class="tab-pane" id="science">
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Insight_Station">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/m6AndjL1T-BndHICYTed_LPaF2P3APyFaOL_DxpSlkPORIi6w14xob0V-CbDdtd-I5KNWzsygMw=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#ISS_Info">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/Hs7eFeeWgCKl_-Ir4ngXl3lXkLeG7SLrQKo84kMIfOONu4A6zpa6OftHrZNBDoMVYqoT151huMjt=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Google_Trend">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Moon_info">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/P_cYQtn-NsKHndUqeytSl6e62UhHA9DDhsEF9_ensKoV6Rjitd79gZwHtjD3XDqsG7c4Zi6ByGrRdw=s90" />
-                                    </button>
-                                </div>
-                                <div class="tab-pane" id="public">
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Zip_code">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/I_NnCp30icOJul74LqvuhrXakeM0xhFWBKp0nRQ8dGMoqAqg4BSmwG4UyRvZYpTuluSfXS-CERDu=s90" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Blood_Index">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/oI6uG6rwPuex3kpDmn2TkL_0zJVmYP7wEWTMQ5D05zSNOAk6hA_1vlQhBXAQOwVVnz5rEprvUSIZ=s90" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Power_Index">
-                                        <img src="https://lh3.googleusercontent.com/uaOnDI3M7mPHQlIuuu6ruOD_DPFYjUinRZl1-M7YH-oTr_Qqzq0dlQK05cMr5jbi7WBl81W9Rgg=s90"
-                                            class="carousel-ncnu" / /></a>
-                                    </button>
-                                </div>
-                                <div class="tab-pane" id="cloud">
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#TW_AQI_index">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/1eK9cMVUJJAmPWbp-kbseKXH7qFjByWkpgSEnamflSYF22jkcDkmazAfw_W2VGK2ILIoIUhUBIU=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#TW_UVI_index">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/tFLlLU7i_2G20MQdyc2cslBtZfxXKvSHbQfe42DT4A5q6iSUNxSeh7jxzBQUuiv-XuC83NOwnTGy=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#TW_Radiation_index">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/CnIRqKjc5uGejjiit-asiFCMDAFH_1HCLEK5kA0vTH32dJw_UVA4Ylp_oVMN_c8Xs9cdKHShpJfh=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#TW_Sea_Waether">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/PAh2x6gmA8Tjw_ogniq_utapmAFmJj4SXIz_m3xOgsWR5PH-eeXDwpgDwhJ05rGJDzBPk9fonWQ=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#World_AQI_index">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#TW_Weather_helper">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/v3moXhFOp3ADc_GaPjTNxwx53JRIkJtpP1IN7zok_7mm2KJrX9t7b81VitsXoCAtNF-H5aMSpoCK5g=s90" />
-                                    </button>
-                                </div>
-                                <div class="tab-pane" id="translate">
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#TW_WG_Translator">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/cf1EkCmbRkqQ_ghf8h-SwKs7pBHwEPwJPbNDCveVBewPLCfeWJXsuoJHK5QkrgLEWkAcz5xOYI9U=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Morse_Translator">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/fxyZgV3doVdffoeB6fwcCOQnAn58ih5LaJAYgzg0qi2tA02XH4BEz2jgFW0ac2rTSP7Jarc2EnI1=s81" />
-                                    </button>
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Binary_Translator">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/A4HU334fqf4ZNvkpEL2nfsfy_x1DRilzSKxO_kAi48SYDpZa4GLb80D_AF1ntC72Pcqr-hy3G_EZ5A=s81" />
-                                    </button>
-                                </div>
-                                <div class="tab-pane" id="date_range">
-                                    <button class="btn btn-primary btn-link" data-toggle="modal" data-target="#Invoice-redemptioner">
-                                        <img
-                                            src="https://lh3.googleusercontent.com/YeR_buvHOHYKwXPox9bmeiW-qnYxgd0wmQlnAzPHXPNoNRq6Dydxgdz6wLH4EBSV8875ugxtS3eC=s90" />
-                                    </button>
-                                </div>
+                        <div class="card-body">
+                            <div class="tab-content text-center" id="nav_buttons">
+                                <!--透過JS自動生成內容-->
                             </div>
                         </div>
                     </div>
@@ -986,6 +795,7 @@ The above copyright notice and this permission notice shall be included in all c
     <!--icon挿件 -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="json.js"></script>
+    <script src="option_generator.js"></script>
     <script src="action_list_generator.js"></script>
 </body>
 
