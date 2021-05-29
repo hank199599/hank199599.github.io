@@ -11,6 +11,20 @@ var tab_dict = {
     "date_range": { "tag": "date_range", "name": "提升生產力" }
 }
 
+var langeuage_url_dict={
+    "中文(台灣)":"zh-TW",
+    "廣東話":"zh-HK",
+    "英文":"en",
+    "日文":"ja",
+    "韓文":"ko",
+    "泰文":"th",
+    "德文":"de",
+    "西班牙文":"es",
+    "荷蘭文":"nl",
+    "丹麥文":"da",
+    "法文":"fr"
+}
+
 var langeuage_dict={
     "中文(台灣)":{
         "food":["Food_Decider"],
@@ -59,7 +73,7 @@ var langeuage_dict={
         "science":["Insight_Station", "Google_Trend"]
     },
     "西班牙文":{
-        "science":["Insight_Station", "Google_Trend"]
+        "science":["Insight_Station"]
     },
     "荷蘭文":{
         "science":["Insight_Station", "Google_Trend"]
