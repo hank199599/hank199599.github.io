@@ -10,8 +10,11 @@ var modal_content = "";
         var badge_content = "";
         var badge_list = temp["Language"];
         for (var j = 0; j < badge_list.length; j++) {
-            badge_content = badge_content + '<span class="badge badge-pill badge-secondary">' + badge_list[j] + '</span>'
+            badge_content = badge_content + '<span class="badge badge-pill badge-secondary" style="margin:2px 2px">' + badge_list[j] + '</span>'
         }
+
+        var action_title= action_name_dict[action_list[i]][language];
+        if(action_title===undefined){ action_title= action_name_dict[action_list[i]]["中文(台灣)"];}
 
         modal_content = modal_content +
             '<div class="modal fade" id="' + action_list[i] + '" tabindex=" -1 " role=" dialog ">' +
@@ -25,7 +28,7 @@ var modal_content = "";
             '</td>' +
             '<td width=" 5px "></td>' +
             '<td style=" vertical-align:center; ">' +
-            '<h3 class=" modal-title ">' + temp['Titile'] + '</h3>' +
+            '<h3 class=" modal-title ">' + action_title + '</h3>' +
             badge_content +
             '</td>' +
             '</tr>' +
@@ -44,7 +47,7 @@ var modal_content = "";
             'target="_blank"><i class="fa fa-github"></i></a>' +
             '</button>' +
             '<button type="button" class="btn btn-link">' +
-            '<a title="' + temp['Titile'] + ' | Google助理"' +
+            '<a title="' + action_title + ' | ' + assistant_name_dict[language]+'" '+
             'href="' + temp['Action_link'] + '?hl='+langeuage_url_dict[language]+'"' +
             'target="_blank">在Google助理上試用</a>' +
             '</button>' +
