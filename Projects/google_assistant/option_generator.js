@@ -36,5 +36,6 @@ document.getElementById('nav_items').innerHTML = '<ul class="nav nav-tabs" data-
 document.getElementById('nav_buttons').innerHTML = option_buttons
 document.getElementById('navbar-brand').innerHTML = language
 model_generator(language)
+langeage_bar_generator(language)
 }
 
