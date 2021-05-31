@@ -70,7 +70,7 @@ var hour_now = today.getHours().toString();
 
 
 if (hour_now < 6 || hour_now > 17) {
-    document.getElementById("background").style.backgroundImage = "url('https://raw.githubusercontent.com/hank199599/Google-Assistant-APP/master/%E7%B4%AB%E5%A4%96%E7%B7%9A%E7%B2%BE%E9%9D%88/assets/ejlSjF3.png')";
+    document.getElementById("background").style.backgroundImage = "url('../../assets/img/ejlSjF3.png')";
 } else {
-    document.getElementById("background").style.backgroundImage = "url('https://raw.githubusercontent.com/hank199599/Google-Assistant-APP/master/%E7%B4%AB%E5%A4%96%E7%B7%9A%E7%B2%BE%E9%9D%88/assets/0Is452b.jpg')";
+    document.getElementById("background").style.backgroundImage = "url('../../assets/img/0Is452b.jpg')";
 }
