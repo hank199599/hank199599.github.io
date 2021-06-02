@@ -1,8 +1,8 @@
 function picture_generator(number) {
     if (number >= 0) {
-        return "https://raw.githubusercontent.com/hank199599/Google-Assistant-APP/master/%E8%BC%BB%E5%B0%84%E7%B2%BE%E9%9D%88/SVC/big/" + number + ".jpg";
+        return "./image/" + number + ".jpg";
     } else {
-        return "https://raw.githubusercontent.com/hank199599/Google-Assistant-APP/master/%E8%BC%BB%E5%B0%84%E7%B2%BE%E9%9D%88/SVC/big/NaN.jpg"
+        return "./image/NaN.jpg"
     }
 }
 
