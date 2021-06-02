@@ -1,8 +1,8 @@
 function picture_generator(UVI) {
     if (UVI >= 0 && UVI <= 15) {
-        return "https://raw.githubusercontent.com/hank199599/Google-Assistant-APP/master/%E7%B4%AB%E5%A4%96%E7%B7%9A%E7%B2%BE%E9%9D%88/UVI/small/" + UVI + ".jpg";
+        return "./image/" + UVI + ".jpg";
     } else {
-        return "https://raw.githubusercontent.com/hank199599/Google-Assistant-APP/master/%E7%B4%AB%E5%A4%96%E7%B7%9A%E7%B2%BE%E9%9D%88/UVI/small/NaN.jpg"
+        return "./image/NaN.jpg"
     }
 }
 

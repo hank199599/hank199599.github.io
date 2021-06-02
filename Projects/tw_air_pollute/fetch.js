@@ -1,8 +1,8 @@
 function picture_generator(number) {
     if (number >= 0 && number <= 500) {
-        return "https://raw.githubusercontent.com/hank199599/Google-Assistant-APP/master/%E7%A9%BA%E6%B1%99%E6%9F%A5%E8%A9%A2%E7%B2%BE%E9%9D%88/AQI/small/" + number + ".jpg";
+        return "./image/" + number + ".jpg";
     } else {
-        return "https://raw.githubusercontent.com/hank199599/Google-Assistant-APP/master/%E7%A9%BA%E6%B1%99%E6%9F%A5%E8%A9%A2%E7%B2%BE%E9%9D%88/AQI/small/NaN.jpg";
+        return "./image/NaN.jpg";
     }
 }
 
