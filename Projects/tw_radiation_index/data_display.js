@@ -13,7 +13,8 @@ firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
 
-var county_list = Object.keys(test_list);
+var input_dict=nuclear_list;
+var county_list = Object.keys(input_dict);
 var nav_items = '';
 var nav_content = '';
 for (var i = 0; i < county_list.length; i++) {
@@ -38,7 +39,7 @@ myData.on('value', function(snapshot) {
     var modal_content = '';
 
     for (var i = 0; i < county_list.length; i++) {
-        var station_array = test_list[county_list[i]];
+        var station_array = input_dict[county_list[i]];
         var content = '';
 
         for (var j = 0; j < station_array.length; j++) {
