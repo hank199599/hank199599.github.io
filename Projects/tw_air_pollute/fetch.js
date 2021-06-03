@@ -1,5 +1,5 @@
 function picture_generator(number) {
-    if (number >= 0 && number <= 500) {
+    if (String(number).length!==0 && number >= 0 && number <= 500) {
         return "./image/" + number + ".jpg";
     } else {
         return "./image/NaN.jpg";
