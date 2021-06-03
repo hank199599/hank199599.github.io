@@ -88,7 +88,7 @@ var langeuage_dict={
 
 var detail_dict = {
     "Food_Decider": {
-        "src": "https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s81",
+        "src": "https://lh3.googleusercontent.com/ydRrGO73QtkvNGjrclVYOSD6fGwWp3vHQTFLQUjEmLTjopR0xsXpI29bPPzgs5eYwO7mjobiXKdt=s90",
         "Titile": "美食決定器",
         "Language": ["中文(台灣)", "廣東話", "英文", "日文"],
         "content": "只要簡單詢問即可快速得到建議，</br>是個可幫助你減少思考時間的小幫手!",
@@ -97,7 +97,7 @@ var detail_dict = {
     },
 
     "Daily_History": {
-        "src": "https://lh3.googleusercontent.com/1U6-HhkKdaVzPMMsz5XmKZ31lTnOkXWz4eTuDcNTejlgatqouaKoniXkxfMC0AKvRx4wSjHmynvs=s81",
+        "src": "https://lh3.googleusercontent.com/1U6-HhkKdaVzPMMsz5XmKZ31lTnOkXWz4eTuDcNTejlgatqouaKoniXkxfMC0AKvRx4wSjHmynvs=s90",
         "Titile": "每日大事記",
         "Language": ["中文(台灣)"],
         "content": "透過對話快速查詢曾經發生的歷史事件!</br>資訊來源：維基百科</br>https://zh.wikipedia.org/wiki/歷史上的今天 </br>",
@@ -105,7 +105,7 @@ var detail_dict = {
         "Action_link": "https://assistant.google.com/services/invoke/uid/000000d67993a1d2"
     },
     "Taiwan_Dictoinary": {
-        "src": "https://lh3.googleusercontent.com/b5mi7bsFMvz5vbzdQYkGvRTCZQlwgCOvIlmNAds6dvjuLGwC-gzhYDMowSi7_e4OR1o9fY0ecBY=s81",
+        "src": "https://lh3.googleusercontent.com/b5mi7bsFMvz5vbzdQYkGvRTCZQlwgCOvIlmNAds6dvjuLGwC-gzhYDMowSi7_e4OR1o9fY0ecBY=s90",
         "Titile": "臺灣國語辭典",
         "Language": ["中文(台灣)"],
         "content": "這是介接《萌典》所提供之API所達成的字典詞條查詢服務。</br>使用者可以透過對話、直接輸入或利用麥克風等方式來進行查詢。</br>查詢之詞彙及詞條內容來自《重編國語辭典修訂本》。",
