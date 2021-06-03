@@ -10,27 +10,36 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+var input_dict = county_dict;
 
 var database = firebase.database();
 
-var input_dict=nuclear_list;
-var county_list = Object.keys(input_dict);
-var nav_items = '';
-var nav_content = '';
-for (var i = 0; i < county_list.length; i++) {
-    nav_items = nav_items + '<li class="nav-item" > <a class="nav-link';
-    nav_content = nav_content + '<div class="tab-pane';
-    if (i === 0) {
-        nav_items = nav_items + ' active'
-        nav_content = nav_content + ' active'
-    }
-    nav_items = nav_items + '" href="#' + tab_list[county_list[i]] + '" data-toggle="tab">' + county_list[i] + '</a></li>'
-    nav_content = nav_content + '" id="' + tab_list[county_list[i]] + '">' + '<p></p></div>'
+var selection_dict={
+    "縣市":county_dict,
+    "核電廠":nuclear_dict
 }
-document.getElementById('county_list').innerHTML = nav_items
-document.getElementById('county_content').innerHTML = nav_content
 
 var myData = firebase.database().ref('/TWradiation');
+
+function display_generator(selection){
+
+    var county_list = Object.keys(selection_dict[selection]);
+    var nav_items = '';
+    var nav_content = '';
+    for (var i = 0; i < county_list.length; i++) {
+        nav_items = nav_items + '<li class="nav-item" > <a class="nav-link';
+        nav_content = nav_content + '<div class="tab-pane';
+        if (i === 0) {
+            nav_items = nav_items + ' active'
+            nav_content = nav_content + ' active'
+        }
+        nav_items = nav_items + '" href="#' + tab_list[county_list[i]] + '" data-toggle="tab">' + county_list[i] + '</a></li>'
+        nav_content = nav_content + '" id="' + tab_list[county_list[i]] + '">' + '<p></p></div>'
+    }
+document.getElementById('county_list').innerHTML = nav_items
+document.getElementById('county_content').innerHTML = nav_content
+document.getElementById('selection').innerHTML = "檢視角度"+selection
+
 
 myData.on('value', function(snapshot) {
 
@@ -39,7 +48,7 @@ myData.on('value', function(snapshot) {
     var modal_content = '';
 
     for (var i = 0; i < county_list.length; i++) {
-        var station_array = input_dict[county_list[i]];
+        var station_array = selection_dict[selection][county_list[i]];
         var content = '';
 
         for (var j = 0; j < station_array.length; j++) {
@@ -103,3 +112,5 @@ myData.on('value', function(snapshot) {
 
     document.getElementById('modal creator').innerHTML = modal_content
 })
+
+}

@@ -238,10 +238,8 @@ The above copyright notice and this permission notice shall be included in all c
 
                     <div class="row">
                         <div class="col-md-9">
-                            <h3><b>作品總覽</b></br>
-                                <small>能依據使用者語系自動切換回應語言!</small>
-                            </h3>
-
+                            <h3><b>測站總覽</b></br>
+                            <small id="selection">目前檢視的測站</small>
                         </div>
                         <div class="col-md-2">
                             <ul class="nav">
@@ -269,13 +267,14 @@ The above copyright notice and this permission notice shall be included in all c
                             <div class="nav-tabs-navigation">
                                 <div class="nav-tabs-wrapper">
                                     <ul class="nav nav-tabs" data-tabs="tabs" id="county_list">
+                                        <!--產生選單-->
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="tab-content text-center" id="county_content">
-
+                                <!--產生縣市資訊等詳細內容-->
                             </div>
                         </div>
                     </div>
@@ -338,7 +337,7 @@ The above copyright notice and this permission notice shall be included in all c
     <script src="./fetch.js"></script>
     <script src="./json.js"></script>
     <script src="./data_display.js"></script>
-    <script src="./toggle_control.js"></script>
+    <script src="./initial.js"></script>
     <link href="bootstrap-switch.css" rel="stylesheet">
     <script src="bootstrap-switch.js"></script>
 </body>
