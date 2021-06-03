@@ -62,7 +62,7 @@ myData.on('value', function(snapshot) {
                 'border-top: 0.0625rem solid rgba(0, 0, 0, 0.05);' +
                 'text-align: center !important;' +
                 '">' +
-                '<a href="#' + station + '"  data-toggle="modal" >詳細資訊</a>' +
+                '<a href="#' + station + '"  data-toggle="modal">詳細資訊</a>' +
                 '</div>' +
                 '</div>' +
                 '</div>' +
