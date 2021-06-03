@@ -38,7 +38,7 @@ function display_generator(selection){
     }
 document.getElementById('county_list').innerHTML = nav_items
 document.getElementById('county_content').innerHTML = nav_content
-document.getElementById('selection').innerHTML = "檢視角度"+selection
+document.getElementById('selection').innerHTML = "檢視角度："+selection
 
 
 myData.on('value', function(snapshot) {
