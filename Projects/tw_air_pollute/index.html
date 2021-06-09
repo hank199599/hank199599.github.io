@@ -161,21 +161,10 @@ The above copyright notice and this permission notice shall be included in all c
                         <h2><small class="animated flash infinite slow"
                                 style="color: white; animation-duration: 5s;">正在擷取最新概要資訊</small></h2>
                     </div>
-                    <h4>更新時間 • <b>
-                            <script>
-                                var today = new Date();
-                                var nowTime = today.getTime();
-                                today.setTime(parseInt(nowTime));
-                                var oYear = today.getFullYear().toString();
-                                var oMoth = (today.getMonth() + 1).toString();
-                                var oDay = today.getDate().toString();
-                                var oHour = today.getHours().toString();
-                                if (oMoth.length <= 1) { oMoth = '0' + oMoth; }
-                                if (oDay.length <= 1) { oDay = '0' + oDay; }
-                                if (oHour.length <= 1) { oHour = '0' + oHour; }
-                                document.write(oYear + "/" + oMoth + "/" + oDay + " " + oHour + ":00")
-                            </script>
-                        </b></h4>
+                    <div id="report_time">
+                        <h4>更新時間 • <b class="animated flash infinite slow"
+                            style="color: white; animation-duration: 5s;">資料抓取中...</b></h4>
+                    </div>
                 </div>
             </div>
             <a href="https://assistant.google.com/services/invoke/uid/000000fa049fc5e5" class="btn btn-white btn-round"

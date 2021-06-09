@@ -37,6 +37,7 @@ myData.on('value', function(snapshot) {
     var snapshot_data = snapshot.val();
 
     document.getElementById("weather_report").innerHTML = '<h4>' + snapshot_data.report + '</h4>';
+    document.getElementById("report_time").innerHTML ='<h4>更新時間 • <b>' + snapshot_data.PublishTime + '</b></h4>';
 
     var mobile_array = machine(Object.keys(snapshot_data.data))
     var modal_content = '';
