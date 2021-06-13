@@ -1,0 +1,364 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <meta name="theme-color" content="#4F7DC9">
+    <meta charset="UTF-8">
+    <title>[Codelabs] 自DialogFlow建立Google Assistant語音互動應用</title>
+    <link rel="stylesheet"
+        href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+    <style>
+        .success {
+            color: #1e8e3e;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+    <google-codelab codelab-gaid="" id="Assistant_DialogFlow-1" title="自DialogFlow建立Google Assistant語音互動應用 [基礎]"
+        environment="web" feedback-link="mailto:hank199599@gmail.com">
+        <google-codelab-step label="你將會得到甚麼?" duration="0">
+            <p>
+                建立一個專屬於自己的Google Assistant語音應用程式
+            </p>
+        </google-codelab-step>
+
+        <google-codelab-step label="認識基本架構" duration="8">
+            <p>
+                <img
+                    src="https://developers.google.com/assistant/conversational/images/aog-user-query-to-fulfillment.png">
+            </p>
+            <ul>
+                <li>Google助理：
+                    <ul>
+                        <li>為Google開發的智慧型個人助理</li>
+                        <li>在第三方應用的角色是處理語音辨識及傳遞回應給使用者</li>
+                    </ul>
+                </li>
+                <li>DialogFlow</li>
+                <ul>
+                    <li>建構自然語言處理模型並訓練機器辨識使用者輸入的意圖(Intent)</li>
+                    <li>並作為中介把資訊傳遞給Fulfillment</li>
+                </ul>
+                <li>Fulfillment</li>
+                <ul>
+                    <li>將來自DialogFlow的資訊進行分析再回應給使用者</li>
+                    <li>實作上是將Fulfillment部署到Firebase上，作為處理與回傳客製化回應的中介</li>
+                </ul>
+                </ol>
+        </google-codelab-step>
+
+        <google-codelab-step label="Prerequisites" duration="5">
+            <ul>
+                <li>GCP / Firebase 基礎知識</li>
+                <li>Access to Azure Cloud environment</li>
+            </ul>
+
+
+        </google-codelab-step>
+
+        <google-codelab-step label="High Level Architecture of this codelab&#39;s goal" duration="4">
+            <p class="image-container">
+                <img alt="High Level Architecture" src="">
+            </p>
+        </google-codelab-step>
+
+        <google-codelab-step label="Configure the Solace PubSub&#43; Event
+                broker to receives messages on a queue" duration="5">
+            <p>In this example we will create two queues in Solace PubSub+,
+                one of it will receive messages from Azure
+                function over HTTP and another over C#.<br>Log on to Solace
+                Console</p>
+            <ol type="1">
+                <li>Create a queue that will receive data from Azure
+                    function using REST
+                    <pre>
+                        <code>solace&gt; enable
+solace# configure
+solace# (configure)# message-spool message-vpn &lt;VPN Name&gt;
+solace(configure/message-spool/message-vpn)# create queue azure-rest-queue
+solace(configure/message-vpn/my-azure-queue )# permission all consume
+solace(configure/message-vpn/my-azure-queue )# subscription topic azure/2/solace-rest
+solace(configure/message-vpn/my-azure-queue )# no shutdown
+solace(configure/message-vpn/my-azure-queue )# exit
+                        </code>
+                    </pre>
+                </li>
+                <li>Create a queue that will receive data from Azure
+                    function using C#
+                    <pre><code>solace(configure/message-spool/message-vpn)# create queue azure-c#-queue
+                        solace(configure/message-vpn/my-azure-queue )# permission all consume
+                        solace(configure/message-vpn/my-azure-queue )# subscription topic azure/2/solace
+                        solace(configure/message-vpn/my-azure-queue )# no shutdown
+                        solace(configure/message-vpn/my-azure-queue )# end
+                        </code></pre>
+                </li>
+            </ol>
+
+
+        </google-codelab-step>
+
+        <google-codelab-step label="Azure Function Setup - For C#/.Net using
+                Solace C# APIs" duration="15">
+            <p>Azure allows you to use multiple programming languages and
+                APIs. However, for this codelab, I will walk
+                you through usage of C# using Solace C#API and REST .</p>
+            <ol type="1">
+                <li>Create a new Azure function project in Visual Studio<br><img alt="" src=""><br>Select
+                    <strong>Azure Functions</strong> from the list and
+                    click <strong>Next</strong>
+                </li>
+                <li>Configure your new project<br><img alt="" src=""></li>
+                <li>Create a new Azure Function application<br><img alt="" src=""><br>In
+                    the
+                    above screen you will do the following:<ul>
+                        <li>Select <strong>Azure Service Bus Trigger</strong>
+                            from the list</li>
+                        <li>Specifiy <strong>Storage Account</strong></li>
+                        <li>Specify <strong>Connection String Setting Name</strong>.
+                            This is the name that we will use
+                            in the Azure function code later.</li>
+                        <li>Specify Service Bus <strong>Queue Name</strong>.
+                            This is the queue that we will stream data
+                            from to Solace Event broker.</li>
+                        <li>Click <strong>Next</strong> to finish create a
+                            project.</li>
+                    </ul>
+                </li>
+                <li>Open the <strong>local.settings.json</strong> file and
+                    add the following properties as shown in the
+                    code below:
+                    <pre><code>//Update the Service Bus end point connection string below &#34;SBConnection&#34;: &#34;Endpoint=....windows.net/;SharedAccessKeyName=ListenOnly;SharedAccessKey=xxxxxxxxxxxxxxxxxxxxxxx&#34;,
+//Update the Solace Host (SMF) URL string below &#34;solace-host&#34;: &#34;mr1xi40mbgzuj7.messaging.solace.cloud&#34;,
+//Update the Solace Username string below &#34;solace-username&#34;: &#34;solace-cloud-client&#34;,
+//Update the Solace Password string below &#34;solace-password&#34;: &#34;abcgdjsjj&#34;,
+//Update the Solace VPN Name string below &#34;solace-vpnname&#34;: &#34;sumeet&#34;
+//Update the Solace Topic string below &#34;solace-topic&#34;: &#34;azure/2/solace&#34;
+</code></pre>
+                </li>
+                <li>Using NuGet package manager, search and install Solace
+                    library.<br><img alt="" src=""></li>
+                <li>Create a new class called <strong>SolacePublisher</strong>
+                    and add the following code to
+                    <strong>SolacePublisher.cs</strong> class.
+                    <pre><code>
+
+                        </code></pre>
+                </li>
+                <li>Add the following code to <strong>function1.cs</strong>
+                    class.
+                    <pre><code>
+
+                        </code></pre>
+                </li>
+                <li>Now Build your project.</li>
+                <li>Publish your Azure function as follows:<br><img alt="" src=""><img alt="" src=""><img alt=""
+                        src=""><img alt="" src=""></li>
+                <li>Now that your function is published, logon to your Azure
+                    portal and start the function app.<br><img alt="" src=""></li>
+                <li>Lets look at the Solace queue via Solace broker&#39;s
+                    WebUI that will be receiving messages from
+                    servicebus.<br><img alt="" src=""></li>
+                <li>Send test messages to Service Bus Queue (on which you
+                    have configured the trigger to invoke above
+                    Azure function). Below is a screen grab of console
+                    output from my test application.<br><img alt="" src=""></li>
+                <li>Refresh your Solace broker&#39;s WebUI to confirm you
+                    have received messages from
+                    ServiceBus.<br><img alt="" src=""></li>
+            </ol>
+
+
+        </google-codelab-step>
+
+        <google-codelab-step label="For C#/.Net using REST APIs" duration="15">
+            <ol type="1">
+                <li>Create a new Azure function project in Visual Studio<br><img alt="" src=""><br>Select
+                    <strong>Azure Functions</strong> from the list and
+                    click <strong>Next</strong>
+                </li>
+                <li>Configure your new project<br><img alt="" src=""></li>
+                <li>Create a new Azure Function application<br><img alt="" src=""><br>In
+                    the
+                    above screen you will do the following:<ul>
+                        <li>Select <strong>Azure Service Bus Trigger</strong>
+                            from the list</li>
+                        <li>Specifiy <strong>Storage Account</strong></li>
+                        <li>Specify <strong>Connection String Setting Name</strong>.
+                            This is the name that we will use
+                            in the Azure function code later.</li>
+                        <li>Specify Service Bus <strong>Queue Name</strong>.
+                            This is the queue that we will stream data
+                            from to Solace Event broker.</li>
+                        <li>Click <strong>Next</strong> to finish create a
+                            project.</li>
+                    </ul>
+                </li>
+                <li>Open the <strong>local.settings.json</strong> file and
+                    add the following properties as shown in the
+                    code below:
+                    <pre><code>		//Update all the below property values to point to your environment
+	&#34;SBConnection&#34;: &#34;Endpoint=sb://sumeet.servicebus.windows.net/;SharedAccessKeyName=sendListen;SharedAccessKey=xxxxxxxxxxxxxxxxxxxxxxxx;&#34;,
+	&#34;solace-host&#34;: &#34;sumeet-solace.mymaas.net&#34;,
+	&#34;solace-tls&#34;: false,
+	&#34;solace-plain-text-port&#34;: 80,
+	&#34;solace-tls-port&#34;: 443,
+	&#34;solace-username&#34;: &#34;default&#34;,
+	&#34;solace-password&#34;: &#34;dc7u1ne2ps16r5p1ss2frq4b4n&#34;,
+	&#34;solace-topic&#34;: &#34;azure/2/solace-rest&#34;
+}
+}
+</code></pre>
+                </li>
+                <li>Using NuGet package manager, search and install Solace
+                    library.<br><img alt="" src=""></li>
+                <li>Rename function1.cs to <strong>funcSB2SolaceREST.cs</strong>
+                    and Copy the below code in
+                    <strong>funcSB2SolaceREST.cs</strong>
+                    <pre><code>using System;
+using System.Net.Http;
+using System.Reflection;
+using System.Text;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Host;
+using Microsoft.Extensions.Logging;
+
+namespace SB2SolaceRest
+{
+
+public static class funcSB2SolaceREST
+{
+    private static readonly HttpClient _Client = new HttpClient();
+    private static string solaceRESTUrl = null;
+    private static Boolean init = initializeHttpClient();
+
+    [FunctionName(&#34;funcSB2SolaceREST&#34;)]
+    public static async void Run([ServiceBusTrigger(&#34;azure2solacerest&#34;, Connection = &#34;SBConnection&#34;)] string myQueueItem, ILogger log)
+    {
+        log.LogInformation($&#34;C# ServiceBus queue trigger function processed message: {myQueueItem}&#34;);
+        if (initializeHttpClient())
+        {
+            HttpRequestMessage httpRequestMessage = new HttpRequestMessage
+            {
+                Method = HttpMethod.Post,
+                RequestUri = new Uri(solaceRESTUrl)
+            };
+            HttpContent httpContent = new StringContent(myQueueItem, Encoding.UTF8, &#34;application/text&#34;);
+            httpRequestMessage.Content = httpContent;
+            var response = await _Client.SendAsync(httpRequestMessage);
+            string responseString = await response.Content.ReadAsStringAsync();
+            log.LogInformation($&#34;Response from Solace :{responseString}, Response Code :{response.StatusCode}&#34;);
+        }
+        else
+        {
+            log.LogInformation(&#34;Unable to initialize HTTP Client&#34;);
+            throw new Exception(&#34;Unable to initialize HTTP Client&#34;);
+        }
+    }
+
+    public static bool initializeHttpClient()
+    {
+        if (!init)
+        {
+            string username = Environment.GetEnvironmentVariable(&#34;solace-username&#34;);
+            string password = Environment.GetEnvironmentVariable(&#34;solace-password&#34;);
+            string auth = &#34;Basic &#34; + Convert.ToBase64String(Encoding.UTF8.GetBytes($&#34;{username}:{password}&#34;));
+            _Client.DefaultRequestHeaders.Add(&#34;Authorization&#34;, auth);
+            string port = null;
+            string protocol = &#34;http&#34;;
+            if (Boolean.Parse(Environment.GetEnvironmentVariable(&#34;solace-tls&#34;)))
+            {
+                port = Environment.GetEnvironmentVariable(&#34;solace-tls-port&#34;);
+                protocol = &#34;https&#34;;
+                //TODO: If 2 -way TLS, we may need to add Cert related stuff
+            }
+            else
+                port = Environment.GetEnvironmentVariable(&#34;solace-plain-text-port&#34;);
+            solaceRESTUrl = protocol + &#34;://&#34; + Environment.GetEnvironmentVariable(&#34;solace-host&#34;) + &#34;:&#34; + port +
+                            &#34;/&#34; + Environment.GetEnvironmentVariable(&#34;solace-topic&#34;);
+            init = true;
+        }
+        return init;
+    }
+}
+}
+</code></pre>
+                </li>
+                <li>As described in previous section, Build your project and
+                    Publish your Azure function.</li>
+                <li>Now that your function is published, logon to your Azure
+                    portal and start the function app.</li>
+                <li>Look at the Solace queue via Solace broker&#39;s WebUI
+                    that will be receiving messages from
+                    servicebus and confirm there are no messages sitting in
+                    the queue.</li>
+                <li>Send test messages to Service Bus Queue (on which you
+                    have configured the trigger to invoke above
+                    Azure function).</li>
+                <li>Refresh your Solace broker&#39;s WebUI to confirm you
+                    have received messages from
+                    ServiceBus.<br><img alt="" src=""></li>
+            </ol>
+
+
+        </google-codelab-step>
+
+        <google-codelab-step label="Takeaways" duration="7">
+            <p>✅ You have learned how to create an Azure function that helps
+                you stream data from ServiceBus to Solace
+                PubSub+ Event broker.<br><br>✅ You can use similar approach
+                to integrate with Azure, Blob Storage, Event
+                Hub, IoT Hub, Cosmos Db etc.<br><br>✅ Event though this
+                codelab uses C#, you can use other programming
+                languages supported by Azure functions.</p>
+            <p>✅ The code provided here is for demonstration purposes only.
+                It is not production ready and hence you
+                must refer Solace PubSub+ C# .Net API refernce documentation
+                <a href="https://docs.solace.com/Solace-PubSub-Messaging-APIs/dotNet-API/net-api-home.htm"
+                    target="_blank">here</a>.
+            </p>
+            <p>✅ For more information on Azure functions connectors check
+                out the <a href="https://solace.com/connectors/?fwp_connectors_search=azure" target="_blank">PubSub+
+                    Connector
+                    Hub</a> page</p>
+            <p class="image-container"><img alt="Soly Image Caption" src=""></p>
+            <p>Thanks for participating in this codelab! Let us know what
+                you thought in the <a href="https://solace.community/" target="_blank">Solace
+                    Community Forum</a>! If you found any issues
+                along the way we&#39;d appreciate it if you&#39;d raise them
+                by clicking the Report a mistake button at
+                the bottom left of this codelab.</p>
+
+
+        </google-codelab-step>
+
+    </google-codelab>
+
+    <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+    <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+    <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+    <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+    <script type="text/javascript">
+        document.getElementById("arrow-back").href = "../"
+        document.getElementById("previous-step").title = "上一步"
+        document.getElementById("previous-step").innerHTML = "上一步"
+        document.getElementById("next-step").title = "下一步"
+        document.getElementById("next-step").innerHTML = "下一步"
+        document.getElementById("done").href = "../"
+        document.getElementById("done").innerHTML = "完成"
+        document.getElementById("done").innerHTML = "完成"
+        document.getElementsByClassName("metadata")[0].innerHTML = '<a target="_blank" href="mailto:hank199599@gmail.com"><i class="material-icons">bug_report</i> 回報問題</a>'
+    </script>
+</body>
+
+</html>
