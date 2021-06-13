@@ -15,13 +15,13 @@ The above copyright notice and this permission notice shall be included in all c
 <html lang="zh-Hant">
 
 <head>
+    <title>
+        NPM module | 開源的共享模組
+    </title>
     <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>
-        Google Assistant Voice APP | by 游紹宏 Hank Yu
-    </title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
@@ -30,128 +30,201 @@ The above copyright notice and this permission notice shall be included in all c
     <link href="../assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/demo/demo.css" rel="stylesheet" />
+    <style type="text/css">
+        .dropdown-menu .dropdown-item:hover,
+        .dropdown-menu .dropdown-item:focus,
+        .dropdown-menu .dropdown-item:active,
+        .dropdown-menu a:active,
+        .dropdown-menu a.active,
+        .dropdown-menu a:hover,
+        .dropdown-menu a:focus,
+        .dropdown-menu a:active {
+            background-color: #376bcb;
+        }
+        
+        .btn.btn-primary:focus,
+        .btn.btn-primary:active,
+        .btn.btn-primary:hover {
+            box-shadow: 0 14px 26px -12px rgba(55, 112, 203, 0.42), 0 4px 23px 0px rgba(55, 112, 203, 0.12), 0 8px 10px -5px rgba(39, 65, 176, 0.2);
+        }
+        
+        .navbar.navbar-transparent .navbar-toggler .navbar-toggler-icon {
+            background-color: #376bcb;
+        }
+        
+        .navbar .navbar-toggler .navbar-toggler-icon {
+            background-color: #376bcb;
+        }
+        
+        .navbar-collapse .navbar-nav .nav-item .nav-link {
+            color: #376bcb;
+        }
+        
+        .navbar.navbar-transparent {
+            color: #376bcb;
+        }
+        
+        .dropdown-menu .dropdown-item,
+        .dropdown-menu li>a {
+            color: #376bcb;
+        }
+        
+        .navbar .navbar-brand {
+            color: #376bcb;
+        }
+        
+        .navbar .navbar-nav .nav-item.active .nav-link,
+        .navbar .navbar-nav .nav-item.active .nav-link:hover,
+        .navbar .navbar-nav .nav-item.active .nav-link:focus {
+            background-color: rgba(55, 112, 203, 0.1);
+        }
+    </style>
 </head>
 
 <body class="landing-page sidebar-collapse">
     <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
         <div class="container">
             <div class="navbar-translate">
-                <a class="navbar-brand" href="">
-                    Google 語音應用程式 By 游紹宏 Hank Yu</a>
+                <a class="navbar-brand" href="../index.html">
+                   NPM Module</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="https://hank199599.github.io/index.html" class="nav-link">
-                            <i class="material-icons">assignment_ind</i> 個人頁面
+                        <a href="../index.html" class="nav-link">
+                            <i class="material-icons">assignment_ind</i> 首頁
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://gdg.community.dev/events/details/google-gdg-taipei-presents-devfest-taiwan-2020/#0" target="_blank" class="nav-link">
-                            <i class="material-icons">code</i> DevFest 2020
+                        <a href="../Timeline/index.html" class="nav-link">
+                            <i class="material-icons">timeline</i> 學經歷
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../blog/" class="nav-link">
+                            <i class="material-icons">description</i> 部落格
+                        </a>
+                    </li>
+                    <li class="dropdown nav-item active">
+                        <a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown" style="color:#376bcb;">
+                            <i class="material-icons">account_tree</i> 作品集
+                        </a>
+                        <div class="dropdown-menu dropdown-with-icons">
+                            <a href="../Projects/google_assistant/index.html" class="dropdown-item">
+                                <span class="iconify" data-icon="mdi-google-assistant" data-inline="false"></span> &emsp;Google助理語音應用
+                            </a>
+                            <a href="../Projects/npm/index.html" class="dropdown-item active">
+                                <span class="iconify" data-icon="simple-icons:npm" data-inline="false"></span>&emsp;Node.js 模組
+                            </a>
+                            <a href="../Projects/python/index.html" class="dropdown-item">
+                                <span class="iconify" data-icon="simple-icons:python" data-inline="false"></span>&emsp;Python學習紀錄
+                            </a>
+                            <a href="../Projects/tw_air_pollute/index.html" class="dropdown-item">
+                                <span class="iconify" data-icon="oi-cloud" data-inline="false"></span>&emsp;空汙即時查詢
+                            </a>
+                            <a href="../Projects/tw_uvi_index/index.html" class="dropdown-item">
+                                <span class="iconify" data-icon="uil-sun" data-inline="false"></span>&emsp;紫外線即時查詢
+                            </a>
+                            <a href="../Projects/tw_radiation_index/index.html" class="dropdown-item">
+                                <span class="iconify" data-icon="ion-nuclear" data-inline="false"></span>&emsp;輻射即時查詢
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/profile.php?id=100000555093316" target="_blank" data-original-title="Facebook" rel="nofollow">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.linkedin.com/in/%E7%B4%B9%E5%AE%8F-%E6%B8%B8-74679110b/" target="_blank" data-original-title="LinkedIn" rel="nofollow">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://github.com/hank199599" target="_blank" data-original-title="Github" rel="nofollow">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://open.spotify.com/user/11141875107?si=-Yre6oNIQTOOmtOzuDY0IQ" target="_blank" data-original-title="Spotify" rel="nofollow">
+                            <i class="fa fa-spotify"></i>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="page-header header-filter" data-parallax="true" style="background-image: url('../assets/img/assistant_background.jpg')">
+    <div class="page-header" data-parallax="true" style="background-color:#f2f2f2; ">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <img src="https://raw.githubusercontent.com/hank199599/Google-Assistant-APP/master/%E6%88%90%E8%AA%9E%E6%8E%A5%E9%BE%8D/assets/Google-Assistant-icon.gif" style="height: 20vh;">
-                    <h1 class="title">OK Google!</h1>
-                    <h4>藉由Actions On Google平台<br>它所能做到的比你想得更多!</h4>
+                <div class="col-md-12 text-center">
+                    <p style="font-size: 200px; color:#376bcb;">
+                        <span class="iconify" data-icon="carbon:code" data-inline="false"></span>
+                    </p>
+                    <h4 style="color:#376bcb;">這是Node.js預設<br>以JavaScript編寫的軟體套件管理系統</h4>
                 </div>
             </div>
         </div>
     </div>
-    <div class="main main-raised">
+    <div class="main main-raised" style=" margin: -200px 15px 0px;">
         <div class="container">
             <div class="row">
-                <div class="col-md-9 mr-auto ml-auto">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h3>作品總覽</br>
-                                <small>能依據使用者語系自動切換回應語言!</small>
-                            </h3>
-                        </div>
-                        <div class="col-md-4" style="display: flex;align-items: center; ">
-                            <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#Assistant_detail">
-                                                <i class="material-icons">library_books</i>
-                                                有關 Google語音助理
-                        </button>
-                        </div>
-                    </div>
-                    <div class="card card-nav-tabs">
-                        <div class="card-header card-header-success">
-                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-                            <div class="nav-tabs-navigation">
-                                <div class="nav-tabs-wrapper">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body ">
-                            <div class="tab-content text-center">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <!--modals -->
-                    <div class="row">
-                        <div class="col-md-6 ">
-                            <h3><b>Google官方部落格</b></br>
-                                <small>被官方宣傳的作品</small> </h3>
-                        </div>
-                    </div>
-                    
-                    <!--end modals-->
-                    <h3>使用者評論</br>
-                        <small>世界各地使用者的反饋</small>
-                    </h3>
-                    <!-- Tabs on Plain Card -->
-                    <div class="card card-nav-tabs card-plain">
-                        <div class="card-header card-header-success">
-                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-                            <div class="nav-tabs-navigation">
-                                <div class="nav-tabs-wrapper">
-                                    <ul class="nav nav-tabs" data-tabs="tabs">
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body ">
-                            <div class="tab-content">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <!-- 彈跳式視窗的內容 -->
+                <div class="col-md-10 mr-auto ml-auto">
 
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="card" style="padding: 10px 10px;">
+                                <div class="card-body">
+                                    <h4 class="card-title">DialogFlow 基礎</h4>
+                                    <h6 class="card-subtitle mb-2 text-muted">自DialogFlow建立Google Assistant語音互動應用</h6>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="./Assistant_DialogFlow" class="btn btn-primary" target="_blank" style=" color:#ffffff; background-color: #376bcb;">
+                                        開始課程<i class="material-icons">launch</i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card" style="width: auto;">
+                                <div class="card-body">
+                                    <h4 class="card-title">24_game_resolver</h4>
+                                    <h6 class="card-subtitle mb-2 text-muted">1.0.2</h6>
+                                    <p> Modify the PHP code of 24 Point Poker Game Calculator, Converted to JavaScript module form. The output will be a JSON form, which will be in form with solution list (array), number of solutions.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="https://www.npmjs.com/package/24_game_resolver" class="btn btn-primary" target="_blank" style=" color:#ffffff; background-color: #376bcb;">
+                                    前往查看<i class="material-icons">launch</i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="footer footer-default">
         <div class="container">
             <nav class="float-left">
                 <ul>
                     <li>
-                        <a href="https://hank199599.github.io/index.html" target="_blank">個人頁面</a>
+                        <a href="https://www.facebook.com/profile.php?id=100000555093316" target="_blank">Facebook</a>
                     </li>
                     <li>
-                        <a href="https://gdg.community.dev/events/details/google-gdg-taipei-presents-devfest-taiwan-2020/#0" target="_blank">GOOGLE DevFest TAIWAN 2020</a>
+                        <a href="https://www.linkedin.com/in/紹宏-游-74679110b/" target="_blank">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/hank199599" target="_blank">Github</a>
+                    </li>
+                    <li>
+                        <a href="mailto:hank199599@gmail.com">Email</a>
                     </li>
                 </ul>
             </nav>
@@ -162,6 +235,7 @@ The above copyright notice and this permission notice shall be included in all c
                 </script>, 使用由
                 <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a> 提供的設計工具
             </div>
+
         </div>
     </footer>
     <!--   Core JS Files   -->
@@ -176,6 +250,8 @@ The above copyright notice and this permission notice shall be included in all c
     <!--  Google Maps Plugin    -->
     <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
     <script src="../assets/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
+    <!--icon挿件 -->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </body>
 
 </html>
