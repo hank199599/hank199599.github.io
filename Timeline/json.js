@@ -1,7 +1,7 @@
 var contents={
     "2021/08/02":{
         "title":"助教",
-        "content":"Woman in AI</br>本工作坊會從一個資料科學家的角度，手把手教學AI的操作流程，你不需要具備高深的程式能力。</br>工作坊會由業界學長姐擔任導師和助教，帶領大家從基本的資料處理開始，帶到如何將數據轉換為電腦可運算的數據。</p>",
+        "content":"Woman in AI</br>本工作坊會從一個資料科學家的角度，手把手教學AI的操作流程，你不需要具備高深的程式能力。</br>工作坊會由業界學長姐擔任導師和助教，帶領大家從基本的資料處理開始，帶到如何將數據轉換為電腦可運算的數據。",
         "button":{
             "herf":"https://www.accupass.com/event/2104250103576884283220",
             "content":"<i class='material-icons'>menu_book</i> ACCUPASS 頁面 "
@@ -9,7 +9,7 @@ var contents={
     },
     "2021/03~06":{
         "title":"學徒",
-        "content":"Google Cloud Student Sprint Program</br> 此計畫將在3月到6月期間進行為期 10 週的線上課程及工作坊，並由 Google 導師進行分組指導，</br>最後目標是帶領同學一起通過 Google Cloud Associate Cloud Engineer (ACE) 的專業認證考試。</p>",
+        "content":"Google Cloud Student Sprint Program</br> 此計畫將在3月到6月期間進行為期 10 週的線上課程及工作坊，並由 Google 導師進行分組指導，</br>最後目標是帶領同學一起通過 Google Cloud Associate Cloud Engineer (ACE) 的專業認證考試。",
         "button":{
             "herf":"https://buildyourfuture.withgoogle.com/programs/cloud-student-sprint-programs/",
             "content":"<i class='fa fa-google' aria-hidden='true'></i> 計劃說明頁面 "
@@ -17,7 +17,7 @@ var contents={
     },
     "2020/11":{
         "title":"副召集人/講者",
-        "content":" 「從Python到Tensorflow」線上讀書會</br>2020/11/10 ~ 現正進行中 • Google Meet</p>",
+        "content":" 「從Python到Tensorflow」線上讀書會</br>2020/11/10 ~ 現正進行中 • Google Meet",
         "button":{
             "herf":"https://tensorflowbookclub.ml/",
             "content":"<i class='material-icons'>menu_book</i> 參與讀書會 "
