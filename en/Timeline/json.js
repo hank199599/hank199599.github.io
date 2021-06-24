@@ -32,7 +32,7 @@ var contents={
             }
     },
     "2020/Now":{
-        "title":"Study at <b>National Taiwan Unoversity of Science and Technology</b><i class='material-icons'>school</i>",
+        "title":"Study at <b>National Taiwan University of Science and Technology</b><i class='material-icons'>school</i>",
         "content":"Computer Science and Information Engineering"
     },
     "2016/2018":{
