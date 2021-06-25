@@ -156,7 +156,7 @@ var detail_dict = {
         "src": "https://lh3.googleusercontent.com/NnDqEoQYzER27FJ8X-6fAxdRkSQ35j6MbiMfwMu5V_tqLZDopKQ1YcCPMLwwmIA-WQmEFaJ1Y6YA=s90",
         "Titile": "每日天文圖",
         "Language": ["Chinese(Taiwan)", "Cantonese"],
-        "content": "Provide users with daily selected pictures from &quot;A Day of the Day (APOD)&quot;,</br> and attach a brief description written by a professional astronomer. </br>Take you to a fascinating universe!</br></br>About &quot;A Day of the Day (APOD)&quot;: </br>From the National Aeronautics and Space Administration and Michigan University of Science and Technology The service provided by (MTU) began on June 16, 1995. This website will provide a different image of the universe every day with a brief description.",
+        "content": "Provide users with daily selected pictures from &quot;Astronomy Picture of the Day (APOD)&quot;,</br> and attach a brief description written by a professional astronomer. </br>Take you to a fascinating universe!</br></br>About &quot;Astronomy Picture of the Day (APOD)&quot;: </br>From the National Aeronautics and Space Administration and Michigan University of Science and Technology The service provided by (MTU) began on June 16, 1995. This website will provide a different image of the universe every day with a brief description.",
         "Github_link": "https://github.com/hank199599/Google-Assistant-APP/tree/master/每日天文圖",
         "Action_link": "https://assistant.google.com/services/invoke/uid/00000011ac49f35c"
     },
@@ -346,7 +346,7 @@ var detail_dict = {
     },
     "TW_WG_Translator": {
         "src": "https://lh3.googleusercontent.com/cf1EkCmbRkqQ_ghf8h-SwKs7pBHwEPwJPbNDCveVBewPLCfeWJXsuoJHK5QkrgLEWkAcz5xOYI9U=s90",
-        "Titile": "護照English翻譯機",
+        "Titile": "護照英文翻譯機",
         "Language": ["Chinese(Taiwan)"],
         "content": "Use the &quot;Passport Foreign Name Pinyin Comparison Table&quot; from the Ministry of Foreign Affairs,</br> to provide a quick and convenient translation function!",
         "Github_link": "https://github.com/hank199599/Google-Assistant-APP/tree/master/台灣護照English翻譯機",
