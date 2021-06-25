@@ -710,12 +710,14 @@ The above copyright notice and this permission notice shall be included in all c
     </script>
     <script type="text/javascript">
         var userLang = navigator.language || navigator.userLanguage;
-        if (window.confirm('We detect that your browser language preference is not Chinese(Taiwan).\n Is it ok to switch the interface into English version?')) {
+        if(userLang.indexOf("zh")===-1){
+            if (window.confirm('We detect that your browser language preference is not Chinese(Taiwan).\n Is it ok to switch the interface into English version?')) {
             window.location.href = './en/index.html';
+            }
+            else {
+                die();
+            } 
         }
-        else {
-            die();
-        } 
     </script>
 </body>
 
