@@ -7,6 +7,22 @@ var contents={
             "content":"<i class='material-icons'>menu_book</i> ACCUPASS 頁面 "
             }
     },
+    "2021/07/10":{
+        "title":"講者",
+        "content":" TensorFlow Everywhere<br>這是一項由全球TensorFlow和機器學習社區的負責人舉辦的一系列活動。",
+        "button":{
+            "herf":"https://www.meetup.com/en-AU/TensorFlow-User-Group-Taipei/events/277170902/",
+            "content":"<span class='btn-inner--icon'><span class='iconify' data-icon='cib:meetup' data-inline='false'></span> Meetup 頁面 "
+            }
+    },
+    "2021/07~":{
+        "title":"實習生",
+        "content":"<i class='material-icons'>place</i><b>APMIC OpenTalk</b><br><small>數位轉型的數位助理首選品牌 OpenTalk</small>",
+        "button":{
+            "herf":"https://www.ap-mic.com/",
+            "content":"<i class='material-icons'>launch</i> 相關頁面"
+            }
+    },
     "2021/03~06":{
         "title":"學徒",
         "content":"Google Cloud Student Sprint Program</br> 此計畫將在3月到6月期間進行為期 10 週的線上課程及工作坊，並由 Google 導師進行分組指導，</br>最後目標是帶領同學一起通過 Google Cloud Associate Cloud Engineer (ACE) 的專業認證考試。",
@@ -37,11 +53,11 @@ var contents={
     },
     "2016/2018":{
         "title":"教學助理 TA",
-        "content":"1.協助出題與批改考卷</br>2.Moodle教學系統的操作</br> 3.曾擔任普通物理、材料科學導論等課程，是專題指導教授所教授的課</br></br><small>(2016/02~2018/06，共兩年五個月)</small>"
+        "content":"<i class='material-icons'>place</i> <b>國立暨南國際大學</b><br>1.協助出題與批改考卷</br>2.Moodle教學系統的操作</br> 3.曾擔任普通物理、材料科學導論等課程，是專題指導教授所教授的課</br></br><small>(2016/02~2018/06，共兩年五個月)</small>"
     },
     "2014/2015":{
         "title":"工讀生",
-        "content":"國立暨南國際大學圖書館</br> 1.跨館的借書、還書協助 </br> 2.圖書館閉館協助</br></br><small>(2014/11~2015/06，共七個月)</small>"
+        "content":"<i class='material-icons'>place</i> <b>國立暨南國際大學圖書館</b></br> 1.跨館的借書、還書協助 </br> 2.圖書館閉館協助</br></br><small>(2014/11~2015/06，共七個月)</small>"
     },
     "2013/2018":{
         "title":"就讀國立暨南國際大學<i class='material-icons'>school</i>",
