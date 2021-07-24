@@ -1,5 +1,5 @@
 var contents={
-    "2021/08/02":{
+    "2021/08/20":{
         "title":"Teaching assistant",
         "content":"Woman in AI</br>This workshop will teach the AI ​​operating procedures from the perspective of a data scientist.<br> You don't need to have advanced programming skills. </br>In the workshop, senior elder sisters in the industry will serve as mentors and teaching assistants,<br>  leading everyone from basic data processing to how to convert data into computer-calculated data.",
         "button":{

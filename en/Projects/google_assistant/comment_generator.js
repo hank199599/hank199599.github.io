@@ -31,7 +31,7 @@ for (var i = 0; i < Object.keys(comments).length; i++) {
         }
     }
     else {
-        content = content + '<div class="col-md-4" style="margin:auto;">'+'<h2>No comment now</h2>'+'</div>'
+        content = content + '<div class="col-md-4" style="margin:auto;">'+'<h2>No comment yet</h2>'+'</div>'
     }
     content = content + '</div>'
     document.getElementById(String(i + 1)).innerHTML = content
