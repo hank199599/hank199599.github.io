@@ -14,7 +14,7 @@ var modal_content = "";
         }
 
         var action_title= action_name_dict[action_list[i]][language];
-        if(action_title===undefined){ action_title= action_name_dict[action_list[i]]["中文(台灣)"];}
+        if(action_title===undefined){ action_title= action_name_dict[action_list[i]]["中文(臺灣)"];}
 
         modal_content = modal_content +
             '<div class="modal fade" id="' + action_list[i] + '" tabindex=" -1 " role=" dialog ">' +
@@ -45,13 +45,23 @@ var modal_content = "";
             '<a title="Github原始碼"' +
             'href="' + temp['Github_link'] + '"' +
             'target="_blank"><i class="fa fa-github"></i></a>' +
-            '</button>' +
-            '<button type="button" class="btn btn-link">' +
+            '</button>'
+        if(temp['Action_link']==="javascript:;"){
+            modal_content = modal_content + '<button type="button" class="btn btn-link">' +
+                '<a title="本服務已下線" '+
+                'href="' + temp['Action_link'] +'"' +
+                'target="_blank">在Google助理上試用</a>' +
+                '</button>'
+        }
+        else{
+            modal_content = modal_content + '<button type="button" class="btn btn-link">' +
             '<a title="' + action_title + ' | ' + assistant_name_dict[language]+'" '+
             'href="' + temp['Action_link'] + '?hl='+langeuage_url_dict[language]+'"' +
             'target="_blank">在Google助理上試用</a>' +
-            '</button>' +
-            '</div>' +
+            '</button>'
+
+        }
+        modal_content = modal_content +'</div>' +
             '</div>' +
             '</div>' +
             '</div>'
