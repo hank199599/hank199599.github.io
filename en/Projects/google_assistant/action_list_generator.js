@@ -14,7 +14,7 @@ var modal_content = "";
         }
 
         var action_title= action_name_dict[action_list[i]][language];
-        if(action_title===undefined){ action_title= action_name_dict[action_list[i]]["中文(台灣)"];}
+        if(action_title===undefined){ action_title= action_name_dict[action_list[i]]["中文(臺灣)"];}
 
         modal_content = modal_content +
             '<div class="modal fade" id="' + action_list[i] + '" tabindex=" -1 " role=" dialog ">' +
