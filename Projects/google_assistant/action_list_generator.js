@@ -47,11 +47,11 @@ var modal_content = "";
             'target="_blank"><i class="fa fa-github"></i></a>' +
             '</button>'
         if(temp['Action_link']==="javascript:;"){
-            modal_content = modal_content + '<button type="button" class="btn btn-link">' +
-                '<a title="本服務已下線" '+
-                'href="' + temp['Action_link'] +'"' +
-                'target="_blank">在Google助理上試用</a>' +
-                '</button>'
+            modal_content = modal_content + '<button type="button" class="btn btn-link">本服務已下線</button>' 
+                // '<a title="" '+
+                // 'href="' + temp['Action_link'] +'"' +
+                // 'target="_blank">在Google助理上試用</a>' +
+                // ''
         }
         else{
             modal_content = modal_content + '<button type="button" class="btn btn-link">' +
