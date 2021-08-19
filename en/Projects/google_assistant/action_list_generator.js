@@ -45,16 +45,23 @@ var modal_content = "";
             '<a title="Github原始碼"' +
             'href="' + temp['Github_link'] + '"' +
             'target="_blank"><i class="fa fa-github"></i></a>' +
-            '</button>' +
-            '<button type="button" class="btn btn-link">' +
-            '<a title="' + action_title + ' | ' + assistant_name_dict[language]+'" '+
-            'href="' + temp['Action_link'] + '?hl='+langeuage_url_dict[language]+'"' +
-            'target="_blank">Try it on Google Assistant</a>' +
-            '</button>' +
-            '</div>' +
-            '</div>' +
-            '</div>' +
-            '</div>'
+            '</button>' 
+            if(temp['Action_link']==="javascript:;"){
+                modal_content = modal_content + '<button type="button" class="btn btn-link">Service is shot down</button>' 
+            }
+            else{
+                modal_content = modal_content + '<button type="button" class="btn btn-link">' +
+                '<a title="' + action_title + ' | ' + assistant_name_dict[language]+'" '+
+                'href="' + temp['Action_link'] + '?hl='+langeuage_url_dict[language]+'"' +
+                'target="_blank">在Google助理上試用</a>' +
+                '</button>'
+    
+            }
+            modal_content = modal_content +'</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>'
+    
     }
 document.getElementById('Action_details').innerHTML = modal_content
 }
