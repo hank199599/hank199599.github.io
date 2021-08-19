@@ -262,7 +262,7 @@ var detail_dict = {
         "Language": ["Chinese(Taiwan)", "Cantonese", "English", "Japanese", "Korean", "Thai", "German", "French", "Danish", "Dutch"],
         "content": "Through the RSS of Google Trends, users can quickly obtain the current popular search keywords. </br>When this service is activated, it will automatically determine the user's location to switch the search area",
         "Github_link": "https://github.com/hank199599/Google-Assistant-APP/tree/master/熱搜趨勢",
-        "Action_link": "https://assistant.google.com/services/invoke/uid/000000fe8bfde8db"
+        "Action_link": "javascript:;"
     },
     "Moon_info": {
         "src": "https://lh3.googleusercontent.com/P_cYQtn-NsKHndUqeytSl6e62UhHA9DDhsEF9_ensKoV6Rjitd79gZwHtjD3XDqsG7c4Zi6ByGrRdw=s90",
