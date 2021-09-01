@@ -165,8 +165,8 @@ var detail_dict = {
         "Titile": "運勢大師",
         "Language": ["中文(臺灣)", "廣東話"],
         "content": "本服務提供今天與後兩日的星座運勢。</br>使用者亦可透過透過生日查詢對應的運勢!</br></br>星座運勢內容授權：科技紫微網</br>http://click108.tw/RiYbJ",
-        "Github_link": "",
-        "Action_link": "https://assistant.google.com/services/invoke/uid/00000084fd2effe4"
+        "Github_link": "https://github.com/hank199599/Google-Assistant-APP/tree/master/%E9%81%8B%E5%8B%A2%E5%A4%A7%E5%B8%AB",
+        "Action_link": "javascript:;"
     },
     "Brain_Game": {
         "src": "https://lh3.googleusercontent.com/IC_vSx1qVU6iTofmMzVjUIDjEcQ33KicmwUQS8CInXLghiMVayuCmn2aXEMTqp6DTrg7fbFLBxUT=s90",

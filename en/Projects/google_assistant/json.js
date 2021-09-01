@@ -165,8 +165,8 @@ var detail_dict = {
         "Titile": "運勢大師",
         "Language": ["Chinese(Taiwan)", "Cantonese"],
         "content": "This service provides the horoscope for today and the next two days. </br>Users can also check the corresponding fortune through birthday!</br></br> Horoscope content authorization: 科技紫微網.com</br>http://click108.tw/RiYbJ",
-        "Github_link": "",
-        "Action_link": "https://assistant.google.com/services/invoke/uid/00000084fd2effe4"
+        "Github_link": "https://github.com/hank199599/Google-Assistant-APP/tree/master/%E9%81%8B%E5%8B%A2%E5%A4%A7%E5%B8%AB",
+        "Action_link": "javascript:;"
     },
     "Brain_Game": {
         "src": "https://lh3.googleusercontent.com/IC_vSx1qVU6iTofmMzVjUIDjEcQ33KicmwUQS8CInXLghiMVayuCmn2aXEMTqp6DTrg7fbFLBxUT=s90",
