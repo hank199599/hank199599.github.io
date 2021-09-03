@@ -15,7 +15,7 @@ var contents={
             "content":"<span class='btn-inner--icon'><span class='iconify' data-icon='cib:meetup' data-inline='false'></span>&nbsp;Meetup Page "
             }
     },
-    "2021/07~":{
+    "2021/07~08":{
         "title":"Intern",
         "content":"<i class='material-icons'>place</i><b>APMIC OpenTalk</b><br><small>the Preferred Brand for Digital Assistants in Digital Transformation OpenTalk</small>",
         "button":{

@@ -15,7 +15,7 @@ var contents={
             "content":"<span class='btn-inner--icon'><span class='iconify' data-icon='cib:meetup' data-inline='false'></span> Meetup 頁面 "
             }
     },
-    "2021/07~":{
+    "2021/07~08":{
         "title":"實習生",
         "content":"<i class='material-icons'>place</i><b>APMIC OpenTalk</b><br><small>數位轉型的數位助理首選品牌 OpenTalk</small>",
         "button":{
