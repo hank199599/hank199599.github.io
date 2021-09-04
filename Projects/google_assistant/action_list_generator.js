@@ -48,10 +48,6 @@ var modal_content = "";
             '</button>'
         if(temp['Action_link']==="javascript:;"){
             modal_content = modal_content + '<button type="button" class="btn btn-link">本服務已下線</button>' 
-                // '<a title="" '+
-                // 'href="' + temp['Action_link'] +'"' +
-                // 'target="_blank">在Google助理上試用</a>' +
-                // ''
         }
         else{
             modal_content = modal_content + '<button type="button" class="btn btn-link">' +
