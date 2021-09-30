@@ -59,7 +59,7 @@ myData.on('value', function(snapshot) {
                 '<div class="col-md-3 ml-auto mr-auto">' +
                 '<div class="card">' +
                 '<div class="card-body" style="padding: 0;">' +
-                '<img class="card-img-top" src="' + picture_generator(data.AQI) + '" rel="nofollow" alt="Card image cap">' +
+                '<img class="card-img-top" src="' + picture_generator(data.AQI) + '" rel="nofollow" alt="AQI value'+data.AQI+'">' +
                 ' <div class = "card-body" style="padding : 5px 5px;">' +
                 '<p class = "card-text">' +
                 '<h2 class="card-title" style="margin: 0 0 ">' + station + '</h2>' +
