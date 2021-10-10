@@ -156,9 +156,9 @@ var comments = {
                 "#e51516",
                 "#a20102"
             ],
-            "title": "普通に楽しい。時間潰しに最適なアプリ。!",
-            "reviewer": "山下友都",
-            "date": "2020年9月27日"
+            "title": "最低な話しまやた利他いお金も化かんないかだ1位です",
+            "reviewer": "宮坂柊輝",
+            "date": "2021年10月10日"
         },
         {
             "name": "インサイト探査機",
@@ -226,9 +226,9 @@ var comments = {
                 "#e51516",
                 "#a20102"
             ],
-            "title": "ชอบมาก!",
-            "reviewer": "สิบเอกดนัย ทองหนุน (แม๊กเหนือเมฆ)",
-            "date": "2020年9月5日"
+            "title": "สนุกไปกับมัน ไม่เบื่อเลยค่ะ",
+            "reviewer": "39 Thanapha Patjirakul",
+            "date": "2021年9月19日"
         },
         {
             "name": "สถานี Insight",
@@ -284,9 +284,9 @@ var comments = {
                 "#e51516",
                 "#a20102"
             ],
-            "title": "Super spiel!",
-            "reviewer": "Constantin Gamer",
-            "date": "2020年9月21日"
+            "title": "Gutes spiel",
+            "reviewer": "Bruddah_numba_one",
+            "date": "2021年7月11日"
         }
     ],
     "8":[],
