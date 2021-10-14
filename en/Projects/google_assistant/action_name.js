@@ -139,7 +139,7 @@ var action_name_dict = {
         "Chinese(Taiwan)":"天氣小幫手",
     },
     "TW_WG_Translator":{
-        "Chinese(Taiwan)":"護照English翻譯機",
+        "Chinese(Taiwan)":"護照英文翻譯機",
     },
     "Morse_Translator":{
         "Chinese(Taiwan)":"摩斯密碼翻譯機",
