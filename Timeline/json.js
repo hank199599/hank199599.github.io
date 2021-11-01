@@ -1,4 +1,12 @@
 var contents={
+    "2021/11/29":{
+        "title":"DevFest 2021 講者",
+        "content":"由 Google Developer Group Taipei/Taoyuan 主辦, </br>在這個線上演講中: </br>分享開發Google Assistant 與語音對話設計的主要流程<br>並提供於鐵人賽分享的詳細教學。",
+        "button":{
+            "herf":"https://youtu.be/vA21dx5dPsE?t=3066",
+            "content":"<i class='fa fa-youtube-play' aria-hidden='true'></i> 線上直播頁面"
+            }
+    },
     "2021/08/20":{
         "title":"助教",
         "content":"Woman in AI</br>本工作坊會從一個資料科學家的角度，手把手教學AI的操作流程，你不需要具備高深的程式能力。</br>工作坊會由業界學長姐擔任導師和助教，帶領大家從基本的資料處理開始，帶到如何將數據轉換為電腦可運算的數據。",
