@@ -7,6 +7,14 @@ var contents={
             "content":"<i class='fa fa-youtube-play' aria-hidden='true'></i> 線上直播頁面"
             }
     },
+    "2021/9":{
+        "title":"2021 iThome 鐵人賽",
+        "content":"由 IT邦幫忙 主辦, </br>在這個連續30日不間斷的教學中: </br>分享開發Google Assistant 與語音對話設計的主要流程",
+        "button":{
+            "herf":"https://ithelp.ithome.com.tw/users/20141015/ironman/4365",
+            "content":"<i class='material-icons'>menu_book</i> 教學頁面"
+            }
+    },
     "2021/08/20":{
         "title":"助教",
         "content":"Woman in AI</br>本工作坊會從一個資料科學家的角度，手把手教學AI的操作流程，你不需要具備高深的程式能力。</br>工作坊會由業界學長姐擔任導師和助教，帶領大家從基本的資料處理開始，帶到如何將數據轉換為電腦可運算的數據。",
