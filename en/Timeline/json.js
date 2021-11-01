@@ -1,4 +1,20 @@
 var contents={
+    "2021/11/29":{
+        "title":"DevFest 2021 Speaker",
+        "content":"Host by Google Developer Group Taipei/Taoyuan,</br>In this online speech:<br>Share the brief process of VUI design and how to apply it to develop a Google Assistant voice app.<br>At the same time, I share the info of complete tutorial for the listener.",
+        "button":{
+            "herf":"https://youtu.be/vA21dx5dPsE?t=3066",
+            "content":"<i class='fa fa-youtube-play' aria-hidden='true'></i> Onsite page"
+            }
+    },
+    "2021/9":{
+        "title":"2021 iThome Ironman",
+        "content":"Host by IThome, </br>In this 30 days non-stop tutorial blog challenge</br>Share the main concept of voice user interface and how to apply it to develope a Google Assistant voice app",
+        "button":{
+            "herf":"https://ithelp.ithome.com.tw/users/20141015/ironman/4365",
+            "content":"<i class='material-icons'>menu_book</i> Turorial Page (Chinese)"
+            }
+    },
     "2021/08/20":{
         "title":"Teaching assistant",
         "content":"Woman in AI</br>This workshop will teach the AI ​​operating procedures from the perspective of a data scientist.<br> You don't need to have advanced programming skills. </br>In the workshop, senior elder sisters in the industry will serve as mentors and teaching assistants,<br>  leading everyone from basic data processing to how to convert data into computer-calculated data.",
