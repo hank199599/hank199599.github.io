@@ -54,7 +54,7 @@ myData.on('value', function(snapshot) {
             if (station.indexOf('(') !== -1) {
                 station = station.split('(')[1].replace(')', '(行動站)')
             }
-
+            if (data===undefined){continue;}
             content = content +
                 '<div class="col-md-3 ml-auto mr-auto">' +
                 '<div class="card">' +
