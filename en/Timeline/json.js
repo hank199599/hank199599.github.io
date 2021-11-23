@@ -3,7 +3,7 @@ var contents={
         "title":"DevFest 2021 Speaker",
         "content":"Host by Google Developer Group Taipei/Taoyuan,</br>In this online speech:<br>Share the brief process of VUI design and how to apply it to develop a Google Assistant voice app.<br>At the same time, I share the info of complete tutorial for the listener.",
         "button":{
-            "herf":"https://youtu.be/vA21dx5dPsE?t=3066",
+            "herf":"https://youtu.be/Qc5aUWCA43k",
             "content":"<i class='fa fa-youtube-play' aria-hidden='true'></i> Onsite page"
             }
     },
