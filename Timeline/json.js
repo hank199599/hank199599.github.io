@@ -3,7 +3,7 @@ var contents={
         "title":"DevFest 2021 講者",
         "content":"由 Google Developer Group Taipei/Taoyuan 主辦, </br>在這個線上演講中: </br>分享開發Google Assistant 與語音對話設計的主要流程<br>並提供於鐵人賽分享的詳細教學。",
         "button":{
-            "herf":"https://youtu.be/vA21dx5dPsE?t=3066",
+            "herf":"https://youtu.be/Qc5aUWCA43k",
             "content":"<i class='fa fa-youtube-play' aria-hidden='true'></i> 線上直播頁面"
             }
     },
