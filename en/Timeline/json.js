@@ -8,7 +8,7 @@ var contents={
             }
     },
     "2021/9":{
-        "title":"2021 iThome Ironman",
+        "title":"The 13th ITHELP Ironman Contest 2021",
         "content":"Host by IThome, </br>In this 30 days non-stop tutorial blog challenge</br>Share the main concept of voice user interface and how to apply it to develope a Google Assistant voice app",
         "button":{
             "herf":"https://ithelp.ithome.com.tw/users/20141015/ironman/4365",
