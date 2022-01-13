@@ -3,12 +3,12 @@ var contents={
         "title":"DevFest 2021 Speaker",
         "content":"Host by Google Developer Group Taipei/Taoyuan,</br>In this online speech:<br>Share the brief process of VUI design and how to apply it to develop a Google Assistant voice app.<br>At the same time, I share the info of complete tutorial for the listener.",
         "button":{
-            "herf":"https://youtu.be/Qc5aUWCA43k",
+            "herf":"https://youtu.be/Qc5aUWCA43k?t=16550",
             "content":"<i class='fa fa-youtube-play' aria-hidden='true'></i> Onsite page"
             }
     },
     "2021/9":{
-        "title":"2021 iThome Ironman",
+        "title":"The 13th ITHELP Ironman Contest 2021",
         "content":"Host by IThome, </br>In this 30 days non-stop tutorial blog challenge</br>Share the main concept of voice user interface and how to apply it to develope a Google Assistant voice app",
         "button":{
             "herf":"https://ithelp.ithome.com.tw/users/20141015/ironman/4365",
