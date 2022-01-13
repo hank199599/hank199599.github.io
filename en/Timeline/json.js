@@ -51,7 +51,7 @@ var contents={
         "title":"Deputy convener/Speaker",
         "content":" &quot;From Python to Tensorflow&quot; onsite bookclub</br>2020/11/10 ~ Now • Google Meet",
         "button":{
-            "herf":"https://tensorflowbookclub.ml/",
+            "herf":"https://bookclubtensorflow.github.io/",
             "content":"<i class='material-icons'>menu_book</i>&nbsp;Join the bookclub "
         }
     },
