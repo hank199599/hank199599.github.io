@@ -51,7 +51,7 @@ var contents={
         "title":"副召集人/講者",
         "content":" 「從Python到Tensorflow」線上讀書會</br>2020/11/10 ~ 現正進行中 • Google Meet",
         "button":{
-            "herf":"https://tensorflowbookclub.ml/",
+            "herf":"https://bookclubtensorflow.github.io/",
             "content":"<i class='material-icons'>menu_book</i> 參與讀書會 "
         }
     },
