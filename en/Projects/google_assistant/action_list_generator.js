@@ -42,7 +42,7 @@ var modal_content = "";
             '</div>' +
             '<div class="modal-footer">' +
             '<button type="button" class="btn btn-link">' +
-            '<a title="Github原始碼"' +
+            '<a title="Origin code on Github"' +
             'href="' + temp['Github_link'] + '"' +
             'target="_blank"><i class="fa fa-github"></i></a>' +
             '</button>' 
