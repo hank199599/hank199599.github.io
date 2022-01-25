@@ -53,7 +53,7 @@ var modal_content = "";
                 modal_content = modal_content + '<button type="button" class="btn btn-link">' +
                 '<a title="' + action_title + ' | ' + assistant_name_dict[language]+'" '+
                 'href="' + temp['Action_link'] + '?hl='+langeuage_url_dict[language]+'"' +
-                'target="_blank">在Google助理上試用</a>' +
+                'target="_blank">Try it on Google Assistant</a>' +
                 '</button>'
     
             }
