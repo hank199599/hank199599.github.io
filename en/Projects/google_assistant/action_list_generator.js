@@ -42,7 +42,7 @@ var modal_content = "";
             '</div>' +
             '<div class="modal-footer">' +
             '<button type="button" class="btn btn-link">' +
-            '<a title="Github原始碼"' +
+            '<a title="Origin code on Github"' +
             'href="' + temp['Github_link'] + '"' +
             'target="_blank"><i class="fa fa-github"></i></a>' +
             '</button>' 
@@ -53,7 +53,7 @@ var modal_content = "";
                 modal_content = modal_content + '<button type="button" class="btn btn-link">' +
                 '<a title="' + action_title + ' | ' + assistant_name_dict[language]+'" '+
                 'href="' + temp['Action_link'] + '?hl='+langeuage_url_dict[language]+'"' +
-                'target="_blank">在Google助理上試用</a>' +
+                'target="_blank">Try it on Google Assistant</a>' +
                 '</button>'
     
             }
