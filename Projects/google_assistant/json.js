@@ -262,7 +262,7 @@ var detail_dict = {
         "Language": ["中文(臺灣)", "廣東話", "英文", "日文", "韓文", "泰文", "德文", "法文", "丹麥文", "荷蘭文"],
         "content": "透過Google趨勢的RSS， 為使用者快速取得當前的熱門搜尋關鍵字。</br>在啟動本服務同時，會自動判斷使用者所在地區來切換搜尋地區",
         "Github_link": "https://github.com/hank199599/Google-Assistant-APP/tree/master/熱搜趨勢",
-        "Action_link": "javascript:;"
+        "Action_link": "https://assistant.google.com/services/invoke/uid/000000fe8bfde8db"
     },
     "Moon_info": {
         "src": "https://lh3.googleusercontent.com/P_cYQtn-NsKHndUqeytSl6e62UhHA9DDhsEF9_ensKoV6Rjitd79gZwHtjD3XDqsG7c4Zi6ByGrRdw=s90",
