@@ -79,9 +79,9 @@ var contents={
         "title":"Part-Time Worker",
         "content":"<i class='material-icons'>place</i> <b>National Chi Nan University (Taiwan) library</b></br> 1. Assistance in borrowing and returning books across libraries </br> 2. Assistance in library closure</br></br><small>(2014/11~2015/06，7 month)</small>"
     },
-    "2013/2018":{
+    "2014/2018":{
         "title":"<i class='material-icons'>school</i> National Chi Nan University (Taiwan)",
-        "content":"Applied Material and Optoelectronic Engineering</br></br><small>(2013/09~2018/06)</small>"
+        "content":"Applied Material and Optoelectronic Engineering</br></br><small>(2014/09~2018/06)</small>"
     },
     "2014/2016":{
         "title":"Manager",
