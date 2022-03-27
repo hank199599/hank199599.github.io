@@ -43,7 +43,7 @@ var contents={
         "title":"Apprentice",
         "content":"Google Cloud Student Sprint Program</br> This project will be a 10-week online course and workshop from March to June, and will be guided by Google mentor in groups. </br> The final goal is leading students to pass the Google Cloud Associate Cloud Engineer (ACE) professional certification exam.",
         "button":{
-            "herf":"https://buildyourfuture.withgoogle.com/programs/cloud-student-sprint-programs/",
+            "herf":"https://web.archive.org/web/20211202222716/https:/buildyourfuture.withgoogle.com/programs/cloud-student-sprint-programs/",
             "content":"<i class='fa fa-google' aria-hidden='true'></i>&nbsp;details of this program "
         }
     },
