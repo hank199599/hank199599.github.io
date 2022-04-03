@@ -19,18 +19,18 @@ The above copyright notice and this permission notice shall be included in all c
         Python | 學習紀錄
     </title>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-    <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <link rel="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+    <!-- Nucleo Icons -->
+    <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
-    <link href="../../assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="../../assets/demo/demo.css" rel="stylesheet" />
+    <link id="pagestyle" href="../../assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
+    <!-- <link href="../../main.css" rel="stylesheet" /> -->
     <style type="text/css">
         .dropdown-menu .dropdown-item:hover,
         .dropdown-menu .dropdown-item:focus,
@@ -40,53 +40,46 @@ The above copyright notice and this permission notice shall be included in all c
         .dropdown-menu a:hover,
         .dropdown-menu a:focus,
         .dropdown-menu a:active {
-            background-color: #356c99;
+            background-color: #c8d8ef;
         }
-        
+
         .btn.btn-primary:focus,
         .btn.btn-primary:active,
         .btn.btn-primary:hover {
             box-shadow: 0 14px 26px -12px rgba(53, 108, 153, 0.42), 0 4px 23px 0px rgba(53, 108, 153, 0.12), 0 8px 10px -5px rgba(39, 65, 176, 0.2);
         }
-        
+
         .navbar.navbar-transparent .navbar-toggler .navbar-toggler-icon {
             background-color: #356c99;
         }
-        
-        .navbar .navbar-toggler .navbar-toggler-icon {
+
+        /* .navbar .navbar-toggler .navbar-toggler-icon {
             background-color: #356c99;
-        }
-        
+        } */
+
         .navbar-collapse .navbar-nav .nav-item .nav-link {
             color: #356c99;
         }
-        
+
         .navbar.navbar-transparent {
             color: #356c99;
         }
-        
+
         .dropdown-menu .dropdown-item,
         .dropdown-menu li>a {
             color: #356c99;
         }
-        
+
         .navbar .navbar-nav .nav-item.active .nav-link,
         .navbar .navbar-nav .nav-item.active .nav-link:hover,
         .navbar .navbar-nav .nav-item.active .nav-link:focus {
             background-color: rgba(53, 108, 153, 0.1);
         }
-        
+
         .navbar .navbar-brand {
             color: #356c99;
         }
-        
-        .card .card-header-primary,
-        .card.bg-primary,
-        .card.card-rotate.bg-primary .front,
-        .card.card-rotate.bg-primary .back {
-            background: linear-gradient( 60deg, #4b7597, #356c99);
-        }
-        
+
         .nav-pills .nav-item .nav-link.active {
             color: #ffffff;
             background-color: #356c99;
@@ -96,153 +89,240 @@ The above copyright notice and this permission notice shall be included in all c
 </head>
 
 <body class="landing-page sidebar-collapse">
-    <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
-        <div class="container">
-            <div class="navbar-translate">
-                <a class="navbar-brand" href="../../index.html">
-                   Python學習紀錄</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="../../index.html" class="nav-link">
-                            <i class="material-icons">assignment_ind</i> 首頁
+    <div class="container position-sticky z-index-sticky top-0">
+        <div class="row">
+            <div class="col-12">
+                <nav
+                    class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+                    <div class="container-fluid px-0">
+                        <a class="navbar-brand font-weight-bolder ms-sm-3" href="../../" rel="tooltip" title="Home Page"
+                            data-placement="bottom">
+                            Python | 學習紀錄
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../Timeline/index.html" class="nav-link">
-                            <i class="material-icons">timeline</i> 學經歷
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../blog/" class="nav-link">
-                            <i class="material-icons">description</i> 部落格
-                        </a>
-                    </li>
-                    <li class="dropdown nav-item active">
-                        <a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown" style="color:#356c99;">
-                            <i class="material-icons">account_tree</i> 作品集
-                        </a>
-                        <div class="dropdown-menu dropdown-with-icons">
-                            <a href="../../Projects/google_assistant/index.html" class="dropdown-item">
-                                <span class="iconify" data-icon="mdi-google-assistant" data-inline="false"></span> &emsp;Google助理語音應用
-                            </a>
-                            <a href="../../Projects/npm/index.html" class="dropdown-item">
-                                <span class="iconify" data-icon="simple-icons:npm" data-inline="false"></span>&emsp;Node.js 模組
-                            </a>
-                            <a href="../../Projects/python/index.html" class="dropdown-item active">
-                                <span class="iconify" data-icon="simple-icons:python" data-inline="false"></span>&emsp;Python學習紀錄
-                            </a>
-                            <a href="../../Projects/tw_air_pollute/index.html" class="dropdown-item">
-                                <span class="iconify" data-icon="oi-cloud" data-inline="false"></span>&emsp;空汙即時查詢
-                            </a>
-                            <a href="../../Projects/tw_uvi_index/index.html" class="dropdown-item">
-                                <span class="iconify" data-icon="uil-sun" data-inline="false"></span>&emsp;紫外線即時查詢
-                            </a>
-                            <a href="../../Projects/tw_radiation_index/index.html" class="dropdown-item">
-                                <span class="iconify" data-icon="ion-nuclear" data-inline="false"></span>&emsp;輻射即時查詢
-                            </a>
+                        <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon mt-2">
+                                <span class="navbar-toggler-bar bar1"></span>
+                                <span class="navbar-toggler-bar bar2"></span>
+                                <span class="navbar-toggler-bar bar3"></span>
+                            </span>
+                        </button>
+                        <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+
+                            <ul class="navbar-nav navbar-nav-hover ms-auto">
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link nav-link-icon me-2" href="../../Timeline/index.html">
+                                        <i class="material-icons opacity-6 me-2 text-dark">timeline</i>
+                                        <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" >時間軸</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link nav-link-icon me-2" href="../../blog/">
+                                        <i class="material-icons opacity-6 me-2 text-dark">description</i>
+                                        <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" >部落格</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown dropdown-hover mx-2">
+                                    <a class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+                                        id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="material-icons opacity-6 me-2 text-md">view_day</i>
+                                        作品集
+                                        <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow"
+                                            class="arrow ms-auto ms-md-2">
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3"
+                                        aria-labelledby="dropdownMenuBlocks">
+                                        <div class="d-none d-lg-block">
+                                            <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                    href="../../Projects/google_assistant/">
+                                                    <div
+                                                        class="w-100 d-flex align-items-center justify-content-between">
+                                                        <div>
+                                                            <h6
+                                                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                Google 助理技能</h6>
+                                                            <span class="text-sm">基於語音的應用程式</span>
+                                                        </div>
+                                                        <img src="../../assets/img/down-arrow.svg" alt="down-arrow"
+                                                            class="arrow">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                    href="../../Projects/npm/">
+                                                    <div
+                                                        class="w-100 d-flex align-items-center justify-content-between">
+                                                        <div>
+                                                            <h6
+                                                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                NPM 模組</h6>
+                                                            <span class="text-sm">Node.js的開源框架</span>
+                                                        </div>
+                                                        <img src="../../assets/img/down-arrow.svg" alt="down-arrow"
+                                                            class="arrow">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                    href="../../Projects/python/">
+                                                    <div
+                                                        class="w-100 d-flex align-items-center justify-content-between">
+                                                        <div>
+                                                            <h6
+                                                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                Python學習紀錄</h6>
+                                                            <span class="text-sm">基於Colab實踐</span>
+                                                        </div>
+                                                        <img src="../../assets/img/down-arrow.svg" alt="down-arrow"
+                                                            class="arrow">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                    href="../../Projects/tw_air_pollute/">
+                                                    <div
+                                                        class="w-100 d-flex align-items-center justify-content-between">
+                                                        <div>
+                                                            <h6
+                                                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                空汙即時查詢</h6>
+                                                            <span class="text-sm">資訊來自環保署</span>
+                                                        </div>
+                                                        <img src="../../assets/img/down-arrow.svg" alt="down-arrow"
+                                                            class="arrow">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                    href="../../Projects/tw_uvi_index/">
+                                                    <div
+                                                        class="w-100 d-flex align-items-center justify-content-between">
+                                                        <div>
+                                                            <h6
+                                                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                紫外線即時查詢</h6>
+                                                            <span class="text-sm">資訊來自氣象局</span>
+                                                        </div>
+                                                        <img src="../../assets/img/down-arrow.svg" alt="down-arrow"
+                                                            class="arrow">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                    href="../../Projects/tw_radiation_index/">
+                                                    <div
+                                                        class="w-100 d-flex align-items-center justify-content-between">
+                                                        <div>
+                                                            <h6
+                                                                class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                輻射即時查詢</h6>
+                                                            <span class="text-sm">資訊來自原子能委員會</span>
+                                                        </div>
+                                                        <img src="../../assets/img/down-arrow.svg" alt="down-arrow"
+                                                            class="arrow">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </div>
+
+                                        <div class="row d-lg-none">
+                                            <div class="col-md-12">
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                    href="../../Projects/google_assistant/">
+                                                    Google 助理技能
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                    href="../../Projects/npm/">
+                                                    NPM 模組
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                    href="../../Projects/python/">
+                                                    Python學習紀錄
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                    href="../../Projects/tw_air_pollute/">
+                                                    空汙即時查詢
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                    href="../../Projects/tw_uvi_index/">
+                                                    紫外線即時查詢
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                    href="../../Projects/tw_radiation_index/">
+                                                    輻射即時查詢
+                                                </a>
+                                            </div>
+                                    </ul>
+                                </li>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/profile.php?id=100000555093316" target="_blank" data-original-title="Facebook" rel="nofollow">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.linkedin.com/in/%E7%B4%B9%E5%AE%8F-%E6%B8%B8-74679110b/" target="_blank" data-original-title="LinkedIn" rel="nofollow">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://github.com/hank199599" target="_blank" data-original-title="Github" rel="nofollow">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://open.spotify.com/user/11141875107?si=-Yre6oNIQTOOmtOzuDY0IQ" target="_blank" data-original-title="Spotify" rel="nofollow">
-                            <i class="fa fa-spotify"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="page-header" data-parallax="true" style="background-color:#f2f2f2; ">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p style="font-size: 200px; color:#356c99;">
-                        <span class="iconify" data-icon="simple-icons:python" data-inline="false"></span>
-                    </p>
-                    <h4 style="color:#356c99;">現今最受歡迎的程式語言<br>被廣為運用在資料科學與機器學習上</h4>
-                </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
             </div>
         </div>
     </div>
-    <div class="main main-raised" style=" margin: -200px 15px 0px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 mr-auto ml-auto">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h3><b>學習紀錄</b></br>
-                                <small>學習歷程記錄與線上展示</small>
-                            </h3>
-                        </div>
-                        <div class="col-md-4" style="display: flex;align-items: center; ">
-                            <button class="btn btn-block btn-warning" data-toggle="modal" data-target="#Colab_detail">
-                                有關 Colab
-                            </button>
-                        </div>
+    <header class="header-2">
+        <div class="page-header min-vh-75 relative" style="background-image: url('../../assets/img/bg9.jpg')">
+            <span class="mask bg-gradient-dark opacity-4"></span>
+            <div class="container">
+                <div class="row col-lg-10">
+                    <div class="col-lg-1 text-left mx-auto">
+                        <p style="font-size: 150px; color:#ffffff;">
+                            <span class="iconify" data-icon="simple-icons:python" data-inline="false"></span>
+                        </p>
                     </div>
-                    <div class="profile-tabs">
-                        <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+                    <div class="col-lg-7 text-left" style="align-items: center; display: flex">
+                        <h2 style="color:#ffffff;">現今最受歡迎的程式語言<br>被廣為運用在資料科學與機器學習上</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+        <div class="row text-center" style="padding: 30px;">
+            <h3><b>學習紀錄</b></br>
+                <small>歷程與線上展示</small>
+            </h3>
+            </h3>
+        </div>
+        <div class=" mb-4">
+            <div class="card card-nav-tabs card-plain" style="margin: 15px 15px; ">
+                <div class="card-header-primary card-header-success">
+                    <div class="card nav-wrapper position-relative end-0 shadow-lg blur" id="nav_items">
+                        <ul class="nav nav-pills nav-fill p-1 " role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#python" role="tab" data-toggle="tab">
-                                    <i class="fab fa-python"></i> Python 基礎
-                                </a>
+                               <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#python" role="tab" aria-controls="python" aria-selected="true">
+                                <i class="fab fa-python"></i> Python 基礎
+                               </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#data_science" role="tab" data-toggle="tab">
-                                    <i class="fas fa-chart-bar"></i> 資料科學
-                                </a>
+                               <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#data_science" role="tab" aria-controls="data_science" aria-selected="false">
+                                <i class="fas fa-chart-bar"></i> 資料科學
+                               </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#tensorflow" role="tab" data-toggle="tab">
+                                <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#tensorflow" role="tab" aria-controls="tensorflow" aria-selected="false">
                                     <i class="fas fa-cogs"></i> 機器學習
                                 </a>
-                            </li>
-                        </ul>
+                             </li>
+                         </ul>
                     </div>
-                    <div class="card card-nav-tabs">
-                        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-
-                        <!--div class="nav-tabs-wrapper">
-                                    <ul class="nav nav-tabs" data-tabs="tabs">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="#python" data-toggle="tab">Python 基礎</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#data_science" data-toggle="tab">資料科學</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#tensorflow" data-toggle="tab">TensorFlow</a>
-                                        </li>
-                                    </ul>
-                                </div-->
-
-                        <div class="card-body">
-                            <div class="tab-content text-center">
-                                <div class="tab-pane active" id="python">
+                    <div class="card-body">
+                        <div class="tab-content text-center" id="nav_buttons">
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="python" role="tabpanel" aria-labelledby="python">
                                     <h3 style="margin-bottom: 0rem !important;" class="text-center"><small><b>精通 Python：運用簡單的套件進行現代運算（第二版）</b></small></h3>
-                                    <table class="table" style="text-align: left;">
+                                    <table class="table col-lg-10" style="text-align: left;">
                                         <thead>
                                             <tr>
                                                 <th class="text-center">章節</th>
@@ -365,9 +445,9 @@ The above copyright notice and this permission notice shall be included in all c
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="tab-pane" id="data_science">
+                                <div class="tab-pane fade" id="data_science" role="tabpanel" aria-labelledby="data_science">
                                     <h3 style="margin-bottom: 0rem !important;" class="text-center"><small><b>Data Science from Scratch中文版（第二版）</b></small></h3>
-                                    <table class="table" style="text-align: left;">
+                                    <table class="table col-lg-10" style="text-align: left;">
                                         <thead>
                                             <tr>
                                                 <th class="text-center">章節</th>
@@ -611,9 +691,9 @@ The above copyright notice and this permission notice shall be included in all c
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="tab-pane" id="tensorflow">
+                                <div class="tab-pane fade" id="tensorflow" role="tabpanel" aria-labelledby="tensorflow">
                                     <h3 style="margin-bottom: 0rem !important;" class="text-center"><small><b>Deep learning 深度學習必讀：<br>Keras 大神帶你用 Python 實作</b></small></h3>
-                                    <table class="table" style="text-align: left;">
+                                    <table class="table col-lg-10" style="text-align: left;">
                                         <thead>
                                             <tr>
                                                 <th class="text-center">章節</th>
@@ -721,74 +801,54 @@ The above copyright notice and this permission notice shall be included in all c
             </div>
         </div>
     </div>
-    <footer class="footer footer-default">
+    <!--   Core JS Files   -->
+    <footer class="footer pt-3 mt-3">
         <div class="container">
-            <nav class="float-left">
-                <ul>
-                    <li class="dropdown nav-item">
-                        <a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown">
-                            <i class="fa fa-globe" aria-hidden="true"></i> 中文 (臺灣)
-                        </a>
-                        <div class="dropdown-menu dropdown-with-icons">
-                            <a href="" class="dropdown-item active">
-                                中文 (臺灣)
-                            </a>
-                            <!--a href="../../../en/Projects/python/index.html" class="dropdown-item">
-                                English
-                            </a-->
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            <div class="copyright float-right">
-                &copy;
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>, 使用由
-                <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a> 提供的設計工具
-            </div>
-        </div>
-        <div class="modal fade" id="Colab_detail" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content" style="text-align: left;">
-                    <div class="modal-header">
-                        <h3 class="modal-title">Colaboratory</h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <i class="material-icons">clear</i>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <span class="badge badge-pill badge-secondary">Python</span>
-                        <span class="badge badge-pill badge-secondary">TensorFlow</span>
-                        <p>
-                            </br>它是一個免費的Jupyter Notebook環境。</br>它在雲端運行，並將筆記本存儲在Google雲端硬碟上。</br>
-                            具備下列優點： </br>- 不必進行任何設定 </br>- 免費使用 GPU </br>- 輕鬆共用
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-link"><a href="https://colab.research.google.com/"
-                                target="_blank">立即體驗Colab</a></button>
-                        <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">關閉</button>
-                    </div>
+          <div class="row">
+            <div class="col-6">
+                <div class="dropup ">
+                  <button class="btn btn-default blur dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    中文(台灣)
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="./" selected>中文(台灣)</a></li>
+                  </ul>
                 </div>
             </div>
+            <div class="col-6">
+              <div class="text-center">
+                <p class="text-dark my-4 text-sm font-weight-normal">
+                  All rights reserved. Copyright ©
+                  <script>document.write(new Date().getFullYear())</script> Material Kit by <a
+                    href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </footer>
     <!--   Core JS Files   -->
-    <script src="../../assets/js/core/jquery.min.js" type="text/javascript"></script>
     <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
-    <script src="../../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
-    <script src="../../assets/js/plugins/moment.min.js"></script>
-    <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-    <script src="../../assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
-    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-    <script src="../../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
-    <!--  Google Maps Plugin    -->
-    <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
-    <script src="../../assets/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
-    <!--icon挿件 -->
+    <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+    <script src="../../assets/js/plugins/countup.min.js"></script>
+    <script src="../../assets/js/plugins/choices.min.js"></script>
+    <script src="../../assets/js/plugins/prism.min.js"></script>
+    <script src="../../assets/js/plugins/highlight.min.js"></script>
+    <!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
+    <script src="../../assets/js/plugins/rellax.min.js"></script>
+    <!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
+    <script src="../../assets/js/plugins/tilt.min.js"></script>
+    <!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
+    <script src="../../assets/js/plugins/choices.min.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <script src="https://kit.fontawesome.com/28b9df9e1d.js" crossorigin="anonymous"></script>
+
+    <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+    <script src="../../assets/js/plugins/parallax.min.js"></script>
+    <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
+    <!--  Google Maps Plugin    -->
+    <script src="../../assets/js/material-kit.min.js?v=3.0.2" type="text/javascript"></script>
 </body>
 
 </html>

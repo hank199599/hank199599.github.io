@@ -19,21 +19,23 @@ The above copyright notice and this permission notice shall be included in all c
         輻射精靈 | 網頁版
     </title>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+    <!-- Nucleo Icons -->
+    <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
-    <link href="../../assets/css/material-kit.css" rel="stylesheet" />
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="../../assets/demo/demo.css" rel="stylesheet" />
-    <!-- Animate.css v3.5.2 -->
+    <link id="pagestyle" href="../../../assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
     <style type="text/css">
+        h1, h4 ,h6, small{
+            color:#fff
+        }
         .card .card-header-secondary,
         .card.bg-info,
         .card.card-rotate.bg-info .front,
@@ -49,8 +51,8 @@ The above copyright notice and this permission notice shall be included in all c
         .dropdown-menu a:hover,
         .dropdown-menu a:focus,
         .dropdown-menu a:active {
-            box-shadow: 0 4px 20px 0px rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(39 65 176 / 40%);
-            background-color: #2d252e;
+            box-shadow: 0 4px 20px 0px rgba(130, 130, 130, 0.14), 0 7px 10px -5px rgb(39 65 176 / 40%);
+            background-color: #cbcbcb;
             color: #fff !important;
         }
 
@@ -105,120 +107,196 @@ The above copyright notice and this permission notice shall be included in all c
             background-color: #614c4b;
             border-color: #2d252e;
         }
+
+        .nav-pills .nav-item .nav-link.active {
+            color: #ffffff;
+            background-color: #2d252e;
+            box-shadow: 0 5px 20px 0px rgb(0 0 0 / 20%), 0 13px 24px -11px rgb(39 65 176 / 60%);
+        }
+
     </style>
 </head>
 
-<body class="landing-page sidebar-collapse">
-    <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100"
-        id="sectionsNav">
-        <div class="container">
-            <div class="navbar-translate">
-                <a class="navbar-brand" href="../../index.html">
-                    Radiation Index Service</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<body class="index-page bg-gray-400"> 
+    <div class="container position-sticky z-index-sticky top-0">
+        <div class="row">
+          <div class="col-12">
+            <nav
+            class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+            <div class="container-fluid px-0">
+              <a class="navbar-brand font-weight-bolder ms-sm-3" href="../../"
+                rel="tooltip" title="Home Page" data-placement="bottom" >
+                Radiation Index Service
+              </a>
+              <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon mt-2">
+                  <span class="navbar-toggler-bar bar1"></span>
+                  <span class="navbar-toggler-bar bar2"></span>
+                  <span class="navbar-toggler-bar bar3"></span>
+                </span>
+              </button>
+              <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                
+                <ul class="navbar-nav navbar-nav-hover ms-auto">
+                  <li class="nav-item mx-2">
+                    <a class="nav-link nav-link-icon me-2" href="../../Timeline/index.html" >
+                      <i class="material-icons opacity-6 me-2 text-dark">timeline</i>
+                      <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" >時間軸</p>
+                    </a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link nav-link-icon me-2" href="../../blog/">
+                      <i class="material-icons opacity-6 me-2 text-dark">description</i>
+                      <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" >部落格</p>
+                    </a>
+                  </li>
+                  <li class="nav-item dropdown dropdown-hover mx-2">
+                    <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="material-icons opacity-6 me-2 text-md">view_day</i>
+                      作品集
+                      <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
+                    </a>
+                    <ul
+                      class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3"
+                      aria-labelledby="dropdownMenuBlocks">
+                      <div class="d-none d-lg-block">
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                          <a class="dropdown-item py-2 ps-3 border-radius-md" href="../../Projects/google_assistant/">
+                            <div class="w-100 d-flex align-items-center justify-content-between">
+                              <div>
+                                <h6
+                                  class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                  Google 助理技能</h6>
+                                <span class="text-sm">基於語音的應用程式</span>
+                              </div>
+                              <img src="../../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                            </div>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                          <a class="dropdown-item py-2 ps-3 border-radius-md" href="../../Projects/npm/">
+                            <div class="w-100 d-flex align-items-center justify-content-between">
+                              <div>
+                                <h6
+                                  class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                  NPM 模組</h6>
+                                <span class="text-sm">Node.js的開源框架</span>
+                              </div>
+                              <img src="../../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                            </div>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                          <a class="dropdown-item py-2 ps-3 border-radius-md" href="../../Projects/python/">
+                            <div class="w-100 d-flex align-items-center justify-content-between">
+                              <div>
+                                <h6
+                                  class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                  Python學習紀錄</h6>
+                                <span class="text-sm">基於Colab實踐</span>
+                              </div>
+                              <img src="../../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                            </div>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                          <a class="dropdown-item py-2 ps-3 border-radius-md" href="../../Projects/tw_air_pollute/">
+                            <div class="w-100 d-flex align-items-center justify-content-between">
+                              <div>
+                                <h6
+                                  class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                  空汙即時查詢</h6>
+                                <span class="text-sm">資訊來自環保署</span>
+                              </div>
+                              <img src="../../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                            </div>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                          <a class="dropdown-item py-2 ps-3 border-radius-md" href="../../Projects/tw_uvi_index/">
+                            <div class="w-100 d-flex align-items-center justify-content-between">
+                              <div>
+                                <h6
+                                  class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                  紫外線即時查詢</h6>
+                                <span class="text-sm">資訊來自氣象局</span>
+                              </div>
+                              <img src="../../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                            </div>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                          <a class="dropdown-item py-2 ps-3 border-radius-md" href="../../Projects/tw_radiation_index/">
+                            <div class="w-100 d-flex align-items-center justify-content-between">
+                              <div>
+                                <h6
+                                  class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                  輻射即時查詢</h6>
+                                <span class="text-sm">資訊來自原子能委員會</span>
+                              </div>
+                              <img src="../../assets/img/down-arrow.svg" alt="down-arrow" class="arrow">
+                            </div>
+                          </a>
+                        </li>
+                      </div>
+    
+                      <div class="row d-lg-none">
+                        <div class="col-md-12">
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="../../Projects/google_assistant/">
+                            Google 助理技能
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="../../Projects/npm/">
+                            NPM 模組
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/python/">
+                            Python學習紀錄
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/tw_air_pollute/">
+                            空汙即時查詢
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                            href="../../Projects/tw_uvi_index/">
+                            紫外線即時查詢
+                          </a>
+                          <a class="dropdown-item ps-3 border-radius-md mb-1"
+                          href="../../Projects/tw_radiation_index/">
+                          輻射即時查詢
+                        </a>
+                      </div>
+                    </ul>
+                  </li>
+              </div>
             </div>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="../../index.html" class="nav-link">
-                            <i class="material-icons">assignment_ind</i> 首頁
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../Timeline/index.html" class="nav-link">
-                            <i class="material-icons">timeline</i> 學經歷
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../blog/" class="nav-link">
-                            <i class="material-icons">description</i> 部落格
-                        </a>
-                    </li>
-                    <li class="dropdown nav-item active">
-                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                            <i class="material-icons">account_tree</i> 作品集
-                        </a>
-                        <div class="dropdown-menu dropdown-with-icons">
-                            <a href="../../Projects/google_assistant/index.html" class="dropdown-item">
-                                <span class="iconify" data-icon="mdi-google-assistant" data-inline="false"></span>
-                                &emsp;Google助理語音應用
-                            </a>
-                            <a href="../../Projects/npm/index.html" class="dropdown-item">
-                                <span class="iconify" data-icon="simple-icons:npm"
-                                    data-inline="false"></span>&emsp;Node.js 模組
-                            </a>
-                            <a href="../../Projects/python/index.html" class="dropdown-item">
-                                <span class="iconify" data-icon="simple-icons:python"
-                                    data-inline="false"></span>&emsp;Python學習紀錄
-                            </a>
-                            <a href="../../Projects/tw_air_pollute/index.html" class="dropdown-item">
-                                <span class="iconify" data-icon="oi-cloud" data-inline="false"></span>&emsp;空汙即時查詢
-                            </a>
-                            <a href="../../Projects/tw_uvi_index/index.html" class="dropdown-item">
-                                <span class="iconify" data-icon="uil-sun" data-inline="false"></span>&emsp;紫外線即時查詢
-                            </a>
-                            <a href="../../Projects/tw_radiation_index/index.html" class="dropdown-item active">
-                                <span class="iconify" data-icon="ion-nuclear" data-inline="false"></span>&emsp;輻射即時查詢
-                            </a>
-
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
-                            href="https://www.facebook.com/profile.php?id=100000555093316" target="_blank"
-                            data-original-title="Facebook" rel="nofollow">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
-                            href="https://www.linkedin.com/in/%E7%B4%B9%E5%AE%8F-%E6%B8%B8-74679110b/" target="_blank"
-                            data-original-title="LinkedIn" rel="nofollow">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
-                            href="https://github.com/hank199599" target="_blank" data-original-title="Github"
-                            rel="nofollow">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
-                            href="https://open.spotify.com/user/11141875107?si=-Yre6oNIQTOOmtOzuDY0IQ" target="_blank"
-                            data-original-title="Spotify" rel="nofollow">
-                            <i class="fa fa-spotify"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="page-header" data-parallax="true"
-        style="background-image: url('../../assets/img/nuclear_backgrpound.jpg')">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6" id="uvi_report">
-                    <h1 class="title">輻射精靈</h1>
-                    <h4>更新時間 • <b class="animated flash infinite slow" style="color: white; animation-duration: 5s;">
-                            資料抓取中...</b></h4>
-                </div>
-            </div>
-            <br>
-            <a href="https://assistant.google.com/services/invoke/uid/000000a573924fc8" class="btn btn-white btn-round"
-                target="_blank" style="color: #2d252e;"><b><span class="iconify" data-icon="mdi-google-assistant"
-                        data-inline="false"></span>&emsp;Try it on Google Assistant</b></a>
-
+          </nav>
+            <!-- End Navbar -->
+          </div>
         </div>
     </div>
-    <div class="main main-raised">
+    <header class="header-2">
+        <div class="page-header min-vh-75 relative" style="background-image: url('../../assets/img/nuclear_backgrpound.jpg')">
+          <span class="mask bg-gradient-dark opacity-4"></span>
+          <div class="container">
+            <div class="row">
+                <div class="col-lg-7 text-left mx-auto text-light" >
+                    <h1 class="title">輻射精靈</h1>
+                    <h4 id="uvi_report">更新時間 • <b class="animated flash infinite slow" style="color: white; animation-duration: 5s;">
+                            資料抓取中...</b></h4><br>
+                  <a href="https://assistant.google.com/services/invoke/uid/000000a573924fc8" class="btn btn-white btn-round"
+                  target="_blank" style="color: #2d252e;"><b><span class="iconify" data-icon="mdi-google-assistant"
+                          data-inline="false"></span>&emsp;Try it on Google Assistant</b></a>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+    </header>
+    
+    <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mr-auto ml-auto" style="padding: 15px 15px;">
@@ -286,42 +364,41 @@ The above copyright notice and this permission notice shall be included in all c
 
                     <div class="row">
                         <div class="col-md-9">
-                            <h3><b>測站總覽</b></br>
-                                <small id="selection">目前檢視的測站</small>
+                            <h3><b>測站總覽</b>
                         </div>
                         <div class="col-md-2">
-                            <ul class="nav">
-                                <li class="nav-item dropdown">
-                                    <a class="btn btn-block btn-primary btn-lg nav-link dropdown-toggle"
-                                        href="javascript:;" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        選擇檢視角度
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="javascript:void(0)"
-                                            onclick="display_generator('縣市');">縣市列表</a>
-                                        <a class="dropdown-item" href="javascript:void(0)"
-                                            onclick="display_generator('核電廠');">核電廠周遭</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                            <div class="dropdown">
+                                <button class="btn bg-gradient-dark dropdown-toggle btn-lg" type="button" id="dropdownMenuButton"
+                                  data-bs-toggle="dropdown" aria-expanded="false">
+                                  選擇檢視角度
+                                </button>
+                                <ul class="dropdown-menu px-2 py-3" aria-labelledby="dropdownMenuButton">
+                                  <li>
+                                      <a class="dropdown-item" href="javascript:void(0)"
+                                      onclick="display_generator('縣市');">縣市列表</a></li>
+                                  <li>
+                                      <a class="dropdown-item" href="javascript:void(0)" 
+                                      onclick="display_generator('核電廠');">核電廠周遭</a>
+                                  </li>
+                                  </ul>
+                              </div>
+                        </div>   
                     </div>
                 </div>
                 <div class="col-md-12 mr-auto ml-auto" style="padding: 15px 15px;">
                     <div class="card card-nav-tabs card-plain">
                         <div class="card-header card-header-secondary">
-                            <!-- colors:"header-primary","header-info","header-success","header-warning","header-danger" -->
+                          <h2 class="text-white font-weight-normal" id="selection">語系標題</h2>
                             <div class="nav-tabs-navigation">
                                 <div class="nav-tabs-wrapper">
-                                    <ul class="nav nav-tabs" data-tabs="tabs" id="county_list">
+                                    <ul class="nav nav-pills nav-fill p-1 " role="tablist" id="county_list">
                                         <!--產生選單-->
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="tab-content text-center" id="county_content">
+                            <div class="tab-content text-center justify-content-center" id="county_content">
                                 <!--產生縣市資訊等詳細內容-->
                             </div>
                         </div>
@@ -331,34 +408,30 @@ The above copyright notice and this permission notice shall be included in all c
             </div>
         </div>
     </div>
-    <footer class="footer footer-default">
-        <div class="container">
-            <nav class="float-left">
-                <ul>
-                    <li class="dropdown nav-item">
-                        <a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown">
-                            <i class="fa fa-globe" aria-hidden="true"></i> 中文 (臺灣)
-                        </a>
-                        <div class="dropdown-menu dropdown-with-icons">
-                            <a href="" class="dropdown-item active">
-                                中文 (臺灣)
-                            </a>
-                            <!--a href="../../../en/Projects/tw_radiation_index/index.html" class="dropdown-item">
-                                English
-                            </a-->
-                        </div>
-                    </li>
+    <footer class="footer pt-3 mt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+              <div class="dropup ">
+                <button class="btn btn-default blur dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  中文(台灣)
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="./" selected>中文(台灣)</a></li>
                 </ul>
-            </nav>
-            <div class="copyright float-right">
-                &copy;
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>, 使用由
-                <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a> 提供的設計工具
+              </div>
+          </div>
+          <div class="col-6">
+            <div class="text-center">
+              <p class="text-dark my-4 text-sm font-weight-normal">
+                All rights reserved. Copyright ©
+                <script>document.write(new Date().getFullYear())</script> Material Kit by <a
+                  href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+              </p>
             </div>
-
+          </div>
         </div>
+      </div>
     </footer>
     <!--彈跳式視窗擺放處-->
     <div id="modal creator">
@@ -366,15 +439,26 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
 
     <!--   Core JS Files   -->
-    <script src="../../assets/js/core/jquery.min.js" type="text/javascript"></script>
-    <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
-    <script src="../../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
-    <script src="../../assets/js/plugins/moment.min.js"></script>
-    <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-    <script src="../../assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
-    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-    <script src="../../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
-    <!--  Google Maps Plugin    -->
+    <script src="../../../assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="../../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+    <script src="../../../assets/js/plugins/countup.min.js"></script>
+    <script src="../../../assets/js/plugins/choices.min.js"></script>
+    <script src="../../../assets/js/plugins/prism.min.js"></script>
+    <script src="../../../assets/js/plugins/highlight.min.js"></script>
+    <!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
+    <script src="../../../assets/js/plugins/rellax.min.js"></script>
+    <!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
+    <script src="../../../assets/js/plugins/tilt.min.js"></script>
+    <!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
+    <script src="../../../assets/js/plugins/choices.min.js"></script>
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+    <script src="../../../assets/js/plugins/parallax.min.js"></script>
+    <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>

@@ -31,7 +31,7 @@ var langeuage_dict={
         "school":["Daily_History","Taiwan_Dictoinary",  "Taiwan_Rail_Dictoinary","Cangjie_Dictoinary"],
         "reader":["Positive_Quote","Negative_Quote","Today_Quote"],
         "color_lens":["NASA_daily","Fortune_Master"],
-        "sports_esports":["Brain_Game","Riddle_Game","Number_Elf","1A2B","Flag_Game","text_solitaire","idiom_solitaire","easy_text_solitaire","24_points"],
+        "sports_esports":["Brain_Game","Riddle_Game","Number_Elf","Cows_and_Bulls","Flag_Game","text_solitaire","idiom_solitaire","easy_text_solitaire","twenty_four_points"],
         "science":["Insight_Station","ISS_Info", "Google_Trend","Moon_info"],
         "public":["Zip_code","Blood_Index","Power_Index"],
         "cloud":["TW_AQI_index",  "TW_UVI_index","TW_Radiation_index", "TW_Sea_Waether","World_AQI_index","TW_Weather_helper"],
@@ -42,29 +42,29 @@ var langeuage_dict={
         "food":["Food_Decider"],
         "school":["Cangjie_Dictoinary"],
         "color_lens":["NASA_daily","Fortune_Master"],
-        "sports_esports":["Number_Elf","1A2B","24_points"],
+        "sports_esports":["Number_Elf","Cows_and_Bulls","twenty_four_points"],
         "science":["Insight_Station","ISS_Info", "Google_Trend"],
         "cloud":["World_AQI_index"],
         "translate":["Morse_Translator","Binary_Translator"],
     },
     "English":{
         "food":["Food_Decider"],
-        "sports_esports":["Number_Elf","1A2B"],
+        "sports_esports":["Number_Elf","Cows_and_Bulls"],
         "science":["Insight_Station", "Google_Trend"]
     },
     "Japanese":{
         "food":["Food_Decider"],
-        "sports_esports":["Number_Elf","1A2B"],
+        "sports_esports":["Number_Elf","Cows_and_Bulls"],
         "cloud":["World_AQI_index"],
         "science":["Insight_Station", "Google_Trend"]
     },
     "Korean":{
-        "sports_esports":["Number_Elf","1A2B"],
+        "sports_esports":["Number_Elf","Cows_and_Bulls"],
         "cloud":["World_AQI_index"],
         "science":["Insight_Station", "Google_Trend"]
     },
     "Thai":{
-        "sports_esports":["Number_Elf","1A2B"],
+        "sports_esports":["Number_Elf","Cows_and_Bulls"],
         "cloud":["World_AQI_index"],
         "science":["Insight_Station", "Google_Trend"]
     },
@@ -192,7 +192,7 @@ var detail_dict = {
         "Github_link": "https://github.com/hank199599/Google-Assistant-APP/tree/master/數字精靈",
         "Action_link": "https://assistant.google.com/services/invoke/uid/0000008473a60dc8"
     },
-    "1A2B": {
+    "Cows_and_Bulls": {
         "src": "https://lh3.googleusercontent.com/bq7AdNyaNrET2f4F55Eq27vxnfA-G3odqoOZPA9_hl3sadVsSHzoFWEOeseoootSzwuewJyxfIU=s90",
         "Titile": "1A2B猜數",
         "Language": ["Chinese(Taiwan)", "Cantonese", "English", "Japanese", "Korean", "Thai"],
@@ -232,7 +232,7 @@ var detail_dict = {
         "Github_link": "https://github.com/hank199599/Google-Assistant-APP/tree/master/讀音接龍",
         "Action_link": "https://assistant.google.com/services/invoke/uid/000000f85bd23edc"
     },
-    "24_points": {
+    "twenty_four_points": {
         "src": "https://lh3.googleusercontent.com/CceE_F175HAi1aWL5cA6wFCJMi85emmsVkUdyMfr1t7WqdegcVHZKaFUtLm7fZBjewXO4aSGU_eDdw=s90",
         "Titile": "24點巧算",
         "Language": ["Chinese(Taiwan)", "Cantonese"],

@@ -1,6 +1,4 @@
 
-var recommand_list=["Food_Decider","Brain_Game","Riddle_Game","1A2B","text_solitaire"];
-
 function display_generator(language){
 
 var nav_options="";
@@ -12,7 +10,7 @@ for (var i=0;i < display_list.length;i++){
     var type = tab_dict[display_list[i]];
     var button_list = display_dict[display_list[i]];
 
-    nav_options=nav_options+'<li class="nav-item">'+'<a class="nav-link'
+    nav_options=nav_options+'<li class="nav-item">'+'<a class="nav-link mb-0 px-0 py-1 d-flex align-items-center justify-content-center'
     option_buttons=option_buttons+'<div class="tab-pane'
 
     if(i===0){
@@ -20,21 +18,30 @@ for (var i=0;i < display_list.length;i++){
         option_buttons=option_buttons+' active '
     } 
 
-    nav_options=nav_options+'" href="#'+display_list[i]+'" data-toggle="tab">'+
-                '<i class="material-icons">'+type.tag+'</i>'+ type.name+'</a>'+'</li>';
+    nav_options=nav_options+'" data-bs-toggle="tab" href="#'+display_list[i]+'" role="tab" aria-controls="'+display_list[i]+'" aria-selected="'
+   
+    if(i===0){
+        nav_options=nav_options+'true" >'
+    } 
+    else{
+        nav_options=nav_options+'false" >'
+    }
+    
+    nav_options=nav_options+'<i class="material-icons">'+type.tag+'</i> &ensp;'+ type.name+'</a>'+'</li>';
 
     option_buttons=option_buttons+'" id="'+display_list[i]+'">'
 
     for (var j=0;j<button_list.length;j++){
-        option_buttons=option_buttons+'<button class="btn btn-primary btn-link" data-toggle="modal" data-target="#'+button_list[j]+'">'+
+        option_buttons=option_buttons+'<button class="btn bg-gradient-white w-auto me-2" data-bs-toggle="modal" data-bs-target="#'+button_list[j]+'">'+
         '<img src="'+detail_dict[button_list[j]]['src']+'"/></button>'
     }
     option_buttons=option_buttons+'</div>'
 }
-
-document.getElementById('nav_items').innerHTML = '<ul class="nav nav-tabs" data-tabs="tabs">'+nav_options+'</ul>'
+                                                  
+document.getElementById('nav_items').innerHTML = '<ul class="nav nav-pills nav-fill p-1" role="tablist">'+nav_options+'</ul>'
 document.getElementById('nav_buttons').innerHTML = option_buttons
-document.getElementById('navbar-brand').innerHTML = language
+document.getElementById('navbar-brand').innerHTML = ''+language
+document.getElementById('comment-brand').innerHTML = 'Comments from the '+language+' user'
 model_generator(language)
 langeage_bar_generator(language)
 }

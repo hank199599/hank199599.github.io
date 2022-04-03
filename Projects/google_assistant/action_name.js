@@ -50,7 +50,7 @@ var action_name_dict = {
         "泰文":"เทพดาดิจิตอล",
         "德文":"Nummer Elf",
     },
-    "1A2B":{
+    "Cows_and_Bulls":{
         "中文(臺灣)":"1A2B猜數",
         "廣東話":"1A2B猜數",
         "英文":"Cows and Bulls",
@@ -70,7 +70,7 @@ var action_name_dict = {
     "easy_text_solitaire":{
         "中文(臺灣)":"讀音接龍",
     },
-    "24_points":{
+    "twenty_four_points":{
         "中文(臺灣)":"24點巧算",
         "廣東話":"24點巧算"
     },
