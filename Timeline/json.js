@@ -43,7 +43,7 @@ var contents={
         "title":"學徒",
         "content":"Google Cloud Student Sprint Program</br> 此計畫將在3月到6月期間進行為期 10 週的線上課程及工作坊，並由 Google 導師進行分組指導，</br>最後目標是帶領同學一起通過 Google Cloud Associate Cloud Engineer (ACE) 的專業認證考試。",
         "button":{
-            "herf":"https://web.archive.org/web/20211202222716/https:/buildyourfuture.withgoogle.com/programs/cloud-student-sprint-programs/",
+            "herf":"https://buildyourfuture.withgoogle.com/programs/cloud-student-sprint-programs/",
             "content":"<i class='fa fa-google' aria-hidden='true'></i> 計劃說明頁面 "
         }
     },
