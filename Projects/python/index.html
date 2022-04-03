@@ -12,13 +12,19 @@ Coded by Creative Tim
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  
     <title>
         Python | 學習紀錄
     </title>
-    <meta charset="utf-8" />
+    
     <link rel="stylesheet" type="text/css"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <!-- Nucleo Icons -->
@@ -88,7 +94,7 @@ The above copyright notice and this permission notice shall be included in all c
     </style>
 </head>
 
-<body class="landing-page sidebar-collapse">
+<body class="index-page bg-gray-200">
     <div class="container position-sticky z-index-sticky top-0">
         <div class="row">
             <div class="col-12">
@@ -289,13 +295,13 @@ The above copyright notice and this permission notice shall be included in all c
     </header>
 
     <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
-        <div class="row text-center" style="padding: 30px;">
+        <div class="row text-center " style="padding: 30px;">
             <h3><b>學習紀錄</b></br>
                 <small>歷程與線上展示</small>
             </h3>
             </h3>
         </div>
-        <div class=" mb-4">
+        <div class="mb-4">
             <div class="card card-nav-tabs card-plain" style="margin: 15px 15px; ">
                 <div class="card-header-primary card-header-success">
                     <div class="card nav-wrapper position-relative end-0 shadow-lg blur" id="nav_items">
@@ -317,7 +323,7 @@ The above copyright notice and this permission notice shall be included in all c
                              </li>
                          </ul>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" style="margin: 15px 15px;">
                         <div class="tab-content text-center" id="nav_buttons">
                             <div class="tab-content" id="v-pills-tabContent">
                                 <div class="tab-pane fade show active" id="python" role="tabpanel" aria-labelledby="python">
@@ -326,7 +332,7 @@ The above copyright notice and this permission notice shall be included in all c
                                         <thead>
                                             <tr>
                                                 <th class="text-center">章節</th>
-                                                <th>標題</th>
+                                                <th style="width: fit-content;">標題</th>
                                                 <th>Colab連結</th>
                                             </tr>
                                         </thead>
@@ -451,7 +457,7 @@ The above copyright notice and this permission notice shall be included in all c
                                         <thead>
                                             <tr>
                                                 <th class="text-center">章節</th>
-                                                <th>標題</th>
+                                                <th style="width: fit-content;">標題</th>
                                                 <th>Colab連結</th>
                                             </tr>
                                         </thead>
@@ -697,7 +703,7 @@ The above copyright notice and this permission notice shall be included in all c
                                         <thead>
                                             <tr>
                                                 <th class="text-center">章節</th>
-                                                <th>標題</th>
+                                                <th style="width:auto">標題</th>
                                                 <th>Colab連結</th>
                                             </tr>
                                         </thead>
@@ -849,6 +855,33 @@ The above copyright notice and this permission notice shall be included in all c
     <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
     <!--  Google Maps Plugin    -->
     <script src="../../assets/js/material-kit.min.js?v=3.0.2" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        if (document.getElementById('state1')) {
+          const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+          if (!countUp.error) {
+            countUp.start();
+          } else {
+            console.error(countUp.error);
+          }
+        }
+        if (document.getElementById('state2')) {
+          const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+          if (!countUp1.error) {
+            countUp1.start();
+          } else {
+            console.error(countUp1.error);
+          }
+        }
+        if (document.getElementById('state3')) {
+          const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+          if (!countUp2.error) {
+            countUp2.start();
+          } else {
+            console.error(countUp2.error);
+          };
+        }
+      </script>
 </body>
 
 </html>
