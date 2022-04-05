@@ -84,23 +84,24 @@ myData.on('value', function(snapshot) {
                 '<div class="modal-dialog modal-dialog-centered" role="document">' +
                 '<div class="modal-content" style="width:600px">' +
                 '<div class="modal-header">' +
+                '<table>'+
+                '<tr><td style="width:60%">'+
+                '<h2 class="card-title">' + station + '</h2>' +
+                '<h5 class="text-muted">' +status_generator(data.AQI) 
+                if (data.AQI > 50) {
+                    modal_content = modal_content + ' • ' + pollutant_dict[data.Pollutant];
+                }
+                modal_content = modal_content + '</h5>'+'</td><td style="width:40%;">'+
+                '<img class="img-container" src="' + picture_generator(data.AQI) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
+                '</td></tr>'+
+                '</table>'+
                 '</div>' +
                 '<div class="modal-body" style="padding-top: 0;">' +
-                '<div class="row"><div class="col-md-8 ml-auto mr-auto">' +
-                '<h2  style="margin: 0 0 ">' + station + '</h2>' +
-                '<h4 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data.AQI)
-            if (data.AQI > 50) {
-                modal_content = modal_content + ' • ' + pollutant_dict[data.Pollutant];
-            }
-            modal_content = modal_content + '</small></h4>' +
-                '<p class="card-text">' + info_output_generator(data.AQI) + '</p>'
-            if (status_generator(data.AQI) !== "有效數據不足") {
-                modal_content = modal_content + '<p class="card-text" style="margin: 0 0 "> PM₁₀ ' + data.PM10 + '(μg/m³) • PM₂.₅ ' + data.PM25 + '(μg/m³) • 臭氧 ' + data.O3 + '(ppb) </p>'
-            }
-            modal_content = modal_content + '</div>' +
-                '<div class="col-md-4 ml-auto mr-auto">' +
-                '<img class="img-container" src="' + picture_generator(data.AQI) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
-                '</div></div>' +
+                '<p class="card-text" style="margin-top:16px;">' + info_output_generator(data.AQI) + '</p>'
+                if (status_generator(data.AQI) !== "有效數據不足") {
+                    modal_content = modal_content + '<p class="card-text" style="margin: 0 0 "> PM₁₀ ' + data.PM10 + '(μg/m³) • PM₂.₅ ' + data.PM25 + '(μg/m³) • 臭氧 ' + data.O3 + '(ppb) </p>'
+                }
+            modal_content = modal_content +
                 '</div>' +
                 '<div class="modal-footer">' +
                 '<button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">關閉頁面</button>' +

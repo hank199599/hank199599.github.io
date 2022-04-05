@@ -73,16 +73,17 @@ myData.on('value', function(snapshot) {
                 '<div class="modal-dialog modal-dialog-centered" role="document">' +
                 '<div class="modal-content">' +
                 '<div class="modal-header">' +
+                '<table>'+
+                '<tr><td style="width:60%">'+
+                '<h2 class="card-title">' + station + '</h2>' +
+                '<h5 class="text-muted">' +status_generator(data) + '</h5>' +
+                '</td><td style="width:40%;">'+
+                '<img class="img-container" src="' + picture_generator(data) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
+                '</td></tr>'+
+                '</table>'+
                 '</div>' +
                 '<div class="modal-body" style="padding-top: 0;">' +
-                '<div class="row"><div class="col-md-8 ml-auto mr-auto">' +
-                '<h2  style="margin: 0 0 ">' + station + '</h2>' +
-                '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data) + '</small></h3>' +
-                '<p class="card-text">' + info_output_generator(data) + '</p>' +
-                '</div>' +
-                '<div class="col-md-4 ml-auto mr-auto">' +
-                '<img class="img-container" src="' + picture_generator(data) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
-                '</div></div>' +
+                '<p class="card-text" style="margin-top:16px;">' + info_output_generator(data) + '</p>' +
                 '</div>' +
                 '<div class="modal-footer">' +
                 '<button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">關閉頁面</button>' +

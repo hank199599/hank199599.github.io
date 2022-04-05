@@ -83,18 +83,19 @@ myData.on('value', function(snapshot) {
                 '<div class="modal-dialog modal-dialog-centered" role="document">' +
                 '<div class="modal-content">' +
                 '<div class="modal-header">' +
+                '<table>'+
+                '<tr><td style="width:60%">'+
+                '<h2 class="card-title">' + station + '</h2>' +
+                '<h5 class="text-muted">' +status_generator(data["SVC"]) + '</h5>' +
+                '</td><td style="width:40%;">'+
+                '<img class="img-container" src="' + picture_generator(parseFloat(data["SVC"])) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
+                '</td></tr>'+
+                '</table>'+
                 '</div>' +
                 '<div class="modal-body" style="padding-top: 0;">' +
-                '<div class="row"><div class="col-md-8 ml-auto mr-auto">' +
-                '<h2  style="margin: 0 0 ">' + station + '</h2>' +
-                '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data["SVC"]) + '</small></h3>' +
-                '<p class="card-text">根據<a href="https://zh.wikipedia.org/wiki/%E8%A5%BF%E5%BC%97#%E4%BA%BA%E9%AB%94%E5%BD%B1%E9%9F%BF" target="_blank" style="color:#248da3">維基百科</a>的資料，<br>這個輻射劑量相當於' + info_output_generator(data["SVC"]) + '</p>' +
+                '<p class="card-text" style="margin-top:16px;">根據<a href="https://zh.wikipedia.org/wiki/%E8%A5%BF%E5%BC%97#%E4%BA%BA%E9%AB%94%E5%BD%B1%E9%9F%BF" target="_blank" style="color:#248da3">維基百科</a>的資料，<br>這個輻射劑量相當於' + info_output_generator(data["SVC"]) + '</p>' +
                 '<br>' +
                 '<p> 更新時間 •  ' + data["PublishTime"] + '</p>' +
-                '</div>' +
-                '<div class="col-md-4 ml-auto mr-auto">' +
-                '<img class="img-container" src="' + picture_generator(parseFloat(data["SVC"])) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
-                '</div></div>' +
                 '</div>' +
                 '<div class="modal-footer">' +
                 '<button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">關閉頁面</button>' +
