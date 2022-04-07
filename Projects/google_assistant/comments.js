@@ -97,9 +97,9 @@ var comments = {
                 "#e51516",
                 "#a20102"
             ],
-            "title": "當你冇人同你玩嗰陣時候呢個遊戲就啱你啦！!",
-            "reviewer": "the ink! fox fluttersamuel",
-            "date": "2020年5月4日"
+            "title": "無聊嘅時候可以玩，又可以配合擲骰仔,超級好玩",
+            "reviewer": "Isaac Fung",
+            "date": "2022年3月24日"
         }
     ],
     "3": [
