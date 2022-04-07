@@ -87,6 +87,17 @@ var comments = {
             "title": "可以使用，解決了現代人的日常難題。",
             "reviewer": "Pichu Baby",
             "date": "2019年3月6日"
+        },
+        {
+            "name": "讀音接龍",
+            "text_color": "#ffffff",
+            "bg_color": [
+                "#a40035",
+                "#a40035"
+            ],
+            "title": "我贏他了",
+            "reviewer": "賴薈如",
+            "date": "2021年2月7日"
         }
     ],
     "2": [
