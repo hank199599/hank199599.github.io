@@ -552,12 +552,12 @@
                             當使用者與Google助理互動時，以下流程會被觸發。</br>
                             而直到使用者的需求被滿足或中斷，都是這個形式進行每輪的對話：
                             <ul class="list-group">
-                              <li class="list-group-item">1. </li>
-                              <li class="list-group-item">2. </li>
-                              <li class="list-group-item">3. </li>
-                              <li class="list-group-item">4. </li>
-                              <li class="list-group-item">5. </li>
-                              <li class="list-group-item">6. </li>
+                              <li class="list-group-item">1. 使用者向助理提問</li>
+                              <li class="list-group-item">2. 助理將(辨識到的)文字傳送給第三方Action</li>
+                              <li class="list-group-item">3. 在第三方Action架構中，利用DialogFlow訓練的機器模型去判斷使用者的意圖</li>
+                              <li class="list-group-item">4. 為進一步回應，將篩選後的參數傳進Fulfillment中進行邏輯判斷或資料拉取</li>
+                              <li class="list-group-item">5. Fulfillment回傳對應Intent的回應給助理</li>
+                              <li class="list-group-item">6. 助理接收到回應並呈獻給使用者</li>
                             </ul>
                           </div>
                         </div>
@@ -585,7 +585,7 @@
                       <div class="row">
                         <div class="col-md-5">
                           <div class="accordion-body text-xl opacity-5 text-dark">
-                            尚待更新
+                            根據實際需求，有幾種架構被建立。
                           </div>
                         </div>
                         <div class="col-md-7 justify-content-lg-center" style="margin: 0 auto;">
