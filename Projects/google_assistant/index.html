@@ -296,143 +296,144 @@
                       <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
                     </button>
                   </h5>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                </div>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionRental">
+                  <div class="row">
+                    <div class="col-md-7 mx-auto">
+                      <div class="accordion-body text-xl opacity-7 text-dark">
+                        它是一個介接於Google助理的一個基於語音設計界面的新型態應用程式。</br>
+                        使用者在向Google助理表明想使用某個特定的Action(動作)後，</br>
+                        Google會在Actions On Google平台上搜尋是否有對應名稱的Action。</br>
+                        接著使用者會被Google助理導引至Action的使用介面。</br>
+                        從此刻開始，Google助理的角色轉變為協助進行語音辨識與傳遞資訊的角色。</br>
+                        辨識使用者輸入的意圖與給予對應回應的工作則轉由開發者所設計的Action所執行。</div>
+                    </div>
+                    <div class="col-md-5 mx-auto " style="margin: 0 auto;width: fit-content;">
+                      <div class="accordion-body text-xl opacity-10 text-dark">
+                        <img src="https://developers.google.com/assistant/conversational/images/invocation.svg"
+                          style="display: block;max-width:80%;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item mb-3">
+                  <h5 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button border-bottom font-weight-bold" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                      aria-controls="collapseTwo">
+                      以Actions On Google (AoG)平台的觀點來說，基礎架構又是什麼呢?
+                      <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                      <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+                    </button>
+                  </h5>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#accordionRental">
                     <div class="row">
-                      <div class="col-md-7 mx-auto">
+                      <div class="col-md-12">
                         <div class="accordion-body text-xl opacity-7 text-dark">
-                          它是一個介接於Google助理的一個基於語音設計界面的新型態應用程式。</br>
-                          使用者在向Google助理表明想使用某個特定的Action(動作)後，</br>
-                          Google會在Actions On Google平台上搜尋是否有對應名稱的Action。</br>
-                          接著使用者會被Google助理導引至Action的使用介面。</br>
-                          從此刻開始，Google助理的角色轉變為協助進行語音辨識與傳遞資訊的角色。</br>
-                          辨識使用者輸入的意圖與給予對應回應的工作則轉由開發者所設計的Action所執行。</div>
+                          在支援Google語音助理的裝置上，</br>
+                          原生內建一個由官方支持的第三方平台(Actions On Google, AoG)。</br></br>
+                          當用戶請求與第三方平台的技能互動時，系統會自動到AoG上尋找對應的技能。
+                          一旦找到就會將畫面使用權交給第三方技能。
+                          自此刻開始，Google助理的角色轉為進行語音辨識與呈現第三方技能內容的中介。</br></br>
+                          在實作上，整個互動的過程是透過JSON為格式的API進行資訊傳遞。
+                        </div>
                       </div>
-                      <div class="col-md-5 mx-auto " style="margin: 0 auto;width: fit-content;">
+                      <div class="col-md-7 justify-content-lg-center" style="margin: 0 auto;">
                         <div class="accordion-body text-xl opacity-10 text-dark">
-                          <img src="https://developers.google.com/assistant/conversational/images/invocation.svg"
+                          <img src="https://hank199599.github.io/assets/img/blog/%E7%A4%BA%E6%84%8F%E5%9C%961.png"
+                            style="display: block;max-width:100%;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item mb-3">
+                  <h5 class="accordion-header" id="headingThree">
+                    <button class="accordion-button border-bottom font-weight-bold" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                      aria-controls="collapseThree">
+                      當使用者與Google助理互動時，在後台會發生甚麼事?
+                      <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                      <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+                    </button>
+                  </h5>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionRental">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="accordion-body text-xl opacity-7 text-dark">
+                          當使用者與Google助理互動時，以下流程會被觸發。</br>
+                          而直到使用者的需求被滿足或中斷，都是這個形式進行每輪的對話：
+                          <ul class="list-group">
+                            <li class="list-group-item active">1. 使用者向助理提問</li>
+                            <li class="list-group-item active">2. 助理將(辨識到的)文字傳送給第三方Action</li>
+                            <li class="list-group-item">3. 在第三方Action架構中，利用DialogFlow訓練的機器模型去判斷使用者的意圖</li>
+                            <li class="list-group-item">4. 為進一步回應，將篩選後的參數傳進Fulfillment中進行邏輯判斷或資料拉取</li>
+                            <li class="list-group-item">5. Fulfillment回傳對應Intent的回應給助理</li>
+                            <li class="list-group-item active">6. 助理接收到回應並呈獻給使用者</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-md-7 justify-content-lg-center" style="margin: 0 auto;">
+                        <div class="accordion-body text-xl opacity-10 text-dark">
+                          <img
+                            src="https://developers.google.com/assistant/conversational/images/aog-user-query-to-fulfillment.png"
                             style="display: block;max-width:80%;">
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item mb-3">
-                    <h5 class="accordion-header" id="headingTwo">
-                      <button class="accordion-button border-bottom font-weight-bold" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                        aria-controls="collapseTwo">
-                        以Actions On Google (AoG)平台的觀點來說，基礎架構又是什麼呢?
-                        <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
-                        <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
-                      </button>
-                    </h5>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                      data-bs-parent="#accordionRental">
-                      <div class="row">
-                        <div class="col-md-5">
-                          <div class="accordion-body text-xl opacity-7 text-dark">
-                            在支援Google語音助理的裝置上，</br>
-                            原生內建一個由官方支持的第三方平台(Actions On Google, AoG)。</br></br>
-                            當用戶請求與第三方平台的技能互動時，系統會自動到AoG上尋找對應的技能。
-                            一旦找到就會將畫面使用權交給第三方技能。
-                            自此刻開始，Google助理的角色轉為進行語音辨識與呈現第三方技能內容的中介。</br></br>
-                            在實作上，整個互動的過程是透過JSON為格式的API進行資訊傳遞。
-                          </div>
-                        </div>
-                        <div class="col-md-7 justify-content-lg-center" style="margin: 0 auto;">
-                          <div class="accordion-body text-xl opacity-10 text-dark">
-                            <img src="https://hank199599.github.io/assets/img/blog/%E7%A4%BA%E6%84%8F%E5%9C%961.png"
-                              style="display: block;max-width:100%;">
-                          </div>
-                        </div>
+                </div>
+                <div class="accordion-item mb-3">
+                  <h5 class="accordion-header" id="headingFour">
+                    <button class="accordion-button border-bottom font-weight-bold" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                      aria-controls="collapseFour">
+                      在GCP平台上的架構是如何被實踐的?
+                      <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                      <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+                    </button>
+                  </h5>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordionRental">
+                    <div class="col-md-12">
+                      <div class="accordion-body text-xl opacity-7 text-dark">
+                        根據實際需求，有幾種架構被建立。
                       </div>
                     </div>
-                  </div>
-                  <div class="accordion-item mb-3">
-                    <h5 class="accordion-header" id="headingThree">
-                      <button class="accordion-button border-bottom font-weight-bold" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                        aria-controls="collapseThree">
-                        當使用者與Google助理互動時，在後台會發生甚麼事?
-                        <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
-                        <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
-                      </button>
-                    </h5>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                      data-bs-parent="#accordionRental">
-                      <div class="row">
-                        <div class="col-md-5">
-                          <div class="accordion-body text-xl opacity-7 text-dark">
-                            當使用者與Google助理互動時，以下流程會被觸發。</br>
-                            而直到使用者的需求被滿足或中斷，都是這個形式進行每輪的對話：
-                            <ul class="list-group">
-                              <li class="list-group-item active">1. 使用者向助理提問</li>
-                              <li class="list-group-item active">2. 助理將(辨識到的)文字傳送給第三方Action</li>
-                              <li class="list-group-item">3. 在第三方Action架構中，利用DialogFlow訓練的機器模型去判斷使用者的意圖</li>
-                              <li class="list-group-item">4. 為進一步回應，將篩選後的參數傳進Fulfillment中進行邏輯判斷或資料拉取</li>
-                              <li class="list-group-item">5. Fulfillment回傳對應Intent的回應給助理</li>
-                              <li class="list-group-item active">6. 助理接收到回應並呈獻給使用者</li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="col-md-7 justify-content-lg-center" style="margin: 0 auto;">
-                          <div class="accordion-body text-xl opacity-10 text-dark">
-                            <img
-                              src="https://developers.google.com/assistant/conversational/images/aog-user-query-to-fulfillment.png"
-                              style="display: block;max-width:80%;">
-                          </div>
-                        </div>
+                    <div class="col-md-12">
+                      <div class="accordion-body text-xl opacity-7 text-dark">
+                        1. 沒有涉及的資料抓取的Action架構圖
                       </div>
+                      <img
+                        src="https://github.com/hank199599/hank199599.github.io/blob/master/assets/img/blog/diagram1.png?raw=true"
+                        style="display: block;max-width:60%; margin: 0 auto;">
                     </div>
-                  </div>
-                  <div class="accordion-item mb-3">
-                    <h5 class="accordion-header" id="headingFour">
-                      <button class="accordion-button border-bottom font-weight-bold" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                        aria-controls="collapseFour">
-                        在GCP平台上的架構是如何被實踐的?
-                        <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
-                        <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
-                      </button>
-                    </h5>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                      data-bs-parent="#accordionRental">
-                      <div class="row">
-                        <div class="accordion-body text-xl opacity-7 text-dark">
-                          根據實際需求，有幾種架構被建立。
-                        </div>
+                    <div class="col-md-12">
+                      <div class="accordion-body text-xl opacity-7 text-dark">
+                        2. 最簡單的形式，直接透過Cloud Function進行API資料抓取
                       </div>
-                      <div class="row">
-                        <div class="accordion-body text-xl opacity-7 text-dark">
-                          1. 沒有涉及的資料抓取的Action架構圖
-                        </div>
-                        <img
-                          src="https://github.com/hank199599/hank199599.github.io/blob/master/assets/img/blog/diagram1.png?raw=true"
-                          style="display: block;max-width:60%; margin: 0 auto;">
+                      <img
+                        src="https://github.com/hank199599/hank199599.github.io/blob/master/assets/img/blog/diagram2.png?raw=true"
+                        style="display: block;max-width:60%; margin: 0 auto;">
+                    </div>
+                    <div class="col-md-12">
+                      <div class="accordion-body text-xl opacity-7 text-dark">
+                        3. 施行前後端分離，將拉取資料的部分獨立成一微服務，原先的Cloud Function則專注在處理每個Intent對應的邏輯
                       </div>
-                      <div class="row">
-                        <div class="accordion-body text-xl opacity-7 text-dark">
-                          2. 最簡單的形式，直接透過Cloud Function進行API資料抓取
-                        </div>
-                        <img
-                          src="https://github.com/hank199599/hank199599.github.io/blob/master/assets/img/blog/diagram2.png?raw=true"
-                          style="display: block;max-width:60%; margin: 0 auto;">
+                      <img src="https://ithelp.ithome.com.tw/upload/images/20210925/20141015Bx3Xs2O7P1.png"
+                        style="display: block;max-width:60%; margin: 0 auto;">
+                    </div>
+                    <div class="col-md-12">
+                      <div class="accordion-body text-xl opacity-7 text-dark">
+                        4. 使Cloud Function會依據設定的時間自動進行資料拉取及上傳至Firebase Realtime
+                        Database資料庫，而專注於服務DialogFlow的Function則在需要時自資料庫拉取資料呈現給使用者。
                       </div>
-                      <div class="row">
-                        <div class="accordion-body text-xl opacity-7 text-dark">
-                          3. 施行前後端分離，將拉取資料的部分獨立成一微服務，原先的Cloud Function則專注在處理每個Intent對應的邏輯
-                        </div>
-                        <img src="https://ithelp.ithome.com.tw/upload/images/20210925/20141015Bx3Xs2O7P1.png"
-                          style="display: block;max-width:60%; margin: 0 auto;">
-                      </div>
-                      <div class="row">
-                        <div class="accordion-body text-xl opacity-7 text-dark">
-                          4. 使Cloud Function會依據設定的時間自動進行資料拉取及上傳至Firebase Realtime Database資料庫，而專注於服務DialogFlow的Function則在需要時自資料庫拉取資料呈現給使用者。
-                        </div>
-                        <img
-                          src="https://camo.githubusercontent.com/59160f6e1fb2ca4d7fc55cd5a062f34d2ea2ba4dd0a86d23ee0b72ece4c18548/68747470733a2f2f68616e6b3139393539392e6769746875622e696f2f6173736574732f696d672f4743502f53797374656d5f7374727563747572652e706e67"
-                          style="display: block;max-width:60%; margin: 0 auto;">
-                      </div>
+                      <img
+                        src="https://camo.githubusercontent.com/59160f6e1fb2ca4d7fc55cd5a062f34d2ea2ba4dd0a86d23ee0b72ece4c18548/68747470733a2f2f68616e6b3139393539392e6769746875622e696f2f6173736574732f696d672f4743502f53797374656d5f7374727563747572652e706e67"
+                        style="display: block;max-width:60%; margin: 0 auto;">
                     </div>
                   </div>
                 </div>
