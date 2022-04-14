@@ -297,6 +297,7 @@
                       <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
                     </button>
                   </h5>
+                </div>
                   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                     data-bs-parent="#accordionRental">
                     <div class="row">
@@ -398,12 +399,12 @@
                     </h5>
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                       data-bs-parent="#accordionRental">
-                      <div class="row">
+                      <div class="col-md-12">
                         <div class="accordion-body text-xl opacity-7 text-dark">
                           Based on requirements, there are 4 types of the structure are constructed.
                         </div>
                       </div>
-                      <div class="row">
+                      <div class="col-md-12">
                         <div class="accordion-body text-xl opacity-7 text-dark">
                           1. Without the requirement of the fetching data , which is the simplest structure. 
                         </div>
@@ -411,7 +412,7 @@
                           src="https://github.com/hank199599/hank199599.github.io/blob/master/assets/img/blog/diagram1.png?raw=true"
                           style="display: block;max-width:60%; margin: 0 auto;">
                       </div>
-                      <div class="row">
+                      <div class="col-md-12">
                         <div class="accordion-body text-xl opacity-7 text-dark">
                           2. With the requirement of the fetching data , it fetch data processing by APIs in the same Cloud Function.
                         </div>
@@ -419,14 +420,14 @@
                           src="https://github.com/hank199599/hank199599.github.io/blob/master/assets/img/blog/diagram2.png?raw=true"
                           style="display: block;max-width:60%; margin: 0 auto;">
                       </div>
-                      <div class="row">
+                      <div class="col-md-12">
                         <div class="accordion-body text-xl opacity-7 text-dark">
                           3. Perform the seperation of frontend and backend, the service of fetching data is now packged in one independent Cloud Function, the other one is focusing on the DialogFlow logic and responds.
                         </div>
                         <img src="https://ithelp.ithome.com.tw/upload/images/20210925/20141015Bx3Xs2O7P1.png"
                           style="display: block;max-width:60%; margin: 0 auto;">
                       </div>
-                      <div class="row">
+                      <div class="col-md-12">
                         <div class="accordion-body text-xl opacity-7 text-dark">
                           4. In this structure, the Cloud Function fetch data automatically in preset time and perform the data update to the Firebase Realtime Database, the other one is focusing on the DialogFlow logic and fetching the data from the database.
                         </div>
@@ -436,7 +437,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                
               </div>
             </div>
           </div>
