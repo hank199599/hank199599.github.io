@@ -29,6 +29,8 @@
   <!-- Nucleo Icons -->
   <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
   <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="../../../assets/css/materal-kit-pro.css" rel="stylesheet" />
+
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <!-- Material Icons -->
@@ -47,7 +49,13 @@
     color: #ffffff;
     background-color: #4d5257;
     box-shadow: 0 5px 20px 0px rgb(0 0 0 / 20%), 0 13px 24px -11px rgb(39 65 176 / 60%);
-}
+    }
+    .list-group-item.active {
+      z-index: 2;
+      color: #fff;
+      background-color: #4485f2;
+      border-color: #4485f2;
+    }
   </style>
 </head>
 
@@ -270,6 +278,170 @@
             </div>
           </div>
         </section>
+
+        <div class="col-md-12 mr-auto ml-auto">
+          <div class="row">
+            <div class="col-md-6 ">
+              <h3><b>Foundamental</b></h3>
+              <h6>How the actions works</h6>
+            </div>
+            <div class="col-md-12 mx-auto">
+              <div class="accordion" id="accordionRental">
+                <div class="accordion-item mb-3">
+                  <h5 class="accordion-header" id="headingOne">
+                    <button class="accordion-button border-bottom font-weight-bold" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                      aria-controls="collapseOne">
+                      Generaly speaking, how does it work?
+                      <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                      <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+                    </button>
+                  </h5>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionRental">
+                    <div class="row">
+                      <div class="col-md-7 mx-auto">
+                        <div class="accordion-body text-xl opacity-7 text-dark">
+                          It is a new type of application with a voice-based design interface that interfaces with Google Assistant.
+                          After the user indicates to Google Assistant that they want to use a specific Action,
+                          Google will search the Actions On Google platform to see if there is an Action with the corresponding name.
+                          The user is then directed by the Google Assistant to the Action interface.
+                          From this moment on, the role of the Google Assistant has shifted to assisting with speech recognition and information delivery.
+                          The task of recognizing the user's input intent and giving the corresponding response is transferred to the Action designed by the developer.</div>
+                      </div>
+                      <div class="col-md-5 mx-auto " style="margin: 0 auto;width: fit-content;">
+                        <div class="accordion-body text-xl opacity-10 text-dark">
+                          <img src="https://developers.google.com/assistant/conversational/images/invocation.svg"
+                            style="display: block;max-width:80%;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item mb-3">
+                    <h5 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button border-bottom font-weight-bold" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                        aria-controls="collapseTwo">
+                        In the view of Actions On Google (AoG) Platform, how does it actually work ?
+                        <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                        <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+                      </button>
+                    </h5>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionRental">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <div class="accordion-body text-xl opacity-7 text-dark">
+                            On devices that support Google Assistant,</br>
+                            Natively built in an officially supported third-party platform known as Actions On Google (AoG). </br></br>
+                            As a user requests to interact with a action on this third-party platform, the system will automatically search for the corresponding action to be serived.
+                            Once the platfoem found, the control of the response will be handed over to the third-party action.
+                            In this point, the Google Assistant's role has shifted to an intermediary that performs speech recognition and presents third-party action content. </br></br>
+                            In practice, the entire interaction process is information transfer through API in JSON format.
+                          </div>
+                        </div>
+                        <div class="col-md-7 justify-content-lg-center" style="margin: 0 auto;">
+                          <div class="accordion-body text-xl opacity-10 text-dark">
+                            <img src="../../../assets/img/blog/Diagram-1.png"
+                              style="display: block;max-width:100%;">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item mb-3">
+                    <h5 class="accordion-header" id="headingThree">
+                      <button class="accordion-button border-bottom font-weight-bold" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                        aria-controls="collapseThree">
+                        As the user interact with the action, what happened in the backend?
+                        <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                        <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+                      </button>
+                    </h5>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                      data-bs-parent="#accordionRental">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <div class="accordion-body text-xl opacity-7 text-dark">
+                            As the user interact with the action, the following pipeline with be practice</br>
+                            Until the request of the user is fulfilled or the action is interrupted, each round of the conversation is perform in this way:
+                            <ul class="list-group">
+                              <li class="list-group-item active">1. User asked to the Assistant</li>
+                              <li class="list-group-item active">2. Assistant transfer the (recognized) sentences send to the Action</li>
+                              <li class="list-group-item">3. In the structure of the action, we use DialogFlow which containing the pretrained modle to judged the intent of the user</li>
+                              <li class="list-group-item">4. To perform the complex responds, the DialogFlow narrow down the sentence and send the coresponding parameters to the Fulfillment where will perform data fetching or API call</li>
+                              <li class="list-group-item">5. Fulfillment return the relative Intent responds to the Assistant</li>
+                              <li class="list-group-item active">6. Assistant recived the responds and show it to the user</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-md-7 justify-content-lg-center" style="margin: 0 auto;">
+                          <div class="accordion-body text-xl opacity-10 text-dark">
+                            <img
+                              src="https://developers.google.com/assistant/conversational/images/aog-user-query-to-fulfillment.png"
+                              style="display: block;max-width:80%;">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item mb-3">
+                    <h5 class="accordion-header" id="headingFour">
+                      <button class="accordion-button border-bottom font-weight-bold" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                        aria-controls="collapseFour">
+                        What is the structure on Google Cloud Platform?
+                        <i class="collapse-close fa fa-plus text-xs pt-1 position-absolute end-0"></i>
+                        <i class="collapse-open fa fa-minus text-xs pt-1 position-absolute end-0"></i>
+                      </button>
+                    </h5>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                      data-bs-parent="#accordionRental">
+                      <div class="row">
+                        <div class="accordion-body text-xl opacity-7 text-dark">
+                          Based on requirements, there are 4 types of the structure are constructed.
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="accordion-body text-xl opacity-7 text-dark">
+                          1. Without the requirement of the fetching data , which is the simplest structure. 
+                        </div>
+                        <img
+                          src="https://github.com/hank199599/hank199599.github.io/blob/master/assets/img/blog/diagram1.png?raw=true"
+                          style="display: block;max-width:60%; margin: 0 auto;">
+                      </div>
+                      <div class="row">
+                        <div class="accordion-body text-xl opacity-7 text-dark">
+                          2. With the requirement of the fetching data , it fetch data processing by APIs in the same Cloud Function.
+                        </div>
+                        <img
+                          src="https://github.com/hank199599/hank199599.github.io/blob/master/assets/img/blog/diagram2.png?raw=true"
+                          style="display: block;max-width:60%; margin: 0 auto;">
+                      </div>
+                      <div class="row">
+                        <div class="accordion-body text-xl opacity-7 text-dark">
+                          3. Perform the seperation of frontend and backend, the service of fetching data is now packged in one independent Cloud Function, the other one is focusing on the DialogFlow logic and responds.
+                        </div>
+                        <img src="https://ithelp.ithome.com.tw/upload/images/20210925/20141015Bx3Xs2O7P1.png"
+                          style="display: block;max-width:60%; margin: 0 auto;">
+                      </div>
+                      <div class="row">
+                        <div class="accordion-body text-xl opacity-7 text-dark">
+                          4. In this structure, the Cloud Function fetch data automatically in preset time and perform the data update to the Firebase Realtime Database, the other one is focusing on the DialogFlow logic and fetching the data from the database.
+                        </div>
+                        <img
+                          src="https://camo.githubusercontent.com/59160f6e1fb2ca4d7fc55cd5a062f34d2ea2ba4dd0a86d23ee0b72ece4c18548/68747470733a2f2f68616e6b3139393539392e6769746875622e696f2f6173736574732f696d672f4743502f53797374656d5f7374727563747572652e706e67"
+                          style="display: block;max-width:60%; margin: 0 auto;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
 
         <div class="col-md-12 mr-auto ml-auto">
           <div class="row" >
