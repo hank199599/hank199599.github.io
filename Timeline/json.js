@@ -1,4 +1,8 @@
 var contents={
+    "2021/09-2022/01":{
+        "title":"教學助理 TA",
+        "content":"<i class='material-icons'>place</i> <b>國立臺灣科技大學</b><br>1.協助建立遠端教學的平台Google Meet</br>2.Moodle教學系統的操作</br> (為論文指導教授所教授的課)</br></br><small>(2021/09~2022/01，共四個月)</small>",
+    },
     "2021/11/29":{
         "title":"DevFest 2021 講者",
         "content":"由 Google Developer Group Taipei/Taoyuan 主辦, </br>在這個線上演講中: </br>分享開發Google Assistant 與語音對話設計的主要流程<br>並提供於鐵人賽分享的詳細教學。",
