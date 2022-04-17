@@ -63,9 +63,13 @@ var contents={
             "content":"<i class='fa fa-youtube-play' aria-hidden='true'></i> 線上直播頁面"
             }
     },
-    "2020/現在":{
+    "2020/2022":{
         "title":"就讀<b>國立台灣科技大學</b><i class='material-icons'>school</i>",
         "content":"資訊工程所"
+    },
+    "2018/07~10":{
+        "title":"義務役</b><i class='material-icons'>shield</i>",
+        "content":"陸軍</br></br><small>(2018/07/10/~2021/10/21，共四個月)</small>"
     },
     "2016/2018":{
         "title":"教學助理 TA",
