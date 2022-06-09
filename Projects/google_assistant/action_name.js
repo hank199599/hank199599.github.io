@@ -106,6 +106,9 @@ var action_name_dict = {
     "Moon_info":{
         "中文(臺灣)":"月相精靈",
     },
+    "Toeic_tester":{
+        "中文(臺灣)":"多益測驗",
+    },
     "Zip_code":{
         "中文(臺灣)":"郵遞區號查詢器",
     },

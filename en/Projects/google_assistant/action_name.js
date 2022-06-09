@@ -103,6 +103,9 @@ var action_name_dict = {
         "Danish":"tjek søgetendenser",
         "French":"le classement de recherche"
     },
+    "Toeic_tester":{
+        "Chinese(Taiwan)":"多益測驗",
+    },
     "Moon_info":{
         "Chinese(Taiwan)":"月相精靈",
     },
