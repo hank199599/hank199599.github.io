@@ -28,7 +28,7 @@ var langeuage_url_dict={
 var langeuage_dict={
     "中文(臺灣)":{
         "food":["Food_Decider"],
-        "school":["Daily_History","Taiwan_Dictoinary",  "Taiwan_Rail_Dictoinary","Cangjie_Dictoinary"],
+        "school":["Daily_History","Taiwan_Dictoinary",  "Taiwan_Rail_Dictoinary","Cangjie_Dictoinary","Toeic_tester"],
         "reader":["Positive_Quote","Negative_Quote","Today_Quote"],
         "color_lens":["NASA_daily","Fortune_Master"],
         "sports_esports":["Brain_Game","Riddle_Game","Number_Elf","Cows_and_Bulls","Flag_Game","text_solitaire","idiom_solitaire","easy_text_solitaire","twenty_four_points"],
@@ -270,7 +270,15 @@ var detail_dict = {
         "Language": ["中文(臺灣)"],
         "content": "快速獲得今天的月相資訊、亮度</br>以及預計的月出月落時間。",
         "Github_link": "",
-        "Action_link": "https://assistant.google.com/services/invoke/uid/0000004eb1cefaba"
+        "Action_link": "javascript:;"
+    },
+    "Toeic_tester": {
+        "src": "https://lh3.googleusercontent.com/6QvDGU9WMc1QC1c8F9GHS8bPiUgs4yfX2SVrAfwwX9zNnOy77AfjlOdIwG5taGCvmZxVKsq4tcX5=s90",
+        "Titile": "多益測驗",
+        "Language": ["中文(臺灣)"],
+        "content": "這是一個回合制的多益題目測驗，每回合一共有五個單字。<br>使用者有三次猜測正確涵義的機會。",
+        "Github_link": "",
+        "Action_link": "https://assistant.google.com/services/invoke/uid/0000006745131063"
     },
     "Zip_code": {
         "src": "https://lh3.googleusercontent.com/I_NnCp30icOJul74LqvuhrXakeM0xhFWBKp0nRQ8dGMoqAqg4BSmwG4UyRvZYpTuluSfXS-CERDu=s90",

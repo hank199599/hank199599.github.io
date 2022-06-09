@@ -28,7 +28,7 @@ var langeuage_url_dict={
 var langeuage_dict={
     "Chinese(Taiwan)":{
         "food":["Food_Decider"],
-        "school":["Daily_History","Taiwan_Dictoinary",  "Taiwan_Rail_Dictoinary","Cangjie_Dictoinary"],
+        "school":["Daily_History","Taiwan_Dictoinary",  "Taiwan_Rail_Dictoinary","Cangjie_Dictoinary","Toeic_tester"],
         "reader":["Positive_Quote","Negative_Quote","Today_Quote"],
         "color_lens":["NASA_daily","Fortune_Master"],
         "sports_esports":["Brain_Game","Riddle_Game","Number_Elf","Cows_and_Bulls","Flag_Game","text_solitaire","idiom_solitaire","easy_text_solitaire","twenty_four_points"],
@@ -270,7 +270,15 @@ var detail_dict = {
         "Language": ["Chinese(Taiwan)"],
         "content": "Quickly get today's moon phase information, brightness</br> and estimated moonrise and moonset time.",
         "Github_link": "",
-        "Action_link": "https://assistant.google.com/services/invoke/uid/0000004eb1cefaba"
+        "Action_link": "javascript:;"
+    },
+    "Toeic_tester": {
+        "src": "https://lh3.googleusercontent.com/6QvDGU9WMc1QC1c8F9GHS8bPiUgs4yfX2SVrAfwwX9zNnOy77AfjlOdIwG5taGCvmZxVKsq4tcX5=s90",
+        "Title": "多益測驗",
+        "Language": ["Chinese(Taiwan)"],
+        "content": "This is a turn-based TOEIC quiz, with a total of five words per round. <br>Users have three chances to guess the correct meaning. ",
+        "Github_link": "https://github.com/hank199599/Google-Assistant-APP/tree/master/多益測驗",
+        "Action_link": "https://assistant.google.com/services/invoke/uid/0000006745131063"
     },
     "Zip_code": {
         "src": "https://lh3.googleusercontent.com/I_NnCp30icOJul74LqvuhrXakeM0xhFWBKp0nRQ8dGMoqAqg4BSmwG4UyRvZYpTuluSfXS-CERDu=s90",
