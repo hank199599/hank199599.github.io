@@ -22,7 +22,8 @@
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Google Assistant Voice APP | 藉由語音互動的新形態應用程式" />
-  <meta property="og:description" content="它是一個介接於Google助理的一個基於語音設計界面的新型態應用程式，在實作上搭建在Actions on Google (AoG)平台上，並以Node.js、DialogFlow 與Firebase 為建構工具。在這裡呈現以此為基礎建構的作品集。" />
+  <meta property="og:description"
+    content="它是一個介接於Google助理的一個基於語音設計界面的新型態應用程式，在實作上搭建在Actions on Google (AoG)平台上，並以Node.js、DialogFlow 與Firebase 為建構工具。在這裡呈現以此為基礎建構的作品集。" />
   <meta property="og:image" content="https://hank199599.github.io/assets/img/Google-Assistant-icon.gif" />
   <meta property="og:url" content="https://hank199599.github.io/Projects/google_assistant/" />
 
@@ -50,7 +51,7 @@
       border-width: 2px;
       border-color: #4d5257;
       color: #4d5257;
-    } 
+    }
 
     .nav-pills .nav-item .nav-link.active {
       color: #ffffff;
@@ -68,7 +69,6 @@
 </head>
 
 <body class="index-page bg-gray-200">
-
 
   <!-- Navbar -->
   <div class="container position-sticky z-index-sticky top-0">
@@ -284,6 +284,21 @@
             </div>
           </div>
         </section>
+        
+        <!--告知服務被棄用-->
+        <div class="alert alert-danger alert-dismissible fade show text-white" role="alert">
+          <span class="iconify" data-icon="mdi:google-assistant"></span>
+          <span class="alert-text"><strong>服務將被Google官方棄用...</strong></span><br>
+          <span class="alert-text">對話式Action 將在&nbsp;<strong>2023/06/13</strong>&nbsp;後無法被呼叫使用!</span><br>
+          <a href="https://developers.google.com/assistant/ca-sunset" class="text-white text-sm icon-move-right"
+            target="_blank">Conversational Actions sunset overview | CA sunset | Google Developers
+            <i class="fas fa-arrow-right text-xs ms-1"></i>
+          </a>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
         <div class="col-md-12 mr-auto ml-auto">
           <div class="row">
             <div class="col-md-6 ">
@@ -459,7 +474,7 @@
               <div class="card card-plain">
                 <div class="card-body px-0">
                   <h5 style="color: #00a0e9;">2021 13TH</h5>
-                  <h6 >Google Assistant 開發與語音使用者介面設計</h6>
+                  <h6>Google Assistant 開發與語音使用者介面設計</h6>
                   <p>
                     你是否曾試想過出一張嘴就能獲取一切資訊的情境呢?<br>
                     在Google、Amazon、Apple發表各家的語音助理後，這個想像逐漸在現實生活中真實上演。<br>
@@ -469,7 +484,8 @@
                     最後，將帶領各位看看語音對話為基礎的APP能在哪些地方提供更實用的協助。<br>
                     希望這一系列文章結束後能讓你加入開發的行列!<br>
                   </p>
-                  <a href="https://ithelp.ithome.com.tw/users/20141015/ironman/4365" class="text-info text-sm icon-move-right" target="_blank">查看系列文章
+                  <a href="https://ithelp.ithome.com.tw/users/20141015/ironman/4365"
+                    class="text-info text-sm icon-move-right" target="_blank">查看系列文章
                     <i class="fas fa-arrow-right text-xs ms-1"></i>
                   </a>
                 </div>
