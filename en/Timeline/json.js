@@ -1,5 +1,19 @@
 var contents={
-    "2021/11/29":{
+    "2022/08":{
+        "title":"Journal Paper publish",
+        "content":"S. M. Chen and S. H. Yu,<br> “Multiattribute decision making based on novel score function and the power operator of interval-valued intuitionistic fuzzy values,”<br> Information Sciences, vol. 606, pp. 763-785, August 2022.",
+        "button":{
+            "herf":"https://www.sciencedirect.com/science/article/pii/S0020025522004674?casa_token=8C9dCzJk_70AAAAA:NCJZpY58ICmg5Vpv9LtyNYj2Qb87P2Socy8AXfc5PegWgfbMMmDOFOPg6HDCmldaRiySKZaybQ",
+            "content":"<i class='material-icons'>menu_book</i> Journal Paper Online Page"
+            }},
+    "2022/03-2022/06":{
+        "title":"Teaching Assistant",
+        "content":"<i class='material-icons'>place</i> <b>NTUST</b><br>Undergraduate course : CS2006301 Computer Organization<br> 1. Moodle management</br></br><small>(2021/09~2022/01, 4 months)</small>",
+    },
+    "2021/09-2022/01":{
+        "title":"Teaching Assistant",
+        "content":"<i class='material-icons'>place</i> <b>NTUST</b><br>Undergraduate course : CS5023701 Knowledge-Based Systems<br>1.Moodle management Meet</br>2.Assist in the establishment of remote teaching based on Google Meet</br></br><small>(2021/09~2022/01, 4 months)</small>",
+    },"2021/11/29":{
         "title":"DevFest 2021 Speaker",
         "content":"Host by Google Developer Group Taipei/Taoyuan,</br>In this online speech:<br>Share the brief process of VUI design and how to apply it to develop a Google Assistant voice app.<br>At the same time, I share the info of complete tutorial for the listener.",
         "button":{
