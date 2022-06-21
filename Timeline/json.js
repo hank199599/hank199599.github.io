@@ -1,7 +1,18 @@
 var contents={
+    "2022/08":{
+        "title":"期刊論文發表",
+        "content":"S. M. Chen and S. H. Yu,<br> “Multiattribute decision making based on novel score function and the power operator of interval-valued intuitionistic fuzzy values,”<br> Information Sciences, vol. 606, pp. 763-785, August 2022.",
+        "button":{
+            "herf":"https://www.sciencedirect.com/science/article/pii/S0020025522004674?casa_token=8C9dCzJk_70AAAAA:NCJZpY58ICmg5Vpv9LtyNYj2Qb87P2Socy8AXfc5PegWgfbMMmDOFOPg6HDCmldaRiySKZaybQ",
+            "content":"<i class='material-icons'>menu_book</i> Journal Paper 頁面"
+            }},
+    "2022/03-2022/06":{
+        "title":"教學助理 TA",
+        "content":"<i class='material-icons'>place</i> <b>國立臺灣科技大學</b><br>CS2006301 計算機組織<br>1.Moodle教學系統的操作</br> (為論文指導教授所教授的課)</br></br><small>(2021/09~2022/01，共四個月)</small>",
+    },
     "2021/09-2022/01":{
         "title":"教學助理 TA",
-        "content":"<i class='material-icons'>place</i> <b>國立臺灣科技大學</b><br>1.協助建立遠端教學的平台Google Meet</br>2.Moodle教學系統的操作</br> (為論文指導教授所教授的課)</br></br><small>(2021/09~2022/01，共四個月)</small>",
+        "content":"<i class='material-icons'>place</i> <b>國立臺灣科技大學</b><br>CS5023701 知識系統<br>1.協助建立遠端教學的平台Google Meet</br>2.Moodle教學系統的操作</br> (為論文指導教授所教授的課)</br></br><small>(2021/09~2022/01，共四個月)</small>",
     },
     "2021/11/29":{
         "title":"DevFest 2021 講者",
