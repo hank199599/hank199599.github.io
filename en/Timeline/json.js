@@ -77,13 +77,17 @@ var contents={
             "content":"<i class='fa fa-youtube-play' aria-hidden='true'></i>&nbsp;Live page"
             }
     },
-    "2020/Now":{
+    "2020/2022":{
         "title":"Study at <b>National Taiwan University of Science and Technology</b>",
         "content":"Computer Science and Information Engineering",
         "button":{
             "herf":" https://www.ntust.edu.tw/index.php?Lang=en",
             "content":"<i class='material-icons'>school</i>&nbsp;school page"
             }
+    },
+    "2018/07~10":{
+        "title":"compulsory service</b><i class='material-icons'>shield</i>",
+        "content":"army</br></br><small>(2018/07/10/~2018/10/21，4 months)</small>"
     },
     "2016/2018":{
         "title":"Teach Assistant",
