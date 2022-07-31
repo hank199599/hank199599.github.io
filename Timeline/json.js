@@ -56,7 +56,7 @@ var contents={
     },
     "2021/03~06":{
         "title":"學徒",
-        "content":"Google Cloud Student Sprint Program</br> 此計畫將在3月到6月期間進行為期 10 週的線上課程及工作坊，並由 Google 導師進行分組指導，</br>最後目標是帶領同學一起通過 Google Cloud Associate Cloud Engineer (ACE) 的專業認證考試。",
+        "content":"[Google Cloud Student Sprint Program]</br></br>• 由Google所舉辦，是一項在3月到6月期間進行為期 10 週的線上課程及工作坊的計畫。</br>• 這個計畫網羅40名來自台灣、中國與海外的學生，並以5~6人小組形式由在 Google Cloud 擔任雲端工程師的 Googler 導師 進行分組指導。</br>• 我們獲得有關 Google Cloud Platform 的基礎知識並沉浸於 Google 的企業文化中。</br>• 該計畫的最終目標是帶領學生通過 Google Cloud Associate Cloud Engineer (ACE) 的專業認證考試。</br>• 在這項計畫結束後成功考取 「Associate Cloud Engineer」之專業認證。",
         "button":{
             "herf":"https://web.archive.org/web/20211202222716/https:/buildyourfuture.withgoogle.com/programs/cloud-student-sprint-programs/",
             "content":"<i class='fa fa-google' aria-hidden='true'></i> 計劃說明頁面 "
@@ -84,7 +84,7 @@ var contents={
     },
     "2018/07~10":{
         "title":"義務役</b><i class='material-icons'>shield</i>",
-        "content":"陸軍</br></br><small>(2018/07/10/~2018/10/21，共四個月)</small>"
+        "content":"陸軍</br></br><small>(2018/07/10/~2021/10/21，共四個月)</small>"
     },
     "2016/2018":{
         "title":"教學助理 TA",
