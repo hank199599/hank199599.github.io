@@ -84,7 +84,7 @@ var contents={
     },
     "2018/07~10":{
         "title":"義務役</b><i class='material-icons'>shield</i>",
-        "content":"陸軍</br></br><small>(2018/07/10/~2021/10/21，共四個月)</small>"
+        "content":"陸軍</br></br><small>(2018/07/10/~2018/10/21，共四個月)</small>"
     },
     "2016/2018":{
         "title":"教學助理 TA",
