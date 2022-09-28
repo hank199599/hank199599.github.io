@@ -1,4 +1,12 @@
 var contents={
+    "2022/09-Now":{
+        "title":"後端工程師",
+        "content":"LINE TV (巧克科技)",
+        "button":{
+            "herf":"https://www.linetv.tw/",
+            "content":"<span class='material-icons'>ondemand_video</span> 官方頁面"
+            }
+        },
     "2022/08":{
         "title":"期刊論文發表",
         "content":"S. M. Chen and S. H. Yu,<br> “Multiattribute decision making based on novel score function and the power operator of interval-valued intuitionistic fuzzy values,”<br> Information Sciences, vol. 606, pp. 763-785, August 2022.",
