@@ -1,18 +1,17 @@
 <!--
 =========================================================
-Material Kit - v2.0.7
+* Material Kit 2 - v3.0.2
 =========================================================
 
-Product Page: https://www.creative-tim.com/product/material-kit
-Copyright 2020 Creative Tim (https://www.creative-tim.com/)
+* Product Page:  https://www.creative-tim.com/product/material-kit 
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Coded by www.creative-tim.com
 
-Coded by Creative Tim
+ =========================================================
 
-=========================================================
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
   <meta charset="utf-8" />
@@ -22,37 +21,22 @@ The above copyright notice and this permission notice shall be included in all c
   <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
 
   <title>
-    紫外線精靈 | 網頁版
+    OpenAI ChatGPT | 全網瘋迷的聊天機器人AI
   </title>
-  <meta charset="utf-8" />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css"
     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
   <!-- Nucleo Icons -->
-  <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
-  <link id="pagestyle" href="../../../assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+  <link id="pagestyle" href="../../assets/css/material-kit.css?v=3.0.2" rel="stylesheet" />
+  <link href="../../main.css" rel="stylesheet" />
   <style type="text/css">
-    h1,
-    h4,
-    h6,
-    small {
-      color: #fff
-    }
-
-    .card .card-header-secondary,
-    .card.bg-info,
-    .card.card-rotate.bg-info .front,
-    .card.card-rotate.bg-info .back {
-      background: linear-gradient(60deg, #010316, #11132b);
-    }
-
     .dropdown-menu .dropdown-item:hover,
     .dropdown-menu .dropdown-item:focus,
     .dropdown-menu .dropdown-item:active,
@@ -61,33 +45,91 @@ The above copyright notice and this permission notice shall be included in all c
     .dropdown-menu a:hover,
     .dropdown-menu a:focus,
     .dropdown-menu a:active {
-      box-shadow: 0 4px 20px 0px rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(39 65 176 / 40%);
-      background-color: #9c9c9f;
-      color: #fff !important;
+        background-color: #d7d7d7;
     }
+    
+    .btn.btn-primary:focus,
+    .btn.btn-primary:active,
+    .btn.btn-primary:hover {
+        box-shadow: 0 14px 26px -12px rgba(181, 181, 181, 0.42), 0 4px 23px 0px rgba(181, 181, 181, 0.12), 0 8px 10px -5px rgba(39, 65, 176, 0.2);
+    }
+    
+    .navbar.navbar-transparent .navbar-toggler .navbar-toggler-icon {
+        background-color: #000000;
+    }
+    
+    /* .navbar .navbar-toggler .navbar-toggler-icon {
+        background-color: #000000;
+    } */
+    
+    .navbar-collapse .navbar-nav .nav-item .nav-link {
+        color: #000000;
+    }
+    
+    .navbar.navbar-transparent {
+        color: #000000;
+    }
+    
+    .dropdown-menu .dropdown-item,
+    .dropdown-menu li>a {
+        color: #000000;
+    }
+    
+    .navbar .navbar-brand {
+        color: #000000;
+    }
+    
+    .navbar .navbar-nav .nav-item.active .nav-link,
+    .navbar .navbar-nav .nav-item.active .nav-link:hover,
+    .navbar .navbar-nav .nav-item.active .nav-link:focus {
+        background-color: rgba(181, 181, 181, 0.1);
+    }
+</style>
+<style>
+  .material-symbols-outlined {
+      font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 48
+  }
+</style>
+<!-- 定義DialogFlow對話氣泡的外觀-->
+<style>
+  df-messenger {
+      --df-messenger-bot-message: #878fac;
+      --df-messenger-button-titlebar-color: #000000;
+      --df-messenger-chat-background-color: #fafafa;
+      --df-messenger-font-color: white;
+      --df-messenger-send-icon: #878fac;
+      --df-messenger-user-message: #b6b6b6;
+  }
 
-    a {
-      color: #010316;
-    }
-
-    .nav-pills .nav-item .nav-link.active {
-      color: #ffffff;
-      background-color: #010316;
-      box-shadow: 0 5px 20px 0px rgb(0 0 0 / 20%), 0 13px 24px -11px rgb(39 65 176 / 60%);
-    }
-  </style>
+  @font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-size: 1.33333333em;
+      font-weight: 400;
+      src: url(https://example.com/MaterialIcons-Regular.eot);
+      /* For IE6-8 */
+      src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+</style>
 </head>
 
 <body class="index-page bg-gray-200">
+
+
+  <!-- Navbar -->
   <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
       <div class="col-12">
         <nav
           class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
           <div class="container-fluid px-0">
-            <a class="navbar-brand font-weight-bolder ms-sm-3" href="../../" rel="tooltip" title="Home Page"
-              data-placement="bottom">
-              UVI Index Service
+            <a class="navbar-brand font-weight-bolder ms-sm-3" href="../../"
+              rel="tooltip" title="Home Page" data-placement="bottom" >
+              OpenAI ChatGPT integration
             </a>
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
               data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
@@ -99,20 +141,18 @@ The above copyright notice and this permission notice shall be included in all c
               </span>
             </button>
             <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
-
+              
               <ul class="navbar-nav navbar-nav-hover ms-auto">
                 <li class="nav-item mx-2">
-                  <a class="nav-link nav-link-icon me-2" href="../../Timeline/index.html">
+                  <a class="nav-link nav-link-icon me-2" href="../../Timeline/index.html" >
                     <i class="material-icons opacity-6 me-2 text-dark">timeline</i>
-                    <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip"
-                      data-bs-placement="bottom">時間軸</p>
+                    <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" >時間軸</p>
                   </a>
                 </li>
                 <li class="nav-item mx-2">
                   <a class="nav-link nav-link-icon me-2" href="../../blog/">
                     <i class="material-icons opacity-6 me-2 text-dark">description</i>
-                    <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip"
-                      data-bs-placement="bottom">部落格</p>
+                    <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" >部落格</p>
                   </a>
                 </li>
                 <li class="nav-item dropdown dropdown-hover mx-2">
@@ -221,10 +261,12 @@ The above copyright notice and this permission notice shall be included in all c
 
                     <div class="row d-lg-none">
                       <div class="col-md-12">
-                        <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/google_assistant/">
+                        <a class="dropdown-item ps-3 border-radius-md mb-1"
+                          href="../../Projects/google_assistant/">
                           Google 助理技能
                         </a>
-                        <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/npm/">
+                        <a class="dropdown-item ps-3 border-radius-md mb-1"
+                          href="../../Projects/npm/">
                           NPM 模組
                         </a>
                         <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/python/">
@@ -233,17 +275,19 @@ The above copyright notice and this permission notice shall be included in all c
                         <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/tw_air_pollute/">
                           空汙即時查詢
                         </a>
-                        <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/tw_uvi_index/">
+                        <a class="dropdown-item ps-3 border-radius-md mb-1"
+                          href="../../Projects/tw_uvi_index/">
                           紫外線即時查詢
                         </a>
-                        <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/tw_radiation_index/">
-                          輻射即時查詢
-                        </a>
                         <a class="dropdown-item ps-3 border-radius-md mb-1"
+                        href="../../Projects/tw_radiation_index/">
+                        輻射即時查詢
+                      </a>
+                      <a class="dropdown-item ps-3 border-radius-md mb-1"
                           href="../../Projects/OpenAI-ChatGPT/">
                           OpenAI-ChatGPT 串接
                         </a>
-                      </div>
+                    </div>
                   </ul>
                 </li>
             </div>
@@ -254,140 +298,84 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
   </div>
   <header class="header-2">
-    <div class="page-header min-vh-75 relative" id="background"
-      style="background-image: url('../../assets/img/ejlSjF3.png'); background-position: top;">
+    <div class="page-header min-vh-75 relative" style="background-image: url('../../assets/img/bg3.jpg')">
       <span class="mask bg-gradient-dark opacity-4"></span>
       <div class="container">
         <div class="row">
           <div class="col-lg-7 text-left mx-auto text-light">
-            <h1 class="title">紫外線精靈</h1>
-            <h4 id="uvi_report">更新時間 • <b class="animated flash infinite slow"
-                style=" animation-duration: 5s;">
-                資料抓取中...</b></h4>
-            <br>
-            <a href="https://assistant.google.com/services/invoke/uid/00000008b2c308d2" class="btn btn-white btn-round"
-              target="_blank" style="color: #2d252e;"><b><span class="iconify" data-icon="mdi-google-assistant"
-                  data-inline="false"></span>&emsp;Try it on Google Assistant</b></a>
+            <div class="col-md-8">
+              <p style="font-size: 150px; color:#ffffff;">
+                <span class="iconify" data-icon="simple-icons:openai" data-inline="false"></span>
+            </p>
+              <h1 class="title" style="margin:0px 10px 0px 0px; color: #ffffff;">ChatGPT</h1>
+              <h5 style="color: #ffffff;">由OpenAI開發的自然語言處理（NLP）模型「GPT-3」延伸出的「GPT-3.5」製作的模型</h5>
+              <!-- <a href="https://github.com/hank199599/Google-Assistant-APP" class="btn btn-white btn-round"
+                target="_blank"><b><span class="iconify" data-icon="simple-icons:openai" data-inline="false"></span>&emsp;官方頁面</b></a> -->
+            </div>
           </div>
         </div>
-
-
       </div>
+</div>
     </div>
   </header>
 
-  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 mr-auto ml-auto" style="padding: 15px 15px;">
-          <div class="card">
-            <div class="card-body">
-              <h2>紫外線指數</h2>
-              <p>紫外線指數標準的計算方法為，量度至400 nm的紫外線輻射強度，並將不同波長的紫外線輻射強度乘上「紅斑作用光譜」（Erythema Action
-                Spectrum）內對應的加權數值，以反映人類皮膚對紫外線的反應，將不同波段相乘的結果相加起來，即得出總紫外線強度(單位是毫瓦/平方米)，再將其總紫外線強度乘0.04即得出紫外線指數(每單位紫外線指數為25毫
-                瓦/平方米)。</p>
-              <table style="text-align: center; 
-                            width: auto; 
-                            flex-direction: column;
-                            justify-content: center;">
-                <tr style="text-align: left">
-                  <td style="width: 10%;  transition: width 1.5s ease;">
-                    0
-                  </td>
-                  <td style="width: 10%;  transition: width 1.5s ease;">
-                    3
-                  </td>
-                  <td style="width: 10%;  transition: width 1.5s ease;">
-                    6
-                  </td>
-                  <td style="width: 10%;  transition: width 1.5s ease;">
-                    8
-                  </td>
-                  <td style=" width: 30%;  transition: width 1.5s ease;">
-                    11
-                  </td>
-                </tr>
-                <tr style="height: fit-content;">
-                  <td>
-                    <div class="progress progress-line-danger" style="margin-bottom: 10px;">
-                      <div class="progress-bar" style="width: 100%; background: #1e9265;">
-                        <span class="sr-only">35% Complete (success)</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="progress progress-line-danger" style="margin-bottom: 10px;">
-                      <div class="progress-bar" style="width: 100%; background: #fc920b;">
-                        <span class="sr-only">35% Complete (success)</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="progress progress-line-danger" style="margin-bottom: 10px;">
-                      <div class="progress-bar" style="width: 100%; background: #ef4521;">
-                        <span class="sr-only">35% Complete (success)</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="progress progress-line-danger" style="margin-bottom: 10px;">
-                      <div class="progress-bar" style="width: 100%; background: #b71311;">
-                        <span class="sr-only">35% Complete (success)</span>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="progress progress-line-danger" style="margin-bottom: 10px;">
-                      <div class="progress-bar" style="width: 100%; background: #5b0e32;">
-                        <span class="sr-only">35% Complete (success)</span>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr style="height: fit-content;">
-                  <td>
-                    &nbsp;低量級&nbsp;
-                  </td>
-                  <td>
-                    &nbsp;中量級&nbsp;
-                  </td>
-                  <td>
-                    &nbsp;高量級&nbsp;
-                  </td>
-                  <td>
-                    &nbsp;過量級&nbsp;
-                  </td>
-                  <td>
-                    &nbsp;危險級&nbsp;
-                  </td>
-                </tr>
-              </table>
-              <br><b>© 資料來源：</b> <a href="https://www.cwb.gov.tw/V8/C/" target="_blank" style="color:#248da3">中央氣象局</a>
-              與 <a href="https://www.epa.gov.tw/Index" target="_blank" style="color:#248da3">行政院環境保護署</a>
-            </div>
-          </div>
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 ">
+  <div class="row text-center" style="padding: 30px;">
+    <h3><b>作品總覽</b></br>
+      <small>透過DialogFlow串接到各處！</small>
+  </h3>
+  </div>
+  <div class="row max-width" style="padding: 30px; justify-content: center">
+    <div class="col-md-5">
+      <div class="card" style="width: auto;">
+        <div class="card-body ps-0">
+          <div class = 'container'>
+          <h5 class="mb-0">LINE</h5>
+          <p class="text-muted">立即使用！</p>
+          <p>
+          </p>
         </div>
-        <div class="col-md-12 mr-auto ml-auto" style="padding: 15px 15px;">
-          <div class="card card-nav-tabs card-plain">
-            <div class="card-header card-header-secondary">
-              <!-- colors:"header-primary","header-info","header-success","header-warning","header-danger" -->
-              <div class="nav-tabs-navigation">
-                <div class="nav-tabs-wrapper">
-                  <ul class="nav nav-pills nav-fill p-1 " role="tablist" id="county_list">
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="tab-content text-center" id="county_content">
-
-              </div>
-            </div>
-          </div>
-
+        <div class="card-footer">
+          <a type="button" class="btn btn-github btn-icon mt-2" href="https://github.com/hank199599/openGPT-with-Dialogflow" target="_blank">
+            <span class="btn-inner--icon"><i class="fab fa-github"></i></span>
+            <span class="btn-inner--text">Github</span>
+          </a>  
+        <a type="button" class="btn btn-github btn-icon mt-2" style="background-color: #06c755;" href="https://line.me/R/ti/p/@977vrkxz" target="_blank">
+          <span class="btn-inner--icon"><i class="fab fa-line"></i></span>
+          <span class="btn-inner--text">LINE Official Account</span>
+        </a>
+        
+        </div>
         </div>
       </div>
-    </div>
+  </div>
+      <div class="col-md-5">
+          <div class="card" style="width: auto;">
+            <div class="card-body ps-0">
+              <div class = 'container'>
+              <h5 class="mb-0">Telegram</h5>
+              <p class="text-muted">即將登場</p>
+              <p>
+              </p>
+            </div>
+            <div class="card-footer">
+              <a type="button" class="btn btn-github btn-icon mt-2 disabled" href="https://github.com/hank199599/openGPT-with-Dialogflow" target="_blank">
+                <span class="btn-inner--icon"><i class="fab fa-github"></i></span>
+                <span class="btn-inner--text">Github</span>
+              </a>  
+            <a type="button" class="btn btn-github btn-icon mt-2 disabled" style="background-color: #0088cc;" href="https://line.me/R/ti/p/@977vrkxz" target="_blank">
+              <span class="btn-inner--icon"><i class="fab fa-telegram"></i></span>
+              <span class="btn-inner--text">Telegram Chat Bot</span>
+            </a>
+            
+            </div>
+            </div>
+          </div>
+      </div>
+      
+
+  </div>
+    
   </div>
   <footer class="footer pt-3 mt-3">
     <div class="container">
@@ -399,6 +387,7 @@ The above copyright notice and this permission notice shall be included in all c
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <li><a class="dropdown-item" href="./" selected>中文(台灣)</a></li>
+                <li><a class="dropdown-item" href="../../en/Projects/npm/" selected>English</a></li>
               </ul>
             </div>
         </div>
@@ -414,44 +403,60 @@ The above copyright notice and this permission notice shall be included in all c
       </div>
     </div>
   </footer>
-  <!--彈跳式視窗擺放處-->
-  <div id="modal creator">
-    <!--透過程式自動生成內容-->
-  </div>
-
+  <df-messenger intent="WELCOME" chat-title="OpenAI ChatGPT" agent-id="bd5cc9e7-9760-4136-b30e-8d267f9247cc"
+        language-code="zh-TW" chat-icon="./assets/img/tensorflow.png"></df-messenger>
   <!--   Core JS Files   -->
-  <script src="../../../assets/js/core/popper.min.js" type="text/javascript"></script>
-  <script src="../../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-  <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
   <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
-  <script src="../../../assets/js/plugins/countup.min.js"></script>
-  <script src="../../../assets/js/plugins/choices.min.js"></script>
-  <script src="../../../assets/js/plugins/prism.min.js"></script>
-  <script src="../../../assets/js/plugins/highlight.min.js"></script>
+  <script src="../../assets/js/plugins/countup.min.js"></script>
+  <script src="../../assets/js/plugins/choices.min.js"></script>
+  <script src="../../assets/js/plugins/prism.min.js"></script>
+  <script src="../../assets/js/plugins/highlight.min.js"></script>
   <!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
-  <script src="../../../assets/js/plugins/rellax.min.js"></script>
+  <script src="../../assets/js/plugins/rellax.min.js"></script>
   <!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
-  <script src="../../../assets/js/plugins/tilt.min.js"></script>
+  <script src="../../assets/js/plugins/tilt.min.js"></script>
   <!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
-  <script src="../../../assets/js/plugins/choices.min.js"></script>
-
+  <script src="../../assets/js/plugins/choices.min.js"></script>
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-
+  <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
   <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
-  <script src="../../../assets/js/plugins/parallax.min.js"></script>
+  <script src="../../assets/js/plugins/parallax.min.js"></script>
   <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="../../assets/js/material-kit.min.js?v=3.0.2" type="text/javascript"></script>
+  <!--模組化內容程式-->
+  <script src="../../json.js"></script>
+  <script src="../../generator.js"></script>
 
-  <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
-  <script src="../../assets/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
-  <!--icon挿件 -->
-  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-  <script src="./fetch.js"></script>
-  <script src="./json.js"></script>
-  <script src="./data_display.js"></script>
+  <script type="text/javascript">
 
+    if (document.getElementById('state1')) {
+      const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+      if (!countUp.error) {
+        countUp.start();
+      } else {
+        console.error(countUp.error);
+      }
+    }
+    if (document.getElementById('state2')) {
+      const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+      if (!countUp1.error) {
+        countUp1.start();
+      } else {
+        console.error(countUp1.error);
+      }
+    }
+    if (document.getElementById('state3')) {
+      const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+      if (!countUp2.error) {
+        countUp2.start();
+      } else {
+        console.error(countUp2.error);
+      };
+    }
+  </script>
 </body>
-
 </html>
