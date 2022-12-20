@@ -45,67 +45,67 @@
     .dropdown-menu a:hover,
     .dropdown-menu a:focus,
     .dropdown-menu a:active {
-        background-color: #d7d7d7;
+      background-color: #d7d7d7;
     }
-    
+
     .btn.btn-primary:focus,
     .btn.btn-primary:active,
     .btn.btn-primary:hover {
-        box-shadow: 0 14px 26px -12px rgba(181, 181, 181, 0.42), 0 4px 23px 0px rgba(181, 181, 181, 0.12), 0 8px 10px -5px rgba(39, 65, 176, 0.2);
+      box-shadow: 0 14px 26px -12px rgba(181, 181, 181, 0.42), 0 4px 23px 0px rgba(181, 181, 181, 0.12), 0 8px 10px -5px rgba(39, 65, 176, 0.2);
     }
-    
+
     .navbar.navbar-transparent .navbar-toggler .navbar-toggler-icon {
-        background-color: #000000;
+      background-color: #000000;
     }
-    
+
     /* .navbar .navbar-toggler .navbar-toggler-icon {
         background-color: #000000;
     } */
-    
+
     .navbar-collapse .navbar-nav .nav-item .nav-link {
-        color: #000000;
+      color: #000000;
     }
-    
+
     .navbar.navbar-transparent {
-        color: #000000;
+      color: #000000;
     }
-    
+
     .dropdown-menu .dropdown-item,
     .dropdown-menu li>a {
-        color: #000000;
+      color: #000000;
     }
-    
+
     .navbar .navbar-brand {
-        color: #000000;
+      color: #000000;
     }
-    
+
     .navbar .navbar-nav .nav-item.active .nav-link,
     .navbar .navbar-nav .nav-item.active .nav-link:hover,
     .navbar .navbar-nav .nav-item.active .nav-link:focus {
-        background-color: rgba(181, 181, 181, 0.1);
+      background-color: rgba(181, 181, 181, 0.1);
     }
-</style>
-<style>
-  .material-symbols-outlined {
+  </style>
+  <style>
+    .material-symbols-outlined {
       font-variation-settings:
-          'FILL' 0,
-          'wght' 400,
-          'GRAD' 0,
-          'opsz' 48
-  }
-</style>
-<!-- 定義DialogFlow對話氣泡的外觀-->
-<style>
-  df-messenger {
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+    }
+  </style>
+  <!-- 定義DialogFlow對話氣泡的外觀-->
+  <style>
+    df-messenger {
       --df-messenger-bot-message: #878fac;
       --df-messenger-button-titlebar-color: #000000;
       --df-messenger-chat-background-color: #fafafa;
       --df-messenger-font-color: white;
       --df-messenger-send-icon: #878fac;
       --df-messenger-user-message: #b6b6b6;
-  }
+    }
 
-  @font-face {
+    @font-face {
       font-family: 'Material Icons';
       font-style: normal;
       font-size: 1.33333333em;
@@ -113,8 +113,17 @@
       src: url(https://example.com/MaterialIcons-Regular.eot);
       /* For IE6-8 */
       src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), url(https://example.com/MaterialIcons-Regular.woff) format('woff'), url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-  }
-</style>
+    }
+  </style>
+  <style>
+    .dot {
+      height: 56px;
+      width: 56px;
+      background-color: #000000;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  </style>
 </head>
 
 <body class="index-page bg-gray-200">
@@ -126,8 +135,8 @@
         <nav
           class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
           <div class="container-fluid px-0">
-            <a class="navbar-brand font-weight-bolder ms-sm-3" href="../../"
-              rel="tooltip" title="Home Page" data-placement="bottom" >
+            <a class="navbar-brand font-weight-bolder ms-sm-3" href="../../" rel="tooltip" title="Home Page"
+              data-placement="bottom">
               OpenAI ChatGPT integration
             </a>
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
@@ -140,18 +149,20 @@
               </span>
             </button>
             <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
-              
+
               <ul class="navbar-nav navbar-nav-hover ms-auto">
                 <li class="nav-item mx-2">
-                  <a class="nav-link nav-link-icon me-2" href="../../Timeline/index.html" >
+                  <a class="nav-link nav-link-icon me-2" href="../../Timeline/index.html">
                     <i class="material-icons opacity-6 me-2 text-dark">timeline</i>
-                    <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" >時間軸</p>
+                    <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip"
+                      data-bs-placement="bottom">時間軸</p>
                   </a>
                 </li>
                 <li class="nav-item mx-2">
                   <a class="nav-link nav-link-icon me-2" href="../../blog/">
                     <i class="material-icons opacity-6 me-2 text-dark">description</i>
-                    <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" >部落格</p>
+                    <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip"
+                      data-bs-placement="bottom">部落格</p>
                   </a>
                 </li>
                 <li class="nav-item dropdown dropdown-hover mx-2">
@@ -260,12 +271,10 @@
 
                     <div class="row d-lg-none">
                       <div class="col-md-12">
-                        <a class="dropdown-item ps-3 border-radius-md mb-1"
-                          href="../../Projects/google_assistant/">
+                        <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/google_assistant/">
                           Google 助理技能
                         </a>
-                        <a class="dropdown-item ps-3 border-radius-md mb-1"
-                          href="../../Projects/npm/">
+                        <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/npm/">
                           NPM 模組
                         </a>
                         <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/python/">
@@ -274,19 +283,16 @@
                         <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/tw_air_pollute/">
                           空汙即時查詢
                         </a>
-                        <a class="dropdown-item ps-3 border-radius-md mb-1"
-                          href="../../Projects/tw_uvi_index/">
+                        <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/tw_uvi_index/">
                           紫外線即時查詢
                         </a>
-                        <a class="dropdown-item ps-3 border-radius-md mb-1"
-                        href="../../Projects/tw_radiation_index/">
-                        輻射即時查詢
-                      </a>
-                      <a class="dropdown-item ps-3 border-radius-md mb-1"
-                          href="../../Projects/OpenAI-ChatGPT/">
+                        <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/tw_radiation_index/">
+                          輻射即時查詢
+                        </a>
+                        <a class="dropdown-item ps-3 border-radius-md mb-1" href="../../Projects/OpenAI-ChatGPT/">
                           OpenAI-ChatGPT 串接
                         </a>
-                    </div>
+                      </div>
                   </ul>
                 </li>
             </div>
@@ -305,149 +311,176 @@
             <div class="col-md-8">
               <p style="font-size: 150px; color:#ffffff;">
                 <span class="iconify" data-icon="simple-icons:openai" data-inline="false"></span>
-            </p>
+              </p>
               <h1 class="title" style="margin:0px 10px 0px 0px; color: #ffffff;">ChatGPT</h1>
               <h5 style="color: #ffffff;">由OpenAI開發的自然語言處理（NLP）模型「GPT-3」延伸出的「GPT-3.5」製作的模型</h5>
-              <!-- <a href="https://github.com/hank199599/Google-Assistant-APP" class="btn btn-white btn-round"
-                target="_blank"><b><span class="iconify" data-icon="simple-icons:openai" data-inline="false"></span>&emsp;官方頁面</b></a> -->
+
+
+              <a href="https://chat.openai.com/chat" class="btn btn-github btn-lg" style="background-color: #19c37d;"
+                target="_blank"><b><span class="iconify" data-icon="simple-icons:openai" data-inline="false"></span>
+                  &emsp;GPTChat去官網聊天</b></a>
+
             </div>
           </div>
         </div>
       </div>
-</div>
+    </div>
     </div>
   </header>
 
-  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 ">
   <div class="row text-center" style="padding: 30px;">
     <h3><b>作品總覽</b></br>
       <small>透過DialogFlow串接到各處！</small></br></br>
-      <a type="button" class="btn btn-github btn-icon btn-lg" href="https://github.com/hank199599/openGPT-with-Dialogflow" target="_blank">
-        <span class="btn-inner--icon"><i class="fab fa-github"></i></span>
-        <span class="btn-inner--text"> Github 專案頁面</span>
-      </a> 
-  </h3>
+    </h3>
   </div>
   <div class="row max-width" style="padding: 40px; justify-content: center">
     <div class="col-md-12 mr-auto ml-auto">
       <div class="row">
-        <div class="col-md-4 ml-auto mr-auto">
-          <div class="card card-blog card-background cursor-pointer" style="height: auto;margin: 5px;">
-            <div class="full-background"
-              style="background-image: url('../../assets/img/bg3.jpg')" loading="lazy"></div>
-            <div class="card-body">
-              <div class="content-left text-start my-auto py-4">
-                <h2 class="card-title text-white">在這裡立刻對話</h2>
-                <p class="card-description text-white">
-                  點選右下角的懸浮泡泡<br>你就能直接和強大的AI直接對話囉!
-                </p>
+        <div class="col-md-4 ml-auto mr-auto " style="max-height: 479px;">
+          <div class="card card-blog alert alert-warning card-body cursor-pointer text-center" role="alert">
+            <span class="alert-text"><strong
+                style="text-size-adjust:20px; ;">為了避免GPTChat使用額度超過上限，每一輪對話超過三次就會強制罐頭回復!</strong></span>
+          </div>
+          <!-- <div class="card card-blog card-background cursor-pointer" style="height: fit-content; margin: 5px;">
+            <div class="full-background" style="background-image: url('../../assets/img/bg3.jpg')" loading="lazy"></div>
+            <div class="card-body" style="height: min-content;">
+              <div class="content-left text-start" style="padding: 0px;">
+
+                  qqqq
               </div>
             </div>
-          </div>
-          <div class="card-body" style="height: auto;">
-            <a href="https://chat.openai.com/chat" class="btn btn-github btn-lg" style="background-color: #19c37d;"
-            target="_blank"><b><span class="iconify" data-icon="simple-icons:openai" data-inline="false"></span>
-              &emsp;去官網聊天</b></a>
+            <div class="card-footer">
+              <a type="button" class="btn btn-github btn-icon btn-lg"
+                href="https://github.com/hank199599/openGPT-with-Dialogflow" target="_blank">
+                <span class="btn-inner--icon"><i class="fab fa-github"></i></span>
+                <span class="btn-inner--text"> Github 專案頁面</span>
+              </a>
             </div>
+          </div> -->
+          <div class="card" style="width: auto;margin: 5px;background-color: #24292E; display: flex">
+            <div class="card-body ps-0">
+              <div class='container'>
+                <h1 class="mb-0" style="color: #ffffff;">Github專案</h1>
+                <h4 class="text-muted" style="color: #ffffff !important;">你可以去這裡看看這是如何被實作出來的!<br>內有教學可以帶領你做出屬於自己的版本</h4>                
+              </div>
+            </div>
+            <div class="card-footer">
+              <a type="button" class="btn btn-outline-white btn-lg"
+                href="https://github.com/hank199599/openGPT-with-Dialogflow" target="_blank">
+                <span class="btn-inner--icon"><i class="fab fa-github"></i></span>
+                <span class="btn-inner--text"> Github 專案頁面</span>
+              </a>
+            </div>
+          </div>
         </div>
         <div class="col-md-8 ml-auto mr-auto">
           <div class="row">
             <div class="col-md-6 ml-auto mr-auto">
               <div class="card" style="width: auto;margin: 5px;">
                 <div class="card-body ps-0">
-                  <div class = 'container'>
-                  <h5 class="mb-0">LINE</h5>
-                  <p class="text-muted">暫不開放</p>
-                  <p>
-                  </p>
+                  <div class='container'>
+                    <h5 class="mb-0">LINE</h5>
+                    <p class="text-muted">現可使用!</p>
+                    <p>
+                    </p>
+                  </div>
                 </div>
-              </div>
                 <div class="card-footer">
-                <a type="button" class="btn btn-github btn-icon mt-2 disabled" style="background-color: #06c755;" href="https://line.me/R/ti/p/@977vrkxz" target="_blank">
-                  <span class="btn-inner--icon"><i class="fab fa-line"></i></span>
-                  <span class="btn-inner--text">LINE Official Account</span>
-                </a>
-            </div>
-          </div>
-            </div>
-            <div class="col-md-6 ml-auto mr-auto">
-              <div class="card" style="width: auto;margin: 5px;">
-                <div class="card-body ps-0">
-                  <div class = 'container'>
-                  <h5 class="mb-0">Telegram</h5>
-                  <p class="text-muted">現可使用!</p>
-                  <p>
-                  </p>
-                </div>
-              </div>
-                <div class="card-footer">
-                <a type="button" class="btn btn-github btn-icon mt-2" style="background-color: #0088cc;" href="https://t.me/gptchatwithdialogflowbot" target="_blank">
-                  <span class="btn-inner--icon"><i class="fab fa-telegram"></i></span>
-                  <span class="btn-inner--text">Telegram Chat Bot</span>
-                </a>
-                
-               
+                  <a type="button" class="btn btn-github btn-icon mt-2" style="background-color: #06c755;"
+                    href="https://line.me/R/ti/p/@977vrkxz" target="_blank">
+                    <span class="btn-inner--icon"><i class="fab fa-line"></i></span>
+                    <span class="btn-inner--text">LINE Official Account</span>
+                  </a>
                 </div>
               </div>
             </div>
             <div class="col-md-6 ml-auto mr-auto">
               <div class="card" style="width: auto;margin: 5px;">
                 <div class="card-body ps-0">
-                  <div class = 'container'>
-                  <h5 class="mb-0">Slack</h5>
-                  <p class="text-muted">即將登場</p>
-                  <p>
-                  </p>
+                  <div class='container'>
+                    <h5 class="mb-0">Telegram</h5>
+                    <p class="text-muted">現可使用!</p>
+                    <p>
+                    </p>
+                  </div>
                 </div>
-              </div>
                 <div class="card-footer">
-                <a type="button" class="btn btn-slack btn-icon mt-2 disabled"  href="https://line.me/R/ti/p/@977vrkxz" target="_blank">
-                  <span class="btn-inner--icon"><i class="fab fa-slack"></i></span>
-                  <span class="btn-inner--text">Slack Chat Bot</span>
-                </a>
-                
-                
+                  <a type="button" class="btn btn-github btn-icon mt-2" style="background-color: #0088cc;"
+                    href="https://t.me/gptchatwithdialogflowbot" target="_blank">
+                    <span class="btn-inner--icon"><i class="fab fa-telegram"></i></span>
+                    <span class="btn-inner--text">Telegram Chat Bot</span>
+                  </a>
                 </div>
               </div>
             </div>
             <div class="col-md-6 ml-auto mr-auto">
-              <div class="card" style="width: auto; margin: 5px;">
+              <div class="card" style="width: auto;margin: 5px;">
                 <div class="card-body ps-0">
-                  <div class = 'container'>
-                  <h5 class="mb-0">Google Chat</h5>
-                  <p class="text-muted">即將登場</p>
-                  <p>
-                  </p>
+                  <div class='container'>
+                    <h5 class="mb-0">Facebook Messenger</h5>
+                    <p class="text-muted">即將登場</p>
+                    <p>
+                    </p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a type="button" class="btn btn-facebook btn-icon mt-2 disabled"
+                    href="https://line.me/R/ti/p/@977vrkxz" target="_blank">
+                    <span class="btn-inner--icon"><i class="fab fa-facebook"></i></span>
+                    <span class="btn-inner--text">Messenger Bot</span>
+                  </a>
+
+
                 </div>
               </div>
-                <div class="card-footer"> 
-                <a type="button" class="btn btn-github btn-icon mt-2 disabled" style="background-color: #1BA261;" href="https://line.me/R/ti/p/@977vrkxz" target="_blank">
-                  <span class="iconify" data-icon="uil:google-hangouts" data-inline="false"></span>
-                  <span class="btn-inner--text">Google Chat Bot</span>
-                </a>
+            </div>
+            <div class="col-md-6 ml-auto mr-auto">
+              <div class="card" style="width: auto;margin: 5px;  
+              background-image:radial-gradient(ellipse at center,  #000000 0%,#000000 66%,#19c37d 66%);
+              
+              background-repeat: no-repeat;
+              background-position: 90% 85%;
+              background-size: 56px 56px;
+              
+              background-color: #19c37d;">
+                <div class="card-body ps-0">
+                  <div class='container'>
+                    <h5 class="mb-0" style="color: #ffffff;">立刻開始對話</h5>
+                    <p class="text-muted" style="color: #ffffff !important;">現可使用!</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div style="max-height: 64px;height: 64px;">
+                    <p class="text-muted" style="color: #ffffff !important; margin-bottom: 0px;">
+                      點擊右下角的黑色懸浮泡泡，<br>就可以和AI展開對話囉!</p>
+                  </div>
+                  <!-- <span class="dot"></span> -->
                 </div>
               </div>
+
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-    
+  </div>
+
   </div>
   <footer class="footer pt-3 mt-3">
     <div class="container">
       <div class="row">
         <div class="col-6">
-            <div class="dropup ">
-              <button class="btn btn-default blur dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                中文(台灣)
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="./" selected>中文(台灣)</a></li>
-                <!-- <li><a class="dropdown-item" href="../../en/Projects/npm/" selected>English</a></li> -->
-              </ul>
-            </div>
+          <div class="dropup ">
+            <button class="btn btn-default blur dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              中文(台灣)
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="./" selected>中文(台灣)</a></li>
+              <!-- <li><a class="dropdown-item" href="../../en/Projects/npm/" selected>English</a></li> -->
+            </ul>
+          </div>
         </div>
         <div class="col-6">
           <div class="text-center">
@@ -462,7 +495,7 @@
     </div>
   </footer>
   <df-messenger intent="WELCOME" chat-title="OpenAI ChatGPT" agent-id="bd5cc9e7-9760-4136-b30e-8d267f9247cc"
-  language-code="zh-TW" chat-icon="https://openai.com/content/images/2022/05/openai-avatar.png"></df-messenger>
+    language-code="zh-TW" chat-icon="https://openai.com/content/images/2022/05/openai-avatar.png"></df-messenger>
 
   <!--   Core JS Files   -->
   <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
@@ -515,4 +548,5 @@
     }
   </script>
 </body>
+
 </html>
