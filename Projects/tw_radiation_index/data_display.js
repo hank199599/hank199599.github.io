@@ -55,54 +55,61 @@ myData.on('value', function(snapshot) {
             var station = station_array[j];
             var data = snapshot_data.data[station];
 
+            if (data===undefined){
+                continue;
+            }
+
             content = content +
-                '<div class="col-md-3 ml-auto mr-auto" style="padding: 10px;">' +
-                '<div class="card">' +
-                '<div class="card-body" style="padding: 0;">' +
-                '<img class="card-img-top" src="' + picture_generator(parseFloat(data["SVC"])) + '" rel="nofollow" alt="Card image cap">' +
-                ' <div class = "card-body" style="padding : 5px 5px;">' +
-                '<p class = "card-text">' +
-                '<h2 class="card-title" style="margin: 0 0 ">' + station + '</h2>' +
-                '<h2 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data["SVC"]) + '</small></h2>' +
-                '</p>' +
-                '</div>' +
-                '<div class="center" style="' +
-                'padding: 1.25rem 1.5rem;' +
-                'background-color: #f6f9fc;' +
-                'border-top: 0.0625rem solid rgba(0, 0, 0, 0.05);' +
-                'text-align: center !important;' +
-                '">' +
-                '<a href="#' + station + '"  data-bs-toggle="modal" >詳細資訊</a>' +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '</div>';
+                `
+                <div class="col-md-3 ml-auto mr-auto" style="padding: 10px;"> 
+                    <div class="card"> 
+                        <div class="card-body" style="padding: 0;"> 
+                            <img class="card-img-top" src=" ${picture_generator(parseFloat(data["SVC"]))}" rel="nofollow" alt="Card image cap"> 
+                                <div class = "card-body" style="padding : 5px 5px;"> 
+                                    <p class = "card-text"> 
+                                        <h2 class="card-title" style="margin: 0 0 ">  ${station}  </h2> 
+                                        <h2 class="card-text"  style="margin: 0 0 "><small class="text-muted">${status_generator(data["SVC"])}</small></h2> 
+                                    </p> 
+                                </div> 
+                                <div class="center" style=" 
+                                    padding: 1.25rem 1.5rem; 
+                                    background-color: #f6f9fc; 
+                                    border-top: 0.0625rem solid rgba(0, 0, 0, 0.05); 
+                                    text-align: center !important;"> 
+                            <a href="#${station}"  data-bs-toggle="modal" >詳細資訊</a> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div>`;
 
             modal_content = modal_content +
-                '<div class="modal fade" id="' + station + '" tabindex="-1" role="dialog">' +
-                '<div class="modal-dialog modal-dialog-centered" role="document">' +
-                '<div class="modal-content">' +
-                '<div class="modal-header">' +
-                '<table>'+
-                '<tr><td style="width:60%">'+
-                '<h2 class="card-title">' + station + '</h2>' +
-                '<h5 class="text-muted">' +status_generator(data["SVC"]) + '</h5>' +
-                '</td><td style="width:40%;">'+
-                '<img class="img-container" src="' + picture_generator(parseFloat(data["SVC"])) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
-                '</td></tr>'+
-                '</table>'+
-                '</div>' +
-                '<div class="modal-body" style="padding-top: 0;">' +
-                '<p class="card-text" style="margin-top:16px;">根據<a href="https://zh.wikipedia.org/wiki/%E8%A5%BF%E5%BC%97#%E4%BA%BA%E9%AB%94%E5%BD%B1%E9%9F%BF" target="_blank" style="color:#248da3">維基百科</a>的資料，<br>這個輻射劑量相當於' + info_output_generator(data["SVC"]) + '</p>' +
-                '<br>' +
-                '<p> 更新時間 •  ' + data["PublishTime"] + '</p>' +
-                '</div>' +
-                '<div class="modal-footer">' +
-                '<button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">關閉頁面</button>' +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '</div>'
+                `<div class="modal fade" id="${station}" tabindex="-1" role="dialog"> 
+                    <div class="modal-dialog modal-dialog-centered" role="document"> 
+                        <div class="modal-content"> 
+                            <div class="modal-header"> 
+                                <table>
+                                    <tr>
+                                        <td style="width:60%">
+                                            <h2 class="card-title">  ${station}  </h2> 
+                                            <h5 class="text-muted"> ${status_generator(data["SVC"])}  </h5> 
+                                        </td>
+                                        <td style="width:40%;">
+                                            <img class="img-container" src="  ${picture_generator(parseFloat(data["SVC"]))}  " rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap"> 
+                                        </td>
+                                    </tr>
+                                </table>
+                                </div> 
+                                <div class="modal-body" style="padding-top: 0;"> 
+                                    <p class="card-text" style="margin-top:16px;">根據<a href="https://zh.wikipedia.org/wiki/%E8%A5%BF%E5%BC%97#%E4%BA%BA%E9%AB%94%E5%BD%B1%E9%9F%BF" target="_blank" style="color:#248da3">維基百科</a>的資料，<br>這個輻射劑量相當於${info_output_generator(data["SVC"])} </p> 
+                                    <br> 
+                                    <p> 更新時間 •  ${data["PublishTime"]}  </p> 
+                                </div> 
+                                <div class="modal-footer"> 
+                                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">關閉頁面</button> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div>`;
         }
 
         document.getElementById(tab_list[county_list[i]]).innerHTML = '<div class="row justify-content-center">' + content + '</div>'

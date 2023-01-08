@@ -56,28 +56,28 @@ myData.on('value', function(snapshot) {
                 station = station.split('(')[1].replace(')', '(行動站)')
             }
             if (data===undefined){continue;}
-            content = content +
-                '<div class="col-md-3 ml-auto mr-auto" style="padding: 10px;">' +
-                '<div class="card" >' +
-                '<div class="card-body" style="padding: 0px;">' +
-                '<img class="card-img-top" src="' + picture_generator(data.AQI) + '" rel="nofollow" alt="AQI value'+data.AQI+'">' +
-                ' <div class = "card-body" style="padding : 5px 5px;">' +
-                '<p class = "card-text">' +
-                '<h2 class="card-title" style="margin: 0 0 ">' + station + '</h2>' +
-                '<h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data.AQI) + '</small></h3>' +
-                '</p>' +
-                '</div>' +
-                '<div class="center" style="' +
-                'padding: 1.25rem 1.5rem;' +
-                'background-color: #f6f9fc;' +
-                'border-top: 0.0625rem solid rgba(0, 0, 0, 0.05);' +
-                'text-align: center !important;' +
-                '">' +
-                '<a data-bs-toggle="modal" href="#' + station.replace(/[(].+[)]/gm,"") + '" >詳細資訊</a>' +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '</div>';
+            content = content +`
+                <div class="col-md-3 ml-auto mr-auto" style="padding: 10px;"> 
+                    <div class="card" > 
+                        <div class="card-body" style="padding: 0px;"> 
+                            <img class="card-img-top" src="  ${picture_generator(data.AQI)} " rel="nofollow" alt="AQI valuedata.AQI"> 
+                            <div class = "card-body" style="padding : 5px 5px;"> 
+                            <p class = "card-text"> 
+                                <h2 class="card-title" style="margin: 0 0 ">  ${station}  </h2> 
+                                <h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">  ${status_generator(data.AQI)}  </small></h3> 
+                            </p> 
+                            </div> 
+                            <div class="center" style=" 
+                                padding: 1.25rem 1.5rem; 
+                                background-color: #f6f9fc; 
+                                border-top: 0.0625rem solid rgba(0, 0, 0, 0.05); 
+                                text-align: center !important; 
+                                "> 
+                                <a data-bs-toggle="modal" href="#${station.replace(/[(].[)]/gm,"")}" >詳細資訊</a> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div>`;
 
             modal_content = modal_content +
                 '<div class="modal fade" id="' + station.replace(/[(].+[)]/gm,"") + '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
@@ -101,14 +101,15 @@ myData.on('value', function(snapshot) {
                 if (status_generator(data.AQI) !== "有效數據不足") {
                     modal_content = modal_content + '<p class="card-text" style="margin: 0 0 "> PM₁₀ ' + data.PM10 + '(μg/m³) • PM₂.₅ ' + data.PM25 + '(μg/m³) • 臭氧 ' + data.O3 + '(ppb) </p>'
                 }
-            modal_content = modal_content +
-                '</div>' +
-                '<div class="modal-footer">' +
-                '<button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">關閉頁面</button>' +
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '</div>'
+            modal_content = modal_content + 
+                    `</div> 
+                        <div class="modal-footer"> 
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">關閉頁面</button> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div>`
+
         }
 
         document.getElementById(tab_list[county_list[i]]).innerHTML = '<div class="row justify-content-center">' + content + '</div>'
