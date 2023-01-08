@@ -63,7 +63,7 @@ myData.on('value', function(snapshot) {
                             <img class="card-img-top" src="  ${picture_generator(data.AQI)} " rel="nofollow" alt="AQI valuedata.AQI"> 
                             <div class = "card-body" style="padding : 5px 5px;"> 
                             <p class = "card-text"> 
-                                <h2 class="card-title" style="margin: 0 0 ">  ${station}  </h2> 
+                                <h2 class="card-title" style="margin: 0 0 ">${station}</h2> 
                                 <h3 class="card-text"  style="margin: 0 0 "><small class="text-muted">  ${status_generator(data.AQI)}  </small></h3> 
                             </p> 
                             </div> 
@@ -73,7 +73,7 @@ myData.on('value', function(snapshot) {
                                 border-top: 0.0625rem solid rgba(0, 0, 0, 0.05); 
                                 text-align: center !important; 
                                 "> 
-                                <a data-bs-toggle="modal" href="#${station.replace(/[(].[)]/gm,"")}" >詳細資訊</a> 
+                                <a data-bs-toggle="modal" href="#${station.replace(/[(].+[)]/gm,"")}" >詳細資訊</a> 
                             </div> 
                         </div> 
                     </div> 
