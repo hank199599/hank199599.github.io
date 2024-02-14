@@ -1,40 +1,27 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyD7QTtDBeC-O0tjPGfr6HjO-tK3Qz8J_L0",
-    authDomain: "b1a2b-krmfch.firebaseapp.com",
-    databaseURL: "https://b1a2b-krmfch.firebaseio.com",
-    projectId: "b1a2b-krmfch",
-    storageBucket: "b1a2b-krmfch.appspot.com",
-    messagingSenderId: "777443303063",
-    appId: "1:777443303063:web:da8a0160d289078cded3d2"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-var database = firebase.database();
-
-var county_list = Object.keys(test_list);
-var nav_items = '';
-var nav_content = '';
-for (var i = 0; i < county_list.length; i++) {
-    nav_items = nav_items + '<li class="nav-item" > <a class="nav-link mb-0 px-0 py-1';
-    nav_content = nav_content + '<div class="tab-pane';
-    if (i === 0) {
-        nav_items = nav_items + ' active'
-        nav_content = nav_content + ' active'
-    }
-    nav_items = nav_items  + '" data-bs-toggle="tab" href="#' + tab_list[county_list[i]] + '" role="tab" aria-controls="' + tab_list[county_list[i]] + '" aria-selected="true">' + county_list[i] + '</a></li>'
-    nav_content = nav_content + '" id="' + tab_list[county_list[i]] + '">' + '<p></p></div>'
+const fetchUVIData = async () => {
+    const res = await fetch('https://script.google.com/macros/s/AKfycbwxxyBKvBZwmlo57kgc42yqlfQad-B6ovUVx_k2vcAaZwQ2aFEIL6jiYxddmSRaRE1gsg/exec?type=uvi')
+    const response = await res.json()
+    return response
 }
-document.getElementById('county_list').innerHTML = nav_items
-document.getElementById('county_content').innerHTML = nav_content
 
-var myData = firebase.database().ref('/TWuvi');
+fetchUVIData().then((snapshot_data) => {
 
-myData.on('value', function(snapshot) {
-
-    var snapshot_data = snapshot.val();
-    document.getElementById("uvi_report").innerHTML = '<h4>更新時間 •  <b>' + snapshot_data.PublishTime + '</b></h4>';
+    var county_list = Object.keys(test_list);
+    var nav_items = '';
+    var nav_content = '';
+    for (var i = 0; i < county_list.length; i++) {
+        nav_items = nav_items + '<li class="nav-item" > <a class="nav-link mb-0 px-0 py-1';
+        nav_content = nav_content + '<div class="tab-pane';
+        if (i === 0) {
+            nav_items = nav_items + ' active'
+            nav_content = nav_content + ' active'
+        }
+        nav_items = nav_items + '" data-bs-toggle="tab" href="#' + tab_list[county_list[i]] + '" role="tab" aria-controls="' + tab_list[county_list[i]] + '" aria-selected="true">' + county_list[i] + '</a></li>'
+        nav_content = nav_content + '" id="' + tab_list[county_list[i]] + '">' + '<p></p></div>'
+    }
+    document.getElementById('county_list').innerHTML = nav_items
+    document.getElementById('county_content').innerHTML = nav_content
+    document.getElementById("uvi_report").innerHTML = '<h4>更新時間 •  <b>' + snapshot_data['臺北'].datacreationdate + '</b></h4>';
     var modal_content = '';
 
     for (var i = 0; i < county_list.length; i++) {
@@ -43,17 +30,20 @@ myData.on('value', function(snapshot) {
 
         for (var j = 0; j < station_array.length; j++) {
             var station = station_array[j];
-            var data = snapshot_data.data[station];
+            var data = snapshot_data[station];
+            console.log(station)
+            console.log(snapshot_data[station])
+            const uvi = data !== undefined ? parseInt(data['uvi']) : -1
 
             content = content +
                 '<div class="col-md-3 ml-auto mr-auto" style="padding: 10px;">' +
                 '<div class="card">' +
                 '<div class="card-body" style="padding: 0;">' +
-                '<img class="card-img-top" src="' + picture_generator(data) + '" rel="nofollow" alt="Card image cap">' +
+                '<img class="card-img-top" src="' + picture_generator(uvi) + '" rel="nofollow" alt="Card image cap">' +
                 ' <div class = "card-body" style="padding : 5px 5px;">' +
                 '<p class = "card-text">' +
                 '<h2 class="card-title" style="margin: 0 0 ">' + station + '</h2>' +
-                '<h2 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(data) + '</small></h2>' +
+                '<h2 class="card-text"  style="margin: 0 0 "><small class="text-muted">' + status_generator(uvi) + '</small></h2>' +
                 '</p>' +
                 '</div>' +
                 '<div class="center" style="' +
@@ -73,17 +63,17 @@ myData.on('value', function(snapshot) {
                 '<div class="modal-dialog modal-dialog-centered" role="document">' +
                 '<div class="modal-content">' +
                 '<div class="modal-header">' +
-                '<table>'+
-                '<tr><td style="width:60%">'+
+                '<table>' +
+                '<tr><td style="width:60%">' +
                 '<h2 class="card-title">' + station + '</h2>' +
-                '<h5 class="text-muted">' +status_generator(data) + '</h5>' +
-                '</td><td style="width:40%;">'+
-                '<img class="img-container" src="' + picture_generator(data) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
-                '</td></tr>'+
-                '</table>'+
+                '<h5 class="text-muted">' + status_generator(uvi) + '</h5>' +
+                '</td><td style="width:40%;">' +
+                '<img class="img-container" src="' + picture_generator(uvi) + '" rel="nofollow" style="width:100%; padding:15px 5px" alt="Card image cap">' +
+                '</td></tr>' +
+                '</table>' +
                 '</div>' +
                 '<div class="modal-body" style="padding-top: 0;">' +
-                '<p class="card-text" style="margin-top:16px;">' + info_output_generator(data) + '</p>' +
+                '<p class="card-text" style="margin-top:16px;">' + info_output_generator(uvi) + '</p>' +
                 '</div>' +
                 '<div class="modal-footer">' +
                 '<button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">關閉頁面</button>' +
