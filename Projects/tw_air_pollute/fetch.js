@@ -98,7 +98,7 @@ function machine(station_array) {
 
     var output = {};
     var results = [];
-    console.log(station_array.length)
+    console.log(station_array)
 
     for (var i = 0; i < contry_row.length; i++) {
         if (output[contry_row[i]] === undefined) { output[contry_row[i]] = [] }
