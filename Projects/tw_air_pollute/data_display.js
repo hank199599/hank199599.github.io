@@ -4,6 +4,17 @@ const fetchAQIData = async()=>{
     return response
 }
 
+const fetchPredictionData = async()=>{
+    const res = await fetch('https://script.google.com/macros/s/AKfycbwxxyBKvBZwmlo57kgc42yqlfQad-B6ovUVx_k2vcAaZwQ2aFEIL6jiYxddmSRaRE1gsg/exec?type=air_prediction')
+    const response = await res.json()
+    return response.message
+}
+
+fetchPredictionData().then((prediction) => {
+    document.getElementById("weather_report").innerHTML = `<h4><small>${prediction}</small></h4>`
+});
+
+
 fetchAQIData().then((snapshot_data) => {
 
     var county_list = Object.keys(tab_list);
