@@ -1,9 +1,9 @@
 var contents={
     "2024/07-NOW":{
         "title":"Cloud Engineer",
-        "content":"TrendMicro",
+        "content":"Trend Micro",
         "button":{
-            "herf":"https://www.trendmicro.com/en_us/business.html",
+            "herf":"https://www.Trend Micro.com/en_us/business.html",
             "content":"<span class='material-icons'>ondemand_video</span> 官方頁面"
             }
     },
