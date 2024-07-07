@@ -1,4 +1,12 @@
 var contents={
+    "2024/07-NOW":{
+        "title":"Cloud Engineer",
+        "content":"TrendMicro (趨勢科技)",
+        "button":{
+            "herf":"https://www.trendmicro.com/zh_tw/business.html",
+            "content":"<span class='material-icons'>ondemand_video</span> 官方頁面"
+            }
+        },
     "2022/09-2024/04":{
         "title":"後端工程師",
         "content":"LINE TV (巧克科技)",
