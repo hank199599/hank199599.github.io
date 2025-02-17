@@ -9,7 +9,7 @@ for (var i = 0; i < Object.keys(comments).length; i++) {
     content = content+'<div class="tab-pane fade show" id="'+language_list[i]+'" role="tabpanel" aria-labelledby="'+language_list[i]+'">'
 
     content = content+'<div class="col-md-4 mx-auto" style="background-position: center center">' +
-        '<a href="https://assistant.google.com/explore/search?q=AtesX%20Team&hl=' + search_lang[i] + '"class="btn btn-outline-dark btn-lg blur" target="_blank" style="bottom:0px;">' +
+        '<a href="https://web.archive.org/web/20200922045406/https://assistant.google.com/explore/search?q=AtesX%20Team&hl=' + search_lang[i] + '"class="btn btn-outline-dark btn-lg blur" target="_blank" style="bottom:0px;">' +
         '<span class="iconify" data-icon="mdi-google-assistant" data-inline="false"></span>' +
         '&emsp;' + search_link[search_lang[i]] + '</a></div>';
   

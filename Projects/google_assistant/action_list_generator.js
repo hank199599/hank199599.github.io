@@ -42,7 +42,7 @@ var modal_content = "";
             '</div>' +
             '<div class="modal-footer justify-content-between">'+
                 '<a title="Github原始碼"' +
-                'href="' + temp['Github_link'] + '" target="_blank" class="btn btn-outline-dark"><i class="fa fa-github"></i></a>'
+                'href="' + temp['Github_link'] + '" target="_blank" class="btn btn-outline-dark">Github原始碼</a>'
 
                 if(temp['Action_link']==="javascript:;"){
                     modal_content = modal_content + '<button type="button" class="btn btn-outline-secondary disabled" data-bs-dismiss="modal">本服務已下線</button>' 
@@ -51,7 +51,7 @@ var modal_content = "";
                     modal_content = modal_content + 
                         '<a title="' + action_title + ' | ' + assistant_name_dict[language]+'" '+
                         'href="' + temp['Action_link'] + '?hl='+langeuage_url_dict[language]+'"' +
-                        'target="_blank" class="btn btn-outline-info" >在Google助理上試用<i class="fas fa-arrow-right text-xs ms-1"></i></a>' 
+                        'target="_blank" class="btn btn-outline-info" >網際網路檔案館的頁面備份<i class="fas fa-arrow-right text-xs ms-1"></i></a>' 
                 }
             modal_content = modal_content + '</div>'
         
