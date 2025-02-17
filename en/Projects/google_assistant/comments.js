@@ -123,7 +123,7 @@ var comments = {
             ],
             "title": "this app is making me smarter!",
             "reviewer": "Keith Lloyd",
-            "date": "September 10, 2019 (<a href='https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=en_us' class='card-link' target='_blank'>US</a>)"
+            "date": "September 10, 2019 (<a href='https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=en_us' class='card-link' target='_blank'>US</a>)"
         },
         {
             "name": "Number Elf",
@@ -134,7 +134,7 @@ var comments = {
             ],
             "title": "I love it",
             "reviewer": "Champashridara Poojary",
-            "date": "April 6, 2021 (<a href='https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=en_in' class='card-link' target='_blank'>India</a>)"
+            "date": "April 6, 2021 (<a href='https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=en_in' class='card-link' target='_blank'>India</a>)"
         },
         {
             "name": "The Insight Station",
@@ -145,7 +145,7 @@ var comments = {
             ],
             "title": "GREAT APP",
             "reviewer": "Janninee Greenfield",
-            "date": "June 3, 2021 (<a href='https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=en_au'class='card-link' target='_blank'>Australia</a>)"
+            "date": "June 3, 2021 (<a href='https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=en_au'class='card-link' target='_blank'>Australia</a>)"
         },
         {
             "name": "Meal Decider",
@@ -156,7 +156,7 @@ var comments = {
             ],
             "title": "With all the new restaurants popping up....I love to try new and worldly delicious dishes",
             "reviewer": "Judy Socket",
-            "date": "July 22, 2019 (<a href='https://assistant.google.com/services/a/uid/00000058f29109ab?hl=en_ca'class='card-link' target='_blank'>Canada</a>)"
+            "date": "July 22, 2019 (<a href='https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/00000058f29109ab?hl=en_ca'class='card-link' target='_blank'>Canada</a>)"
         }
     ],
     "4": [

@@ -42,7 +42,7 @@ var modal_content = "";
             '</div>' +
             '<div class="modal-footer justify-content-between">'+
                 '<a title="Origin code on Github"' +
-                'href="' + temp['Github_link'] + '" target="_blank" class="btn btn-outline-dark"><i class="fa fa-github"></i></a>'
+                'href="' + temp['Github_link'] + '" target="_blank" class="btn btn-outline-dark">Github</a>'
 
                 if(temp['Action_link']==="javascript:;"){
                     modal_content = modal_content + '<button type="button" class="btn btn-outline-secondary disabled" data-bs-dismiss="modal">Out of service</button>' 
