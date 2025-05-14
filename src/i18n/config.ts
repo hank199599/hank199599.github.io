@@ -1,7 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-// 匯入各語系檔案
 import { en } from './locales/en/index';
 import { zh } from './locales/zh/index';
 
@@ -11,11 +10,11 @@ const resources = {
 };
 
 i18n
-  .use(LanguageDetector) // 自動偵測瀏覽器語系
-  .use(initReactI18next) // React Hooks 支援
+  .use(LanguageDetector)
+  .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'zh', // 找不到時預設中文
+    fallbackLng: 'en',
     interpolation: { escapeValue: false },
   });
 
