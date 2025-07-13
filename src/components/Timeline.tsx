@@ -175,14 +175,19 @@ const Timeline = () => {
                         </CardHeader>
                         <CardContent>
                           <p className="text-muted-foreground mb-4 whitespace-pre-line">{event.description}</p>
-                          {event.link && (
-                            <Button variant="outline" size="sm" asChild>
-                              <Link href={originalEvents[index].link!.url} target="_blank" className="inline-flex items-center">
-                                <ExternalLink className="w-4 h-4 mr-2" />
-                                {event.link.text}
-                              </Link>
-                            </Button>
-                          )}
+                          {
+                            originalEvents[index].link && event.link && (
+                                <Button 
+                                  variant="glass" 
+                                  size="sm" 
+                                  asChild
+                                >
+                                  <Link href={originalEvents[index].link!.url} target="_blank" className="inline-flex items-center">
+                                    <ExternalLink className="w-4 h-4 mr-2" />
+                                    {event.link.text}
+                                  </Link>
+                                </Button>
+                              )}
                         </CardContent>
                       </Card>
                     </div>
