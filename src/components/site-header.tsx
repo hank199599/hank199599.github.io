@@ -6,8 +6,10 @@ import { SiteDesktopMenu } from "@/components/site-desktop-menu";
 import { SiteMobileMenu } from "@/components/site-mobile-menu";
 import { LanguageToggle } from "./language-toggle";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useTranslation } from "react-i18next";
 
 export function SiteHeader() {
+  const { t } = useTranslation('navigation');
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const isMobile = useIsMobile();
@@ -35,7 +37,7 @@ export function SiteHeader() {
             {/* <CommandMenu /> */}
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            {mounted && <SiteDesktopMenu />}
+            {mounted && <SiteDesktopMenu t={t} />}
             <LanguageToggle />
             <ModeToggle />
           </div>

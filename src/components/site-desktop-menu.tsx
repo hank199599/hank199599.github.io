@@ -1,7 +1,12 @@
 'use client';
 import Link from "next/link";
+import { TFunction } from 'i18next';
 
-export function SiteDesktopMenu() {
+interface Props {
+  t: TFunction<"navigation">;
+}
+
+export function SiteDesktopMenu({ t }: Props) {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -12,16 +17,16 @@ export function SiteDesktopMenu() {
   return (
     <nav className="flex items-center space-x-6">
       <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
-        Home
+        {t('home')}
       </Link>
       <Link href="/blog" className="text-sm font-medium transition-colors hover:text-primary">
-        Blog
+        {t('blog')}
       </Link>
       <Link href="/timeline" className="text-sm font-medium transition-colors hover:text-primary">
-        Timeline
+        {t('timeline')}
       </Link>
       <Link href="/google-assistant" className="text-sm font-medium transition-colors hover:text-primary" onClick={() => scrollToSection('google-assistant')}>
-        Google Assistant
+        {t('googleAssistant')}
       </Link>
     </nav>
   );
