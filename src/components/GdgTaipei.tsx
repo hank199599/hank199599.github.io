@@ -37,7 +37,6 @@ interface GdgProject {
   demoUrl?: string;
   icon: React.ElementType;
   gradient: string;
-  link?: string;
 }
 
 const gdgProjects: GdgProject[] = [
@@ -90,7 +89,7 @@ const gdgProjects: GdgProject[] = [
     githubUrl: "https://github.com/gdg-twhk/gdg-taiwan-React",
     icon: Code,
     gradient: "from-green-500 to-teal-600",
-    link: "https://gdg.tw"
+    demoUrl: "https://gdg.tw"
   }
 ];
 
