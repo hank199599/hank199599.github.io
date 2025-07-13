@@ -221,11 +221,15 @@ export const googleAssistantData: GoogleAssistantData = {
       id: "中文(臺灣)",
       categories: [
         { categoryId: "food", projectIds: ["Food_Decider"] },
-        { categoryId: "school", projectIds: ["Daily_History", "Taiwan_Dictoinary", "Taiwan_Rail_Dictoinary", "Cangjie_Dictoinary"] },
+        { categoryId: "school", projectIds: ["Daily_History", "Taiwan_Dictoinary", "Taiwan_Rail_Dictoinary", "Cangjie_Dictoinary", "Toeic_tester"] },
         { categoryId: "reader", projectIds: ["Positive_Quote", "Negative_Quote", "Today_Quote"] },
         { categoryId: "color_lens", projectIds: ["NASA_daily", "Fortune_Master"] },
-        { categoryId: "sports_esports", projectIds: ["Number_Elf"] },
-        { categoryId: "science", projectIds: ["Insight_Station"] },
+        { categoryId: "sports_esports", projectIds: ["Brain_Game", "Riddle_Game", "Number_Elf", "Cows_and_Bulls", "Flag_Game", "text_solitaire", "idiom_solitaire", "easy_text_solitaire", "twenty_four_points"] },
+        { categoryId: "science", projectIds: ["Insight_Station", "ISS_Info", "Google_Trend", "Moon_info"] },
+        { categoryId: "public", projectIds: ["Zip_code", "Blood_Index", "Power_Index"] },
+        { categoryId: "cloud", projectIds: ["TW_AQI_index", "TW_UVI_index", "TW_Radiation_index", "TW_Sea_Waether", "World_AQI_index", "TW_Weather_helper"] },
+        { categoryId: "translate", projectIds: ["TW_WG_Translator", "Morse_Translator", "Binary_Translator"] },
+        { categoryId: "date_range", projectIds: ["Invoice-redemptioner"] }
       ],
     },
     {
@@ -234,55 +238,54 @@ export const googleAssistantData: GoogleAssistantData = {
         { categoryId: "food", projectIds: ["Food_Decider"] },
         { categoryId: "school", projectIds: ["Cangjie_Dictoinary"] },
         { categoryId: "color_lens", projectIds: ["NASA_daily", "Fortune_Master"] },
-        { categoryId: "sports_esports", projectIds: ["Number_Elf"] },
-        { categoryId: "science", projectIds: ["Insight_Station"] },
+        { categoryId: "sports_esports", projectIds: ["Number_Elf", "Cows_and_Bulls", "twenty_four_points"] },
+        { categoryId: "science", projectIds: ["Insight_Station", "ISS_Info", "Google_Trend"] },
+        { categoryId: "cloud", projectIds: ["World_AQI_index"] },
+        { categoryId: "translate", projectIds: ["Morse_Translator", "Binary_Translator"] },
       ],
     },
     {
       id: "英文",
       categories: [
         { categoryId: "food", projectIds: ["Food_Decider"] },
-        { categoryId: "sports_esports", projectIds: ["Number_Elf"] },
-        { categoryId: "science", projectIds: ["Insight_Station"] },
+        { categoryId: "sports_esports", projectIds: ["Number_Elf", "Cows_and_Bulls"] },
+        { categoryId: "science", projectIds: ["Insight_Station", "Google_Trend"] },
       ],
     },
     {
       id: "日文",
       categories: [
         { categoryId: "food", projectIds: ["Food_Decider"] },
-        { categoryId: "sports_esports", projectIds: ["Number_Elf"] },
-        { categoryId: "science", projectIds: ["Insight_Station"] },
+        { categoryId: "sports_esports", projectIds: ["Number_Elf", "Cows_and_Bulls"] },
+        { categoryId: "cloud", projectIds: ["World_AQI_index"] },
+        { categoryId: "science", projectIds: ["Insight_Station", "Google_Trend"] },
       ],
     },
     {
       id: "韓文",
       categories: [
-        { categoryId: "sports_esports", projectIds: ["Number_Elf"] },
-        { categoryId: "science", projectIds: ["Insight_Station"] },
+        { categoryId: "sports_esports", projectIds: ["Number_Elf", "Cows_and_Bulls"] },
+        { categoryId: "cloud", projectIds: ["World_AQI_index"] },
+        { categoryId: "science", projectIds: ["Insight_Station", "Google_Trend"] },
       ],
     },
     {
       id: "泰文",
       categories: [
-        { categoryId: "sports_esports", projectIds: ["Number_Elf"] },
-        { categoryId: "science", projectIds: ["Insight_Station"] },
+        { categoryId: "sports_esports", projectIds: ["Number_Elf", "Cows_and_Bulls"] },
+        { categoryId: "cloud", projectIds: ["World_AQI_index"] },
+        { categoryId: "science", projectIds: ["Insight_Station", "Google_Trend"] },
       ],
     },
     {
       id: "德文",
       categories: [
         { categoryId: "sports_esports", projectIds: ["Number_Elf"] },
-        { categoryId: "science", projectIds: ["Insight_Station"] },
+        { categoryId: "science", projectIds: ["Insight_Station", "Google_Trend"] },
       ],
     },
     {
-      id: "法文",
-      categories: [
-        { categoryId: "science", projectIds: ["Insight_Station"] },
-      ],
-    },
-    {
-      id: "丹麥文",
+      id: "西班牙文",
       categories: [
         { categoryId: "science", projectIds: ["Insight_Station"] },
       ],
@@ -290,13 +293,19 @@ export const googleAssistantData: GoogleAssistantData = {
     {
       id: "荷蘭文",
       categories: [
-        { categoryId: "science", projectIds: ["Insight_Station"] },
+        { categoryId: "science", projectIds: ["Insight_Station", "Google_Trend"] },
       ],
     },
     {
-      id: "西班牙文",
+      id: "丹麥文",
       categories: [
-        { categoryId: "science", projectIds: ["Insight_Station"] },
+        { categoryId: "science", projectIds: ["Insight_Station", "Google_Trend"] },
+      ],
+    },
+    {
+      id: "法文",
+      categories: [
+        { categoryId: "science", projectIds: ["Insight_Station", "Google_Trend"] },
       ],
     },
   ],
@@ -313,7 +322,32 @@ export const googleAssistantData: GoogleAssistantData = {
     { id: 'Negative_Quote', src: 'https://lh3.googleusercontent.com/9eRDWvPEh3jeQmuBcpiXtX4gH9yTGqvyO1ur_PQ-K7H9KiR6A24zluD7ENZeIr0nNvshlOLH-yrw=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/負能量語錄', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000e8f5894304', isActive: false, contentId: 'Negative_Quote' },
     { id: 'Today_Quote', src: 'https://lh3.googleusercontent.com/DPDoPBFLpDglYGoU2zNdzACtOFfE-rsPvK2kJC1jA_scJTJM69x8SmycybTIipNMC0LsJdz06j5qwQ=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/今日名言', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/0000002a10f761c0', isActive: false, contentId: 'Today_Quote' },
     { id: 'NASA_daily', src: 'https://lh3.googleusercontent.com/NnDqEoQYzER27FJ8X-6fAxdRkSQ35j6MbiMfwMu5V_tqLZDopKQ1YcCPMLwwmIA-WQmEFaJ1Y6YA=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/每日天文圖', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/00000011ac49f35c', isActive: false, contentId: 'NASA_daily' },
-    { id: 'Fortune_Master', src: 'https://lh3.googleusercontent.com/hKT5442d4Mmrmx6tCPV6Ft-ZUwvR6zps3pmArImOjbCTKS5SjQM_bvUEmYixA8fDzwCwJoAPmR5I=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/%E9%81%8B%E5%8B%A2%E5%A4%A7%E5%B8%AB', actionLink: 'javascript:;', isActive: false, contentId: 'Fortune_Master' }
+    { id: 'Fortune_Master', src: 'https://lh3.googleusercontent.com/hKT5442d4Mmrmx6tCPV6Ft-ZUwvR6zps3pmArImOjbCTKS5SjQM_bvUEmYixA8fDzwCwJoAPmR5I=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/%E9%81%8B%E5%8B%A2%E5%A4%A7%E5%B8%AB', actionLink: 'javascript:;', isActive: false, contentId: 'Fortune_Master' },
+    { id: 'Brain_Game', src: 'https://lh3.googleusercontent.com/IC_vSx1qVU6iTofmMzVjUIDjEcQ33KicmwUQS8CInXLghiMVayuCmn2aXEMTqp6DTrg7fbFLBxUT=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/大腦運動會', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000603cba0b27', isActive: false, contentId: 'Brain_Game' },
+    { id: 'Riddle_Game', src: 'https://lh3.googleusercontent.com/5Iy10xZI4gE58MPb2-j5Sd6SrKPg7dSHzcfp7woqTqQiHf4w4dh6r-UPALvtp0X38NtKNt8zsguz=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/燈謎大師', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/00000046536e4ef2', isActive: false, contentId: 'Riddle_Game' },
+    { id: 'Cows_and_Bulls', src: 'https://lh3.googleusercontent.com/bq7AdNyaNrET2f4F55Eq27vxnfA-G3odqoOZPA9_hl3sadVsSHzoFWEOeseoootSzwuewJyxfIU=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/1A2B', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000b5033b5e97', isActive: false, contentId: 'Cows_and_Bulls' },
+    { id: 'Flag_Game', src: 'https://lh3.googleusercontent.com/8p8IQ-hEspewNRYI77jtHy7W1cM8jBWP6lVxLXXqQ9K5GjwCxlIOqUx3QxGLx8_gyuoQq_MUXFVxmQ=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/國旗達人', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/0000008b6d90ac06', isActive: false, contentId: 'Flag_Game' },
+    { id: 'text_solitaire', src: 'https://lh3.googleusercontent.com/Cc6BaW2bvr3i7N5V0pPb9RDtIZo8wIVFPFPV9Ev9tWtYgMvRBf8kCnhBpldEV-dG0eqDNlchpXQlhw=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/詞語接龍', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000ca4e8b5d65', isActive: false, contentId: 'text_solitaire' },
+    { id: 'idiom_solitaire', src: 'https://lh3.googleusercontent.com/jgOHyXLYLFSqbnQFpS8ax8Y_I0nT7UYcPqyzSNjoOBx0Od3CnMQ05OiL6DV8rg_L2gHrVgyt9CY1=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/成語接龍', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/0000005fc779da97', isActive: false, contentId: 'idiom_solitaire' },
+    { id: 'easy_text_solitaire', src: 'https://lh3.googleusercontent.com/RaAMZ5KmCKWojxT-Zv-dwv5Pxqpvgc-sdWIgp_E0HOGyXERr0btrkcxQQRZJ4FLPAERm8q1XbuQ=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/讀音接龍', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000f85bd23edc', isActive: false, contentId: 'easy_text_solitaire' },
+    { id: 'twenty_four_points', src: 'https://lh3.googleusercontent.com/CceE_F175HAi1aWL5cA6wFCJMi85emmsVkUdyMfr1t7WqdegcVHZKaFUtLm7fZBjewXO4aSGU_eDdw=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/24點巧算', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000c29cce8146', isActive: false, contentId: 'twenty_four_points' },
+    { id: 'Invoice-redemptioner', src: 'https://lh3.googleusercontent.com/YeR_buvHOHYKwXPox9bmeiW-qnYxgd0wmQlnAzPHXPNoNRq6Dydxgdz6wLH4EBSV8875ugxtS3eC=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/發票對獎機', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000f3dc6153fc', isActive: false, contentId: 'Invoice-redemptioner' },
+    { id: 'ISS_Info', src: 'https://lh3.googleusercontent.com/Hs7eFeeWgCKl_-Ir4ngXl3lXkLeG7SLrQKo84kMIfOONu4A6zpa6OftHrZNBDoMVYqoT151huMjt=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/國際太空站', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000ee35748109', isActive: false, contentId: 'ISS_Info' },
+    { id: 'Google_Trend', src: 'https://lh3.googleusercontent.com/UreYAi8D2h2nlgsBT8ILAAuQTnYOUe5sPQfbLAu0skUL1L01BpHT7eNFe5TqASC-g5eZirjysx4=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/熱搜趨勢', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000fe8bfde8db', isActive: false, contentId: 'Google_Trend' },
+    { id: 'Moon_info', src: 'https://lh3.googleusercontent.com/P_cYQtn-NsKHndUqeytSl6e62UhHA9DDhsEF9_ensKoV6Rjitd79gZwHtjD3XDqsG7c4Zi6ByGrRdw=s90', githubLink: '', actionLink: 'javascript:;', isActive: false, contentId: 'Moon_info' },
+    { id: 'Toeic_tester', src: 'https://lh3.googleusercontent.com/6QvDGU9WMc1QC1c8F9GHS8bPiUgs4yfX2SVrAfwwX9zNnOy77AfjlOdIwG5taGCvmZxVKsq4tcX5=s90', githubLink: '', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/0000006745131063', isActive: false, contentId: 'Toeic_tester' },
+    { id: 'Zip_code', src: 'https://lh3.googleusercontent.com/I_NnCp30icOJul74LqvuhrXakeM0xhFWBKp0nRQ8dGMoqAqg4BSmwG4UyRvZYpTuluSfXS-CERDu=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/郵遞區號查詢器', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000ccf8e1037c', isActive: false, contentId: 'Zip_code' },
+    { id: 'Blood_Index', src: 'https://lh3.googleusercontent.com/oI6uG6rwPuex3kpDmn2TkL_0zJVmYP7wEWTMQ5D05zSNOAk6hA_1vlQhBXAQOwVVnz5rEprvUSIZ=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/捐血幫手', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/00000038f48e6d7d', isActive: false, contentId: 'Blood_Index' },
+    { id: 'Power_Index', src: 'https://lh3.googleusercontent.com/uaOnDI3M7mPHQlIuuu6ruOD_DPFYjUinRZl1-M7YH-oTr_Qqzq0dlQK05cMr5jbi7WBl81W9Rgg=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/電力精靈', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/0000008efe74c3bf', isActive: false, contentId: 'Power_Index' },
+    { id: 'TW_AQI_index', src: 'https://lh3.googleusercontent.com/1eK9cMVUJJAmPWbp-kbseKXH7qFjByWkpgSEnamflSYF22jkcDkmazAfw_W2VGK2ILIoIUhUBIU=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/空汙查詢精靈', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000fa049fc5e5', isActive: false, contentId: 'TW_AQI_index' },
+    { id: 'TW_UVI_index', src: 'https://lh3.googleusercontent.com/tFLlLU7i_2G20MQdyc2cslBtZfxXKvSHbQfe42DT4A5q6iSUNxSeh7jxzBQUuiv-XuC83NOwnTGy=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/紫外線精靈', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/00000008b2c308d2', isActive: false, contentId: 'TW_UVI_index' },
+    { id: 'TW_Radiation_index', src: 'https://lh3.googleusercontent.com/CnIRqKjc5uGejjiit-asiFCMDAFH_1HCLEK5kA0vTH32dJw_UVA4Ylp_oVMN_c8Xs9cdKHShpJfh=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/輻射精靈', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000a573924fc8', isActive: false, contentId: 'TW_Radiation_index' },
+    { id: 'TW_Sea_Waether', src: 'https://lh3.googleusercontent.com/PAh2x6gmA8Tjw_ogniq_utapmAFmJj4SXIz_m3xOgsWR5PH-eeXDwpgDwhJ05rGJDzBPk9fonWQ=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/海象精靈', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/0000003f49171d8f', isActive: false, contentId: 'TW_Sea_Waether' },
+    { id: 'World_AQI_index', src: 'https://lh3.googleusercontent.com/jvwwmLpMpt3Ryp_LUM5Y0kvf1qrx2hncQASL6LWtVc5jqYeDD6C6vuQbCf07dwMiQ7MAdgaptur-=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/世界空氣質量指數', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000b85163c25c', isActive: false, contentId: 'World_AQI_index' },
+    { id: 'TW_Weather_helper', src: 'https://lh3.googleusercontent.com/v3moXhFOp3ADc_GaPjTNxwx53JRIkJtpP1IN7zok_7mm2KJrX9t7b81VitsXoCAtNF-H5aMSpoCK5g=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/天氣小幫手', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000971a4ed57e', isActive: false, contentId: 'TW_Weather_helper' },
+    { id: 'TW_WG_Translator', src: 'https://lh3.googleusercontent.com/cf1EkCmbRkqQ_ghf8h-SwKs7pBHwEPwJPbNDCveVBewPLCfeWJXsuoJHK5QkrgLEWkAcz5xOYI9U=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/台灣護照英文翻譯機', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000835c0b1f9e', isActive: false, contentId: 'TW_WG_Translator' },
+    { id: 'Morse_Translator', src: 'https://lh3.googleusercontent.com/fxyZgV3doVdffoeB6fwcCOQnAn58ih5LaJAYgzg0qi2tA02XH4BEz2jgFW0ac2rTSP7Jarc2EnI1=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/摩斯密碼翻譯機', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/0000003c8f1151a9', isActive: false, contentId: 'Morse_Translator' },
+    { id: 'Binary_Translator', src: 'https://lh3.googleusercontent.com/A4HU334fqf4ZNvkpEL2nfsfy_x1DRilzSKxO_kAi48SYDpZa4GLb80D_AF1ntC72Pcqr-hy3G_EZ5A=s90', githubLink: 'https://github.com/hank199599/Google-Assistant-APP/tree/master/二進制翻譯機', actionLink: 'https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/000000974738914a', isActive: false, contentId: 'Binary_Translator' }
   ],
 
   supplementalDictionaries: {
