@@ -1,13 +1,13 @@
-import { mainSection } from "./mainSection";
 import { navigation } from "./navigation";
+import { mainSection } from "./mainSection";
 import { footer } from "./footer";
-import { googleAssistant } from './googleAssistant';  
+import { googleAssistant } from "./googleAssistant";
+import { timeline } from "./timeline";
 
 export const zh = {
-  translation: {
-    mainSection,
-    navigation,
-    footer,
-    googleAssistant,
-  },
+  navigation,
+  mainSection,
+  footer,
+  googleAssistant,
+  timeline
 };
