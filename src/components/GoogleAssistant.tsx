@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { googleAssistantData } from "@/data/google-assistant";
+import { comments } from "@/data/google-assistant";
+import { action_name_dict } from "@/data/google-assistant";
 import {
   Dialog,
   DialogContent,
@@ -15,6 +17,16 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+
+// 定義 comments 型別
+interface UserComment {
+  name: string;
+  text_color: string;
+  bg_color: string[];
+  title: string;
+  reviewer: string;
+  date: string;
+}
 
 interface Project {
   id: string;
@@ -27,13 +39,11 @@ interface Project {
 }
 
 const GoogleAssistant = () => {
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
   const [activeLanguage, setActiveLanguage] = useState("中文(臺灣)");
   const [activeCategory, setActiveCategory] = useState("food");
   const [openAccordion, setOpenAccordion] = useState(0);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  const currentLanguage = i18n.language === 'en' ? 'en' : 'zh';
 
   const stats = [
     {
@@ -57,7 +67,6 @@ const GoogleAssistant = () => {
   ];
 
   const languages = googleAssistantData.languages.map(lang => lang.name);
-  const userComments = googleAssistantData.comments[currentLanguage] || [];
 
   // 取得 langeuage_dict 結構（activeLanguage -> categoryId -> projectIds[]）
   const langeuageDictRaw = (googleAssistantData.langeuage_dict ?? []) as Array<{
@@ -115,33 +124,16 @@ const GoogleAssistant = () => {
 
   const accordionItems = [
     {
-      title: "簡單來說，基礎原理是什麼?",
-      content: `它是一個介接於Google助理的一個基於語音設計界面的新型態應用程式。
-      使用者在向Google助理表明想使用某個特定的Action(動作)後，
-      Google會在Actions On Google平台上搜尋是否有對應名稱的Action。
-      接著使用者會被Google助理導引至Action的使用介面。
-      從此刻開始，Google助理的角色轉變為協助進行語音辨識與傳遞資訊的角色。
-      辨識使用者輸入的意圖與給予對應回應的工作則轉由開發者所設計的Action所執行。`
+      title: t("googleAssistant.howItWorks.accordion.1.title"),
+      content: t("googleAssistant.howItWorks.accordion.1.content")
     },
     {
-      title: "以Actions On Google (AoG)平台的觀點來說，基礎架構又是什麼呢?",
-      content: `在支援Google語音助理的裝置上，
-      原生內建一個由官方支持的第三方平台(Actions On Google, AoG)。
-      當用戶請求與第三方平台的技能互動時，系統會自動到AoG上尋找對應的技能。
-      一旦找到就會將畫面使用權交給第三方技能。
-      自此刻開始，Google助理的角色轉為進行語音辨識與呈現第三方技能內容的中介。
-      在實作上，整個互動的過程是透過JSON為格式的API進行資訊傳遞。`
+      title: t("googleAssistant.howItWorks.accordion.2.title"),
+      content: t("googleAssistant.howItWorks.accordion.2.content")
     },
     {
-      title: "當使用者與Action互動時，在後台會發生甚麼事?",
-      content: `當使用者與Action互動時，以下流程會被觸發。
-      而直到使用者的需求被滿足或中斷，都是這個形式進行每輪的對話：
-      1. 使用者向助理提問
-      2. 助理將(辨識到的)文字傳送給第三方Action
-      3. 在第三方Action架構中，利用DialogFlow訓練的機器模型去判斷使用者的意圖
-      4. 為進一步回應，將篩選後的參數傳進Fulfillment中進行邏輯判斷或資料拉取
-      5. Fulfillment回傳對應Intent的回應給助理
-      6. 助理接收到回應並呈獻給使用者`
+      title: t("googleAssistant.howItWorks.accordion.3.title"),
+      content: t("googleAssistant.howItWorks.accordion.3.content")
     }
   ];
 
@@ -311,7 +303,10 @@ const GoogleAssistant = () => {
                         className="mb-2 rounded"
                       />
                       <span className="text-xs text-center leading-tight">
-                        {t(`googleAssistant.projects.${project.id}.name`)}
+                        {/* 優先用 action_name_dict，無則 fallback i18n */}
+                        {action_name_dict[project.id] && action_name_dict[project.id][activeLanguage]
+                        ? action_name_dict[project.id][activeLanguage]
+                        : t(`googleAssistant.projects.${project.id}.name`)}
                       </span>
                     </button>
                   ))}
@@ -335,27 +330,43 @@ const GoogleAssistant = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {userComments.map((comment, index) => (
-                  <div key={index} className="glass-card rounded-2xl overflow-hidden shadow-lg">
-                    <div 
-                      className="p-4"
-                      style={{
-                        background: `linear-gradient(135deg, ${comment.bgColor[0]}, ${comment.bgColor[1]})`
-                      }}
-                    >
-                      <h3 className="text-xl font-bold" style={{ color: comment.textColor }}>
-                        {comment.projectName}
-                      </h3>
-                    </div>
-                    <div className="p-6">
-                      <h4 className="font-bold text-foreground mb-2">{comment.title}</h4>
-                      <p className="text-sm text-muted-foreground mb-1">{comment.reviewer}</p>
-                      <p className="text-xs text-muted-foreground">{comment.date}</p>
-                    </div>
+              {/* 根據 activeLanguage 取得對應 comments */}
+              {(() => {
+                // 語言順序陣列
+                const languageList = ['中文(臺灣)', '廣東話', '英文', '日文', '韓文', '泰文', '德文', '法文', '丹麥文', '荷蘭文', '西班牙文'];
+                // 找到目前語言的 index (1-based)
+                const langIndex = languageList.indexOf(activeLanguage) + 1;
+                const userComments: UserComment[] = (comments as Record<string, UserComment[]>)[String(langIndex)] || [];
+                return (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {userComments.length === 0 ? (
+                      <div className="col-span-full text-center text-muted-foreground py-8">
+                        {t("googleAssistant.userComments.noComments")}
+                      </div>
+                    ) : (
+                      userComments.map((comment, index) => (
+                        <div key={index} className="glass-card rounded-2xl overflow-hidden shadow-lg">
+                          <div
+                            className="p-4"
+                            style={{
+                              background: `linear-gradient(135deg, ${comment.bg_color[0]}, ${comment.bg_color[1]})`
+                            }}
+                          >
+                            <h3 className="text-xl font-bold" style={{ color: comment.text_color }}>
+                              {comment.name}
+                            </h3>
+                          </div>
+                          <div className="p-6">
+                            <h4 className="font-bold text-foreground mb-2">{comment.title}</h4>
+                            <p className="text-sm text-muted-foreground mb-1">{comment.reviewer}</p>
+                            <p className="text-xs text-muted-foreground" dangerouslySetInnerHTML={{ __html: comment.date }} />
+                          </div>
+                        </div>
+                      ))
+                    )}
                   </div>
-                ))}
-              </div>
+                );
+              })()}
             </div>
 
           </div>
@@ -383,7 +394,10 @@ const GoogleAssistant = () => {
                 />
                 <div className="flex-1">
                   <DialogTitle className="text-2xl mb-2">
-                    {t(`googleAssistant.projects.${selectedProject.id}.name`)}
+                    {/* 優先用 action_name_dict，無則 fallback i18n */}
+                    {action_name_dict[selectedProject.id] && action_name_dict[selectedProject.id][activeLanguage]
+                      ? action_name_dict[selectedProject.id][activeLanguage]
+                      : t(`googleAssistant.projects.${selectedProject.id}.name`)}
                   </DialogTitle>
                   <div className="flex flex-wrap gap-1">
                     {selectedProject.languages.map((lang) => (
@@ -402,17 +416,17 @@ const GoogleAssistant = () => {
               <Button asChild variant="outline">
                 <Link href={selectedProject.githubLink} target="_blank">
                   <Github className="mr-2 h-4 w-4" />
-                  Github 原始碼
+                  {t("googleAssistant.dialog.github")}
                 </Link>
               </Button>
               {selectedProject.actionLink === 'javascript:;' ? (
                 <Button disabled variant="outline">
-                  本服務已下線
+                  {t("googleAssistant.dialog.offline")}
                 </Button>
               ) : (
                 <Button asChild>
                   <Link href={selectedProject.actionLink} target="_blank">
-                    網際網路檔案館的頁面備份
+                    {t("googleAssistant.dialog.archive")}
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>

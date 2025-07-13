@@ -5,17 +5,20 @@ export const googleAssistant = {
     subtitle: "Through Actions on Google platform\nGoogle Assistant can do more than you think",
     githubButton: "Github Project Page"
   },
-  statistics: {
-    'total-skills': {
-      label: 'Total Skills',
+  stats: {
+    skills: {
+      number: '32',
+      title: 'Total Skills',
       description: 'Get help anytime with just internet connection'
     },
-    'unique-users': {
-      label: 'Unique Users',
+    users: {
+      number: '3000',
+      title: 'Unique Users',
       description: 'Average weekly reach of new users'
     },
-    'supported-languages': {
-      label: 'Supported Languages',
+    languages: {
+      number: '10',
+      title: 'Supported Languages',
       description: 'Assistance available in multiple languages'
     }
   },
@@ -107,7 +110,21 @@ export const googleAssistant = {
   },
   howItWorks: {
     title: "How It Works",
-    subtitle: "The principles behind building skills"
+    subtitle: "The principles behind building skills",
+    accordion: {
+      1: {
+        title: "In simple terms, what is the basic principle?",
+        content: `It is a new type of application that interfaces with Google Assistant and is based on a voice-designed interface.\nWhen a user tells Google Assistant to use a specific Action,\nGoogle will search the Actions On Google platform for an Action with the corresponding name.\nThe user is then guided by Google Assistant to the Action's interface.\nFrom this moment, the role of Google Assistant shifts to assisting with voice recognition and information transmission.\nThe task of recognizing user intent and providing appropriate responses is handled by the developer's Action.`
+      },
+      2: {
+        title: "From the perspective of the Actions On Google (AoG) platform, what is the basic architecture?",
+        content: `On devices that support Google Assistant,\na third-party platform officially supported by Google (Actions On Google, AoG) is natively built in.\nWhen a user requests to interact with a third-party skill, the system will automatically search AoG for the corresponding skill.\nOnce found, control is handed over to the third-party skill.\nFrom this point, Google Assistant's role becomes mediating voice recognition and presenting the third-party skill's content.\nIn implementation, the entire interaction process is carried out via APIs in JSON format.`
+      },
+      3: {
+        title: "What happens in the background when a user interacts with an Action?",
+        content: `When a user interacts with an Action, the following process is triggered.\nThis form of interaction continues for each round until the user's needs are met or the session is interrupted:\n1. The user asks the Assistant a question\n2. The Assistant sends the (recognized) text to the third-party Action\n3. In the third-party Action architecture, a machine model trained by DialogFlow determines the user's intent\n4. To further respond, filtered parameters are passed to Fulfillment for logic processing or data retrieval\n5. Fulfillment returns the corresponding Intent response to the Assistant\n6. The Assistant receives the response and presents it to the user.`
+      }
+    }
   },
   skillsOverview: {
     title: "Skills Overview",
@@ -116,6 +133,12 @@ export const googleAssistant = {
   },
   userComments: {
     title: "User Reviews",
-    subtitle: "Feedback from {language} users"
+    subtitle: "Feedback from {language} users",
+    noComments: "No comments yet for this language."
+  },
+  dialog: {
+    github: 'Github Source',
+    offline: 'This service is offline',
+    archive: 'Internet Archive Backup'
   }
 }; 

@@ -1,16 +1,19 @@
 export const googleAssistant = {
   assistantName: "Google 助理",
-  statistics: {
-    'total-skills': {
-      label: '技能總數',
+  stats: {
+    skills: {
+      number: '32',
+      title: '技能總數',
       description: '只需網路即可隨時取得協助'
     },
-    'unique-users': {
-      label: '不重複使用者',
+    users: {
+      number: '3000',
+      title: '不重複使用者',
       description: '每周平均的觸及的陌生使用者比率'
     },
-    'supported-languages': {
-      label: '支援語系',
+    languages: {
+      number: '10',
+      title: '支援語系',
       description: '無論使用哪種語言都能為你提供協助'
     }
   },
@@ -96,5 +99,33 @@ export const googleAssistant = {
       content: '只要簡單詢問即可快速得到建議，是個可幫助你減少思考時間的小幫手!'
     },
     // ... 其餘 detail_dict ...
+  },
+  howItWorks: {
+    title: "運作原理",
+    subtitle: "建立技能的原理說明",
+    accordion: {
+      1: {
+        title: "簡單來說，基礎原理是什麼?",
+        content: `它是一個介接於Google助理的一個基於語音設計界面的新型態應用程式。\n使用者在向Google助理表明想使用某個特定的Action(動作)後，\nGoogle會在Actions On Google平台上搜尋是否有對應名稱的Action。\n接著使用者會被Google助理導引至Action的使用介面。\n從此刻開始，Google助理的角色轉變為協助進行語音辨識與傳遞資訊的角色。\n辨識使用者輸入的意圖與給予對應回應的工作則轉由開發者所設計的Action所執行。`
+      },
+      2: {
+        title: "以Actions On Google (AoG)平台的觀點來說，基礎架構又是什麼呢?",
+        content: `在支援Google語音助理的裝置上，\n原生內建一個由官方支持的第三方平台(Actions On Google, AoG)。\n當用戶請求與第三方平台的技能互動時，系統會自動到AoG上尋找對應的技能。\n一旦找到就會將畫面使用權交給第三方技能。\n自此刻開始，Google助理的角色轉為進行語音辨識與呈現第三方技能內容的中介。\n在實作上，整個互動的過程是透過JSON為格式的API進行資訊傳遞。`
+      },
+      3: {
+        title: "當使用者與Action互動時，在後台會發生甚麼事?",
+        content: `當使用者與Action互動時，以下流程會被觸發。\n而直到使用者的需求被滿足或中斷，都是這個形式進行每輪的對話：\n1. 使用者向助理提問\n2. 助理將(辨識到的)文字傳送給第三方Action\n3. 在第三方Action架構中，利用DialogFlow訓練的機器模型去判斷使用者的意圖\n4. 為進一步回應，將篩選後的參數傳進Fulfillment中進行邏輯判斷或資料拉取\n5. Fulfillment回傳對應Intent的回應給助理\n6. 助理接收到回應並呈獻給使用者`
+      }
+    }
+  },
+  userComments: {
+    title: "用戶留言",
+    subtitle: "來自 {language} 用戶的回饋",
+    noComments: "此語言暫無留言"
+  },
+  dialog: {
+    github: 'Github 原始碼',
+    offline: '本服務已下線',
+    archive: '網際網路檔案館的頁面備份'
   }
 }; 

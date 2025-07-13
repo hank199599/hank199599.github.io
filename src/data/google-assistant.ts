@@ -1,5 +1,249 @@
 import { GoogleAssistantData } from '@/types/google-assistant';
 
+// comments 物件的 key 對應語言如下：
+// 1: 中文(臺灣)
+// 2: 廣東話
+// 3: 英文
+// 4: 日文
+// 5: 韓文
+// 6: 泰文
+// 7: 德文
+// 8: 法文
+// 9: 丹麥文
+// 10: 荷蘭文
+// 11: 西班牙文
+//
+// 對應語言陣列：
+// ['中文(臺灣)', '廣東話', '英文', '日文', '韓文', '泰文', '德文', '法文', '丹麥文', '荷蘭文', '西班牙文']
+export const comments = {
+    "1": [
+        {
+            "name": "數字精靈",
+            "text_color": "#ffffff",
+            "bg_color": ["#e51516", "#a20102"],
+            "title": "很好玩啊，這根本就是終極密碼!",
+            "reviewer": "洪那馬",
+            "date": "2019年8月17日"
+        },
+        {
+            "name": "洞察號",
+            "text_color": "#ffffff",
+            "bg_color": ["#c23c02", "#732503"],
+            "title": "好酷喔",
+            "reviewer": "是我",
+            "date": "2020年5月10日"
+        },
+        {
+            "name": "詞語接龍",
+            "text_color": "#ffffff",
+            "bg_color": ["#a6afb1", "#505657"],
+            "title": "挑戰你腦海中的詞語資料庫",
+            "reviewer": "Google Taiwan",
+            "date": "2020年3月31日"
+        },
+        {
+            "name": "1A2B猜數",
+            "text_color": "#ffffff",
+            "bg_color": ["#4d4d4d", "#000000"],
+            "title": "很有趣可以得到特別的驚喜",
+            "reviewer": "winnie the pooh",
+            "date": "2020年9月7日"
+        },
+        {
+            "name": "空汙查詢精靈",
+            "text_color": "#ffffff",
+            "bg_color": ["#4aa8bc", "#327280"],
+            "title": "開啟自己神之模式",
+            "reviewer": "張育維",
+            "date": "2020年3月3日"
+        },
+        {
+            "name": "國際太空站",
+            "text_color": "#ffffff",
+            "bg_color": ["#4d4d4d", "#000000"],
+            "title": "對於要觀看國際空間站的朋友來說，可以準確的知道過境時間。很棒",
+            "reviewer": "林政宏",
+            "date": "2020年5月3日"
+        },
+        {
+            "name": "臺灣國語辭典",
+            "text_color": "#000000",
+            "bg_color": ["#eaeaf3", "#9494b6"],
+            "title": "很好用",
+            "reviewer": "菘菘",
+            "date": "2020年1月22日"
+        },
+        {
+            "name": "美食決定器",
+            "text_color": "#ffffff",
+            "bg_color": ["#8f7553", "#8a612c"],
+            "title": "可以使用，解決了現代人的日常難題。",
+            "reviewer": "Pichu Baby",
+            "date": "2019年3月6日"
+        },
+        {
+            "name": "讀音接龍",
+            "text_color": "#ffffff",
+            "bg_color": ["#a40035", "#a40035"],
+            "title": "我贏他了",
+            "reviewer": "賴薈如",
+            "date": "2021年2月7日"
+        }
+    ],
+    "2": [
+        {
+            "name": "數字精靈",
+            "text_color": "#ffffff",
+            "bg_color": ["#e51516", "#a20102"],
+            "title": "無聊嘅時候可以玩，又可以配合擲骰仔,超級好玩",
+            "reviewer": "Isaac Fung",
+            "date": "2022年3月24日"
+        }
+    ],
+    "3": [
+        {
+            "name": "Number Elf",
+            "text_color": "#ffffff",
+            "bg_color": ["#e51516", "#a20102"],
+            "title": "this app is making me smarter!",
+            "reviewer": "Keith Lloyd",
+            "date": "2019年9月10日 (<a href='https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=en_us' class='card-link' target='_blank'>US</a>)"
+        },
+        {
+            "name": "Number Elf",
+            "text_color": "#ffffff",
+            "bg_color": ["#e51516", "#a20102"],
+            "title": "I love it",
+            "reviewer": "Champashridara Poojary",
+            "date": "2021年4月6日 (<a href='https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/0000008473a60dc8?hl=en_in' class='card-link' target='_blank'>India</a>)"
+        },
+        {
+            "name": "The Insight Station",
+            "text_color": "#ffffff",
+            "bg_color": ["#c23c02", "#732503"],
+            "title": "GREAT APP",
+            "reviewer": "Janninee Greenfield",
+            "date": "2021年6月3日 (<a href='https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/00000038183bf1fb?hl=en_au'class='card-link' target='_blank'>Australia</a>)"
+        },
+        {
+            "name": "Meal Decider",
+            "text_color": "#ffffff",
+            "bg_color": ["#8f7553", "#8a612c"],
+            "title": "With all the new restaurants popping up....I love to try new and worldly delicious dishes",
+            "reviewer": "Judy Socket",
+            "date": "2019年7月22日 (<a href='https://web.archive.org/web/20200922045406/https://assistant.google.com/services/a/uid/00000058f29109ab?hl=en_ca'class='card-link' target='_blank'>Canada</a>)"
+        }
+    ],
+    "4": [
+        {
+            "name": "数字エルフ",
+            "text_color": "#ffffff",
+            "bg_color": ["#e51516", "#a20102"],
+            "title": "最低な話しまやた利他いお金も化かんないかだ1位です",
+            "reviewer": "宮坂柊輝",
+            "date": "2021年10月10日"
+        },
+        {
+            "name": "インサイト探査機",
+            "text_color": "#ffffff",
+            "bg_color": ["#c23c02", "#732503"],
+            "title": "全集中　水の呼吸　捨ノ型　生生流転",
+            "reviewer":"名探偵α",
+            "date":"2019年11月10日"
+        }
+    ],
+    "5": [
+        {
+            "name": "숫자엘프",
+            "text_color": "#ffffff",
+            "bg_color": ["#e51516", "#a20102"],
+            "title": "GOOD 굿~~ 페밀리 링크 땜 아무것도 못하는데 이앱 정말 좋네요!",
+            "reviewer": "한기쁨",
+            "date": "2021年3月31日"
+        },
+        {
+            "name": "인사이트는",
+            "text_color": "#ffffff",
+            "bg_color": ["#c23c02", "#732503"],
+            "title": "하장실 문이애기하나 그대로 생각을치타하면",
+            "reviewer":"7730 정 jung",
+            "date":"2020年5月29日"
+        },
+        {
+            "name": "세계 대기질 지수",
+            "text_color": "#000000",
+            "bg_color": ["#f8edef", "#cdc2c4"],
+            "title": "감사합니다",
+            "reviewer": "정재형 (부동산)",
+            "date": "2020年7月13日"
+        },
+        {
+            "name": "숫자를 맞춰보세요",
+            "text_color": "#ffffff",
+            "bg_color": ["#4d4d4d", "#000000"],
+            "title": "치트키:처음1234두번재5678",
+            "reviewer": "5- 5",
+            "date": "2021年4月10日"
+        }
+    ],
+    "6": [
+        {
+            "name": "เทพดาดิจิตอล",
+            "text_color": "#ffffff",
+            "bg_color": ["#e51516", "#a20102"],
+            "title": "สนุกไปกับมัน ไม่เบื่อเลยค่ะ",
+            "reviewer": "39 Thanapha Patjirakul",
+            "date": "2021年9月19日"
+        },
+        {
+            "name": "สถานี Insight",
+            "text_color": "#ffffff",
+            "bg_color": ["#c23c02", "#732503"],
+            "title": "ใช้ได้ดีมากครับ",
+            "reviewer":"รังสันต์ โพธิ์ศรี",
+            "date":"2020年8月24日"
+        },
+        {
+            "name": "ดัชนีโลกคุณภาพอากาศ",
+            "text_color": "#000000",
+            "bg_color": ["#f8edef", "#cdc2c4"],
+            "title": "ดีมากสิคะเลยติ",
+            "reviewer": "เนตรแก้ว สังขกุล",
+            "date": "2020年9月15日"
+        },
+        {
+            "name": "เดาหนึ่ง",
+            "text_color": "#ffffff",
+            "bg_color": ["#4d4d4d", "#000000"],
+            "title": "ยากสุด",
+            "reviewer": "Mai VIp (Mai)",
+            "date": "2020年9月28日"
+        },
+        {
+            "name": "ค้นหาด้านบน",
+            "text_color": "#ffffff",
+            "bg_color": ["#1b53b0", "#143f87"],
+            "title": "ยากสุด",
+            "reviewer": "Freedom Mobile",
+            "date": "2020年8月19日"
+        }
+    ],
+    "7": [
+        {
+            "name": "Nummer Elf",
+            "text_color": "#ffffff",
+            "bg_color": ["#e51516", "#a20102"],
+            "title": "Gutes spiel",
+            "reviewer": "Bruddah_numba_one",
+            "date": "2021年7月11日"
+        }
+    ],
+    "8":[],
+    "9":[],
+    "10":[],
+    "11":[]
+};
+
 export const googleAssistantData: GoogleAssistantData = {
   statistics: [
     { id: 'total-skills', value: 32, label: {}, description: {} },
@@ -429,4 +673,163 @@ export const googleAssistantData: GoogleAssistantData = {
       { id: '法文', urlCode: 'fr' }
     ]
   }
+};
+
+// action_name_dict: 各 Action 對應多語言名稱對照表
+export const action_name_dict: Record<string, Record<string, string>> = {
+    "Food_Decider":{
+        "中文(臺灣)":"美食決定器",
+        "廣東話":"美食決定器",
+        "英文":"Meal Decider",
+        "日文":"グルメ決定者"
+    },
+    "Daily_History":{
+        "中文(臺灣)":"每日大事記",
+    },
+    "Taiwan_Dictoinary":{
+        "中文(臺灣)":"臺灣國語辭典",
+    },
+    "Taiwan_Rail_Dictoinary":{
+        "中文(臺灣)":"鐵道詞典",
+        "廣東話":"鐵道詞典",
+    },
+    "Cangjie_Dictoinary":{
+        "中文(臺灣)":"倉頡字典",
+    },
+    "Positive_Quote":{
+        "中文(臺灣)":"正能量語錄",
+    },
+    "Negative_Quote":{
+        "中文(臺灣)":"負能量語錄",
+    },
+    "Today_Quote":{
+        "中文(臺灣)":"今日名言",
+    },
+    "NASA_daily":{
+        "中文(臺灣)":"每日天文圖",
+        "廣東話":"朝朝天文圖",
+    },
+    "Fortune_Master":{
+        "中文(臺灣)":"運勢大師",
+        "廣東話":"運程Master",
+    },
+    "Brain_Game":{
+        "中文(臺灣)":"大腦運動會",
+    },
+    "Riddle_Game":{
+        "中文(臺灣)":"燈謎大師",
+    },
+    "Number_Elf":{
+        "中文(臺灣)":"數字精靈",
+        "廣東話":"數字精靈",
+        "英文":"Number Elf",
+        "日文":"数字エルフ",
+        "韓文":"숫자엘프",
+        "泰文":"เทพดาดิจิตอล",
+        "德文":"Nummer Elf",
+    },
+    "Cows_and_Bulls":{
+        "中文(臺灣)":"1A2B猜數",
+        "廣東話":"1A2B猜數",
+        "英文":"Cows and Bulls",
+        "日文":"数を推測する",
+        "韓文":"숫자를 맞춰보세요",
+        "泰文":"เดาหนึ่ง",
+    },
+    "Flag_Game":{
+        "中文(臺灣)":"國旗達人",
+    },
+    "text_solitaire":{
+        "中文(臺灣)":"詞語接龍",
+    },
+    "idiom_solitaire":{
+        "中文(臺灣)":"成語接龍",
+    },
+    "easy_text_solitaire":{
+        "中文(臺灣)":"讀音接龍",
+    },
+    "twenty_four_points":{
+        "中文(臺灣)":"24點巧算",
+        "廣東話":"24點巧算"
+    },
+    "Insight_Station":{
+        "中文(臺灣)":"洞察號",
+        "廣東話":"洞察號",
+        "英文":"The Insight Station",
+        "日文":"インサイト探査機",
+        "韓文":"인사이트는",
+        "泰文":"สถานี Insight",
+        "德文":"Insight Station",
+        "西班牙文":"Estación InSight",
+        "荷蘭文":"Insight Station",
+        "丹麥文":"InSight station",
+        "法文":"Station InSight"
+    },
+    "ISS_Info":{
+        "中文(臺灣)":"國際太空站",
+        "廣東話":"國際太空站",
+    },
+    "Google_Trend":{
+        "中文(臺灣)":"熱搜趨勢",
+        "廣東話":"熱搜趨勢",
+        "英文":"the search leaderboard",
+        "日文":"上位の検索トレンド",
+        "韓文":"주요 검색 트렌드",
+        "泰文":"ค้นหาด้านบน",
+        "德文":"die Such-Bestenliste",
+        "荷蘭文":"populaire zoektrends",
+        "丹麥文":"tjek søgetendenser",
+        "法文":"le classement de recherche"
+    },
+    "Moon_info":{
+        "中文(臺灣)":"月相精靈",
+    },
+    "Toeic_tester":{
+        "中文(臺灣)":"多益測驗",
+    },
+    "Zip_code":{
+        "中文(臺灣)":"郵遞區號查詢器",
+    },
+    "Blood_Index":{
+        "中文(臺灣)":"捐血幫手",
+    },
+    "Power_Index":{
+        "中文(臺灣)":"電力精靈",
+    },
+    "TW_AQI_index":{
+        "中文(臺灣)":"空汙查詢精靈",
+    },
+    "TW_UVI_index":{
+        "中文(臺灣)":"紫外線精靈",
+    },
+    "TW_Radiation_index":{
+        "中文(臺灣)":"輻射精靈",
+    },
+    "TW_Sea_Waether":{
+        "中文(臺灣)":"海象精靈",
+    },
+    "World_AQI_index":{
+        "中文(臺灣)":"世界空氣質量指數",
+        "廣東話":"世界空氣質素指數",
+        "日文":"世界空気質指数",
+        "韓文":"세계 대기질 지수",
+        "泰文":"ดัชนีโลกคุณภาพอากาศ",
+    },
+    "TW_Weather_helper":{
+        "中文(臺灣)":"天氣小幫手",
+    },
+    "TW_WG_Translator":{
+        "中文(臺灣)":"護照英文翻譯機",
+    },
+    "Morse_Translator":{
+        "中文(臺灣)":"摩斯密碼翻譯機",
+        "廣東話":"摩斯密碼繙譯機",
+    },
+    "Binary_Translator":{
+        "中文(臺灣)":"二進制翻譯機",
+        "廣東話":"二進制繙譯機",
+    },
+    "Invoice-redemptioner":{
+        "中文(臺灣)":"發票對獎機",
+    }
 };
