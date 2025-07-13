@@ -1,5 +1,10 @@
 export const googleAssistant = {
   assistantName: "Google 助理",
+  hero: {
+    title: "OK Google!",
+    subtitle: "透過 Actions on Google 平台\nGoogle 助理能做的事，比你想的還多",
+    githubButton: "Github 專案頁面"
+  },
   stats: {
     skills: {
       number: '32',
@@ -18,16 +23,21 @@ export const googleAssistant = {
     }
   },
   categories: {
-    food: "美食",
-    school: "校園",
-    reader: "閱讀",
-    color_lens: "色彩",
-    sports_esports: "遊戲",
-    science: "科學",
-    public: "公共",
-    cloud: "雲端",
-    translate: "翻譯",
-    date_range: "日期"
+    food: "取得餐飲建議",
+    school: "參考資料",
+    reader: "朗讀語錄",
+    color_lens: "藝術與生活品味",
+    sports_esports: "休閒娛樂",
+    science: "科技資訊",
+    public: "公共資訊",
+    cloud: "查詢天氣資訊",
+    translate: "進行翻譯",
+    date_range: "提升生產力"
+  },
+  deprecation: {
+    title: "Google 即將停止此服務...",
+    description: "對話動作 (Conversational Actions) 將在 2023/06/13 後終止服務！",
+    link: "更多資訊"
   },
   projects: {
     Food_Decider: { name: '美食決定器', content: '只要簡單詢問即可快速得到建議，\n是個可幫助你減少思考時間的小幫手!' },
@@ -117,6 +127,11 @@ export const googleAssistant = {
         content: `當使用者與Action互動時，以下流程會被觸發。\n而直到使用者的需求被滿足或中斷，都是這個形式進行每輪的對話：\n1. 使用者向助理提問\n2. 助理將(辨識到的)文字傳送給第三方Action\n3. 在第三方Action架構中，利用DialogFlow訓練的機器模型去判斷使用者的意圖\n4. 為進一步回應，將篩選後的參數傳進Fulfillment中進行邏輯判斷或資料拉取\n5. Fulfillment回傳對應Intent的回應給助理\n6. 助理接收到回應並呈獻給使用者`
       }
     }
+  },
+  skillsOverview: {
+    title: "技能總覽",
+    subtitle: "根據使用者的地區設定，自動切換回應語言",
+    languageSelector: "選擇語言"
   },
   userComments: {
     title: "用戶留言",

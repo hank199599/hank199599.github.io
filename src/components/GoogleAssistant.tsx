@@ -1,7 +1,24 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ChevronDown, Github, ExternalLink, Calendar, Users, Globe } from "lucide-react";
+import {
+  ChevronDown,
+  Github,
+  ExternalLink,
+  Calendar,
+  Users,
+  Globe,
+  Utensils,
+  GraduationCap,
+  BookText,
+  Palette,
+  Gamepad2,
+  FlaskConical,
+  Globe2,
+  Cloud,
+  Languages,
+  CalendarDays,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
@@ -19,6 +36,19 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+
+const iconMap: { [key: string]: React.ElementType } = {
+  fastfood: Utensils,
+  school: GraduationCap,
+  chrome_reader_mode: BookText,
+  color_lens: Palette,
+  sports_esports: Gamepad2,
+  science: FlaskConical,
+  public: Globe2,
+  cloud: Cloud,
+  translate: Languages,
+  date_range: CalendarDays,
+};
 
 const GoogleAssistant = () => {
   const { t } = useTranslation();
@@ -106,7 +136,7 @@ const GoogleAssistant = () => {
           <div className="text-center text-white">
             <div className="flex items-center justify-center mb-8">
               <div className="w-24 h-24 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mr-4">
-                <span className="text-4xl">🎤</span>
+                
               </div>
               <div className="text-left">
                 <h1 className="text-5xl lg:text-7xl font-bold">
@@ -229,20 +259,23 @@ const GoogleAssistant = () => {
                 
                 {/* Category Tabs */}
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {availableCategories.map((category: { id: string; tag: string; name: string }) => (
-                    <button
-                      key={category.id}
-                      onClick={() => setActiveCategory(category.id)}
-                      className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
-                        activeCategory === category.id
-                          ? 'bg-blue-500 text-white'
-                          : 'bg-gray-100 dark:bg-gray-700 text-foreground hover:bg-gray-200 dark:hover:bg-gray-600'
-                      }`}
-                    >
-                      <span className="mr-2">🔧</span>
-                      {category.name}
-                    </button>
-                  ))}
+                  {availableCategories.map((category: { id: string; tag: string; name: string }) => {
+                    const Icon = iconMap[category.tag];
+                    return (
+                      <button
+                        key={category.id}
+                        onClick={() => setActiveCategory(category.id)}
+                        className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
+                          activeCategory === category.id
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-gray-100 dark:bg-gray-700 text-foreground hover:bg-gray-200 dark:hover:bg-gray-600'
+                        }`}
+                      >
+                        {Icon && <Icon className="mr-2 h-4 w-4" />}
+                        {category.name}
+                      </button>
+                    );
+                  })}
                 </div>
 
                 {/* Skills */}
