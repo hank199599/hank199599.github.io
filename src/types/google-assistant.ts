@@ -16,6 +16,15 @@ export interface ProjectCategory {
   name: Record<string, string>; // language -> name mapping
 }
 
+export interface RawComment {
+  name: string;
+  text_color: string;
+  bg_color: string[];
+  title: string;
+  reviewer: string;
+  date: string;
+}
+
 export interface UserComment {
   projectName: string;
   title: string;
@@ -44,26 +53,4 @@ export interface GoogleAssistantData {
   projects: ActionProject[];
   comments: Record<string, UserComment[]>; // language code -> comments
   languages: LanguageSupport[];
-  langeuage_dict: {
-    id: string;
-    categories: {
-      categoryId: string;
-      projectIds: string[];
-    }[];
-  }[];
-  detail_dict: {
-    id: string;
-    src: string;
-    githubLink: string;
-    actionLink: string;
-    isActive: boolean;
-    contentId: string;
-    languages: string[];
-  }[];
-  supplementalDictionaries: {
-    action_name_dict: { id: string }[];
-    assistant_name_dict: { id: string }[];
-    tab_dict: { id: string; tag: string }[];
-    langeuage_url_dict: { id: string; urlCode: string }[];
-  };
 }

@@ -8,6 +8,8 @@ import { useTranslation } from "react-i18next";
 import { googleAssistantData } from "@/data/google-assistant";
 import { comments } from "@/data/google-assistant";
 import { action_name_dict } from "@/data/google-assistant";
+import { langeuage_url_dict } from "@/data/google-assistant";
+import { ActionProject, RawComment } from "@/types/google-assistant";
 import {
   Dialog,
   DialogContent,
@@ -18,32 +20,12 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-// 定義 comments 型別
-interface UserComment {
-  name: string;
-  text_color: string;
-  bg_color: string[];
-  title: string;
-  reviewer: string;
-  date: string;
-}
-
-interface Project {
-  id: string;
-  src: string;
-  githubLink: string;
-  actionLink: string;
-  isActive: boolean;
-  contentId: string;
-  languages: string[];
-}
-
 const GoogleAssistant = () => {
   const { t } = useTranslation();
-  const [activeLanguage, setActiveLanguage] = useState("中文(臺灣)");
+  const [activeLanguage, setActiveLanguage] = useState("zh-TW");
   const [activeCategory, setActiveCategory] = useState("food");
   const [openAccordion, setOpenAccordion] = useState(0);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ActionProject | null>(null);
 
   const stats = [
     {
@@ -66,35 +48,20 @@ const GoogleAssistant = () => {
     }
   ];
 
-  const languages = googleAssistantData.languages.map(lang => lang.name);
+  // 從 `googleAssistantData.projects` 篩選出當前語言的專案
+  const projectsForLanguage = googleAssistantData.projects.filter(p =>
+    p.languages.includes(activeLanguage)
+  );
 
-  // 取得 langeuage_dict 結構（activeLanguage -> categoryId -> projectIds[]）
-  const langeuageDictRaw = (googleAssistantData.langeuage_dict ?? []) as Array<{
-    id: string;
-    categories: Array<{ categoryId: string; projectIds: string[] }>;
-  }>;
-  // 轉成 { [lang: string]: { [categoryId: string]: string[] } }
-  const langeuageDict: Record<string, Record<string, string[]>> = {};
-  for (const langEntry of langeuageDictRaw) {
-    langeuageDict[langEntry.id] = {};
-    for (const cat of langEntry.categories) {
-      langeuageDict[langEntry.id][cat.categoryId] = cat.projectIds;
-    }
-  }
-
-  // 取得所有分類定義
+  // 從這些專案中找出所有可用的分類
+  const availableCategoryIds = [...new Set(projectsForLanguage.map(p => p.category.id))];
   const allCategories = googleAssistantData.categories;
-
-  // 依語言取得有專案的分類
-  const availableCategoryIds = Object.keys(langeuageDict[activeLanguage] ?? {});
-  const availableCategories = availableCategoryIds.map((catId) => {
-    const cat = allCategories.find((c) => c.id === catId);
-    return {
-      id: catId,
-      tag: cat?.tag || '',
-      name: t(`googleAssistant.categories.${catId}`)
-    };
-  });
+  const availableCategories = allCategories
+    .filter(c => availableCategoryIds.includes(c.id))
+    .map(category => ({
+      ...category,
+      name: t(`googleAssistant.categories.${category.id}`)
+    }));
 
   // activeCategory 合理切換
   useEffect(() => {
@@ -106,21 +73,10 @@ const GoogleAssistant = () => {
     }
   }, [activeLanguage, availableCategories]);
 
-  // 取得所有專案的詳細資料
-  const detailDictArr = (googleAssistantData.detail_dict ?? []) as Array<{
-    id: string;
-    src: string;
-    githubLink: string;
-    actionLink: string;
-    isActive: boolean;
-    contentId: string;
-  }>;
-
-  // Skills 區塊內容同步（改為從 detail_dict 取得）
-  const projectIds = langeuageDict[activeLanguage]?.[activeCategory] ?? [];
-  const filteredProjects = projectIds
-    .map(id => detailDictArr.find(p => p.id === id))
-    .filter((p): p is Project => !!p);
+  // 根據當前選定的分類，篩選出要顯示的專案
+  const filteredProjects = projectsForLanguage.filter(
+    p => p.category.id === activeCategory
+  );
 
   const accordionItems = [
     {
@@ -137,6 +93,9 @@ const GoogleAssistant = () => {
     }
   ];
 
+  const activeLanguageName =
+    googleAssistantData.languages.find((l) => l.code === activeLanguage)?.name ??
+    activeLanguage;
 
   return (
     <section id="google-assistant" className="py-24 relative overflow-hidden">
@@ -258,15 +217,15 @@ const GoogleAssistant = () => {
                   onChange={(e) => setActiveLanguage(e.target.value)}
                   className="mt-4 lg:mt-0 px-4 py-2 border border-border rounded-lg bg-background text-foreground"
                 >
-                  {languages.map((lang) => (
-                    <option key={lang} value={lang}>{lang}</option>
+                  {googleAssistantData.languages.map((lang) => (
+                    <option key={lang.code} value={lang.code}>{lang.name}</option>
                   ))}
                 </select>
               </div>
 
               {/* Categories */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
-                <h3 className="text-2xl font-bold text-foreground mb-6">{activeLanguage}</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-6">{activeLanguageName}</h3>
                 
                 {/* Category Tabs */}
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -288,7 +247,7 @@ const GoogleAssistant = () => {
 
                 {/* Skills */}
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                  {filteredProjects.map((project: Project) => (
+                  {filteredProjects.map((project: ActionProject) => (
                     <button
                       key={project.id}
                       className="aspect-square bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex flex-col items-center justify-center text-white font-bold hover:scale-105 transition-transform cursor-pointer p-2 text-center"
@@ -326,17 +285,13 @@ const GoogleAssistant = () => {
                   {t("googleAssistant.userComments.title")}
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                  {t("googleAssistant.userComments.subtitle", { language: activeLanguage })}
+                  {t("googleAssistant.userComments.subtitle", { language: activeLanguageName})}
                 </p>
               </div>
 
               {/* 根據 activeLanguage 取得對應 comments */}
               {(() => {
-                // 語言順序陣列
-                const languageList = ['中文(臺灣)', '廣東話', '英文', '日文', '韓文', '泰文', '德文', '法文', '丹麥文', '荷蘭文', '西班牙文'];
-                // 找到目前語言的 index (1-based)
-                const langIndex = languageList.indexOf(activeLanguage) + 1;
-                const userComments: UserComment[] = (comments as Record<string, UserComment[]>)[String(langIndex)] || [];
+                const userComments: RawComment[] = comments[activeLanguage] || [];
                 return (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {userComments.length === 0 ? (
@@ -401,7 +356,7 @@ const GoogleAssistant = () => {
                   </DialogTitle>
                   <div className="flex flex-wrap gap-1">
                     {selectedProject.languages.map((lang) => (
-                      <Badge key={lang} variant="secondary">{lang}</Badge>
+                      <Badge key={lang} variant="secondary">{langeuage_url_dict[lang]}</Badge>
                     ))}
                   </div>
                 </div>

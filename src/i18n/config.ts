@@ -15,7 +15,11 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
-    interpolation: { escapeValue: false },
+    interpolation: { 
+      escapeValue: false,
+      prefix: '{',
+      suffix: '}'
+    },
   });
 
 export default i18n; 
