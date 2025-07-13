@@ -51,7 +51,7 @@ const iconMap: { [key: string]: React.ElementType } = {
 };
 
 const GoogleAssistant = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('googleAssistant');
   const [activeLanguage, setActiveLanguage] = useState("zh-TW");
   const [activeCategory, setActiveCategory] = useState("food");
   const [openAccordion, setOpenAccordion] = useState(0);
@@ -60,21 +60,21 @@ const GoogleAssistant = () => {
   const stats = [
     {
       icon: Users,
-      number: t("googleAssistant.stats.skills.number"),
-      title: t("googleAssistant.stats.skills.title"),
-      description: t("googleAssistant.stats.skills.description")
+      number: t("stats.skills.number"),
+      title: t("stats.skills.title"),
+      description: t("stats.skills.description")
     },
     {
       icon: Calendar,
-      number: t("googleAssistant.stats.users.number"),
-      title: t("googleAssistant.stats.users.title"),
-      description: t("googleAssistant.stats.users.description")
+      number: t("stats.users.number"),
+      title: t("stats.users.title"),
+      description: t("stats.users.description")
     },
     {
       icon: Globe,
-      number: t("googleAssistant.stats.languages.number"),
-      title: t("googleAssistant.stats.languages.title"),
-      description: t("googleAssistant.stats.languages.description")
+      number: t("stats.languages.number"),
+      title: t("stats.languages.title"),
+      description: t("stats.languages.description")
     }
   ];
 
@@ -90,7 +90,7 @@ const GoogleAssistant = () => {
     .filter(c => availableCategoryIds.includes(c.id))
     .map(category => ({
       ...category,
-      name: t(`googleAssistant.categories.${category.id}`)
+      name: t(`categories.${category.id}`)
     }));
 
   // activeCategory 合理切換
@@ -110,16 +110,16 @@ const GoogleAssistant = () => {
 
   const accordionItems = [
     {
-      title: t("googleAssistant.howItWorks.accordion.1.title"),
-      content: t("googleAssistant.howItWorks.accordion.1.content")
+      title: t("howItWorks.accordion.1.title"),
+      content: t("howItWorks.accordion.1.content")
     },
     {
-      title: t("googleAssistant.howItWorks.accordion.2.title"),
-      content: t("googleAssistant.howItWorks.accordion.2.content")
+      title: t("howItWorks.accordion.2.title"),
+      content: t("howItWorks.accordion.2.content")
     },
     {
-      title: t("googleAssistant.howItWorks.accordion.3.title"),
-      content: t("googleAssistant.howItWorks.accordion.3.content")
+      title: t("howItWorks.accordion.3.title"),
+      content: t("howItWorks.accordion.3.content")
     }
   ];
 
@@ -148,10 +148,10 @@ const GoogleAssistant = () => {
               </div>
               <div className="text-left">
                 <h1 className="text-5xl lg:text-7xl font-bold">
-                  {t("googleAssistant.hero.title")}
+                  {t("hero.title")}
                 </h1>
                 <p className="text-xl lg:text-2xl mt-2 text-white/80 whitespace-pre-line">
-                  {t("googleAssistant.hero.subtitle")}
+                  {t("hero.subtitle")}
                 </p>
               </div>
             </div>
@@ -161,7 +161,7 @@ const GoogleAssistant = () => {
               className="inline-flex items-center px-8 py-4 bg-white text-black rounded-full font-bold hover:bg-gray-100 transition-colors"
             >
               <Github className="mr-2 h-5 w-5" />
-              {t("googleAssistant.hero.githubButton")}
+              {t("hero.githubButton")}
             </Link>
           </div>
         </div>
@@ -190,15 +190,15 @@ const GoogleAssistant = () => {
             <div className="bg-red-500 text-white p-6 rounded-2xl mb-16">
               <div className="flex items-center mb-2">
                 <span className="text-2xl mr-3">🎤</span>
-                <span className="font-bold">{t("googleAssistant.deprecation.title")}</span>
+                <span className="font-bold">{t("deprecation.title")}</span>
               </div>
-              <p className="mb-2">{t("googleAssistant.deprecation.description")}</p>
+              <p className="mb-2">{t("deprecation.description")}</p>
               <Link
                 href="https://developers.google.com/assistant/ca-sunset"
                 target="_blank"
                 className="inline-flex items-center text-white underline hover:text-gray-200"
               >
-                {t("googleAssistant.deprecation.link")} <ExternalLink className="ml-1 h-4 w-4" />
+                {t("deprecation.link")} <ExternalLink className="ml-1 h-4 w-4" />
               </Link>
             </div>
 
@@ -206,10 +206,10 @@ const GoogleAssistant = () => {
             <div className="mb-16">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-foreground mb-4">
-                  {t("googleAssistant.howItWorks.title")}
+                  {t("howItWorks.title")}
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                  {t("googleAssistant.howItWorks.subtitle")}
+                  {t("howItWorks.subtitle")}
                 </p>
               </div>
 
@@ -244,10 +244,10 @@ const GoogleAssistant = () => {
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
                 <div>
                   <h2 className="text-4xl font-bold text-foreground mb-4">
-                    {t("googleAssistant.skillsOverview.title")}
+                    {t("skillsOverview.title")}
                   </h2>
                   <p className="text-xl text-muted-foreground">
-                    {t("googleAssistant.skillsOverview.subtitle")}
+                    {t("skillsOverview.subtitle")}
                   </p>
                 </div>
                 <select
@@ -292,12 +292,12 @@ const GoogleAssistant = () => {
                     <button
                       key={project.id}
                       className="aspect-square bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex flex-col items-center justify-center text-white font-bold hover:scale-105 transition-transform cursor-pointer p-2 text-center"
-                      title={t(`googleAssistant.projects.${project.id}.content`)}
+                      title={t(`projects.${project.id}.content`)}
                       onClick={() => setSelectedProject(project)}
                     >
                       <Image
                         src={project.src}
-                        alt={t(`googleAssistant.projects.${project.id}.name`)}
+                        alt={t(`projects.${project.id}.name`)}
                         width={60}
                         height={60}
                         className="mb-2 rounded"
@@ -306,14 +306,14 @@ const GoogleAssistant = () => {
                         {/* 優先用 action_name_dict，無則 fallback i18n */}
                         {action_name_dict[project.id] && action_name_dict[project.id][activeLanguage]
                         ? action_name_dict[project.id][activeLanguage]
-                        : t(`googleAssistant.projects.${project.id}.name`)}
+                        : t(`projects.${project.id}.name`)}
                       </span>
                     </button>
                   ))}
                 </div>
                 {filteredProjects.length === 0 && (
                   <div className="text-center py-8 text-muted-foreground">
-                    {t("googleAssistant.skillsOverview.noSkills")}
+                    {t("skillsOverview.noSkills")}
                   </div>
                 )}
               </div>
@@ -323,10 +323,10 @@ const GoogleAssistant = () => {
             <div>
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-foreground mb-4">
-                  {t("googleAssistant.userComments.title")}
+                  {t("userComments.title")}
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                  {t("googleAssistant.userComments.subtitle", { language: activeLanguageName})}
+                  {t("userComments.subtitle", { language: activeLanguageName})}
                 </p>
               </div>
 
@@ -337,7 +337,7 @@ const GoogleAssistant = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {userComments.length === 0 ? (
                       <div className="col-span-full text-center text-muted-foreground py-8">
-                        {t("googleAssistant.userComments.noComments")}
+                        {t("userComments.noComments")}
                       </div>
                     ) : (
                       userComments.map((comment, index) => (
@@ -383,7 +383,7 @@ const GoogleAssistant = () => {
               <div className="flex items-start space-x-4">
                 <Image
                   src={selectedProject.src}
-                  alt={t(`googleAssistant.projects.${selectedProject.id}.name`)}
+                  alt={t(`projects.${selectedProject.id}.name`)}
                   width={60}
                   height={60}
                   className="rounded-lg"
@@ -393,7 +393,7 @@ const GoogleAssistant = () => {
                     {/* 優先用 action_name_dict，無則 fallback i18n */}
                     {action_name_dict[selectedProject.id] && action_name_dict[selectedProject.id][activeLanguage]
                       ? action_name_dict[selectedProject.id][activeLanguage]
-                      : t(`googleAssistant.projects.${selectedProject.id}.name`)}
+                      : t(`projects.${selectedProject.id}.name`)}
                   </DialogTitle>
                   <div className="flex flex-wrap gap-1">
                     {selectedProject.languages.map((lang) => (
@@ -405,24 +405,24 @@ const GoogleAssistant = () => {
             </DialogHeader>
             <div className="py-4">
               <p className="text-sm text-muted-foreground whitespace-pre-line">
-                {t(`googleAssistant.projects.${selectedProject.id}.content`)}
+                {t(`projects.${selectedProject.id}.content`)}
               </p>
             </div>
             <DialogFooter className="sm:justify-between gap-2 flex-col sm:flex-row">
               <Button asChild variant="outline">
                 <Link href={selectedProject.githubLink} target="_blank">
                   <Github className="mr-2 h-4 w-4" />
-                  {t("googleAssistant.dialog.github")}
+                  {t("dialog.github")}
                 </Link>
               </Button>
               {selectedProject.actionLink === 'javascript:;' ? (
                 <Button disabled variant="outline">
-                  {t("googleAssistant.dialog.offline")}
+                  {t("dialog.offline")}
                 </Button>
               ) : (
                 <Button asChild>
                   <Link href={selectedProject.actionLink} target="_blank">
-                    {t("googleAssistant.dialog.archive")}
+                    {t("dialog.archive")}
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
