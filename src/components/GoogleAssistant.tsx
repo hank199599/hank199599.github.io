@@ -6,6 +6,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { googleAssistantData } from "@/data/google-assistant";
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 interface Project {
   id: string;
@@ -14,6 +23,7 @@ interface Project {
   actionLink: string;
   isActive: boolean;
   contentId: string;
+  languages: string[];
 }
 
 const GoogleAssistant = () => {
@@ -21,6 +31,7 @@ const GoogleAssistant = () => {
   const [activeLanguage, setActiveLanguage] = useState("中文(臺灣)");
   const [activeCategory, setActiveCategory] = useState("food");
   const [openAccordion, setOpenAccordion] = useState(0);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const currentLanguage = i18n.language === 'en' ? 'en' : 'zh';
 
@@ -286,10 +297,11 @@ const GoogleAssistant = () => {
                 {/* Skills */}
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                   {filteredProjects.map((project: Project) => (
-                    <div
+                    <button
                       key={project.id}
-                      className="aspect-square bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex flex-col items-center justify-center text-white font-bold hover:scale-105 transition-transform cursor-pointer p-2"
+                      className="aspect-square bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex flex-col items-center justify-center text-white font-bold hover:scale-105 transition-transform cursor-pointer p-2 text-center"
                       title={t(`googleAssistant.projects.${project.id}.content`)}
+                      onClick={() => setSelectedProject(project)}
                     >
                       <Image
                         src={project.src}
@@ -301,7 +313,7 @@ const GoogleAssistant = () => {
                       <span className="text-xs text-center leading-tight">
                         {t(`googleAssistant.projects.${project.id}.name`)}
                       </span>
-                    </div>
+                    </button>
                   ))}
                 </div>
                 {filteredProjects.length === 0 && (
@@ -349,6 +361,66 @@ const GoogleAssistant = () => {
           </div>
         </div>
       </div>
+
+      {selectedProject && (
+        <Dialog
+          open={!!selectedProject}
+          onOpenChange={(isOpen) => {
+            if (!isOpen) {
+              setSelectedProject(null);
+            }
+          }}
+        >
+          <DialogContent className="sm:max-w-[525px]">
+            <DialogHeader>
+              <div className="flex items-start space-x-4">
+                <Image
+                  src={selectedProject.src}
+                  alt={t(`googleAssistant.projects.${selectedProject.id}.name`)}
+                  width={60}
+                  height={60}
+                  className="rounded-lg"
+                />
+                <div className="flex-1">
+                  <DialogTitle className="text-2xl mb-2">
+                    {t(`googleAssistant.projects.${selectedProject.id}.name`)}
+                  </DialogTitle>
+                  <div className="flex flex-wrap gap-1">
+                    {selectedProject.languages.map((lang) => (
+                      <Badge key={lang} variant="secondary">{lang}</Badge>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </DialogHeader>
+            <div className="py-4">
+              <p className="text-sm text-muted-foreground whitespace-pre-line">
+                {t(`googleAssistant.projects.${selectedProject.id}.content`)}
+              </p>
+            </div>
+            <DialogFooter className="sm:justify-between gap-2 flex-col sm:flex-row">
+              <Button asChild variant="outline">
+                <Link href={selectedProject.githubLink} target="_blank">
+                  <Github className="mr-2 h-4 w-4" />
+                  Github 原始碼
+                </Link>
+              </Button>
+              {selectedProject.actionLink === 'javascript:;' ? (
+                <Button disabled variant="outline">
+                  本服務已下線
+                </Button>
+              ) : (
+                <Button asChild>
+                  <Link href={selectedProject.actionLink} target="_blank">
+                    網際網路檔案館的頁面備份
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              )}
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      )}
     </section>
   );
 };
