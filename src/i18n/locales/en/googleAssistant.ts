@@ -137,8 +137,21 @@ export const googleAssistant = {
     noComments: "No comments yet for this language."
   },
   dialog: {
-    github: 'Github Source',
-    offline: 'This service is offline',
-    archive: 'Internet Archive Backup'
+    github: "View on GitHub",
+    archive: "View Archive",
+    offline: "Archived (Offline)"
+  },
+  languages: {
+    'zh-TW': "Chinese (Taiwan)",
+    'zh-HK': "Cantonese",
+    'en': "English",
+    'ja': "Japanese",
+    'ko': "Korean",
+    'th': "Thai",
+    'de': "German",
+    'es': "Spanish",
+    'nl': "Dutch",
+    'da': "Danish",
+    'fr': "French"
   }
 }; 

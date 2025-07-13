@@ -43,7 +43,6 @@ export interface StatisticItem {
 
 export interface LanguageSupport {
   code: string;
-  name: string;
   urlCode: string;
 }
 

@@ -25,7 +25,6 @@ import { useTranslation } from "react-i18next";
 import { googleAssistantData } from "@/data/google-assistant";
 import { comments } from "@/data/google-assistant";
 import { action_name_dict } from "@/data/google-assistant";
-import { langeuage_url_dict } from "@/data/google-assistant";
 import { ActionProject, RawComment } from "@/types/google-assistant";
 import {
   Dialog,
@@ -122,10 +121,6 @@ const GoogleAssistant = () => {
       content: t("howItWorks.accordion.3.content")
     }
   ];
-
-  const activeLanguageName =
-    googleAssistantData.languages.find((l) => l.code === activeLanguage)?.name ??
-    activeLanguage;
 
   return (
     <section id="google-assistant" className="relative overflow-hidden">
@@ -256,14 +251,14 @@ const GoogleAssistant = () => {
                   className="mt-4 lg:mt-0 px-4 py-2 border border-border rounded-lg bg-background text-foreground"
                 >
                   {googleAssistantData.languages.map((lang) => (
-                    <option key={lang.code} value={lang.code}>{lang.name}</option>
+                    <option key={lang.code} value={lang.code}>{t(`languages.${lang.code}`)}</option>
                   ))}
                 </select>
               </div>
 
               {/* Categories */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
-                <h3 className="text-2xl font-bold text-foreground mb-6">{activeLanguageName}</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-6">{t(`languages.${activeLanguage}`)}</h3>
                 
                 {/* Category Tabs */}
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -326,7 +321,7 @@ const GoogleAssistant = () => {
                   {t("userComments.title")}
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                  {t("userComments.subtitle", { language: activeLanguageName})}
+                  {t("userComments.subtitle", { language: t(`languages.${activeLanguage}`) })}
                 </p>
               </div>
 
@@ -397,7 +392,7 @@ const GoogleAssistant = () => {
                   </DialogTitle>
                   <div className="flex flex-wrap gap-1">
                     {selectedProject.languages.map((lang) => (
-                      <Badge key={lang} variant="secondary">{langeuage_url_dict[lang]}</Badge>
+                      <Badge key={lang} variant="secondary">{t(`languages.${lang}`)}</Badge>
                     ))}
                   </div>
                 </div>

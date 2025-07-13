@@ -337,17 +337,17 @@ export const googleAssistantData: GoogleAssistantData = {
   },
 
   languages: [
-    { code: 'zh-TW', name: '中文(臺灣)', urlCode: 'zh-TW' },
-    { code: 'zh-HK', name: '廣東話', urlCode: 'zh-HK' },
-    { code: 'en', name: '英文', urlCode: 'en' },
-    { code: 'ja', name: '日文', urlCode: 'ja' },
-    { code: 'ko', name: '韓文', urlCode: 'ko' },
-    { code: 'th', name: '泰文', urlCode: 'th' },
-    { code: 'de', name: '德文', urlCode: 'de' },
-    { code: 'es', name: '西班牙文', urlCode: 'es' },
-    { code: 'nl', name: '荷蘭文', urlCode: 'nl' },
-    { code: 'da', name: '丹麥文', urlCode: 'da' },
-    { code: 'fr', name: '法文', urlCode: 'fr' }
+    { code: 'zh-TW', urlCode: 'zh-TW' },
+    { code: 'zh-HK', urlCode: 'zh-HK' },
+    { code: 'en', urlCode: 'en' },
+    { code: 'ja', urlCode: 'ja' },
+    { code: 'ko', urlCode: 'ko' },
+    { code: 'th', urlCode: 'th' },
+    { code: 'de', urlCode: 'de' },
+    { code: 'es', urlCode: 'es' },
+    { code: 'nl', urlCode: 'nl' },
+    { code: 'da', urlCode: 'da' },
+    { code: 'fr', urlCode: 'fr' }
   ],
 };
 

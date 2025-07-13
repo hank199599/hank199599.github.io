@@ -139,8 +139,21 @@ export const googleAssistant = {
     noComments: "此語言暫無留言"
   },
   dialog: {
-    github: 'Github 原始碼',
-    offline: '本服務已下線',
-    archive: '網際網路檔案館的頁面備份'
+    github: "在 GitHub 上查看",
+    archive: "查看封存",
+    offline: "已封存 (離線)"
+  },
+  languages: {
+    'zh-TW': "中文(臺灣)",
+    'zh-HK': "廣東話",
+    'en': "英文",
+    'ja': "日文",
+    'ko': "韓文",
+    'th': "泰文",
+    'de': "德文",
+    'es': "西班牙文",
+    'nl': "荷蘭文",
+    'da': "丹麥文",
+    'fr': "法文"
   }
 }; 
