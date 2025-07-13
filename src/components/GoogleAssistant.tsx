@@ -128,15 +128,23 @@ const GoogleAssistant = () => {
     activeLanguage;
 
   return (
-    <section id="google-assistant" className="py-24 relative overflow-hidden">
+    <section id="google-assistant" className="relative overflow-hidden">
       {/* Hero Section */}
-      <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <div
+        className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
+        style={{ backgroundImage: "url('/img/assistant_background.jpg')" }}
+      >
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center text-white">
             <div className="flex items-center justify-center mb-8">
               <div className="w-24 h-24 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mr-4">
-                
+                <Image
+                  src="/img/Google-Assistant-icon.gif"
+                  alt="Google Assistant Icon"
+                  width={64}
+                  height={64}
+                />
               </div>
               <div className="text-left">
                 <h1 className="text-5xl lg:text-7xl font-bold">

@@ -1,69 +1,47 @@
 'use client';
 
-import { ModeToggle } from "./model-toggle"
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
+import { ModeToggle } from "./model-toggle";
+import { SiteDesktopMenu } from "@/components/site-desktop-menu";
+import { SiteMobileMenu } from "@/components/site-mobile-menu";
+import { LanguageToggle } from "./language-toggle";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { SiteMobileMenu } from "./site-mobile-menu";
-import { SiteDesktopMenu } from "./site-desktop-menu";
 
 export function SiteHeader() {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const isMobile = useIsMobile();
-
   useEffect(() => {
     setMounted(true);
   }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 0);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? "bg-background/95 backdrop-blur-sm border-b border-border" : "bg-transparent"
+    <header className={`sticky top-0 z-50 w-full transition-colors duration-300 ${
+      scrolled
+        ? "bg-background/95 backdrop-blur-sm border-b border-border"
+        : "bg-background/80 backdrop-blur-sm"
     }`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="text-xl font-bold">
-            <Link href="/" className="text-primary">
-              個人網頁
-            </Link>
+      <div className="container flex h-16 items-center">
+        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+          <div className="w-full flex-1 md:w-auto md:flex-none">
+            {/* <CommandMenu /> */}
           </div>
-          
           <div className="hidden md:flex items-center space-x-4">
             {mounted && <SiteDesktopMenu />}
+            <LanguageToggle />
             <ModeToggle />
-          </div>
-
-          <div className="md:hidden flex items-center space-x-2">
-            <ModeToggle />
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
           </div>
         </div>
+        {isMobile && <SiteMobileMenu />}
       </div>
-
-      {isOpen && (
-        <div className="md:hidden bg-background border-b border-border">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <SiteMobileMenu />
-          </div>
-        </div>
-      )}
-    </nav>
+    </header>
   );
 }
