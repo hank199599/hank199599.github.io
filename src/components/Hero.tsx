@@ -3,6 +3,7 @@
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { TFunction } from 'i18next';
+import Image from 'next/image';
 
 interface Props {
   t: TFunction<"mainSection">;
@@ -20,11 +21,15 @@ const Hero = ({ t }: Props) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center animate-fade-in">
           <div className="mb-8">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-1">
+            <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-1 overflow-hidden">
               <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-                <span className="text-4xl font-bold bg-gradient-to-br from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  游
-                </span>
+                <Image
+                  src="/img/blog/blog_pic.jpg"
+                  alt={t('hero.name')}
+                  width={128}
+                  height={128}
+                  className="rounded-full"
+                />
               </div>
             </div>
           </div>
