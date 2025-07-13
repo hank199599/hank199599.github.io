@@ -58,6 +58,7 @@ export interface GoogleAssistantData {
     actionLink: string;
     isActive: boolean;
     contentId: string;
+    languages: string[];
   }[];
   supplementalDictionaries: {
     action_name_dict: { id: string }[];
