@@ -2,8 +2,13 @@
 
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
+import { TFunction } from 'i18next';
 
-const Hero = () => {
+interface Props {
+  t: TFunction<"mainSection">;
+}
+
+const Hero = ({ t }: Props) => {
   const scrollToAbout = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -25,18 +30,18 @@ const Hero = () => {
           </div>
           
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6">
-            Hi, I&apos;m{" "}
+            {t('hero.greeting')}{" "}
             <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-              游紹宏
+              {t('hero.name')}
             </span>
           </h1>
           
           <p className="text-xl sm:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed">
-            「機會，是留給準備好的人」
+            {t('hero.quote')}
           </p>
           
           <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Cloud Engineer @ Trend Micro
+            {t('hero.jobTitle')}
           </p>
           
           <div className="flex justify-center space-x-6">

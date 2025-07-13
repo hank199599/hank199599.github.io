@@ -1,68 +1,40 @@
 import { GraduationCap, Calendar, MapPin, Award } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { TFunction } from 'i18next';
 
-const Education = () => {
-  const education = [
-    {
-      degree: "資訊工程所",
-      school: "國立台灣科技大學",
-      location: "台北市",
-      period: "2020 - 2022",
-      description: "專注於人工智慧和機器學習領域的研究，探索 AI 技術在實際應用場景中的可能性。",
-      coursework: [
-        "機器學習",
-        "深度學習",
-        "自然語言處理",
-        "雲端運算"
-      ],
-      achievements: [
-        "發表研究論文",
-        "參與產學合作專案",
-        "擔任研究助理"
-      ]
-    },
-    {
-      degree: "應用材料與光電工程學系",
-      school: "國立暨南國際大學",
-      location: "南投縣",
-      period: "2014 - 2018",
-      description: "在材料科學的基礎上，培養跨領域思維，並開始接觸程式設計，為未來的技術發展奠定基礎。",
-      coursework: [
-        "材料科學",
-        "光電工程",
-        "程式設計基礎",
-        "數值分析"
-      ],
-      achievements: [
-        "專題研究優等",
-        "程式設計競賽佳作",
-        "系學會幹部"
-      ]
-    }
-  ];
+interface EducationItem {
+  degree: string;
+  school: string;
+  location: string;
+  period: string;
+  description: string;
+  coursework: string[];
+  achievements: string[];
+}
 
-  const certifications = [
-    {
-      name: "TOEIC",
-      issuer: "ETS",
-      score: "825",
-      year: "2023"
-    },
-    {
-      name: "Associate Cloud Engineer",
-      issuer: "Google Cloud",
-      description: "An Associate Cloud Engineer deploys applications, monitors operations, and manages enterprise solutions.",
-      year: "2023"
-    }
-  ];
+interface Certification {
+  name: string;
+  issuer: string;
+  score?: string;
+  description?: string;
+  year: string;
+}
+
+interface Props {
+  t: TFunction<"mainSection">;
+}
+
+const Education = ({ t }: Props) => {
+  const education = t('education.educationHistory', { returnObjects: true }) as EducationItem[];
+  const certifications = t('education.certifications.items', { returnObjects: true }) as Certification[];
 
   return (
     <section id="education" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            學歷背景
+            {t('education.title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8"></div>
         </div>
@@ -70,7 +42,7 @@ const Education = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Education Section */}
           <div className="lg:col-span-2 space-y-8">
-            <h3 className="text-2xl font-bold text-foreground mb-6">教育經歷</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-6">{t('education.educationExperience')}</h3>
             {education.map((edu, index) => (
               <Card key={index} className="hover:shadow-lg transition-all duration-300">
                 <CardHeader>
@@ -105,7 +77,7 @@ const Education = () => {
                   
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <h4 className="font-semibold mb-3 text-foreground">主要課程：</h4>
+                      <h4 className="font-semibold mb-3 text-foreground">{t('education.coursework')}：</h4>
                       <ul className="space-y-1">
                         {edu.coursework.map((course, i) => (
                           <li key={i} className="flex items-start gap-2 text-muted-foreground text-sm">
@@ -117,7 +89,7 @@ const Education = () => {
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold mb-3 text-foreground">成就：</h4>
+                      <h4 className="font-semibold mb-3 text-foreground">{t('education.achievements')}：</h4>
                       <ul className="space-y-1">
                         {edu.achievements.map((achievement, i) => (
                           <li key={i} className="flex items-start gap-2 text-muted-foreground text-sm">
@@ -135,7 +107,7 @@ const Education = () => {
 
           {/* Certifications Section */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-foreground mb-6">證照與認證</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-6">{t('education.certifications.title')}</h3>
             <div className="space-y-4">
               {certifications.map((cert, index) => (
                 <Card key={index} className="hover:shadow-md transition-all duration-300">
@@ -153,7 +125,7 @@ const Education = () => {
                         </p>
                         <div className="flex items-center justify-between">
                           <Badge variant="secondary" className="text-xs">
-                            {cert.score || "Professional"}
+                            {cert.score || t('education.certifications.professional')}
                           </Badge>
                           <span className="text-xs text-muted-foreground">
                             {cert.year}

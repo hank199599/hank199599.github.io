@@ -1,43 +1,31 @@
 import { Calendar, MapPin, Building2 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { TFunction } from 'i18next';
 
-const Experience = () => {
-  const workExperience = [
-    {
-      title: "Cloud Engineer",
-      company: "Trend Micro (趨勢科技)",
-      location: "台北市",
-      period: "2024/07 - NOW",
-      description: "作為雲端工程師，負責開發和維護企業級的雲端服務，確保系統的可靠性和效能。",
-      achievements: [
-        "與利害關係人密切合作，進行需求討論、跨團隊整合和問題排除",
-        "作為全週期開發者，負責從規劃、設計到實作、測試、部署和營運的完整流程",
-        "自動化和改進開發及發布流程"
-      ],
-      technologies: ["GCP", "Python", "Cloud Functions", "Cloud Run"]
-    },
-    {
-      title: "後端工程師",
-      company: "LINE TV (巧克科技)",
-      location: "台北市",
-      period: "2022/09 - 2024/04",
-      description: "在 LINE TV 團隊中擔任後端工程師，負責開發和維護核心服務系統。",
-      achievements: [
-        "與 PM 緊密合作了解商業需求，設計 API、資料庫和系統架構",
-        "根據 POC 後的架構撰寫邏輯，透過單元測試和整合測試確保產品迭代順暢",
-        "參與大型系統重構專案，提升系統效能和可維護性"
-      ],
-      technologies: ["Python", "SQL", "RESTful API", "Microservices"]
-    }
-  ];
+interface WorkExperience {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  description: string;
+  achievements: string[];
+  technologies: string[];
+}
+
+interface Props {
+  t: TFunction<"mainSection">;
+}
+
+const Experience = ({ t }: Props) => {
+  const workExperience = t('experience.jobs', { returnObjects: true }) as WorkExperience[];
 
   return (
     <section id="experience" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            工作經驗
+            {t('experience.title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8"></div>
         </div>
@@ -72,9 +60,9 @@ const Experience = () => {
                 </p>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold mb-3 text-foreground">主要成就：</h4>
+                  <h4 className="font-semibold mb-3 text-foreground">{t('experience.achievements')}：</h4>
                   <ul className="space-y-2">
-                    {job.achievements.map((achievement, i) => (
+                    {job.achievements.map((achievement: string, i: number) => (
                       <li key={i} className="flex items-start gap-2 text-muted-foreground">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                         <span>{achievement}</span>
@@ -84,9 +72,9 @@ const Experience = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold mb-3 text-foreground">使用技術：</h4>
+                  <h4 className="font-semibold mb-3 text-foreground">{t('experience.technologies')}：</h4>
                   <div className="flex flex-wrap gap-2">
-                    {job.technologies.map((tech) => (
+                    {job.technologies.map((tech: string) => (
                       <Badge key={tech} variant="secondary" className="text-xs">
                         {tech}
                       </Badge>
