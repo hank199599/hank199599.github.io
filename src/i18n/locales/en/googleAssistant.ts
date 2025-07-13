@@ -23,16 +23,16 @@ export const googleAssistant = {
     }
   },
   categories: {
-    food: "Food",
-    school: "School",
-    reader: "Reader",
-    color_lens: "Color",
-    sports_esports: "Games",
-    science: "Science",
-    public: "Public",
-    cloud: "Cloud",
-    translate: "Translate",
-    date_range: "Date"
+    food: "Food & Drink",
+    school: "Reference & Education",
+    reader: "Quotes & Reading",
+    color_lens: "Art & Lifestyle",
+    sports_esports: "Games & Recreation",
+    science: "Science & Technology",
+    public: "Public Information",
+    cloud: "Weather",
+    translate: "Translation",
+    date_range: "Productivity"
   },
   projects: {
     Food_Decider: { name: 'Meal Decider', content: "Can't decide what to eat? Let the Meal Decider help you!\nA handy tool to help you save thinking time!" },
@@ -106,7 +106,7 @@ export const googleAssistant = {
   deprecation: {
     title: "Service is deprecated by Google...",
     description: "Conversational Actions will no longer be invokable after 2023/06/13!",
-    link: "More Information"
+    link: "Learn More"
   },
   howItWorks: {
     title: "How It Works",
