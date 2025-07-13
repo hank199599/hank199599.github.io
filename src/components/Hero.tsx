@@ -1,7 +1,6 @@
 "use client";
 
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const Hero = () => {
@@ -26,7 +25,7 @@ const Hero = () => {
           </div>
           
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6">
-            Hi, I'm{" "}
+            Hi, I&apos;m{" "}
             <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
               游紹宏
             </span>
@@ -39,19 +38,6 @@ const Hero = () => {
           <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Cloud Engineer @ Trend Micro
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="group" asChild>
-              <Link href="#contact">
-                聯絡我
-                <Mail className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-            <Button variant="outline" size="lg" className="group" onClick={scrollToAbout}>
-              了解更多
-              <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-            </Button>
-          </div>
           
           <div className="flex justify-center space-x-6">
             {[

@@ -1,4 +1,5 @@
 export const mainSection = {
   title: "",
-  description: "",
+  description: ""
+  // googleAssistant 已遷移到 googleAssistant.ts
 }
