@@ -104,7 +104,7 @@ export const googleAssistant = {
     }
   },
   deprecation: {
-    title: "Service will be deprecated by Google...",
+    title: "Service is deprecated by Google...",
     description: "Conversational Actions will no longer be invokable after 2023/06/13!",
     link: "More Information"
   },

@@ -35,7 +35,7 @@ export const googleAssistant = {
     date_range: "提升生產力"
   },
   deprecation: {
-    title: "Google 即將停止此服務...",
+    title: "Google 已停止此服務...",
     description: "對話動作 (Conversational Actions) 將在 2023/06/13 後終止服務！",
     link: "更多資訊"
   },
