@@ -294,8 +294,8 @@ const GoogleAssistant = () => {
                       <Image
                         src={project.src}
                         alt={t(`googleAssistant.projects.${project.id}.name`)}
-                        width={40}
-                        height={40}
+                        width={60}
+                        height={60}
                         className="mb-2 rounded"
                       />
                       <span className="text-xs text-center leading-tight">
