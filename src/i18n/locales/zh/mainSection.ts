@@ -52,7 +52,7 @@ export const mainSection = {
                     "作為全週期開發者，負責從規劃、設計到實作、測試、部署和營運的完整流程",
                     "自動化和改進開發及發布流程"
                 ],
-                technologies: ["GCP", "Python", "Cloud Functions", "Cloud Run"]
+                technologies: ["Azure", "Oracle Cloud", "CI/CD", "Kubernetes","Python","Golang"]
             },
             {
                 title: "後端工程師",
@@ -65,7 +65,7 @@ export const mainSection = {
                     "根據 POC 後的架構撰寫邏輯，透過單元測試和整合測試確保產品迭代順暢",
                     "參與大型系統重構專案，提升系統效能和可維護性"
                 ],
-                technologies: ["Python", "SQL", "RESTful API", "Microservices"]
+                technologies: ["Node.js", "SQL", "RESTful API", "Microservices", "Docker", "AWS"]
             }
         ]
     },

@@ -52,7 +52,7 @@ export const mainSection = {
           "As a full-cycle developer, responsible for the complete process from planning, design, to implementation, testing, deployment, and operation",
           "Automate and improve development and release processes"
         ],
-        technologies: ["GCP", "Python", "Cloud Functions", "Cloud Run"]
+        technologies: ["Azure", "Oracle Cloud", "CI/CD", "Kubernetes","Python","Golang"]
       },
       {
         title: "Backend Engineer",
@@ -65,7 +65,7 @@ export const mainSection = {
           "Wrote logic based on the post-POC architecture, ensuring smooth product iteration through unit and integration testing",
           "Participated in a large-scale system refactoring project to improve system performance and maintainability"
         ],
-        technologies: ["Python", "SQL", "RESTful API", "Microservices"]
+        technologies: ["Azure", "Oracle Cloud", "CI/CD", "Kubernetes","Python","Golang"]
       }
     ]
   },
