@@ -100,7 +100,7 @@ const GoogleAssistant = () => {
     ) {
       setActiveCategory(availableCategories[0].id);
     }
-  }, [activeLanguage, availableCategories]);
+  }, [activeLanguage, availableCategories, activeCategory]);
 
   // 根據當前選定的分類，篩選出要顯示的專案
   const filteredProjects = projectsForLanguage.filter(
