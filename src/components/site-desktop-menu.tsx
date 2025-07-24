@@ -51,7 +51,7 @@ export function SiteDesktopMenu({ t }: Props) {
               <ListItem href="/gdg-taipei-projects" title={t('sideProjects.gdgTaipei')}>
                 {t('sideProjects.gdgTaipeiDescription')}
               </ListItem>
-              <ListItem href="/mindful-moments" title={t('sideProjects.mindfulMoments')}>
+              <ListItem href="https://mindfulmoments-e8722.web.app/" title={t('sideProjects.mindfulMoments')}>
                 {t('sideProjects.mindfulMomentsDescription')}
               </ListItem>
             </ul>
