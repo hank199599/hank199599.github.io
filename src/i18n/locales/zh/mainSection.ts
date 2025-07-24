@@ -79,31 +79,31 @@ export const mainSection = {
             cloud: {
                 title: "雲端技術",
                 skills: [
-                    { name: "Google Cloud Platform", level: 90 },
-                    { name: "Firebase", level: 85 },
-                    { name: "Cloud Functions", level: 85 },
-                    { name: "Cloud Storage", level: 80 },
-                    { name: "Cloud Run", level: 80 }
+                    "Oracle Cloud",
+                    "Google Cloud Platform", 
+                    "AWS",
+                    "Azure",
+                    "Firebase"
+                ]
+            },
+            devops: {
+                title: "DevOps & 基礎設施",
+                skills: [
+                    "Terraform",
+                    "Kubernetes", 
+                    "Docker",
+                    "CI/CD Pipeline",
+                    "Cloud Functions"
                 ]
             },
             backend: {
                 title: "後端開發",
                 skills: [
-                    { name: "Python", level: 90 },
-                    { name: "Node.js", level: 85 },
-                    { name: "SQL", level: 85 },
-                    { name: "RESTful API", level: 90 },
-                    { name: "System Design", level: 85 }
-                ]
-            },
-            ai: {
-                title: "AI & 資料",
-                skills: [
-                    { name: "Keras", level: 80 },
-                    { name: "DialogFlow", level: 85 },
-                    { name: "資料分析", level: 80 },
-                    { name: "機器學習", level: 75 },
-                    { name: "資料工程", level: 80 }
+                    "Python",
+                    "Go",
+                    "Node.js",
+                    "SQL", 
+                    "RESTful API"
                 ]
             }
         },

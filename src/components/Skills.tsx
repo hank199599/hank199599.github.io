@@ -5,10 +5,7 @@ import { TFunction } from 'i18next';
 
 interface SkillCategory {
   title: string;
-  skills: {
-    name: string;
-    level: number;
-  }[];
+  skills: string[];
 }
 
 interface Project {
@@ -48,21 +45,18 @@ const Skills = ({ t }: Props) => {
                   <CardHeader>
                     <CardTitle className="text-xl text-center">{category.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    {category.skills.map((skill) => (
-                      <div key={skill.name}>
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-sm font-medium">{skill.name}</span>
-                          <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                        </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <div
-                            className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out"
-                            style={{ width: `${skill.level}%` }}
-                          ></div>
-                        </div>
-                      </div>
-                    ))}
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill) => (
+                        <Badge 
+                          key={skill} 
+                          variant="secondary" 
+                          className="text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
                   </CardContent>
                 </Card>
               ))}
