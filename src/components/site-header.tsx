@@ -1,13 +1,16 @@
 'use client';
-import { ModeToggle } from "./model-toggle"
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useIsMobile } from "@/hooks/use-mobile";
-import { SiteMobileMenu } from "./site-mobile-menu";
-import { SiteDesktopMenu } from "./site-desktop-menu";
 
+import { useState, useEffect } from "react";
+import { ModeToggle } from "./model-toggle";
+import { SiteDesktopMenu } from "@/components/site-desktop-menu";
+import { SiteMobileMenu } from "@/components/site-mobile-menu";
+import { LanguageToggle } from "./language-toggle";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { useTranslation } from "react-i18next";
 
 export function SiteHeader() {
+  const { t } = useTranslation('navigation');
+  const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const isMobile = useIsMobile();
 
@@ -15,30 +18,33 @@ export function SiteHeader() {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className={`bg-background/80 backdrop-blur-sm rounded-[10px] fixed top-4 left-0 right-0 flex h-fit-content py-3 px-4 lg:mx-16 lg:my-10 lg:px-20 items-center justify-between gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-(--header-height) z-11 `}>
-      <div className={`flex flex-row h-full w-full items-${isMobile ? "between" : "center"} justify-${isMobile ? "between" : "center"} gap-1 px-4 lg:gap-2 lg:px-6`}>
-        {isMobile && (
-          <div className="flex items-center justify-between gap-2">
-            <SiteMobileMenu />
+    <header className={`sticky top-0 z-50 w-full transition-colors duration-300 ${
+      scrolled
+        ? "bg-background/95 backdrop-blur-sm border-b border-border"
+        : "bg-background/80 backdrop-blur-sm"
+    }`}>
+      <div className="container flex h-16 items-center">
+        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+          <div className="w-full flex-1 md:w-auto md:flex-none">
+            {/* <CommandMenu /> */}
           </div>
-        )}
-        {mounted && (
-          <div className="flex items-center justify-between gap-2">
-            <Link href="/" passHref>
-              個人網頁
-            </Link>
+          <div className="hidden md:flex items-center space-x-4">
+            {mounted && <SiteDesktopMenu t={t} />}
+            <LanguageToggle />
+            <ModeToggle />
           </div>
-        )}
-        {!isMobile && (
-          <div className="ml-auto flex items-between justify-between gap-2 w-1/3 ">
-            <SiteDesktopMenu />
         </div>
-        )}
-        <div className="flex items-center justify-between gap-2">
-          <ModeToggle />
-        </div>
+        {isMobile && <SiteMobileMenu />}
       </div>
     </header>
-  )
+  );
 }

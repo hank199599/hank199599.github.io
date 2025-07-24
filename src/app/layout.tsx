@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { I18nProvider } from '@/i18n/I18nProvider';
 import { ThemeProvider } from "@/components/theme-provider"
+import { SiteHeader } from "@/components/site-header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GDG Taiwan",
-  description: "Google Developer Groups Taiwan 官方網站"
+  title: "游紹宏 個人網頁",
+  description: "游紹宏 是一位熱愛學習新技術，樂於團隊合作與分享的雲端工程師。",
 };
 
 export default function RootLayout({
@@ -37,6 +38,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <I18nProvider>
+            <SiteHeader />
             {children}
           </I18nProvider>
         </ThemeProvider>

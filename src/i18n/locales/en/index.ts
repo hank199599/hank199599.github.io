@@ -1,11 +1,17 @@
+import { navigation } from "./navigation";
 import { mainSection } from "./mainSection";
 import { footer } from "./footer";
-import { navigation } from "./navigation";
+import { googleAssistant } from "./googleAssistant";
+import { timeline } from "./timeline";
+import { gdgTaipei } from "./gdgTaipei";
+import { notFound } from "./notFound";
 
 export const en = {
-  translation: {
-    mainSection,
-    footer,
-    navigation,
-  },
+  navigation,
+  mainSection,
+  footer,
+  googleAssistant,
+  timeline,
+  gdgTaipei,
+  notFound
 };
