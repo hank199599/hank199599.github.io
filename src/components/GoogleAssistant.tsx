@@ -35,6 +35,14 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const iconMap: { [key: string]: React.ElementType } = {
   fastfood: Utensils,
@@ -51,10 +59,13 @@ const iconMap: { [key: string]: React.ElementType } = {
 
 const GoogleAssistant = () => {
   const { t } = useTranslation('googleAssistant');
+  const isMobile = useIsMobile();
   const [activeLanguage, setActiveLanguage] = useState("zh-TW");
   const [activeCategory, setActiveCategory] = useState("food");
   const [openAccordion, setOpenAccordion] = useState(0);
   const [selectedProject, setSelectedProject] = useState<ActionProject | null>(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [languageDrawerOpen, setLanguageDrawerOpen] = useState(false);
 
   const stats = [
     {
@@ -245,41 +256,138 @@ const GoogleAssistant = () => {
                     {t("skillsOverview.subtitle")}
                   </p>
                 </div>
-                <select
-                  value={activeLanguage}
-                  onChange={(e) => setActiveLanguage(e.target.value)}
-                  className="mt-4 lg:mt-0 px-4 py-2 border border-border rounded-lg bg-background text-foreground"
-                >
-                  {googleAssistantData.languages.map((lang) => (
-                    <option key={lang.code} value={lang.code}>{t(`languages.${lang.code}`)}</option>
-                  ))}
-                </select>
+                {isMobile ? (
+                  <div className="mt-4 lg:mt-0">
+                    <Drawer open={languageDrawerOpen} onOpenChange={setLanguageDrawerOpen}>
+                      <DrawerTrigger asChild>
+                        <Button variant="outline" className="w-full justify-between">
+                          <div className="flex items-center">
+                            <Globe className="mr-2 h-4 w-4" />
+                            {t(`languages.${activeLanguage}`)}
+                          </div>
+                          <ChevronDown className="h-4 w-4" />
+                        </Button>
+                      </DrawerTrigger>
+                      <DrawerContent>
+                        <DrawerHeader>
+                          <DrawerTitle className="text-2xl font-bold text-foreground text-center">{t("skillsOverview.selectLanguage")}</DrawerTitle>
+                        </DrawerHeader>
+                        <div className="px-4 pb-4">
+                          <div className="grid grid-cols-1 gap-2">
+                            {googleAssistantData.languages.map((lang) => (
+                              <button
+                                key={lang.code}
+                                onClick={() => {
+                                  setActiveLanguage(lang.code);
+                                  setLanguageDrawerOpen(false);
+                                }}
+                                className={`flex items-center px-4 py-3 rounded-lg transition-colors ${
+                                  activeLanguage === lang.code
+                                    ? 'bg-blue-500 text-white'
+                                    : 'bg-gray-100 dark:bg-gray-700 text-foreground hover:bg-gray-200 dark:hover:bg-gray-600'
+                                }`}
+                              >
+                                <Globe className="mr-3 h-5 w-5" />
+                                <span className="font-medium">{t(`languages.${lang.code}`)}</span>
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      </DrawerContent>
+                    </Drawer>
+                  </div>
+                ) : (
+                  <select
+                    value={activeLanguage}
+                    onChange={(e) => setActiveLanguage(e.target.value)}
+                    className="mt-4 lg:mt-0 px-4 py-2 border border-border rounded-lg bg-background text-foreground"
+                  >
+                    {googleAssistantData.languages.map((lang) => (
+                      <option key={lang.code} value={lang.code}>{t(`languages.${lang.code}`)}</option>
+                    ))}
+                  </select>
+                )}
               </div>
 
               {/* Categories */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
                 <h3 className="text-2xl font-bold text-foreground mb-6">{t(`languages.${activeLanguage}`)}</h3>
                 
-                {/* Category Tabs */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {availableCategories.map((category: { id: string; tag: string; name: string }) => {
-                    const Icon = iconMap[category.tag];
-                    return (
-                      <button
-                        key={category.id}
-                        onClick={() => setActiveCategory(category.id)}
-                        className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
-                          activeCategory === category.id
-                            ? 'bg-blue-500 text-white'
-                            : 'bg-gray-100 dark:bg-gray-700 text-foreground hover:bg-gray-200 dark:hover:bg-gray-600'
-                        }`}
-                      >
-                        {Icon && <Icon className="mr-2 h-4 w-4" />}
-                        {category.name}
-                      </button>
-                    );
-                  })}
-                </div>
+                {/* Category Selection */}
+                {isMobile ? (
+                  <div className="mb-6">
+                    <Drawer open={drawerOpen} onOpenChange={setDrawerOpen}>
+                      <DrawerTrigger asChild>
+                        <Button variant="outline" className="w-full justify-between">
+                          <div className="flex items-center">
+                            {(() => {
+                              const activeCategory_data = availableCategories.find(cat => cat.id === activeCategory);
+                              const Icon = activeCategory_data ? iconMap[activeCategory_data.tag] : null;
+                              return (
+                                <>
+                                  {Icon && <Icon className="mr-2 h-4 w-4" />}
+                                  {activeCategory_data?.name}
+                                </>
+                              );
+                            })()}
+                          </div>
+                          <ChevronDown className="h-4 w-4" />
+                        </Button>
+                      </DrawerTrigger>
+                      <DrawerContent>
+                        <DrawerHeader>
+                          <DrawerTitle className="text-2xl font-bold text-foreground text-center">{t("skillsOverview.selectCategory")}</DrawerTitle>
+                        </DrawerHeader>
+                        <div className="px-4 pb-4">
+                          <div className="grid grid-cols-2 gap-2">
+                            {availableCategories.map((category: { id: string; tag: string; name: string }) => {
+                              const Icon = iconMap[category.tag];
+                              return (
+                                <button
+                                  key={category.id}
+                                  onClick={() => {
+                                    setActiveCategory(category.id);
+                                    setDrawerOpen(false);
+                                  }}
+                                  className={`flex items-center justify-center px-4 py-3 rounded-lg transition-colors ${
+                                    activeCategory === category.id
+                                      ? 'bg-blue-500 text-white'
+                                      : 'bg-gray-100 dark:bg-gray-700 text-foreground hover:bg-gray-200 dark:hover:bg-gray-600'
+                                  }`}
+                                >
+                                  <div className="text-center">
+                                    {Icon && <Icon className="mx-auto mb-1 h-5 w-5" />}
+                                    <div className="text-sm font-medium">{category.name}</div>
+                                  </div>
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </DrawerContent>
+                    </Drawer>
+                  </div>
+                ) : (
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {availableCategories.map((category: { id: string; tag: string; name: string }) => {
+                      const Icon = iconMap[category.tag];
+                      return (
+                        <button
+                          key={category.id}
+                          onClick={() => setActiveCategory(category.id)}
+                          className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
+                            activeCategory === category.id
+                              ? 'bg-blue-500 text-white'
+                              : 'bg-gray-100 dark:bg-gray-700 text-foreground hover:bg-gray-200 dark:hover:bg-gray-600'
+                          }`}
+                        >
+                          {Icon && <Icon className="mr-2 h-4 w-4" />}
+                          {category.name}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
 
                 {/* Skills */}
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">

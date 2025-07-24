@@ -131,7 +131,10 @@ export const googleAssistant = {
   skillsOverview: {
     title: "技能總覽",
     subtitle: "根據使用者的地區設定，自動切換回應語言",
-    languageSelector: "選擇語言"
+    languageSelector: "選擇語言",
+    selectLanguage: "選擇語言",
+    selectCategory: "選擇類別",
+    noSkills: "此類別暫無可用技能。"
   },
   userComments: {
     title: "用戶留言",

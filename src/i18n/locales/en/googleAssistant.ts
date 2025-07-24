@@ -129,7 +129,10 @@ export const googleAssistant = {
   skillsOverview: {
     title: "Skills Overview",
     subtitle: "Automatically switches response language based on user's locale",
-    languageSelector: "Select Language"
+    languageSelector: "Select Language",
+    selectLanguage: "Select Language",
+    selectCategory: "Select Category",
+    noSkills: "No skills available for this category."
   },
   userComments: {
     title: "User Reviews",
