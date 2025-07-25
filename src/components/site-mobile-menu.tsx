@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import { ModeToggle } from "./model-toggle";
 import { LanguageToggle } from "./language-toggle";
@@ -14,6 +15,7 @@ interface SiteMobileMenuProps {
 export function SiteMobileMenu({ onItemClick }: SiteMobileMenuProps) {
   const { t } = useTranslation('navigation');
   const [sideProjectsOpen, setSideProjectsOpen] = useState(false);
+  const pathname = usePathname();
 
   const handleLinkClick = () => {
     onItemClick?.();
@@ -23,13 +25,36 @@ export function SiteMobileMenu({ onItemClick }: SiteMobileMenuProps) {
     setSideProjectsOpen(!sideProjectsOpen);
   };
 
+  const isActive = (path: string) => {
+    // Handle trailing slashes for static export
+    const normalizedPathname = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
+    const normalizedPath = path.endsWith('/') && path !== '/' ? path.slice(0, -1) : path;
+    
+    // Debug logging (remove in production)
+    console.log('Checking path:', { path, pathname, normalizedPath, normalizedPathname });
+    
+    return normalizedPathname === normalizedPath;
+  };
+
+  const getActiveClasses = (path: string) => {
+    return isActive(path) 
+      ? "flex items-center px-4 py-3 text-lg font-medium transition-all duration-200 bg-primary/10 text-primary rounded-lg border border-primary/20" 
+      : "flex items-center px-4 py-3 text-lg font-medium transition-all duration-200 hover:bg-muted/50 hover:text-primary rounded-lg";
+  };
+
+  const getSubActiveClasses = (path: string) => {
+    return isActive(path)
+      ? "flex items-center px-4 py-2 text-base font-medium transition-all duration-200 bg-primary/10 text-primary rounded-lg border border-primary/20"
+      : "flex items-center px-4 py-2 text-base font-medium transition-all duration-200 hover:bg-muted/30 hover:text-primary rounded-lg";
+  };
+
   return (
     <nav className="flex flex-col w-full py-2">
       {/* Main Navigation */}
       <div className="flex flex-col space-y-1">
         <Link 
           href="/" 
-          className="flex items-center px-4 py-3 text-lg font-medium transition-all duration-200 hover:bg-muted/50 hover:text-primary rounded-lg"
+          className={getActiveClasses("/")}
           onClick={handleLinkClick}
         >
           <Home className="w-5 h-5 mr-3" />
@@ -38,7 +63,7 @@ export function SiteMobileMenu({ onItemClick }: SiteMobileMenuProps) {
         
         <Link 
           href="/blog" 
-          className="flex items-center px-4 py-3 text-lg font-medium transition-all duration-200 hover:bg-muted/50 hover:text-primary rounded-lg"
+          className={getActiveClasses("/blog")}
           onClick={handleLinkClick}
         >
           <BookOpen className="w-5 h-5 mr-3" />
@@ -47,7 +72,7 @@ export function SiteMobileMenu({ onItemClick }: SiteMobileMenuProps) {
         
         <Link 
           href="/timeline" 
-          className="flex items-center px-4 py-3 text-lg font-medium transition-all duration-200 hover:bg-muted/50 hover:text-primary rounded-lg"
+          className={getActiveClasses("/timeline")}
           onClick={handleLinkClick}
         >
           <Clock className="w-5 h-5 mr-3" />
@@ -75,7 +100,7 @@ export function SiteMobileMenu({ onItemClick }: SiteMobileMenuProps) {
             <div className="ml-8 flex flex-col space-y-1 mt-1">
               <Link 
                 href="/google-assistant" 
-                className="flex items-center px-4 py-2 text-base font-medium transition-all duration-200 hover:bg-muted/30 hover:text-primary rounded-lg"
+                className={getSubActiveClasses("/google-assistant")}
                 onClick={handleLinkClick}
               >
                 <Mic className="w-4 h-4 mr-3" />
@@ -84,7 +109,7 @@ export function SiteMobileMenu({ onItemClick }: SiteMobileMenuProps) {
               
               <Link 
                 href="/gdg-taipei-projects" 
-                className="flex items-center px-4 py-2 text-base font-medium transition-all duration-200 hover:bg-muted/30 hover:text-primary rounded-lg"
+                className={getSubActiveClasses("/gdg-taipei-projects")}
                 onClick={handleLinkClick}
               >
                 <Users className="w-4 h-4 mr-3" />
