@@ -136,17 +136,16 @@ export const mainSection = {
         school: "National Taiwan University of Science and Technology",
         location: "Taipei",
         period: "2020 - 2022",
-        description: "Focused on research in Artificial Intelligence and Machine Learning, exploring the possibilities of AI technology in practical application scenarios.",
+        description: "Focused on fuzzy mathematics in multi-attribute decision-making, published a research paper.",
         coursework: [
-          "Machine Learning",
-          "Deep Learning",
-          "Natural Language Processing",
-          "Cloud Computing"
+          "Fuzzy Systems",
+          "Introduction to Deep Learning and Its Applications",
+          "Database Design",
+          "Social Media Data Analysis"
         ],
         achievements: [
           "Published a research paper",
-          "Participated in industry-academia collaboration projects",
-          "Served as a Research Assistant"
+          "Served as a Teaching Assistant"
         ]
       },
       {
@@ -156,15 +155,14 @@ export const mainSection = {
         period: "2014 - 2018",
         description: "Built interdisciplinary thinking on the foundation of materials science and began to learn programming, laying the groundwork for future technological development.",
         coursework: [
-          "Materials Science",
           "Optoelectronic Engineering",
           "Fundamentals of Programming",
-          "Numerical Analysis"
+          "Numerical Analysis",
+          "Materials Science"
         ],
         achievements: [
-          "Excellent Undergraduate Research Project",
-          "Honorable Mention in Programming Contest",
-          "Department Student Association Officer"
+          "Served as a Teaching Assistant",
+          "Assisted with thesis guidance and wrote SOP"
         ]
       }
     ],
@@ -176,12 +174,6 @@ export const mainSection = {
           name: "TOEIC",
           issuer: "ETS",
           score: "825",
-          year: "2023"
-        },
-        {
-          name: "Associate Cloud Engineer",
-          issuer: "Google Cloud",
-          description: "An Associate Cloud Engineer deploys applications, monitors operations, and manages enterprise solutions.",
           year: "2023"
         }
       ]

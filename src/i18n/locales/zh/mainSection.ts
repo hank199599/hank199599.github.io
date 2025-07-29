@@ -136,17 +136,16 @@ export const mainSection = {
                 school: "國立台灣科技大學",
                 location: "台北市",
                 period: "2020 - 2022",
-                description: "專注於人工智慧和機器學習領域的研究，探索 AI 技術在實際應用場景中的可能性。",
+                description: "專注於模糊領域在多屬性決策的應用，發表一篇期刊論文",
                 coursework: [
-                    "機器學習",
-                    "深度學習",
-                    "自然語言處理",
-                    "雲端運算"
+                    "模糊系統",
+                    "深度學習導論與其應用",
+                    "資料庫設計",
+                    "社群媒體資料分析實務"
                 ],
                 achievements: [
                     "發表研究論文",
-                    "參與產學合作專案",
-                    "擔任研究助理"
+                    "擔任教學助理"
                 ]
             },
             {
@@ -156,15 +155,13 @@ export const mainSection = {
                 period: "2014 - 2018",
                 description: "在材料科學的基礎上，培養跨領域思維，並開始接觸程式設計，為未來的技術發展奠定基礎。",
                 coursework: [
-                    "材料科學",
                     "光電工程",
-                    "程式設計基礎",
-                    "數值分析"
+                    "材料科學",
+                    "程式設計基礎"
                 ],
                 achievements: [
-                    "專題研究優等",
-                    "程式設計競賽佳作",
-                    "系學會幹部"
+                    "擔任教學助理",
+                    "協助專題指導並撰寫SOP"
                 ]
             }
         ],
@@ -176,12 +173,6 @@ export const mainSection = {
                     name: "TOEIC",
                     issuer: "ETS",
                     score: "825",
-                    year: "2023"
-                },
-                {
-                    name: "Associate Cloud Engineer",
-                    issuer: "Google Cloud",
-                    description: "An Associate Cloud Engineer deploys applications, monitors operations, and manages enterprise solutions.",
                     year: "2023"
                 }
             ]
