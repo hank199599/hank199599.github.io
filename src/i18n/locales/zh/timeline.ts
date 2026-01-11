@@ -60,6 +60,13 @@ export const timeline = {
       link: { text: "Meetup 頁面" }
     },
     {
+      date: "2021/03-2021/06",
+      title: "Cloud Student Sprint Program",
+      company: "Google Cloud Student Sprint Program @ Google",
+      description: "由Google所舉辦，是一項在3月到6月期間進行為期 10 週的線上課程及工作坊的計畫。\n這個計畫網羅40名來自台灣、中國與海外的學生，並以5~6人小組形式由在 Google Cloud 擔任雲端工程師的 Googler 導師進行分組指導。\n我們獲得有關 Google Cloud Platform 的基礎知識並沉浸於 Google 的企業文化中。\n該計畫的最終目標是帶領學生通過 Google Cloud Associate Cloud Engineer (ACE) 的專業認證考試。",
+      link: { text: "https://web.archive.org/web/20211202222716/https:/buildyourfuture.withgoogle.com/programs/cloud-student-sprint-programs/" }
+    },
+    {
       date: "2020-2022",
       title: "就讀國立台灣科技大學",
       company: "國立台灣科技大學",

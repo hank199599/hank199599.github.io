@@ -60,6 +60,13 @@ export const timeline = {
       link: { text: "Meetup Page" }
     },
     {
+      date: "March 202 - June 2022",
+      title: "Cloud Student Sprint Program",
+      company: "Google",
+      description: "Hosted by Google,\nIn this 10-week online course and workshop:\n40 students from Taiwan, China, and overseas were selected in groups of 5-6, guided by Googler mentors in Google Cloud.",
+      link: { text: "https://web.archive.org/web/20211202222716/https:/buildyourfuture.withgoogle.com/programs/cloud-student-sprint-programs/" }
+    },
+    {
       date: "2020-2022",
       title: "Studied at National Taiwan University of Science and Technology",
       company: "National Taiwan University of Science and Technology",
