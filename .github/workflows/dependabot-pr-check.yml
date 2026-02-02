@@ -1,0 +1,74 @@
+# Workflow to automatically check and approve PRs created by Dependabot
+#
+# Runs build and lint checks to validate dependency updates,
+# then auto-approves the PR if all checks pass
+#
+name: Dependabot PR Check
+
+on:
+  pull_request_target:
+    branches: ["master"]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    # Only run for Dependabot PRs
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Detect package manager
+        id: detect-package-manager
+        run: |
+          if [ -f "${{ github.workspace }}/src/yarn.lock" ]; then
+            echo "manager=yarn" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            echo "runner=yarn" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ -f "${{ github.workspace }}/src/package.json" ]; then
+            echo "manager=npm" >> $GITHUB_OUTPUT
+            echo "command=install" >> $GITHUB_OUTPUT
+            echo "runner=npx --no-install" >> $GITHUB_OUTPUT
+            exit 0
+          else
+            echo "Unable to determine package manager"
+            exit 1
+          fi
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
+          cache-dependency-path: src/package-lock.json
+
+      - name: Restore cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            src/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('src/package-lock.json', 'src/yarn.lock') }}-${{ hashFiles('src/**.[jt]s', 'src/**.[jt]sx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('src/package-lock.json', 'src/yarn.lock') }}-
+
+      - name: Install dependencies
+        run: cd src && ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
+      - name: Run lint
+        run: cd src && ${{ steps.detect-package-manager.outputs.runner }} next lint
+
+      - name: Build with Next.js
+        run: cd src && ${{ steps.detect-package-manager.outputs.runner }} next build
+
+      - name: Auto-approve PR
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
