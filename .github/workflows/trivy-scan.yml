@@ -76,6 +76,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Ensure required labels exist
+          gh label create "security" --description "Security-related issues" --color "D93F0B" --force 2>/dev/null || true
+          gh label create "trivy" --description "Trivy vulnerability scan results" --color "FBCA04" --force 2>/dev/null || true
+
           VULN_COUNT=$(jq '[.Results[]? | .Vulnerabilities[]?] | length' trivy-fs-results.json 2>/dev/null || echo "0")
 
           if [ "$VULN_COUNT" -eq 0 ]; then
