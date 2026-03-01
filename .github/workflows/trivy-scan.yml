@@ -1,0 +1,183 @@
+# Workflow to scan the project for security vulnerabilities using Trivy
+#
+# Runs on pushes to master, pull requests, and weekly schedule.
+# Scans the filesystem for vulnerabilities in dependencies and IaC misconfigurations.
+#
+name: Trivy Security Scan
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+  schedule:
+    # Run weekly on Monday at 09:00 UTC
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+  issues: write
+
+jobs:
+  trivy-fs-scan:
+    name: Trivy Filesystem Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set default branch name
+        run: git config --global init.defaultBranch master
+
+      - name: Install dependencies
+        run: cd src && npm install
+
+      - name: Install Trivy
+        run: |
+          sudo apt-get install -y wget apt-transport-https gnupg
+          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+          echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb generic main" | sudo tee /etc/apt/sources.list.d/trivy.list
+          sudo apt-get update
+          sudo apt-get install -y trivy
+          trivy --version
+
+      - name: Run Trivy vulnerability scanner (filesystem)
+        id: trivy-sarif
+        uses: aquasecurity/trivy-action@0.34.1
+        with:
+          scan-type: "fs"
+          scan-ref: "src"
+          format: "sarif"
+          output: "trivy-fs-results.sarif"
+          severity: "CRITICAL,HIGH"
+          skip-setup-trivy: true
+
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v4
+        if: always() && steps.trivy-sarif.outcome == 'success'
+        with:
+          sarif_file: "trivy-fs-results.sarif"
+
+      - name: Run Trivy vulnerability scanner (JSON for issue creation)
+        id: trivy-json
+        uses: aquasecurity/trivy-action@0.34.1
+        with:
+          scan-type: "fs"
+          scan-ref: "src"
+          format: "json"
+          output: "trivy-fs-results.json"
+          severity: "CRITICAL,HIGH"
+          skip-setup-trivy: true
+
+      - name: Create GitHub Issue if vulnerabilities found
+        if: always() && steps.trivy-json.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Ensure required labels exist
+          gh label create "security" --description "Security-related issues" --color "D93F0B" --force 2>/dev/null || true
+          gh label create "trivy" --description "Trivy vulnerability scan results" --color "FBCA04" --force 2>/dev/null || true
+
+          VULN_COUNT=$(jq '[.Results[]? | .Vulnerabilities[]?] | length' trivy-fs-results.json 2>/dev/null || echo "0")
+
+          if [ "$VULN_COUNT" -eq 0 ]; then
+            echo "No CRITICAL/HIGH vulnerabilities found. Skipping issue creation."
+            exit 0
+          fi
+
+          # Check if an open issue with the same label already exists
+          EXISTING=$(gh issue list --label "security" --label "trivy" --state open --limit 1 --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            echo "Open Trivy issue #$EXISTING already exists. Skipping duplicate creation."
+            exit 0
+          fi
+
+          SCAN_DATE=$(date -u +"%Y-%m-%d")
+
+          # Build issue body
+          BODY="## Trivy Security Scan Report — ${SCAN_DATE}
+
+          **Scan triggered by:** \`${{ github.event_name }}\` on \`${{ github.ref_name }}\`
+          **Workflow run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          **Vulnerabilities found:** ${VULN_COUNT} (CRITICAL/HIGH)
+
+          ### Vulnerability Details
+
+          | Package | Installed | Vulnerability | Severity | Fixed Version |
+          |---------|-----------|---------------|----------|---------------|"
+
+          # Parse JSON and append rows
+          ROWS=$(jq -r '
+            [.Results[]? | .Vulnerabilities[]?] |
+            sort_by(.Severity) | reverse |
+            .[:20][] |
+            "| \(.PkgName) | \(.InstalledVersion) | [\(.VulnerabilityID)](https://avd.aquasec.com/nvd/\(.VulnerabilityID | ascii_downcase)) | \(.Severity) | \(.FixedVersion // "N/A") |"
+          ' trivy-fs-results.json 2>/dev/null)
+
+          BODY="${BODY}
+          ${ROWS}"
+
+          if [ "$VULN_COUNT" -gt 20 ]; then
+            BODY="${BODY}
+
+          > Showing top 20 of ${VULN_COUNT} vulnerabilities. See the [full scan results](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details."
+          fi
+
+          gh issue create \
+            --title "Trivy: ${VULN_COUNT} vulnerabilities found (${SCAN_DATE})" \
+            --body "$BODY" \
+            --label "security,trivy"
+
+      - name: Run Trivy vulnerability scanner (table output)
+        uses: aquasecurity/trivy-action@0.34.1
+        if: always()
+        with:
+          scan-type: "fs"
+          scan-ref: "src"
+          format: "table"
+          severity: "CRITICAL,HIGH,MEDIUM"
+          skip-setup-trivy: true
+
+      - name: Write GitHub Job Summary
+        if: always() && steps.trivy-json.outcome == 'success'
+        run: |
+          SCAN_DATE=$(date -u +"%Y-%m-%d %H:%M UTC")
+          CRITICAL=$(jq '[.Results[]? | .Vulnerabilities[]? | select(.Severity == "CRITICAL")] | length' trivy-fs-results.json 2>/dev/null || echo "0")
+          HIGH=$(jq '[.Results[]? | .Vulnerabilities[]? | select(.Severity == "HIGH")] | length' trivy-fs-results.json 2>/dev/null || echo "0")
+          TOTAL=$((CRITICAL + HIGH))
+
+          {
+            echo "## :shield: Trivy Security Scan Summary"
+            echo ""
+            echo "**Scan date:** ${SCAN_DATE}"
+            echo "**Trigger:** \`${{ github.event_name }}\` on \`${{ github.ref_name }}\`"
+            echo "**Scan target:** \`src/\` (filesystem)"
+            echo ""
+
+            if [ "$TOTAL" -eq 0 ]; then
+              echo "> :white_check_mark: **No CRITICAL or HIGH vulnerabilities found.**"
+            else
+              echo "> :warning: **${TOTAL} vulnerabilities found** (${CRITICAL} critical, ${HIGH} high)"
+              echo ""
+              echo "| Package | Installed | Vulnerability | Severity | Fixed Version |"
+              echo "|---------|-----------|---------------|----------|---------------|"
+
+              jq -r '
+                [.Results[]? | .Vulnerabilities[]?] |
+                sort_by(.Severity) | reverse |
+                .[:30][] |
+                "| \(.PkgName) | \(.InstalledVersion) | [\(.VulnerabilityID)](https://avd.aquasec.com/nvd/\(.VulnerabilityID | ascii_downcase)) | \(.Severity) | \(.FixedVersion // "N/A") |"
+              ' trivy-fs-results.json 2>/dev/null
+
+              if [ "$TOTAL" -gt 30 ]; then
+                echo ""
+                echo "> Showing top 30 of ${TOTAL} vulnerabilities."
+              fi
+            fi
+
+            echo ""
+            echo "---"
+            echo "*Full results available in the [Security tab](${{ github.server_url }}/${{ github.repository }}/security/code-scanning) and workflow logs.*"
+          } >> "$GITHUB_STEP_SUMMARY"
