@@ -5,7 +5,9 @@ import { useWebMCP } from '@mcp-b/react-webmcp';
 import { z } from 'zod';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from 'next-themes';
+import { useRouter } from 'next/navigation';
 import i18n from '@/i18n/config';
+import { googleAssistantData, action_name_dict } from '@/data/google-assistant';
 
 function GetProfileInfoTool() {
   const { t } = useTranslation('mainSection');
@@ -242,7 +244,7 @@ function SwitchThemeTool() {
 function NavigateToSectionTool() {
   useWebMCP({
     name: 'navigate_to_section',
-    description: 'Scroll to a specific section of the portfolio page.',
+    description: 'Scroll to a specific section of the current page (works on the home page).',
     inputSchema: {
       section: z.enum(['home', 'about', 'experience', 'skills', 'education']).describe('The section to navigate to'),
     },
@@ -264,6 +266,211 @@ function NavigateToSectionTool() {
   return null;
 }
 
+function GetSitePagesTool() {
+  const { t } = useTranslation('navigation');
+
+  useWebMCP({
+    name: 'get_site_pages',
+    description: 'Get the full site structure with all available pages and their descriptions.',
+    inputSchema: {},
+    annotations: {
+      title: 'Get Site Pages',
+      readOnlyHint: true,
+    },
+    handler: async () => {
+      return {
+        pages: [
+          {
+            path: '/',
+            name: t('home'),
+            description: 'Main portfolio page with profile, about, work experience, skills, and education sections.',
+          },
+          {
+            path: '/timeline/',
+            name: t('timeline'),
+            description: 'Career and life timeline showing work, education, and community activity events in chronological order.',
+          },
+          {
+            path: '/gdg-taipei-projects/',
+            name: 'GDG Taipei Projects',
+            description: 'Open-source projects by Google Developer Group Taipei, including AI-powered RSS auto-posting, social media APIs, and the GDG Taiwan website.',
+          },
+          {
+            path: '/google-assistant/',
+            name: 'Google Assistant',
+            description: 'Showcase of 32+ Google Assistant voice applications across 10 languages and multiple categories.',
+          },
+        ],
+        currentPath: window.location.pathname,
+      };
+    },
+  });
+
+  return null;
+}
+
+function NavigateToPageTool() {
+  const router = useRouter();
+
+  useWebMCP({
+    name: 'navigate_to_page',
+    description: 'Navigate to a different page on the website.',
+    inputSchema: {
+      page: z.enum(['/', '/timeline/', '/gdg-taipei-projects/', '/google-assistant/']).describe('The page path to navigate to'),
+    },
+    annotations: {
+      title: 'Navigate to Page',
+      readOnlyHint: false,
+      idempotentHint: true,
+    },
+    handler: async ({ page }) => {
+      router.push(page);
+      return { success: true, page, message: `Navigated to ${page}` };
+    },
+  });
+
+  return null;
+}
+
+function GetTimelineTool() {
+  const { t } = useTranslation('timeline');
+
+  useWebMCP({
+    name: 'get_timeline',
+    description: 'Get the career and life timeline events including work experience, education, and community activities.',
+    inputSchema: {},
+    annotations: {
+      title: 'Get Timeline',
+      readOnlyHint: true,
+    },
+    handler: async () => {
+      const events = t('events', { returnObjects: true }) as Array<{
+        date: string;
+        title: string;
+        company: string;
+        description: string;
+        location?: string;
+        duration?: string;
+        type: string;
+        link?: { text: string; url: string };
+      }>;
+
+      return {
+        title: t('title'),
+        subtitle: t('subtitle'),
+        events,
+      };
+    },
+  });
+
+  return null;
+}
+
+function GetGdgProjectsTool() {
+  const { t } = useTranslation('gdgTaipei');
+
+  useWebMCP({
+    name: 'get_gdg_projects',
+    description: 'Get GDG Taipei open-source projects including project details, tech stacks, and community information.',
+    inputSchema: {},
+    annotations: {
+      title: 'Get GDG Projects',
+      readOnlyHint: true,
+    },
+    handler: async () => {
+      const projects = [
+        {
+          id: 'rss-auto-post',
+          name: t('projects.rss-auto-post.name'),
+          description: t('projects.rss-auto-post.description'),
+          features: t('projects.rss-auto-post.features', { returnObjects: true }),
+          techStack: ['JavaScript', 'Google Apps Script', 'Firebase', 'Facebook Graph API', 'Threads API', 'Gemini AI'],
+          githubUrl: 'https://github.com/GDGTaipei/rss-auto-post-facebook-with-gemini',
+        },
+        {
+          id: 'social-media-api',
+          name: t('projects.social-media-api.name'),
+          description: t('projects.social-media-api.description'),
+          features: t('projects.social-media-api.features', { returnObjects: true }),
+          techStack: ['TypeScript', 'Firebase', 'Express', 'Vertex AI', 'GitHub Actions'],
+          githubUrl: 'https://github.com/GDGTaipei/SocialMediaPost_Cloud_Function',
+        },
+        {
+          id: 'gdg-taiwan-website',
+          name: t('projects.gdg-taiwan-website.name'),
+          description: t('projects.gdg-taiwan-website.description'),
+          features: t('projects.gdg-taiwan-website.features', { returnObjects: true }),
+          techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'react-i18next', 'next-sitemap', 'Firebase'],
+          githubUrl: 'https://github.com/gdg-twhk/gdg-taiwan-React',
+          demoUrl: 'https://gdg.tw',
+        },
+      ];
+
+      return {
+        about: {
+          title: t('about.title'),
+          subtitle: t('about.subtitle'),
+        },
+        community: {
+          website: 'https://gdg.community.dev/gdg-taipei/',
+          github: 'https://github.com/GDGTaipei',
+        },
+        projects,
+      };
+    },
+  });
+
+  return null;
+}
+
+function GetGoogleAssistantProjectsTool() {
+  const { t } = useTranslation('googleAssistant');
+
+  useWebMCP({
+    name: 'get_google_assistant_projects',
+    description: 'Get Google Assistant voice application projects with details, supported languages, and user reviews.',
+    inputSchema: {},
+    annotations: {
+      title: 'Get Google Assistant Projects',
+      readOnlyHint: true,
+    },
+    handler: async () => {
+      const projects = googleAssistantData.projects.map((p) => ({
+        id: p.id,
+        name: action_name_dict[p.id] ?? {},
+        category: p.category.id,
+        languages: p.languages,
+        githubLink: p.githubLink,
+        isActive: p.isActive,
+      }));
+
+      const categories = googleAssistantData.categories.map((c) => ({
+        id: c.id,
+        name: t(`categories.${c.id}`),
+      }));
+
+      const supportedLanguages = googleAssistantData.languages.map((l) => ({
+        code: l.code,
+        name: t(`languages.${l.code}`),
+      }));
+
+      return {
+        stats: {
+          totalSkills: t('stats.skills.number'),
+          uniqueUsers: t('stats.users.number'),
+          supportedLanguages: t('stats.languages.number'),
+        },
+        deprecationNote: t('deprecation.description'),
+        categories,
+        supportedLanguages,
+        projects,
+      };
+    },
+  });
+
+  return null;
+}
+
 export default function WebMCPTools() {
   return (
     <>
@@ -275,6 +482,11 @@ export default function WebMCPTools() {
       <SwitchLanguageTool />
       <SwitchThemeTool />
       <NavigateToSectionTool />
+      <GetSitePagesTool />
+      <NavigateToPageTool />
+      <GetTimelineTool />
+      <GetGdgProjectsTool />
+      <GetGoogleAssistantProjectsTool />
     </>
   );
 }
