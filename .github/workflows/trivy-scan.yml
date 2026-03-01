@@ -33,7 +33,7 @@ jobs:
 
       - name: Run Trivy vulnerability scanner (filesystem)
         id: trivy-sarif
-        uses: aquasecurity/trivy-action@v0.34.1
+        uses: aquasecurity/trivy-action@0.34.1
         with:
           scan-type: "fs"
           scan-ref: "src"
@@ -49,7 +49,7 @@ jobs:
 
       - name: Run Trivy vulnerability scanner (JSON for issue creation)
         id: trivy-json
-        uses: aquasecurity/trivy-action@v0.34.1
+        uses: aquasecurity/trivy-action@0.34.1
         with:
           scan-type: "fs"
           scan-ref: "src"
@@ -113,7 +113,7 @@ jobs:
             --label "security,trivy"
 
       - name: Run Trivy vulnerability scanner (table output)
-        uses: aquasecurity/trivy-action@v0.34.1
+        uses: aquasecurity/trivy-action@0.34.1
         if: always()
         with:
           scan-type: "fs"
