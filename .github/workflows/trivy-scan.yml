@@ -34,12 +34,6 @@ jobs:
       - name: Install dependencies
         run: cd src && npm install
 
-      - name: Install Trivy
-        run: |
-          TRIVY_VERSION="0.69.1"
-          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/master/contrib/install.sh | sh -s -- -b /usr/local/bin "v${TRIVY_VERSION}"
-          trivy --version
-
       - name: Run Trivy vulnerability scanner (filesystem)
         id: trivy-sarif
         uses: aquasecurity/trivy-action@0.34.1
@@ -49,7 +43,6 @@ jobs:
           format: "sarif"
           output: "trivy-fs-results.sarif"
           severity: "CRITICAL,HIGH"
-          skip-setup-trivy: true
 
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v4
@@ -66,7 +59,6 @@ jobs:
           format: "json"
           output: "trivy-fs-results.json"
           severity: "CRITICAL,HIGH"
-          skip-setup-trivy: true
 
       - name: Create GitHub Issue if vulnerabilities found
         if: always() && steps.trivy-json.outcome == 'success'
@@ -131,7 +123,6 @@ jobs:
           scan-ref: "src"
           format: "table"
           severity: "CRITICAL,HIGH,MEDIUM"
-          skip-setup-trivy: true
 
       - name: Write GitHub Job Summary
         if: always() && steps.trivy-json.outcome == 'success'
