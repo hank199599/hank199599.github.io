@@ -6,14 +6,11 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Education from "@/components/Education";
-import WebMCPTools from "@/components/WebMCPTools";
-
 export default function Home() {
   const { t } = useTranslation('mainSection');
 
   return (
     <main className="min-h-screen bg-background">
-      <WebMCPTools />
       <Hero t={t} />
       <About t={t} />
       <Experience t={t} />

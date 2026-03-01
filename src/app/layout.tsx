@@ -4,6 +4,7 @@ import "./globals.css";
 import { I18nProvider } from '@/i18n/I18nProvider';
 import { ThemeProvider } from "@/components/theme-provider"
 import { SiteHeader } from "@/components/site-header";
+import WebMCPTools from "@/components/WebMCPTools";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -118,6 +119,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <I18nProvider>
+            <WebMCPTools />
             <SiteHeader />
             {children}
           </I18nProvider>
