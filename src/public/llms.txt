@@ -1,0 +1,34 @@
+# Shao-Hung Yu (游紹宏) — Personal Portfolio
+
+> This is the personal portfolio website of Shao-Hung Yu (游紹宏), a Cloud Engineer at Trend Micro based in Taipei, Taiwan.
+
+## Site Purpose
+
+This website showcases professional experience, technical skills, education background, and side projects. It is bilingual (English and Traditional Chinese).
+
+## Key Pages
+
+- `/` — Main portfolio page with profile, about, work experience, skills, and education sections
+- `/timeline/` — Career and life timeline
+- `/gdg-taipei-projects/` — GDG Taipei community project contributions
+- `/google-assistant/` — Google Assistant related projects
+
+## About the Owner
+
+- **Name:** Shao-Hung Yu (游紹宏)
+- **Role:** Cloud Engineer at Trend Micro
+- **Previous:** Backend Engineer at LINE TV (CHOCO Media)
+- **Education:** M.S. in Computer Science, National Taiwan University of Science and Technology
+- **Skills:** Azure, Oracle Cloud, GCP, Kubernetes, Python, Go, CI/CD, Docker
+- **Community:** Speaker at GDG Taipei and TensorFlow User Group
+
+## Content Usage
+
+- Content on this site may be cited with proper attribution to "Shao-Hung Yu" with a link to https://hank199599.github.io/
+- This site supports WebMCP (Model Context Protocol) for structured data access by AI agents
+
+## Contact
+
+- GitHub: https://github.com/hank199599
+- LinkedIn: https://www.linkedin.com/in/shaohungyu/
+- Email: hank199599@gmail.com

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://hank199599.github.io/</loc>
+    <lastmod>2025-03-01</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hank199599.github.io/timeline/</loc>
+    <lastmod>2025-03-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hank199599.github.io/gdg-taipei-projects/</loc>
+    <lastmod>2025-03-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hank199599.github.io/google-assistant/</loc>
+    <lastmod>2025-03-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+</urlset>
