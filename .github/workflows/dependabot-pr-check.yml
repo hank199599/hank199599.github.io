@@ -10,7 +10,7 @@ on:
     branches: ["master"]
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
 jobs:
@@ -68,7 +68,13 @@ jobs:
         run: cd src && npm run build
 
       - name: Auto-approve PR
-        run: gh pr review --approve "$PR_URL"
+        run: gh pr review --approve --body "LGTM" "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Auto-merge PR
+        run: gh pr merge --auto --squash "$PR_URL"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
