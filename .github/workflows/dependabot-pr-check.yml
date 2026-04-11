@@ -62,10 +62,10 @@ jobs:
         run: cd src && ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Run lint
-        run: cd src && ${{ steps.detect-package-manager.outputs.runner }} next lint
+        run: cd src && npm run lint
 
       - name: Build with Next.js
-        run: cd src && ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: cd src && npm run build
 
       - name: Auto-approve PR
         run: gh pr review --approve "$PR_URL"
