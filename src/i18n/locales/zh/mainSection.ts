@@ -97,6 +97,28 @@ export const mainSection = {
                     },
                 ],
             },
+            {
+                company: "Google（谷歌）",
+                location: "台灣 · 遠距",
+                span: "2021/03 - 2021/06",
+                logo: "/experience-logos/google.png",
+                roles: [
+                    {
+                        title: "Cloud Student Sprint Program",
+                        period: "2021年3月 – 2021年6月 · 4 個月",
+                        employmentType: "學徒",
+                        description:
+                            "由 Google 舉辦，於 3 月至 6 月進行為期 10 週的線上課程與工作坊，帶領學員建立 Google Cloud Platform 基礎並鎖定 Associate Cloud Engineer 認證。",
+                        achievements: [
+                            "計畫網羅 40 名來自台灣、中國與海外的學員，以 5～6 人一組，由擔任 Google Cloud 雲端工程師的 Googler 導師分組指導",
+                            "取得 Google Cloud Platform 相關基礎知識，並體驗 Google 的工程文化",
+                            "計畫目標為協助學員通過 Google Cloud Associate Cloud Engineer（ACE）專業認證考試",
+                            "計畫結束後成功取得「Associate Cloud Engineer」專業認證",
+                        ],
+                        technologies: ["Google Cloud Platform（GCP）", "雲端運算", "Associate Cloud Engineer"],
+                    },
+                ],
+            },
         ],
     },
     skills: {

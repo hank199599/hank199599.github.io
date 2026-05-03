@@ -99,6 +99,28 @@ export const mainSection = {
           },
         ],
       },
+      {
+        company: "Google",
+        location: "Taiwan · Remote",
+        span: "Mar 2021 - Jun 2021",
+        logo: "/experience-logos/google.png",
+        roles: [
+          {
+            title: "Cloud Student Sprint Program",
+            period: "Mar 2021 - Jun 2021 · 4 mos",
+            employmentType: "Apprentice",
+            description:
+              "A 10-week online curriculum and workshops run by Google (March–June), introducing Google Cloud Platform and preparing cohorts for the Associate Cloud Engineer certification.",
+            achievements: [
+              "Joined a cohort of 40 students from Taiwan, China, and overseas; learned in teams of 5–6 with mentorship from Googlers working as Google Cloud engineers",
+              "Built foundational knowledge of Google Cloud Platform and experienced Google's engineering culture",
+              "Program goal: prepare students to earn the Google Cloud Associate Cloud Engineer (ACE) certification",
+              "Passed the Google Cloud Associate Cloud Engineer certification after completing the program",
+            ],
+            technologies: ["Google Cloud Platform", "Cloud Computing", "Associate Cloud Engineer"],
+          },
+        ],
+      },
     ],
   },
   skills: {
