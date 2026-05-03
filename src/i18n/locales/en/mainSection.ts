@@ -124,24 +124,20 @@ export const mainSection = {
     ],
   },
   skills: {
-    title: "Skills & Projects",
-    tabs: {
-      skills: "Professional Skills",
-      projects: "Key Projects"
-    },
+    title: "Professional Skills",
     categories: {
       cloud: {
         title: "Cloud Technologies",
         skills: [
           "Oracle Cloud",
           "Google Cloud Platform",
-          "AWS", 
+          "AWS",
           "Azure",
           "Firebase"
         ]
       },
       devops: {
-        title: "DevOps & Infrastructure", 
+        title: "DevOps & Infrastructure",
         skills: [
           "Terraform",
           "Kubernetes",
@@ -154,28 +150,68 @@ export const mainSection = {
         title: "Backend Development",
         skills: [
           "Python",
-          "Go", 
+          "Go",
           "Node.js",
           "SQL",
           "RESTful API"
         ]
+      },
+      soft: {
+        title: "Soft Skills",
+        skills: [
+          "Cross-team Communication & Requirement Clarification",
+          "Systems Thinking & Architecture Design",
+          "Technical Decision-making & Trade-off Analysis",
+          "End-to-end Delivery & Ownership",
+          "Knowledge Management & Documentation",
+          "Problem Solving & Root Cause Analysis",
+          "Community Building & Mentorship",
+          "Bilingual / Cross-cultural Collaboration"
+        ]
       }
-    },
-    projects: [
+    }
+  },
+  projects: {
+    title: "Key Projects",
+    releasesLabel: "Releases",
+    linksLabel: "Links",
+    items: [
       {
         title: "Google Assistant Actions",
-        description: "Developed multiple Google Assistant applications to provide users with diverse voice interaction services.",
-        tags: ["DialogFlow", "Cloud Functions", "Node.js"]
-      },
-      {
-        title: "LINE TV Backend System",
-        description: "Participated in the development and maintenance of LINE TV's backend system, handling large-scale user requests and data processing.",
-        tags: ["Python", "SQL", "System Design"]
-      },
-      {
-        title: "Cloud Monitoring System",
-        description: "Designed and implemented a monitoring system for cloud services to ensure service stability and availability.",
-        tags: ["GCP", "Cloud Monitoring", "Python"]
+        description: "Voice-enabled skills built on the Google Assistant third-party platform (Actions on Google, AoG) using Node.js, DialogFlow, and Firebase. Featured on the official Google Taiwan blog.",
+        tags: ["DialogFlow", "Cloud Functions", "Node.js", "Firebase"],
+        logo: "/project-logos/google-assistant.png",
+        highlightGroups: [
+          {
+            label: "July 31, 2019",
+            items: [
+              "Meal Decider (美食決定器)",
+              "Cows and Bulls (1A2B 猜數)",
+              "Master of Riddle (燈謎大師)",
+              "Sport Meeting of Brain (大腦運動會)"
+            ]
+          },
+          {
+            label: "March 31, 2020",
+            items: [
+              "Text Solitaire (詞語接龍)"
+            ]
+          }
+        ],
+        links: [
+          {
+            label: "GitHub Repo",
+            url: "https://github.com/hank199599/Google-Assistant-APP"
+          },
+          {
+            label: "Google Taiwan Blog (2019/07)",
+            url: "https://taiwan.googleblog.com/2019/07/google_31.html"
+          },
+          {
+            label: "Google Taiwan Blog (2020/03)",
+            url: "https://taiwan.googleblog.com/2020/03/tips-for-home-entertainment.html"
+          }
+        ]
       }
     ]
   },
@@ -191,6 +227,9 @@ export const mainSection = {
         achievements: [
           "Assist in organizing community events",
           "Help build GDG and WTM websites and make them open source for others to use",
+          "Assist in organizing I/O Extends 2023",
+          "Assist in organizing DevFest 2023, achieving a record attendance of 700 people",
+          "Assist in building a generative AI-powered automated posting system to help manage fan pages ( as the following link https://www.facebook.com/GDG.Taipei )",
         ],
         logo: "/volunteer-logos/gdg-taipei.png",
       },
@@ -203,6 +242,8 @@ export const mainSection = {
         achievements: [
           "Assist ML GDE Jerry Wu in managing Meetup communities",
           "Host an online book club on \"From Python to TensorFlow\"",
+          "Help building official website and related system",
+          "Participate in the \"TENSORFLOW EVERYWHERE: From 0 to 1\" event as a speaker",
         ],
         logo: "/volunteer-logos/tfug.png",
       },

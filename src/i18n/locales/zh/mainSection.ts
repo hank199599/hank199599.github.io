@@ -122,17 +122,13 @@ export const mainSection = {
         ],
     },
     skills: {
-        title: "技能與專案",
-        tabs: {
-            skills: "專業技能",
-            projects: "代表專案"
-        },
+        title: "專業技能",
         categories: {
             cloud: {
                 title: "雲端技術",
                 skills: [
                     "Oracle Cloud",
-                    "Google Cloud Platform", 
+                    "Google Cloud Platform",
                     "AWS",
                     "Azure",
                     "Firebase"
@@ -142,7 +138,7 @@ export const mainSection = {
                 title: "DevOps & 基礎設施",
                 skills: [
                     "Terraform",
-                    "Kubernetes", 
+                    "Kubernetes",
                     "Docker",
                     "CI/CD Pipeline",
                     "Cloud Functions"
@@ -154,27 +150,67 @@ export const mainSection = {
                     "Python",
                     "Go",
                     "Node.js",
-                    "SQL", 
+                    "SQL",
                     "RESTful API"
                 ]
+            },
+            soft: {
+                title: "軟技能",
+                skills: [
+                    "跨團隊溝通與需求釐清",
+                    "系統性思考與架構設計",
+                    "技術決策與 Trade-off 分析",
+                    "全週期交付與 Ownership",
+                    "知識管理與文件撰寫",
+                    "問題解決與根本原因分析",
+                    "技術社群經營與教學輔導",
+                    "Bilingual / 跨文化協作"
+                ]
             }
-        },
-        projects: [
+        }
+    },
+    projects: {
+        title: "代表專案",
+        releasesLabel: "發佈時間",
+        linksLabel: "相關連結",
+        items: [
             {
                 title: "Google Assistant Actions",
-                description: "開發多個 Google Assistant 應用程式，提供使用者多元的語音互動服務",
-                tags: ["DialogFlow", "Cloud Functions", "Node.js"]
+                description: "為 Google Assistant 第三方平台（Actions on Google, AoG）開發多個語音互動技能，使用 Node.js、DialogFlow 與 Firebase 建置，並獲 Google Taiwan 官方部落格報導。",
+                tags: ["DialogFlow", "Cloud Functions", "Node.js", "Firebase"],
+                logo: "/project-logos/google-assistant.gif",
+                highlightGroups: [
+                    {
+                        label: "2019 年 7 月 31 日",
+                        items: [
+                            "Meal Decider（美食決定器）",
+                            "Cows and Bulls（1A2B 猜數）",
+                            "Master of Riddle（燈謎大師）",
+                            "Sport Meeting of Brain（大腦運動會）",
+                        ],
+                    },
+                    {
+                        label: "2020 年 3 月 31 日",
+                        items: [
+                            "Text Solitaire（詞語接龍）",
+                        ],
+                    },
+                ],
+                links: [
+                    {
+                        label: "GitHub Repo",
+                        url: "https://github.com/hank199599/Google-Assistant-APP",
+                    },
+                    {
+                        label: "Google Taiwan 官方部落格（2019/07）",
+                        url: "https://taiwan.googleblog.com/2019/07/google_31.html",
+                    },
+                    {
+                        label: "Google Taiwan 官方部落格（2020/03）",
+                        url: "https://taiwan.googleblog.com/2020/03/tips-for-home-entertainment.html",
+                    },
+                ],
             },
-            {
-                title: "LINE TV 後端系統",
-                description: "參與開發和維護 LINE TV 的後端系統，處理大規模用戶請求和資料處理",
-                tags: ["Python", "SQL", "System Design"]
-            },
-            {
-                title: "雲端監控系統",
-                description: "設計和實現雲端服務的監控系統，確保服務的穩定性和可用性",
-                tags: ["GCP", "Cloud Monitoring", "Python"]
-            }
         ]
     },
     volunteer: {
@@ -189,6 +225,9 @@ export const mainSection = {
                 achievements: [
                     "協助籌辦社群活動",
                     "協助建置 GDG 與 WTM 網站，並以開源形式供他人使用",
+                    "協助籌辦 I/O Extends 2023",
+                    "協助籌辦 DevFest 2023，創下 700 人參與的紀錄",
+                    "協助建置生成式 AI 自動發文系統，幫助管理粉絲專頁（如：https://www.facebook.com/GDG.Taipei）",
                 ],
                 logo: "/volunteer-logos/gdg-taipei.png",
             },
@@ -201,6 +240,8 @@ export const mainSection = {
                 achievements: [
                     "協助 ML GDE Jerry Wu 管理 Meetup 社群",
                     "主辦「從 Python 到 TensorFlow」線上讀書會",
+                    "協助建置官方網站和相關系統",
+                    "參與「TENSORFLOW EVERYWHERE: From 0 to 1」活動並擔任講者",
                 ],
                 logo: "/volunteer-logos/tfug.png",
             },
