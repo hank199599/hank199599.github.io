@@ -40,34 +40,58 @@ export const mainSection = {
     title: "Work Experience",
     achievements: "Main Achievements",
     technologies: "Technologies Used",
-    jobs: [
+    companies: [
       {
-        title: "Cloud Engineer",
         company: "Trend Micro",
         location: "Taipei",
-        period: "Jul 2024 - Present",
-        description: "As a Cloud Engineer, I am responsible for developing and maintaining enterprise-level cloud services, ensuring system reliability and performance.",
-        achievements: [
-          "Collaborate closely with stakeholders for requirement discussions, cross-team integration, and problem-solving",
-          "As a full-cycle developer, responsible for the complete process from planning, design, to implementation, testing, deployment, and operation",
-          "Automate and improve development and release processes"
+        span: "Jul 2024 - Present",
+        roles: [
+          {
+            title: "Senior Software Engineer",
+            period: "Jan 2026 - Present",
+            description:
+              "Assist in the development of FIPS/STIG compliance certification, ensuring system reliability and performance.",
+            achievements: [
+              "Collaborate closely with stakeholders for requirement discussions, cross-team integration, and problem-solving",
+              "Integrate ChainGuard's FIPS 140-3 compliant Docker image and perform STIG compliance certification",
+              "Use AWS GovCloud for development and testing of compliance certification",
+            ],
+            technologies: ["Kubernetes", "FIPS 140-3", "STIG", "ChainGuard", "Terraform"],
+          },
+          {
+            title: "Software Engineer",
+            period: "Jul 2024 - Dec 2025",
+            description:
+              "As a Cloud Engineer, I developed and maintained enterprise-level cloud services, ensuring system reliability and performance.",
+            achievements: [
+              "Collaborate closely with stakeholders for requirement discussions, cross-team integration, and problem-solving",
+              "As a full-cycle developer, responsible for the complete process from planning, design, to implementation, testing, deployment, and operation",
+              "Automate and improve development and release processes",
+            ],
+            technologies: ["Azure", "Oracle Cloud", "CI/CD", "Kubernetes", "Python", "Golang"],
+          },
         ],
-        technologies: ["Azure", "Oracle Cloud", "CI/CD", "Kubernetes","Python","Golang"]
       },
       {
-        title: "Backend Engineer",
         company: "LINE TV (CHOCO Media)",
         location: "Taipei",
-        period: "Sep 2022 - Apr 2024",
-        description: "As a Backend Engineer at LINE TV, I was responsible for developing and maintaining core service systems.",
-        achievements: [
-          "Worked closely with PMs to understand business needs, design APIs, databases, and system architecture",
-          "Wrote logic based on the post-POC architecture, ensuring smooth product iteration through unit and integration testing",
-          "Participated in a large-scale system refactoring project to improve system performance and maintainability"
+        span: "Sep 2022 - Apr 2024",
+        roles: [
+          {
+            title: "Backend Engineer",
+            period: "Sep 2022 - Apr 2024",
+            description:
+              "Developed and maintained core backend systems for LINE TV's streaming platform.",
+            achievements: [
+              "Worked closely with PMs to understand business needs, design APIs, databases, and system architecture",
+              "Wrote logic based on the post-POC architecture, ensuring smooth product iteration through unit and integration testing",
+              "Participated in a large-scale system refactoring project to improve system performance and maintainability",
+            ],
+            technologies: ["Node.js", "SQL", "RESTful API", "Microservices", "Docker", "AWS"],
+          },
         ],
-        technologies: ["Azure", "Oracle Cloud", "CI/CD", "Kubernetes","Python","Golang"]
-      }
-    ]
+      },
+    ],
   },
   skills: {
     title: "Skills & Projects",

@@ -42,10 +42,23 @@ export const mainSection = {
         technologies: "使用技術",
         jobs: [
             {
-                title: "Cloud Engineer",
+                title: "Senior Software Engineer",
                 company: "Trend Micro (趨勢科技)",
                 location: "台北市",
-                period: "2024/07 - 至今",
+                period: "2026/01 - 至今",
+                description: "協助 FIPS/STIG 合規認證的開發工作，確保系統的可靠性和效能。",
+                achievements: [
+                    "與利害關係人密切合作，進行需求討論、跨團隊整合和問題排除",
+                    "整合 ChainGuard 的 FIPS 140-3 合規 Docker image，並進行 STIG 合規認證",
+                    "使用 AWS GovCloud 進行合規認證的開發和測試"  
+                ],
+                technologies: ["Kubernetes","FIPS 140-3","STIG","ChainGuard","Terraform"]
+            },
+            {
+                title: "Software Engineer",
+                company: "Trend Micro (趨勢科技)",
+                location: "台北市",
+                period: "2024/07 - 2025/12",
                 description: "作為雲端工程師，負責開發和維護企業級的雲端服務，確保系統的可靠性和效能。",
                 achievements: [
                     "與利害關係人密切合作，進行需求討論、跨團隊整合和問題排除",
