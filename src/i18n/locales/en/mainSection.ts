@@ -48,6 +48,7 @@ export const mainSection = {
         tenureLabel: "1 yr 11 mos",
         region: "Taiwan",
         workMode: "Hybrid",
+        logo: "/experience-logos/trend-micro.png",
         roles: [
           {
             title: "Senior Software Engineer",
@@ -81,6 +82,7 @@ export const mainSection = {
         company: "LINE TV (CHOCO Media)",
         location: "Taipei",
         span: "Sep 2022 - Apr 2024",
+        logo: "/experience-logos/line-tv.png",
         roles: [
           {
             title: "Backend Engineer",

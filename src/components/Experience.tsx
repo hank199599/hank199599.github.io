@@ -26,7 +26,7 @@ function CompanyLogo({
   return (
     <div
       className={cn(
-        "flex shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border/70 bg-muted/30 dark:border-zinc-700/80 dark:bg-zinc-950/60",
+        "flex shrink-0 items-center justify-center overflow-hidden rounded-xl border border-neutral-200/90 bg-white shadow-sm dark:border-zinc-300/80 dark:bg-white",
         className
       )}
       style={{ width: LOGO_BOX, height: LOGO_BOX }}

@@ -48,6 +48,7 @@ export const mainSection = {
                 tenureLabel: "1 年 11 個月",
                 region: "台灣",
                 workMode: "混合型",
+                logo: "/experience-logos/trend-micro.png",
                 roles: [
                     {
                         title: "Senior Software Engineer",
@@ -80,6 +81,7 @@ export const mainSection = {
                 company: "LINE TV（巧克科技）",
                 location: "台北市",
                 span: "2022/09 - 2024/04",
+                logo: "/experience-logos/line-tv.png",
                 roles: [
                     {
                         title: "後端工程師",
