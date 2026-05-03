@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { I18nProvider } from '@/i18n/I18nProvider';
 import { ThemeProvider } from "@/components/theme-provider"
@@ -19,6 +20,11 @@ const geistMono = Geist_Mono({
 const siteUrl = "https://hank199599.github.io";
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [{ url: "/img/favicon.png", sizes: "96x96", type: "image/png" }],
+    shortcut: "/img/favicon.png",
+    apple: "/img/favicon.png",
+  },
   title: "游紹宏 Shao-Hung Yu | Cloud Engineer Portfolio",
   description:
     "游紹宏 (Shao-Hung Yu) — Cloud Engineer at Trend Micro. Specialized in cloud architecture, backend development, and AI applications. Previously at LINE TV.",
@@ -101,17 +107,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Script
+          id="json-ld-person"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -126,6 +131,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-    </>
   );
 }

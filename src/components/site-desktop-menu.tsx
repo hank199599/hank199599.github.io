@@ -36,13 +36,6 @@ export function SiteDesktopMenu({ t }: Props) {
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild>
-            <Link href="/timeline" className={navigationMenuTriggerStyle()}>
-              {t('timeline')}
-            </Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
           <NavigationMenuTrigger>{t('sideProjects.title')}</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-3 p-4">

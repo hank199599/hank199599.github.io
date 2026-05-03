@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import { ModeToggle } from "./model-toggle";
 import { LanguageToggle } from "./language-toggle";
-import { ChevronDown, ChevronRight, Home, BookOpen, Clock, FolderOpen, Mic, Users, Heart } from "lucide-react";
+import { ChevronDown, ChevronRight, Home, BookOpen, FolderOpen, Mic, Users, Heart } from "lucide-react";
 
 interface SiteMobileMenuProps {
   onItemClick?: () => void;
@@ -68,15 +68,6 @@ export function SiteMobileMenu({ onItemClick }: SiteMobileMenuProps) {
         >
           <BookOpen className="w-5 h-5 mr-3" />
           {t('blog')}
-        </Link>
-        
-        <Link 
-          href="/timeline" 
-          className={getActiveClasses("/timeline")}
-          onClick={handleLinkClick}
-        >
-          <Clock className="w-5 h-5 mr-3" />
-          {t('timeline')}
         </Link>
 
         {/* Side Projects Section */}
