@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { Badge } from "@/components/ui/badge";
 import { TFunction } from "i18next";
 import { cn } from "@/lib/utils";
-import { formatTenure } from "@/lib/tenure";
+import { formatTenure, formatDateRange } from "@/lib/tenure";
 
 const LOGO_COL_W = "w-14"; // 56px — matches logo column width
 
@@ -52,7 +52,12 @@ function CompanyLogo({
 
 interface Role {
   title: string;
-  period: string;
+  /** Human-readable date range. Optional when startDate/endDate are present. */
+  period?: string;
+  /** ISO "YYYY-MM" — when present, the displayed range is computed from these. */
+  startDate?: string;
+  /** ISO "YYYY-MM"; omit for ongoing roles ("Present"). */
+  endDate?: string;
   /** e.g. Full-time / 正職 */
   employmentType?: string;
   description: string;
@@ -63,8 +68,9 @@ interface Role {
 interface CompanyGroup {
   company: string;
   location: string;
-  span: string;
-  /** ISO "YYYY-MM" — used to compute displayed tenure for multi-role companies. */
+  /** Human-readable date range. Optional when startDate/endDate are present. */
+  span?: string;
+  /** ISO "YYYY-MM" — used to compute displayed tenure/range for companies. */
   startDate?: string;
   /** ISO "YYYY-MM"; omit for ongoing roles ("Present"). */
   endDate?: string;
@@ -115,10 +121,6 @@ function RoleContent({
       </ul>
 
       <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2">
-        <Gem
-          className="h-3.5 w-3.5 shrink-0 text-muted-foreground/80 dark:text-zinc-500"
-          aria-hidden
-        />
         <div className="flex flex-wrap gap-2">
           {role.technologies.map((tech: string) => (
             <Badge
@@ -177,11 +179,15 @@ const Experience = ({ t }: Props) => {
                         </h3>
                         <p className="mt-1 text-sm text-muted-foreground dark:text-zinc-400">
                           {group.startDate
-                            ? formatTenure({
+                            ? `${formatDateRange({
                                 startDate: group.startDate,
                                 endDate: group.endDate,
                                 language: i18n.language,
-                              })
+                              })} · ${formatTenure({
+                                startDate: group.startDate,
+                                endDate: group.endDate,
+                                language: i18n.language,
+                              })}`
                             : group.span}
                         </p>
                         <div className="mt-0.5">
@@ -223,7 +229,13 @@ const Experience = ({ t }: Props) => {
                               </p>
                             ) : null}
                             <p className="mt-1 text-sm tabular-nums text-muted-foreground dark:text-zinc-400">
-                              {role.period}
+                              {role.startDate
+                                ? formatDateRange({
+                                    startDate: role.startDate,
+                                    endDate: role.endDate,
+                                    language: i18n.language,
+                                  })
+                                : role.period}
                             </p>
                             <RoleContent role={role} className="mt-1" />
                           </div>
@@ -245,15 +257,21 @@ const Experience = ({ t }: Props) => {
                               <p className="text-sm text-muted-foreground dark:text-zinc-400">
                                 {[group.company, group.location].filter(Boolean).join(" · ")}
                               </p>
+                              <p className="mt-1 text-sm tabular-nums text-muted-foreground dark:text-zinc-400">
+                                {group.roles[0].startDate
+                                  ? formatDateRange({
+                                      startDate: group.roles[0].startDate,
+                                      endDate: group.roles[0].endDate,
+                                      language: i18n.language,
+                                    })
+                                  : group.roles[0].period}
+                              </p>
                               {group.roles[0].employmentType ? (
                                 <p className="text-sm text-muted-foreground dark:text-zinc-400">
                                   {group.roles[0].employmentType}
                                 </p>
                               ) : null}
                             </div>
-                            <span className="shrink-0 text-sm tabular-nums text-muted-foreground dark:text-zinc-400 sm:pt-0.5 sm:text-right">
-                              {group.roles[0].period}
-                            </span>
                           </div>
                           <RoleContent role={group.roles[0]} />
                         </>

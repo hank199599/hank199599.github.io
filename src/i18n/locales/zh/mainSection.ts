@@ -80,12 +80,15 @@ export const mainSection = {
             {
                 company: "LINE TV（巧克科技）",
                 location: "台北市",
-                span: "2022/09 - 2024/04",
+                startDate: "2022-09",
+                endDate: "2024-04",
                 logo: "/experience-logos/line-tv.png",
+                workMode: "混合型",
                 roles: [
                     {
                         title: "後端工程師",
-                        period: "2022/09 - 2024/04",
+                        startDate: "2022-09",
+                        endDate: "2024-04",
                         employmentType: "正職",
                         description: "負責開發和維護 LINE TV 的後端系統，處理大規模用戶請求和資料處理。",
                         achievements: [
@@ -100,12 +103,15 @@ export const mainSection = {
             {
                 company: "Google（谷歌）",
                 location: "台灣 · 遠距",
-                span: "2021/03 - 2021/06",
+                startDate: "2021-03",
+                endDate: "2021-06",
+                workMode: "遠距",
                 logo: "/experience-logos/google.png",
                 roles: [
                     {
-                        title: "Cloud Student Sprint Program",
-                        period: "2021年3月 – 2021年6月 · 4 個月",
+                        title: "Cloud Student Sprint Program（雲端學生加速計畫）",
+                        startDate: "2021-03",
+                        endDate: "2021-06",
                         employmentType: "學徒",
                         description:
                             "由 Google 舉辦，於 3 月至 6 月進行為期 10 週的線上課程與工作坊，帶領學員建立 Google Cloud Platform 基礎並鎖定 Associate Cloud Engineer 認證。",

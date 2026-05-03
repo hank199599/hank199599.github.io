@@ -125,10 +125,6 @@ const Education = ({ t }: Props) => {
 
                   {edu.coursework.length > 0 && (
                     <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2">
-                      <BookOpen
-                        className="h-3.5 w-3.5 shrink-0 text-muted-foreground/80 dark:text-zinc-500"
-                        aria-hidden
-                      />
                       <div className="flex flex-wrap gap-2">
                         {edu.coursework.map((course) => (
                           <Badge

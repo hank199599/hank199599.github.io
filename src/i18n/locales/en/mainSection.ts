@@ -81,12 +81,15 @@ export const mainSection = {
       {
         company: "LINE TV (CHOCO Media)",
         location: "Taipei",
-        span: "Sep 2022 - Apr 2024",
+        startDate: "2022-09",
+        endDate: "2024-04",
+        workMode: "Hybrid",
         logo: "/experience-logos/line-tv.png",
         roles: [
           {
             title: "Backend Engineer",
-            period: "Sep 2022 - Apr 2024",
+            startDate: "2022-09",
+            endDate: "2024-04",
             employmentType: "Full-time",
             description:
               "Developed and maintained core backend systems for LINE TV's streaming platform.",
@@ -102,12 +105,15 @@ export const mainSection = {
       {
         company: "Google",
         location: "Taiwan · Remote",
-        span: "Mar 2021 - Jun 2021",
+        startDate: "2021-03",
+        endDate: "2021-06",
+        workMode: "Remote",
         logo: "/experience-logos/google.png",
         roles: [
           {
             title: "Cloud Student Sprint Program",
-            period: "Mar 2021 - Jun 2021 · 4 mos",
+            startDate: "2021-03",
+            endDate: "2021-06",
             employmentType: "Apprentice",
             description:
               "A 10-week online curriculum and workshops run by Google (March–June), introducing Google Cloud Platform and preparing cohorts for the Associate Cloud Engineer certification.",

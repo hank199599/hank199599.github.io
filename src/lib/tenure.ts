@@ -51,3 +51,28 @@ export function formatTenure({ startDate, endDate, language }: TenureOptions): s
 
   return language === "zh" ? formatZh(years, months) : formatEn(years, months);
 }
+
+const EN_MONTHS = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+];
+
+function formatMonth(value: string, language: string): string {
+  const { year, month } = parseYearMonth(value);
+  if (language === "zh") {
+    return `${year}/${String(month).padStart(2, "0")}`;
+  }
+  return `${EN_MONTHS[month - 1]} ${year}`;
+}
+
+/**
+ * Format an ISO YYYY-MM date range as a locale-aware string.
+ * zh: "2022/09 - 2024/04" / "2024/07 - 至今"
+ * en: "Sep 2022 - Apr 2024" / "Jul 2024 - Present"
+ */
+export function formatDateRange({ startDate, endDate, language }: TenureOptions): string {
+  const present = language === "zh" ? "至今" : "Present";
+  const start = formatMonth(startDate, language);
+  const end = endDate ? formatMonth(endDate, language) : present;
+  return `${start} - ${end}`;
+}

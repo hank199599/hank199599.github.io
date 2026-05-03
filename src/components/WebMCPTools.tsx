@@ -97,7 +97,7 @@ function GetWorkExperienceTool() {
       const companies = t('experience.companies', { returnObjects: true }) as Array<{
         company: string;
         location: string;
-        span: string;
+        span?: string;
         startDate?: string;
         endDate?: string;
         region?: string;
@@ -105,7 +105,9 @@ function GetWorkExperienceTool() {
         logo?: string;
         roles: Array<{
           title: string;
-          period: string;
+          period?: string;
+          startDate?: string;
+          endDate?: string;
           employmentType?: string;
           description: string;
           achievements: string[];
