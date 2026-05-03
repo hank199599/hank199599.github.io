@@ -212,11 +212,39 @@ export const mainSection = {
             url: "https://taiwan.googleblog.com/2020/03/tips-for-home-entertainment.html"
           }
         ]
+      },
+      {
+        title: "Gemini-powered Auto-posting System for Facebook",
+        description: "A Gemini-powered automation that summarizes Google Blog posts and publishes them to the GDG Taipei Facebook page, reducing information gaps, increasing fan page reach and engagement, and boosting event promotion effectiveness.",
+        tags: ["Gemini", "Google Apps Script", "RSS", "Facebook Graph API", "Automation"],
+        logo: "/volunteer-logos/gdg-taipei.png",
+        period: "Mar 2024 - Jun 2025",
+        highlightGroups: [
+          {
+            label: "Impact",
+            items: [
+              "Automatically summarizes Google Blog posts via Gemini",
+              "Reduces information gaps for community members",
+              "Increases fan page reach, engagement, and event promotion effectiveness"
+            ]
+          }
+        ],
+        links: [
+          {
+            label: "GitHub Repo",
+            url: "https://github.com/GDGTaipei/rss-auto-post-facebook-with-gemini"
+          },
+          {
+            label: "GDG Taipei Facebook Page",
+            url: "https://www.facebook.com/GDG.Taipei"
+          }
+        ]
       }
     ]
   },
   volunteer: {
     title: "Volunteering",
+    linksLabel: "Links",
     items: [
       {
         role: "Organizer",
@@ -232,6 +260,24 @@ export const mainSection = {
           "Assist in building a generative AI-powered automated posting system to help manage fan pages ( as the following link https://www.facebook.com/GDG.Taipei )",
         ],
         logo: "/volunteer-logos/gdg-taipei.png",
+        links: [
+          {
+            label: "GDG Website GitHub Repo",
+            url: "https://github.com/gdg-twhk/gdg-taiwan-React",
+          },
+          {
+            label: "WTM Website GitHub Repo",
+            url: "https://github.com/GDGTaipei/wtm-temp-website/tree/main/public",
+          },
+          {
+            label: "Auto-posting System GitHub Repo",
+            url: "https://github.com/GDGTaipei/rss-auto-post-facebook-with-gemini",
+          },
+          {
+            label: "DevFest 2023 LinkedIn Post",
+            url: "https://www.linkedin.com/posts/shaohungyu_%E6%84%9F%E8%AC%9D%E6%89%80%E6%9C%89%E8%AC%9B%E8%80%85%E8%88%87%E6%9C%83%E7%9C%BE%E7%9A%84%E5%8F%83%E8%88%87%E8%AE%93-devfest-taipei-2023-%E5%85%8B%E6%9C%8D%E5%A4%A9%E6%B0%A3%E7%9A%84%E6%8C%91%E6%88%B0-ugcPost-7142033789345480704-v4JZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAABuzp-YB4UrcrROGNCKaHk9Qj_JMqaMXN3E",
+          }
+        ],
       },
       {
         role: "Co Organizer",
@@ -246,8 +292,42 @@ export const mainSection = {
           "Participate in the \"TENSORFLOW EVERYWHERE: From 0 to 1\" event as a speaker",
         ],
         logo: "/volunteer-logos/tfug.png",
+        links: [
+          {
+            label: "TFUG Taipei Meetup",
+            url: "https://www.meetup.com/tensorflow-user-group-taipei/",
+          },
+        ],
       },
     ],
+  },
+  publications: {
+    title: "Publications",
+    linksLabel: "Links",
+    metadataLabel: "Journal Metadata",
+    authorsLabel: "Authors",
+    items: [
+      {
+        title: "Multiattribute decision making based on novel score function and the power operator of interval-valued intuitionistic fuzzy values",
+        authors: "S. M. Chen and S. H. Yu",
+        venue: "Information Sciences",
+        citation: "vol. 606, pp. 763-785",
+        year: "August 2022",
+        logo: "/publication-logos/information-sciences.jpg",
+        metadata: [
+          { label: "Type", value: "SCI Journal Paper" },
+          { label: "Impact Factor", value: "8.233" },
+          { label: "Field", value: "Computer Science, Information Systems" },
+          { label: "Ranking", value: "16 / 164" }
+        ],
+        links: [
+          {
+            label: "ScienceDirect",
+            url: "https://www.sciencedirect.com/science/article/abs/pii/S0020025522004674"
+          }
+        ]
+      }
+    ]
   },
   education: {
     title: "Education Background",
@@ -291,19 +371,19 @@ export const mainSection = {
           "Assisted with thesis guidance and wrote SOP"
         ]
       }
-    ],
-    certifications: {
-      title: "Licenses & Certifications",
-      professional: "Professional",
-      items: [
-        {
-          name: "TOEIC",
-          issuer: "ETS",
-          score: "825",
-          year: "2023"
-        }
-      ]
-    }
+    ]
+  },
+  certifications: {
+    title: "Licenses & Certifications",
+    professional: "Professional",
+    items: [
+      {
+        name: "TOEIC",
+        issuer: "ETS",
+        score: "825",
+        year: "2023"
+      }
+    ]
   }
   // googleAssistant 已遷移到 googleAssistant.ts
 }

@@ -211,10 +211,38 @@ export const mainSection = {
                     },
                 ],
             },
+            {
+                title: "Gemini 驅動的 Facebook 自動發文系統",
+                description: "以 Gemini 自動摘要 Google Blog 文章並發布至 GDG Taipei 粉絲專頁，降低資訊落差、提升粉專觸及與互動，並強化活動宣傳成效。",
+                tags: ["Gemini", "Google Apps Script", "RSS", "Facebook Graph API", "自動化"],
+                logo: "/volunteer-logos/gdg-taipei.png",
+                period: "2024/03 - 2025/06",
+                highlightGroups: [
+                    {
+                        label: "成效",
+                        items: [
+                            "透過 Gemini 自動摘要 Google Blog 文章",
+                            "降低社群成員的資訊落差",
+                            "提升粉專觸及、互動與活動宣傳成效",
+                        ],
+                    },
+                ],
+                links: [
+                    {
+                        label: "GitHub Repo",
+                        url: "https://github.com/GDGTaipei/rss-auto-post-facebook-with-gemini",
+                    },
+                    {
+                        label: "GDG Taipei 粉絲專頁",
+                        url: "https://www.facebook.com/GDG.Taipei",
+                    },
+                ],
+            },
         ]
     },
     volunteer: {
         title: "志工經歷",
+        linksLabel: "相關連結",
         items: [
             {
                 role: "Organizer",
@@ -230,6 +258,25 @@ export const mainSection = {
                     "協助建置生成式 AI 自動發文系統，幫助管理粉絲專頁（如：https://www.facebook.com/GDG.Taipei）",
                 ],
                 logo: "/volunteer-logos/gdg-taipei.png",
+                links: [
+                    {
+                        label: "GDG 網站 GitHub Repo",
+                        url: "https://github.com/gdg-twhk/gdg-taiwan-React",
+                    },
+                    {
+                        label: "WTM 網站 GitHub Repo",
+                        url: "https://github.com/GDGTaipei/wtm-temp-website/tree/main/public",
+                    },
+                    {
+                        label: "自動發文系統 GitHub Repo",
+                        url: "https://github.com/GDGTaipei/rss-auto-post-facebook-with-gemini",
+                    },
+                    {
+                        label: "DevFest 2023 LinkedIn 貼文",
+                        url: "https://www.linkedin.com/posts/shaohungyu_%E6%84%9F%E8%AC%9D%E6%89%80%E6%9C%89%E8%AC%9B%E8%80%85%E8%88%87%E6%9C%83%E7%9C%BE%E7%9A%84%E5%8F%83%E8%88%87%E8%AE%93-devfest-taipei-2023-%E5%85%8B%E6%9C%8D%E5%A4%A9%E6%B0%A3%E7%9A%84%E6%8C%91%E6%88%B0-ugcPost-7142033789345480704-v4JZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAABuzp-YB4UrcrROGNCKaHk9Qj_JMqaMXN3E",
+                    }
+            
+                ],
             },
             {
                 role: "Co Organizer",
@@ -244,8 +291,42 @@ export const mainSection = {
                     "參與「TENSORFLOW EVERYWHERE: From 0 to 1」活動並擔任講者",
                 ],
                 logo: "/volunteer-logos/tfug.png",
+                links: [
+                    {
+                        label: "TFUG Taipei Meetup",
+                        url: "https://www.meetup.com/tensorflow-user-group-taipei/",
+                    },
+                ],
             },
         ],
+    },
+    publications: {
+        title: "學術發表",
+        linksLabel: "相關連結",
+        metadataLabel: "期刊資訊",
+        authorsLabel: "作者",
+        items: [
+            {
+                title: "Multiattribute decision making based on novel score function and the power operator of interval-valued intuitionistic fuzzy values",
+                authors: "S. M. Chen and S. H. Yu",
+                venue: "Information Sciences",
+                citation: "vol. 606, pp. 763-785",
+                year: "2022 年 8 月",
+                logo: "/publication-logos/information-sciences.jpg",
+                metadata: [
+                    { label: "類型", value: "SCI 期刊論文" },
+                    { label: "影響因子", value: "8.233" },
+                    { label: "研究領域", value: "Computer Science, Information Systems" },
+                    { label: "排名", value: "16 / 164" }
+                ],
+                links: [
+                    {
+                        label: "ScienceDirect",
+                        url: "https://www.sciencedirect.com/science/article/abs/pii/S0020025522004674"
+                    }
+                ]
+            }
+        ]
     },
     education: {
         title: "學歷背景",
@@ -288,19 +369,19 @@ export const mainSection = {
                     "協助專題指導並撰寫SOP"
                 ]
             }
-        ],
-        certifications: {
-            title: "證照與認證",
-            professional: "專業級",
-            items: [
-                {
-                    name: "TOEIC",
-                    issuer: "ETS",
-                    score: "825",
-                    year: "2023"
-                }
-            ]
-        }
+        ]
+    },
+    certifications: {
+        title: "證照與認證",
+        professional: "專業級",
+        items: [
+            {
+                name: "TOEIC",
+                issuer: "ETS",
+                score: "825",
+                year: "2023"
+            }
+        ]
     }
     // googleAssistant 已遷移到 googleAssistant.ts
 }

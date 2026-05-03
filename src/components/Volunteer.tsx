@@ -2,11 +2,25 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { HeartHandshake } from "lucide-react";
+import { HeartHandshake, ExternalLink, Github } from "lucide-react";
 import { TFunction } from "i18next";
 import { cn } from "@/lib/utils";
 
 const LOGO_BOX = 56;
+
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex items-center gap-3">
+      <span className="text-xs font-medium text-muted-foreground/80 dark:text-zinc-500">
+        {children}
+      </span>
+      <span
+        className="h-px flex-1 bg-border/70 dark:bg-zinc-800"
+        aria-hidden
+      />
+    </div>
+  );
+}
 
 function OrgLogo({
   src,
@@ -45,6 +59,11 @@ function OrgLogo({
   );
 }
 
+interface VolunteerLink {
+  label: string;
+  url: string;
+}
+
 interface VolunteerItem {
   role: string;
   organization: string;
@@ -54,6 +73,7 @@ interface VolunteerItem {
   description?: string;
   achievements: string[];
   logo?: string;
+  links?: VolunteerLink[];
 }
 
 interface Props {
@@ -62,6 +82,9 @@ interface Props {
 
 const Volunteer = ({ t }: Props) => {
   const items = t("volunteer.items", { returnObjects: true }) as VolunteerItem[];
+  const linksLabel = t("volunteer.linksLabel", {
+    defaultValue: "Links",
+  }) as string;
 
   return (
     <section
@@ -133,6 +156,36 @@ const Volunteer = ({ t }: Props) => {
                       ))}
                     </ul>
                   )}
+
+                  {item.links?.length ? (
+                    <div className="mt-6">
+                      <SectionLabel>{linksLabel}</SectionLabel>
+                      <ul className="mt-3 flex flex-col gap-1.5">
+                        {item.links.map((link) => {
+                          const isGithub =
+                            /github\.com/i.test(link.url) ||
+                            /github/i.test(link.label);
+                          const Icon = isGithub ? Github : ExternalLink;
+                          return (
+                            <li key={link.url}>
+                              <a
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 text-sm text-primary underline-offset-4 hover:underline dark:text-blue-400"
+                              >
+                                <Icon
+                                  className="h-3.5 w-3.5 shrink-0"
+                                  aria-hidden
+                                />
+                                <span>{link.label}</span>
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </article>
