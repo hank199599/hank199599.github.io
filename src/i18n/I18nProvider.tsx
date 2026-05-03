@@ -15,13 +15,14 @@ export function I18nProvider({ children }: I18nProviderProps) {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return (
-      <div aria-hidden style={{ visibility: 'hidden' }}>
+  return (
+    <I18nextProvider i18n={i18n}>
+      <div
+        aria-hidden={!mounted}
+        style={{ visibility: mounted ? 'visible' : 'hidden' }}
+      >
         {children}
       </div>
-    );
-  }
-
-  return <I18nextProvider i18n={i18n}>{children}</I18nextProvider>;
+    </I18nextProvider>
+  );
 }
