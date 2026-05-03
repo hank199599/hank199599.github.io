@@ -139,7 +139,7 @@ const Experience = ({ t }: Props) => {
       id="experience"
       className="border-t border-border/40 bg-muted/20 py-20 dark:bg-background"
     >
-      <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="mb-10 text-left text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           {t("experience.title")}
         </h2>
