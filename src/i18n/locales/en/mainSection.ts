@@ -45,10 +45,14 @@ export const mainSection = {
         company: "Trend Micro",
         location: "Taipei",
         span: "Jul 2024 - Present",
+        tenureLabel: "1 yr 11 mos",
+        region: "Taiwan",
+        workMode: "Hybrid",
         roles: [
           {
             title: "Senior Software Engineer",
             period: "Jan 2026 - Present",
+            employmentType: "Full-time",
             description:
               "Assist in the development of FIPS/STIG compliance certification, ensuring system reliability and performance.",
             achievements: [
@@ -61,6 +65,7 @@ export const mainSection = {
           {
             title: "Software Engineer",
             period: "Jul 2024 - Dec 2025",
+            employmentType: "Full-time",
             description:
               "As a Cloud Engineer, I developed and maintained enterprise-level cloud services, ensuring system reliability and performance.",
             achievements: [
@@ -80,6 +85,7 @@ export const mainSection = {
           {
             title: "Backend Engineer",
             period: "Sep 2022 - Apr 2024",
+            employmentType: "Full-time",
             description:
               "Developed and maintained core backend systems for LINE TV's streaming platform.",
             achievements: [

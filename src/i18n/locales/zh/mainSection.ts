@@ -45,10 +45,14 @@ export const mainSection = {
                 company: "Trend Micro（趨勢科技）",
                 location: "台北市",
                 span: "2024/07 - 至今",
+                tenureLabel: "1 年 11 個月",
+                region: "台灣",
+                workMode: "混合型",
                 roles: [
                     {
                         title: "Senior Software Engineer",
                         period: "2026/01 - 至今",
+                        employmentType: "正職",
                         description: "協助 FIPS/STIG 合規認證的開發工作，確保系統的可靠性和效能。",
                         achievements: [
                             "與利害關係人密切合作，進行需求討論、跨團隊整合和問題排除",
@@ -60,6 +64,7 @@ export const mainSection = {
                     {
                         title: "Software Engineer",
                         period: "2024/07 - 2025/12",
+                        employmentType: "正職",
                         description:
                             "作為雲端工程師，負責開發和維護企業級的雲端服務，確保系統的可靠性和效能。",
                         achievements: [
@@ -79,7 +84,8 @@ export const mainSection = {
                     {
                         title: "後端工程師",
                         period: "2022/09 - 2024/04",
-                        description: "在 LINE TV 團隊中負責開發和維護核心服務系統。",
+                        employmentType: "正職",
+                        description: "負責開發和維護 LINE TV 的後端系統，處理大規模用戶請求和資料處理。",
                         achievements: [
                             "與 PM 緊密合作了解商業需求，設計 API、資料庫和系統架構",
                             "根據 POC 後的架構撰寫邏輯，透過單元測試和整合測試確保產品迭代順暢",

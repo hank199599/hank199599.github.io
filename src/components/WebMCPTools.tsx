@@ -98,9 +98,14 @@ function GetWorkExperienceTool() {
         company: string;
         location: string;
         span: string;
+        tenureLabel?: string;
+        region?: string;
+        workMode?: string;
+        logo?: string;
         roles: Array<{
           title: string;
           period: string;
+          employmentType?: string;
           description: string;
           achievements: string[];
           technologies: string[];
