@@ -124,8 +124,12 @@ const Projects = ({ t }: Props) => {
                       <h3 className="text-lg font-bold leading-snug text-foreground">
                         {project.title}
                       </h3>
-                    <div className="flex flex-wrap items-center gap-x-2 gap-y-2 mt-6">
-                      <div className="flex flex-wrap gap-2">
+                      {project.role ? (
+                        <p className="text-sm text-muted-foreground dark:text-zinc-400">
+                          {project.role}
+                        </p>
+                      ) : null}
+                      <div className="flex flex-wrap gap-2 pt-2">
                         {project.tags.map((tag) => (
                           <Badge
                             key={tag}
@@ -136,12 +140,6 @@ const Projects = ({ t }: Props) => {
                           </Badge>
                         ))}
                       </div>
-                  </div>
-                      {project.role ? (
-                        <p className="text-sm text-muted-foreground dark:text-zinc-400">
-                          {project.role}
-                        </p>
-                      ) : null}
                     </div>
                     {project.period ? (
                       <span className="shrink-0 text-sm tabular-nums text-muted-foreground dark:text-zinc-400 sm:pt-0.5 sm:text-right">
