@@ -190,6 +190,7 @@ export const mainSection = {
         school: "National Taiwan University of Science and Technology",
         location: "Taipei",
         period: "2020 - 2022",
+        logo: "/education-logos/NTUST.png",
         description: "Focused on fuzzy mathematics in multi-attribute decision-making, published a research paper.",
         coursework: [
           "Fuzzy Systems",
@@ -207,6 +208,7 @@ export const mainSection = {
         school: "National Chi Nan University",
         location: "Nantou",
         period: "2014 - 2018",
+        logo: "/education-logos/NCNU.png",
         description: "Built interdisciplinary thinking on the foundation of materials science and began to learn programming, laying the groundwork for future technological development.",
         coursework: [
           "Optoelectronic Engineering",

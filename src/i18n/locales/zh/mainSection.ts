@@ -188,6 +188,7 @@ export const mainSection = {
                 school: "國立台灣科技大學",
                 location: "台北市",
                 period: "2020 - 2022",
+                logo: "/education-logos/NTUST.png",
                 description: "專注於模糊領域在多屬性決策的應用，發表一篇期刊論文",
                 coursework: [
                     "模糊系統",
@@ -205,6 +206,7 @@ export const mainSection = {
                 school: "國立暨南國際大學",
                 location: "南投縣",
                 period: "2014 - 2018",
+                logo: "/education-logos/NCNU.png",
                 description: "在材料科學的基礎上，培養跨領域思維，並開始接觸程式設計，為未來的技術發展奠定基礎。",
                 coursework: [
                     "光電工程",
