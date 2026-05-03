@@ -86,24 +86,28 @@ function GetWorkExperienceTool() {
 
   useWebMCP({
     name: 'get_work_experience',
-    description: 'Get the profile owner\'s work experience including job titles, companies, achievements, and technologies used.',
+    description:
+      'Get the profile owner\'s work experience grouped by company, including roles, date ranges, achievements, and technologies used.',
     inputSchema: {},
     annotations: {
       title: 'Get Work Experience',
       readOnlyHint: true,
     },
     handler: async () => {
-      const jobs = t('experience.jobs', { returnObjects: true }) as Array<{
-        title: string;
+      const companies = t('experience.companies', { returnObjects: true }) as Array<{
         company: string;
         location: string;
-        period: string;
-        description: string;
-        achievements: string[];
-        technologies: string[];
+        span: string;
+        roles: Array<{
+          title: string;
+          period: string;
+          description: string;
+          achievements: string[];
+          technologies: string[];
+        }>;
       }>;
 
-      return { jobs };
+      return { companies };
     },
   });
 
