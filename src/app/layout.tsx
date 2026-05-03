@@ -19,6 +19,11 @@ const geistMono = Geist_Mono({
 const siteUrl = "https://hank199599.github.io";
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [{ url: "/img/favicon.png", sizes: "96x96", type: "image/png" }],
+    shortcut: "/img/favicon.png",
+    apple: "/img/favicon.png",
+  },
   title: "游紹宏 Shao-Hung Yu | Cloud Engineer Portfolio",
   description:
     "游紹宏 (Shao-Hung Yu) — Cloud Engineer at Trend Micro. Specialized in cloud architecture, backend development, and AI applications. Previously at LINE TV.",
