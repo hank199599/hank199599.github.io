@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
+import Volunteer from "@/components/Volunteer";
 import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero t={t} />
       <About t={t} />
       <Experience t={t} />
+      <Volunteer t={t} />
       <Skills t={t} />
       <Education t={t} />
     </main>

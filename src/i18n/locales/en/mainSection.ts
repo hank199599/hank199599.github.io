@@ -179,6 +179,35 @@ export const mainSection = {
       }
     ]
   },
+  volunteer: {
+    title: "Volunteering",
+    items: [
+      {
+        role: "Organizer",
+        organization: "GDG Taipei",
+        period: "Nov 2022 - Sep 2024",
+        tenureLabel: "1 yr 11 mos",
+        cause: "Science and Technology",
+        achievements: [
+          "Assist in organizing community events",
+          "Help build GDG and WTM websites and make them open source for others to use",
+        ],
+        logo: "/volunteer-logos/gdg-taipei.png",
+      },
+      {
+        role: "Co Organizer",
+        organization: "TensorFlow User Group (TFUG)",
+        period: "Nov 2020 - Sep 2022",
+        tenureLabel: "1 yr 11 mos",
+        cause: "Science and Technology",
+        achievements: [
+          "Assist ML GDE Jerry Wu in managing Meetup communities",
+          "Host an online book club on \"From Python to TensorFlow\"",
+        ],
+        logo: "/volunteer-logos/tfug.png",
+      },
+    ],
+  },
   education: {
     title: "Education Background",
     educationExperience: "Education Experience",

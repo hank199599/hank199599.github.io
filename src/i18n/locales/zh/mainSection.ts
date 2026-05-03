@@ -177,6 +177,35 @@ export const mainSection = {
             }
         ]
     },
+    volunteer: {
+        title: "志工經歷",
+        items: [
+            {
+                role: "Organizer",
+                organization: "GDG Taipei",
+                period: "2022年11月 - 2024年9月",
+                tenureLabel: "1 年 11 個月",
+                cause: "科學與技術",
+                achievements: [
+                    "協助籌辦社群活動",
+                    "協助建置 GDG 與 WTM 網站，並以開源形式供他人使用",
+                ],
+                logo: "/volunteer-logos/gdg-taipei.png",
+            },
+            {
+                role: "Co Organizer",
+                organization: "TensorFlow User Group (TFUG)",
+                period: "2020年11月 - 2022年9月",
+                tenureLabel: "1 年 11 個月",
+                cause: "科學與技術",
+                achievements: [
+                    "協助 ML GDE Jerry Wu 管理 Meetup 社群",
+                    "主辦「從 Python 到 TensorFlow」線上讀書會",
+                ],
+                logo: "/volunteer-logos/tfug.png",
+            },
+        ],
+    },
     education: {
         title: "學歷背景",
         educationExperience: "教育經歷",

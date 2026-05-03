@@ -82,11 +82,14 @@ const Education = ({ t }: Props) => {
       id="education"
       className="border-t border-border/40 bg-muted/20 py-20 dark:bg-background"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="mb-10 text-left text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          {t("education.title")}
-        </h2>
+      <div className="text-center mb-20">
+        <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+            {t('education.title')}
+          </h2>
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
+        </div>
 
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6">
           {education.map((edu, index) => (
             <article
