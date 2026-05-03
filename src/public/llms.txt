@@ -9,7 +9,6 @@ This website showcases professional experience, technical skills, education back
 ## Key Pages
 
 - `/` — Main portfolio page with profile, about, work experience, skills, and education sections
-- `/timeline/` — Career and life timeline
 - `/gdg-taipei-projects/` — GDG Taipei community project contributions
 - `/google-assistant/` — Google Assistant related projects
 

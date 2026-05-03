@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { TFunction } from "i18next";
 import { cn } from "@/lib/utils";
 
-const LOGO_COL_W = "w-14"; // 56px — aligns timeline with logo column
+const LOGO_COL_W = "w-14"; // 56px — matches logo column width
 
 const LOGO_BOX = 56;
 

@@ -295,11 +295,6 @@ function GetSitePagesTool() {
             description: 'Main portfolio page with profile, about, work experience, skills, and education sections.',
           },
           {
-            path: '/timeline/',
-            name: t('timeline'),
-            description: 'Career and life timeline showing work, education, and community activity events in chronological order.',
-          },
-          {
             path: '/gdg-taipei-projects/',
             name: 'GDG Taipei Projects',
             description: 'Open-source projects by Google Developer Group Taipei, including AI-powered RSS auto-posting, social media APIs, and the GDG Taiwan website.',
@@ -325,7 +320,7 @@ function NavigateToPageTool() {
     name: 'navigate_to_page',
     description: 'Navigate to a different page on the website.',
     inputSchema: {
-      page: z.enum(['/', '/timeline/', '/gdg-taipei-projects/', '/google-assistant/']).describe('The page path to navigate to'),
+      page: z.enum(['/', '/gdg-taipei-projects/', '/google-assistant/']).describe('The page path to navigate to'),
     },
     annotations: {
       title: 'Navigate to Page',
@@ -335,40 +330,6 @@ function NavigateToPageTool() {
     handler: async ({ page }) => {
       router.push(page);
       return { success: true, page, message: `Navigated to ${page}` };
-    },
-  });
-
-  return null;
-}
-
-function GetTimelineTool() {
-  const { t } = useTranslation('timeline');
-
-  useWebMCP({
-    name: 'get_timeline',
-    description: 'Get the career and life timeline events including work experience, education, and community activities.',
-    inputSchema: {},
-    annotations: {
-      title: 'Get Timeline',
-      readOnlyHint: true,
-    },
-    handler: async () => {
-      const events = t('events', { returnObjects: true }) as Array<{
-        date: string;
-        title: string;
-        company: string;
-        description: string;
-        location?: string;
-        duration?: string;
-        type: string;
-        link?: { text: string; url: string };
-      }>;
-
-      return {
-        title: t('title'),
-        subtitle: t('subtitle'),
-        events,
-      };
     },
   });
 
@@ -493,7 +454,6 @@ export default function WebMCPTools() {
       <NavigateToSectionTool />
       <GetSitePagesTool />
       <NavigateToPageTool />
-      <GetTimelineTool />
       <GetGdgProjectsTool />
       <GetGoogleAssistantProjectsTool />
     </>
