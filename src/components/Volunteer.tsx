@@ -3,8 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import { HeartHandshake, ExternalLink, Github } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { TFunction } from "i18next";
 import { cn } from "@/lib/utils";
+import { formatTenure } from "@/lib/tenure";
 
 const LOGO_BOX = 56;
 
@@ -68,7 +70,10 @@ interface VolunteerItem {
   role: string;
   organization: string;
   period: string;
-  tenureLabel?: string;
+  /** ISO "YYYY-MM" — when present, tenure is computed from startDate/endDate. */
+  startDate?: string;
+  /** ISO "YYYY-MM"; omit for ongoing roles. */
+  endDate?: string;
   cause?: string;
   description?: string;
   achievements: string[];
@@ -81,6 +86,7 @@ interface Props {
 }
 
 const Volunteer = ({ t }: Props) => {
+  const { i18n } = useTranslation();
   const items = t("volunteer.items", { returnObjects: true }) as VolunteerItem[];
   const linksLabel = t("volunteer.linksLabel", {
     defaultValue: "Links",
@@ -126,8 +132,12 @@ const Volunteer = ({ t }: Props) => {
                       ) : null}
                     </div>
                     <span className="shrink-0 text-sm tabular-nums text-muted-foreground dark:text-zinc-400 sm:pt-0.5 sm:text-right">
-                      {item.tenureLabel
-                        ? `${item.period} · ${item.tenureLabel}`
+                      {item.startDate
+                        ? `${item.period} · ${formatTenure({
+                            startDate: item.startDate,
+                            endDate: item.endDate,
+                            language: i18n.language,
+                          })}`
                         : item.period}
                     </span>
                   </div>

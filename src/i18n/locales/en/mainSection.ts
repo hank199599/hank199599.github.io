@@ -45,7 +45,7 @@ export const mainSection = {
         company: "Trend Micro",
         location: "Taipei",
         span: "Jul 2024 - Present",
-        tenureLabel: "1 yr 11 mos",
+        startDate: "2024-07",
         region: "Taiwan",
         workMode: "Hybrid",
         logo: "/experience-logos/trend-micro.png",
@@ -250,7 +250,8 @@ export const mainSection = {
         role: "Organizer",
         organization: "GDG Taipei",
         period: "Nov 2022 - Sep 2024",
-        tenureLabel: "1 yr 11 mos",
+        startDate: "2022-11",
+        endDate: "2024-09",
         cause: "Science and Technology",
         achievements: [
           "Assist in organizing community events",
@@ -283,7 +284,8 @@ export const mainSection = {
         role: "Co Organizer",
         organization: "TensorFlow User Group (TFUG)",
         period: "Nov 2020 - Sep 2022",
-        tenureLabel: "1 yr 11 mos",
+        startDate: "2020-11",
+        endDate: "2022-09",
         cause: "Science and Technology",
         achievements: [
           "Assist ML GDE Jerry Wu in managing Meetup communities",

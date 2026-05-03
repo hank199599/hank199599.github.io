@@ -45,7 +45,7 @@ export const mainSection = {
                 company: "Trend Micro（趨勢科技）",
                 location: "台北市",
                 span: "2024/07 - 至今",
-                tenureLabel: "1 年 11 個月",
+                startDate: "2024-07",
                 region: "台灣",
                 workMode: "混合型",
                 logo: "/experience-logos/trend-micro.png",
@@ -178,7 +178,7 @@ export const mainSection = {
                 title: "Google Assistant Actions",
                 description: "為 Google Assistant 第三方平台（Actions on Google, AoG）開發多個語音互動技能，使用 Node.js、DialogFlow 與 Firebase 建置，並獲 Google Taiwan 官方部落格報導。",
                 tags: ["DialogFlow", "Cloud Functions", "Node.js", "Firebase"],
-                logo: "/project-logos/google-assistant.gif",
+                logo: "/project-logos/google-assistant.png",
                 highlightGroups: [
                     {
                         label: "2019 年 7 月 31 日",
@@ -248,7 +248,8 @@ export const mainSection = {
                 role: "Organizer",
                 organization: "GDG Taipei",
                 period: "2022年11月 - 2024年9月",
-                tenureLabel: "1 年 11 個月",
+                startDate: "2022-11",
+                endDate: "2024-09",
                 cause: "科學與技術",
                 achievements: [
                     "協助籌辦社群活動",
@@ -282,7 +283,8 @@ export const mainSection = {
                 role: "Co Organizer",
                 organization: "TensorFlow User Group (TFUG)",
                 period: "2020年11月 - 2022年9月",
-                tenureLabel: "1 年 11 個月",
+                startDate: "2020-11",
+                endDate: "2022-09",
                 cause: "科學與技術",
                 achievements: [
                     "協助 ML GDE Jerry Wu 管理 Meetup 社群",

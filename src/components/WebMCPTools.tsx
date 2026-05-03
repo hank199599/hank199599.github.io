@@ -98,7 +98,8 @@ function GetWorkExperienceTool() {
         company: string;
         location: string;
         span: string;
-        tenureLabel?: string;
+        startDate?: string;
+        endDate?: string;
         region?: string;
         workMode?: string;
         logo?: string;
@@ -182,7 +183,7 @@ function GetEducationTool() {
       }>;
 
       const certifications = {
-        items: t('education.certifications.items', { returnObjects: true }) as Array<{
+        items: t('certifications.items', { returnObjects: true }) as Array<{
           name: string;
           issuer: string;
           score: string;

@@ -3,9 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Building2, Gem } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Badge } from "@/components/ui/badge";
 import { TFunction } from "i18next";
 import { cn } from "@/lib/utils";
+import { formatTenure } from "@/lib/tenure";
 
 const LOGO_COL_W = "w-14"; // 56px — matches logo column width
 
@@ -62,8 +64,10 @@ interface CompanyGroup {
   company: string;
   location: string;
   span: string;
-  /** Human-readable total tenure at company (e.g. "1 yr 11 mos") — shown when multiple roles */
-  tenureLabel?: string;
+  /** ISO "YYYY-MM" — used to compute displayed tenure for multi-role companies. */
+  startDate?: string;
+  /** ISO "YYYY-MM"; omit for ongoing roles ("Present"). */
+  endDate?: string;
   /** e.g. Taiwan / 台灣 */
   region?: string;
   /** e.g. Hybrid / 混合型 */
@@ -132,7 +136,10 @@ function RoleContent({
 }
 
 const Experience = ({ t }: Props) => {
-  const companies = t("experience.companies", { returnObjects: true }) as CompanyGroup[];
+  const { i18n } = useTranslation();
+  const companies = (t("experience.companies", { returnObjects: true }) || []) as CompanyGroup[];
+
+  if (!Array.isArray(companies) || !companies.length) return null;
 
   return (
     <section
@@ -169,7 +176,13 @@ const Experience = ({ t }: Props) => {
                           {group.company}
                         </h3>
                         <p className="mt-1 text-sm text-muted-foreground dark:text-zinc-400">
-                          {group.tenureLabel ?? group.span}
+                          {group.startDate
+                            ? formatTenure({
+                                startDate: group.startDate,
+                                endDate: group.endDate,
+                                language: i18n.language,
+                              })
+                            : group.span}
                         </p>
                         <div className="mt-0.5">
                           <CompanyMetaLine group={group} />
