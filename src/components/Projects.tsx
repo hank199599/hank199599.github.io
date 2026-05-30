@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { FolderKanban, Gem, ExternalLink, Github } from "lucide-react";
+import { FolderKanban, ExternalLink, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { TFunction } from "i18next";
 import { cn } from "@/lib/utils";
