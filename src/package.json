@@ -35,7 +35,7 @@
     "@react-map/taiwan": "^1.0.9",
     "@tabler/icons-react": "^3.31.0",
     "@tanstack/react-table": "^8.21.3",
-    "add-to-calendar-button-react": "^2.8.9",
+    "add-to-calendar-button-react": "^2.14.0",
     "axios": "^1.17.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
