@@ -1,6 +1,7 @@
 "use client";
 
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Mail } from "lucide-react";
+import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import Link from "next/link";
 import { TFunction } from 'i18next';
 import Image from 'next/image';
@@ -51,15 +52,15 @@ const Hero = ({ t }: Props) => {
           
           <div className="flex justify-center space-x-6">
             {[
-              { 
-                icon: Github, 
-                href: "https://github.com/hank199599", 
-                label: "GitHub" 
+              {
+                icon: IconBrandGithub,
+                href: "https://github.com/hank199599",
+                label: "GitHub"
               },
-              { 
-                icon: Linkedin, 
-                href: "https://www.linkedin.com/in/shaohungyu/", 
-                label: "LinkedIn" 
+              {
+                icon: IconBrandLinkedin,
+                href: "https://www.linkedin.com/in/shaohungyu/",
+                label: "LinkedIn"
               },
               { 
                 icon: Mail, 

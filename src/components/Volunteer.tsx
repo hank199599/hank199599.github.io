@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { HeartHandshake, ExternalLink, Github } from "lucide-react";
+import { HeartHandshake, ExternalLink } from "lucide-react";
+import { IconBrandGithub } from "@tabler/icons-react";
 import { useTranslation } from "react-i18next";
 import { TFunction } from "i18next";
 import { cn } from "@/lib/utils";
@@ -175,7 +176,7 @@ const Volunteer = ({ t }: Props) => {
                           const isGithub =
                             /github\.com/i.test(link.url) ||
                             /github/i.test(link.label);
-                          const Icon = isGithub ? Github : ExternalLink;
+                          const Icon = isGithub ? IconBrandGithub : ExternalLink;
                           return (
                             <li key={link.url}>
                               <a

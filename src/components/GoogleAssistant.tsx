@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import {
   ChevronDown,
-  Github,
   ExternalLink,
   Calendar,
   Users,
@@ -19,6 +18,7 @@ import {
   Languages,
   CalendarDays,
 } from "lucide-react";
+import { IconBrandGithub } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
@@ -166,7 +166,7 @@ const GoogleAssistant = () => {
               target="_blank"
               className="inline-flex items-center px-8 py-4 bg-white text-black rounded-full font-bold hover:bg-gray-100 transition-colors"
             >
-              <Github className="mr-2 h-5 w-5" />
+              <IconBrandGithub className="mr-2 h-5 w-5" />
               {t("hero.githubButton")}
             </Link>
           </div>
@@ -514,7 +514,7 @@ const GoogleAssistant = () => {
             <DialogFooter className="sm:justify-between gap-2 flex-col sm:flex-row">
               <Button asChild variant="outline">
                 <Link href={selectedProject.githubLink} target="_blank">
-                  <Github className="mr-2 h-4 w-4" />
+                  <IconBrandGithub className="mr-2 h-4 w-4" />
                   {t("dialog.github")}
                 </Link>
               </Button>

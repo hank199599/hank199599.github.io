@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { FolderKanban, ExternalLink, Github } from "lucide-react";
+import { FolderKanban, ExternalLink } from "lucide-react";
+import { IconBrandGithub } from "@tabler/icons-react";
 import { Badge } from "@/components/ui/badge";
 import { TFunction } from "i18next";
 import { cn } from "@/lib/utils";
@@ -193,7 +194,7 @@ const Projects = ({ t }: Props) => {
                           const isGithub =
                             /github\.com/i.test(link.url) ||
                             /github/i.test(link.label);
-                          const Icon = isGithub ? Github : ExternalLink;
+                          const Icon = isGithub ? IconBrandGithub : ExternalLink;
                           return (
                             <li key={link.url}>
                               <a

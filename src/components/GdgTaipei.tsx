@@ -3,7 +3,6 @@
 import { useState } from "react";
 import {
   ChevronDown,
-  Github,
   ExternalLink,
   Users,
   Globe,
@@ -12,6 +11,7 @@ import {
   MessageSquare,
   Bot,
 } from "lucide-react";
+import { IconBrandGithub } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
@@ -167,7 +167,7 @@ const GdgTaipei = () => {
               target="_blank"
               className="inline-flex items-center px-8 py-4 bg-white text-black rounded-full font-bold hover:bg-gray-100 transition-colors"
             >
-              <Github className="mr-2 h-5 w-5" />
+              <IconBrandGithub className="mr-2 h-5 w-5" />
               {t("hero.viewOrganization")}
             </Link>
           </div>
@@ -331,14 +331,14 @@ const GdgTaipei = () => {
                 </div>
                 
                 <div className="glass-card rounded-2xl p-6 text-center">
-                  <Github className="h-12 w-12 text-gray-800 dark:text-white mx-auto mb-4" />
+                  <IconBrandGithub className="h-12 w-12 text-gray-800 dark:text-white mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-foreground mb-2">{t("community.github.title")}</h3>
                   <p className="text-muted-foreground mb-4">
                     {t("community.github.description")}
                   </p>
                   <Button asChild>
                     <Link href="https://github.com/GDGTaipei" target="_blank">
-                      <Github className="mr-2 h-4 w-4" />
+                      <IconBrandGithub className="mr-2 h-4 w-4" />
                       {t("community.github.button")}
                     </Link>
                   </Button>
@@ -400,7 +400,7 @@ const GdgTaipei = () => {
             <DialogFooter className="sm:justify-between gap-2 flex-col sm:flex-row">
               <Button asChild variant="outline">
                 <Link href={selectedProject.githubUrl} target="_blank">
-                  <Github className="mr-2 h-4 w-4" />
+                  <IconBrandGithub className="mr-2 h-4 w-4" />
                   {t("dialog.viewSource")}
                 </Link>
               </Button>
