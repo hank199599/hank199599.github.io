@@ -15,7 +15,7 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "@mcp-b/global": "^2.0.8",
-    "@mcp-b/react-webmcp": "^2.0.8",
+    "@mcp-b/react-webmcp": "^3.0.0",
     "@radix-ui/react-accordion": "^1.2.10",
     "@radix-ui/react-avatar": "^1.1.7",
     "@radix-ui/react-checkbox": "^1.2.3",
