@@ -103,19 +103,16 @@ const GoogleAssistant = () => {
       name: t(`categories.${category.id}`)
     }));
 
-  // activeCategory 合理切換
-  useEffect(() => {
-    if (
-      availableCategories.length > 0 &&
-      !availableCategories.some((cat) => cat.id === activeCategory)
-    ) {
-      setActiveCategory(availableCategories[0].id);
-    }
-  }, [activeLanguage, availableCategories, activeCategory]);
+  // Derive the active category during render to avoid setState-in-effect
+  const resolvedCategory =
+    availableCategories.length > 0 &&
+    !availableCategories.some((cat) => cat.id === activeCategory)
+      ? availableCategories[0].id
+      : activeCategory;
 
   // 根據當前選定的分類，篩選出要顯示的專案
   const filteredProjects = projectsForLanguage.filter(
-    p => p.category.id === activeCategory
+    p => p.category.id === resolvedCategory
   );
 
   const accordionItems = [
@@ -321,7 +318,7 @@ const GoogleAssistant = () => {
                         <Button variant="outline" className="w-full justify-between">
                           <div className="flex items-center">
                             {(() => {
-                              const activeCategory_data = availableCategories.find(cat => cat.id === activeCategory);
+                              const activeCategory_data = availableCategories.find(cat => cat.id === resolvedCategory);
                               const Icon = activeCategory_data ? iconMap[activeCategory_data.tag] : null;
                               return (
                                 <>
@@ -350,7 +347,7 @@ const GoogleAssistant = () => {
                                     setDrawerOpen(false);
                                   }}
                                   className={`flex items-center justify-center px-4 py-3 rounded-lg transition-colors ${
-                                    activeCategory === category.id
+                                    resolvedCategory === category.id
                                       ? 'bg-blue-500 text-white'
                                       : 'bg-gray-100 dark:bg-gray-700 text-foreground hover:bg-gray-200 dark:hover:bg-gray-600'
                                   }`}
