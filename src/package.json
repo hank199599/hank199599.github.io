@@ -51,7 +51,7 @@
     "react-day-picker": "^9.4.5",
     "react-dom": "^19.2.7",
     "react-i18next": "^15.5.1",
-    "react-router-dom": "^7.16.0",
+    "react-router-dom": "^7.17.0",
     "recharts": "^2.15.3",
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.2.0",
