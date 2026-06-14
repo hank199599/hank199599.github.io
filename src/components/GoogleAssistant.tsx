@@ -373,7 +373,7 @@ const GoogleAssistant = () => {
                           key={category.id}
                           onClick={() => setActiveCategory(category.id)}
                           className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
-                            activeCategory === category.id
+                            resolvedCategory === category.id
                               ? 'bg-blue-500 text-white'
                               : 'bg-gray-100 dark:bg-gray-700 text-foreground hover:bg-gray-200 dark:hover:bg-gray-600'
                           }`}
