@@ -1,20 +1,13 @@
 # Workflow to automatically check and approve PRs created by Dependabot
 #
 # Runs build and lint checks to validate dependency updates,
-# then auto-approves the PR if all checks pass.
-#
-# Triggered by both pull_request_target (normal path) and push on dependabot/**
-# branches (fallback for GitHub-Actions PRs that modify workflow files, where
-# GitHub routes the trigger as a push event instead of pull_request_target).
+# then auto-approves and auto-merges the PR if all checks pass.
 #
 name: Dependabot PR Check
 
 on:
   pull_request_target:
     branches: ["master"]
-  push:
-    branches:
-      - "dependabot/**"
 
 permissions:
   contents: write
@@ -23,14 +16,12 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    # Only run for Dependabot PRs (github.actor works for both push and pull_request_target)
     if: github.actor == 'dependabot[bot]'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          # pull_request_target: use PR head SHA; push: use the pushed commit SHA
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Detect package manager
         id: detect-package-manager
@@ -38,12 +29,10 @@ jobs:
           if [ -f "${{ github.workspace }}/src/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
-            echo "runner=yarn" >> $GITHUB_OUTPUT
             exit 0
           elif [ -f "${{ github.workspace }}/src/package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
-            echo "runner=npx --no-install" >> $GITHUB_OUTPUT
             exit 0
           else
             echo "Unable to determine package manager"
@@ -75,26 +64,12 @@ jobs:
       - name: Build with Next.js
         run: cd src && ${{ steps.detect-package-manager.outputs.manager }} run build
 
-      - name: Resolve PR URL
-        id: resolve-pr
-        run: |
-          if [ "${{ github.event_name }}" = "push" ]; then
-            PR_URL=$(gh pr list --head "${{ github.ref_name }}" --base master --state open --json url --jq '.[0].url // empty')
-          else
-            PR_URL="${{ github.event.pull_request.html_url }}"
-          fi
-          echo "pr_url=${PR_URL}" >> $GITHUB_OUTPUT
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Auto-approve PR
-        if: steps.resolve-pr.outputs.pr_url != ''
-        run: gh pr review --approve --body "LGTM" "${{ steps.resolve-pr.outputs.pr_url }}"
+        run: gh pr review --approve --body "LGTM" "${{ github.event.pull_request.html_url }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Auto-merge PR
-        if: steps.resolve-pr.outputs.pr_url != ''
-        run: gh pr merge --auto --squash "${{ steps.resolve-pr.outputs.pr_url }}"
+        run: gh pr merge --auto --squash "${{ github.event.pull_request.html_url }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
