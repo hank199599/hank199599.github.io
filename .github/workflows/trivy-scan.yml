@@ -28,7 +28,7 @@ jobs:
       TRIVY_DB_REPOSITORY: ghcr.io/aquasecurity/trivy-db:2
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set default branch name
         run: git config --global init.defaultBranch master
