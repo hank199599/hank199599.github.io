@@ -118,7 +118,18 @@ function ChartTooltipContent({
   color,
   nameKey,
   labelKey,
-}: React.ComponentProps<typeof RechartsPrimitive.Tooltip> &
+}: React.ComponentProps<typeof RechartsPrimitive.Tooltip> & {
+    // recharts v3 moved payload to PropertiesReadFromContext and Omits it from
+    // the public component props; re-add it here for tooltip content components.
+    payload?: Array<{
+      name?: RechartsPrimitive.NameType
+      value?: RechartsPrimitive.ValueType
+      fill?: string
+      color?: string
+      dataKey?: string | number
+      payload?: Record<string, unknown>
+    }>
+  } &
   React.ComponentProps<"div"> & {
     hideLabel?: boolean
     hideIndicator?: boolean
