@@ -18,6 +18,10 @@ updates:
         update-types: ["version-update:semver-major"]
       - dependency-name: "react-dom"
         update-types: ["version-update:semver-major"]
+      # eslint v10 removed context.getFilename(); incompatible with eslint-plugin-react
+      # bundled in eslint-config-next until the bundled plugin is updated
+      - dependency-name: "eslint"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
