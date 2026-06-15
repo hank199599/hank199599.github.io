@@ -118,7 +118,15 @@ function ChartTooltipContent({
   color,
   nameKey,
   labelKey,
-}: React.ComponentProps<typeof RechartsPrimitive.Tooltip> &
+}: React.ComponentProps<typeof RechartsPrimitive.Tooltip> & {
+    // recharts v3 moved payload/label to PropertiesReadFromContext and Omits
+    // them from component props. Re-add using the exact recharts Payload type
+    // extracted from the formatter signature so it stays in sync across versions.
+    payload?: Parameters<
+      NonNullable<React.ComponentProps<typeof RechartsPrimitive.Tooltip>["formatter"]>
+    >[2][]
+    label?: string | number
+  } &
   React.ComponentProps<"div"> & {
     hideLabel?: boolean
     hideIndicator?: boolean
@@ -186,7 +194,7 @@ function ChartTooltipContent({
 
           return (
             <div
-              key={item.dataKey}
+              key={typeof item.dataKey === "function" ? index : (item.dataKey ?? index)}
               className={cn(
                 "[&>svg]:text-muted-foreground flex w-full flex-wrap items-stretch gap-2 [&>svg]:h-2.5 [&>svg]:w-2.5",
                 indicator === "dot" && "items-center"
@@ -257,7 +265,15 @@ function ChartLegendContent({
   verticalAlign = "bottom",
   nameKey,
 }: React.ComponentProps<"div"> &
-  Pick<RechartsPrimitive.LegendProps, "payload" | "verticalAlign"> & {
+  Pick<RechartsPrimitive.LegendProps, "verticalAlign"> & {
+    // recharts v3 removed payload from LegendProps; re-add with compatible type
+    payload?: Array<{
+      value?: unknown
+      type?: string
+      id?: string
+      color?: string
+      dataKey?: string | number | ((obj: unknown) => unknown)
+    }>
     hideIcon?: boolean
     nameKey?: string
   }) {
@@ -275,13 +291,13 @@ function ChartLegendContent({
         className
       )}
     >
-      {payload.map((item) => {
+      {payload.map((item, index) => {
         const key = `${nameKey || item.dataKey || "value"}`
         const itemConfig = getPayloadConfigFromPayload(config, item, key)
 
         return (
           <div
-            key={item.value}
+            key={typeof item.value === "string" || typeof item.value === "number" ? item.value : index}
             className={cn(
               "[&>svg]:text-muted-foreground flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3"
             )}
