@@ -1,13 +1,20 @@
 # Workflow to automatically check and approve PRs created by Dependabot
 #
 # Runs build and lint checks to validate dependency updates,
-# then auto-approves the PR if all checks pass
+# then auto-approves the PR if all checks pass.
+#
+# Triggered by both pull_request_target (normal path) and push on dependabot/**
+# branches (fallback for GitHub-Actions PRs that modify workflow files, where
+# GitHub routes the trigger as a push event instead of pull_request_target).
 #
 name: Dependabot PR Check
 
 on:
   pull_request_target:
     branches: ["master"]
+  push:
+    branches:
+      - "dependabot/**"
 
 permissions:
   contents: write
@@ -17,13 +24,14 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    # Only run for Dependabot PRs
-    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    # Only run for Dependabot PRs (github.actor works for both push and pull_request_target)
+    if: github.actor == 'dependabot[bot]'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          # pull_request_target: use PR head SHA; push: use the pushed commit SHA
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Detect package manager
         id: detect-package-manager
@@ -68,14 +76,26 @@ jobs:
       - name: Build with Next.js
         run: cd src && npm run build
 
-      - name: Auto-approve PR
-        run: gh pr review --approve --body "LGTM" "$PR_URL"
+      - name: Resolve PR URL
+        id: resolve-pr
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            PR_URL=$(gh pr list --head "${{ github.ref_name }}" --base master --state open --json url --jq '.[0].url // empty')
+          else
+            PR_URL="${{ github.event.pull_request.html_url }}"
+          fi
+          echo "pr_url=${PR_URL}" >> $GITHUB_OUTPUT
         env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Auto-approve PR
+        if: steps.resolve-pr.outputs.pr_url != ''
+        run: gh pr review --approve --body "LGTM" "${{ steps.resolve-pr.outputs.pr_url }}"
+        env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Auto-merge PR
-        run: gh pr merge --auto --squash "$PR_URL"
+        if: steps.resolve-pr.outputs.pr_url != ''
+        run: gh pr merge --auto --squash "${{ steps.resolve-pr.outputs.pr_url }}"
         env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
