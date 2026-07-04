@@ -3,6 +3,12 @@
 # Runs build and lint checks to validate dependency updates,
 # then auto-approves and auto-merges the PR if all checks pass.
 #
+# If lint or build fails, Claude Code analyzes the errors and commits a fix.
+# Auto-approve/merge only run on the clean-pass path; after a Claude fix,
+# CI re-triggers on the new commit and approves/merges on the next green run.
+#
+# Prerequisites: add ANTHROPIC_API_KEY to the repository secrets.
+#
 name: Dependabot PR Check
 
 on:
@@ -21,7 +27,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          # Check out by branch name (not SHA) so Claude can push fix commits back
+          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Detect package manager
         id: detect-package-manager
@@ -59,17 +67,42 @@ jobs:
         run: cd src && ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Run lint
+        id: lint
         run: cd src && ${{ steps.detect-package-manager.outputs.manager }} run lint
 
       - name: Build with Next.js
+        id: build
         run: cd src && ${{ steps.detect-package-manager.outputs.manager }} run build
 
+      - name: Fix with Claude Code
+        if: failure()
+        uses: anthropics/claude-code-action@v1
+        with:
+          prompt: |
+            A Dependabot dependency update PR has lint or build failures. Analyze and fix the TypeScript/ESLint errors so the PR can be merged.
+
+            Context:
+            - Next.js 15 project in the `src/` directory with TypeScript
+            - A dependency was bumped by Dependabot; API or type signature changes likely caused the failures
+            - Do NOT modify `package.json`, `package-lock.json`, or any lockfiles — only fix source and component files
+
+            Steps:
+            1. Run `cd src && npm run lint 2>&1` to capture current lint errors
+            2. Run `cd src && npm run build 2>&1` to capture TypeScript and build errors
+            3. Inspect the failing source files and fix the incompatibilities (renamed types, changed API shapes, removed exports, updated component props, etc.)
+            4. Re-run lint and build to confirm all errors are resolved
+            5. Commit all changes with a descriptive message such as "fix: resolve <package> vX breaking changes"
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Auto-approve PR
+        if: success()
         run: gh pr review --approve --body "LGTM" "${{ github.event.pull_request.html_url }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Auto-merge PR
+        if: success()
         run: gh pr merge --auto --squash "${{ github.event.pull_request.html_url }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
