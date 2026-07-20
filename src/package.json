@@ -50,7 +50,7 @@
     "react": "^19.1.0",
     "react-day-picker": "^10.0.1",
     "react-dom": "^19.2.7",
-    "react-i18next": "^17.0.9",
+    "react-i18next": "^17.0.10",
 
     "react-router-dom": "^7.18.1",
     "recharts": "^3.9.2",
