@@ -94,6 +94,7 @@ jobs:
             5. Commit all changes with a descriptive message such as "fix: resolve <package> vX breaking changes"
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          allowed_bots: dependabot[bot]
 
       - name: Auto-approve PR
         if: success()
