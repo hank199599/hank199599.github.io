@@ -50,7 +50,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v7
         with:
-          node-version: "lts/*"
+          node-version: "22.x"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ steps.detect-package-manager.outputs.manager == 'yarn' && 'src/yarn.lock' || 'src/package-lock.json' }}
 
