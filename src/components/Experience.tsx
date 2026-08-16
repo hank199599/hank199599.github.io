@@ -202,7 +202,7 @@ const Experience = ({ t }: Props) => {
                           <div
                             className={cn(
                               LOGO_COL_W,
-                              "flex shrink-0 flex-col items-center self-stretch pt-1"
+                              "flex shrink-0 flex-col items-center self-stretch pt-0"
                             )}
                           >
                             {roleIndex > 0 && (
