@@ -92,7 +92,7 @@ const Skills = ({ t }: Props) => {
                 className={cn(
                   "group relative overflow-hidden rounded-2xl border border-border/70 bg-card/90 p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg",
                   "dark:border-zinc-800/90 dark:bg-[#1b1b1f] dark:shadow-none",
-                  isFullWidth && "md:col-span-3"
+                  isFullWidth && "md:col-span-2"
                 )}
               >
                 <div
