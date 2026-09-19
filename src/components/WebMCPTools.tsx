@@ -20,7 +20,7 @@ function GetProfileInfoTool() {
       title: 'Get Profile Info',
       readOnlyHint: true,
     },
-    handler: async () => {
+    execute: async () => {
       return {
         name: t('hero.name'),
         greeting: t('hero.greeting'),
@@ -49,7 +49,7 @@ function GetAboutInfoTool() {
       title: 'Get About Info',
       readOnlyHint: true,
     },
-    handler: async () => {
+    execute: async () => {
       return {
         professionalBackground: {
           paragraph1: t('about.professionalBackground.paragraph1'),
@@ -93,7 +93,7 @@ function GetWorkExperienceTool() {
       title: 'Get Work Experience',
       readOnlyHint: true,
     },
-    handler: async () => {
+    execute: async () => {
       const companies = t('experience.companies', { returnObjects: true }) as Array<{
         company: string;
         location: string;
@@ -133,7 +133,7 @@ function GetSkillsTool() {
       title: 'Get Skills',
       readOnlyHint: true,
     },
-    handler: async () => {
+    execute: async () => {
       const categories = {
         cloud: {
           title: t('skills.categories.cloud.title'),
@@ -189,7 +189,7 @@ function GetEducationTool() {
       title: 'Get Education',
       readOnlyHint: true,
     },
-    handler: async () => {
+    execute: async () => {
       const educationHistory = t('education.educationHistory', { returnObjects: true }) as Array<{
         degree: string;
         school: string;
@@ -220,15 +220,15 @@ function SwitchLanguageTool() {
   useWebMCP({
     name: 'switch_language',
     description: 'Switch the website display language between English (en) and Traditional Chinese (zh).',
-    inputSchema: {
+    inputSchema: z.object({
       language: z.enum(['en', 'zh']).describe('The language to switch to: "en" for English, "zh" for Traditional Chinese'),
-    },
+    }),
     annotations: {
       title: 'Switch Language',
       readOnlyHint: false,
       idempotentHint: true,
     },
-    handler: async ({ language }) => {
+    execute: async ({ language }) => {
       i18n.changeLanguage(language);
       return {
         success: true,
@@ -247,15 +247,15 @@ function SwitchThemeTool() {
   useWebMCP({
     name: 'switch_theme',
     description: 'Switch the website theme between light, dark, and system default.',
-    inputSchema: {
+    inputSchema: z.object({
       theme: z.enum(['light', 'dark', 'system']).describe('The theme to apply: "light", "dark", or "system"'),
-    },
+    }),
     annotations: {
       title: 'Switch Theme',
       readOnlyHint: false,
       idempotentHint: true,
     },
-    handler: async ({ theme: newTheme }) => {
+    execute: async ({ theme: newTheme }) => {
       setTheme(newTheme);
       return {
         success: true,
@@ -273,15 +273,15 @@ function NavigateToSectionTool() {
   useWebMCP({
     name: 'navigate_to_section',
     description: 'Scroll to a specific section of the current page (works on the home page).',
-    inputSchema: {
+    inputSchema: z.object({
       section: z.enum(['home', 'about', 'experience', 'skills', 'education']).describe('The section to navigate to'),
-    },
+    }),
     annotations: {
       title: 'Navigate to Section',
       readOnlyHint: true,
       idempotentHint: true,
     },
-    handler: async ({ section }) => {
+    execute: async ({ section }) => {
       const element = document.getElementById(section);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
@@ -305,7 +305,7 @@ function GetSitePagesTool() {
       title: 'Get Site Pages',
       readOnlyHint: true,
     },
-    handler: async () => {
+    execute: async () => {
       return {
         pages: [
           {
@@ -338,15 +338,15 @@ function NavigateToPageTool() {
   useWebMCP({
     name: 'navigate_to_page',
     description: 'Navigate to a different page on the website.',
-    inputSchema: {
+    inputSchema: z.object({
       page: z.enum(['/', '/gdg-taipei-projects/', '/google-assistant/']).describe('The page path to navigate to'),
-    },
+    }),
     annotations: {
       title: 'Navigate to Page',
       readOnlyHint: false,
       idempotentHint: true,
     },
-    handler: async ({ page }) => {
+    execute: async ({ page }) => {
       router.push(page);
       return { success: true, page, message: `Navigated to ${page}` };
     },
@@ -366,7 +366,7 @@ function GetGdgProjectsTool() {
       title: 'Get GDG Projects',
       readOnlyHint: true,
     },
-    handler: async () => {
+    execute: async () => {
       const projects = [
         {
           id: 'rss-auto-post',
@@ -423,7 +423,7 @@ function GetGoogleAssistantProjectsTool() {
       title: 'Get Google Assistant Projects',
       readOnlyHint: true,
     },
-    handler: async () => {
+    execute: async () => {
       const projects = googleAssistantData.projects.map((p) => ({
         id: p.id,
         name: action_name_dict[p.id] ?? {},
