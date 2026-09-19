@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { TFunction } from "i18next";
 import { cn } from "@/lib/utils";
-import { Cloud, Cog, Code2, Users, type LucideIcon } from "lucide-react";
+import { Cloud, Cog, Code2, Users, Monitor, Database, Sparkles, ShieldCheck, type LucideIcon } from "lucide-react";
 
 interface SkillCategory {
   title: string;
@@ -32,6 +32,30 @@ const CATEGORY_META: Record<
     accent: "from-emerald-500 to-teal-500",
     iconBg:
       "bg-emerald-500/10 text-emerald-600 dark:bg-emerald-500/15 dark:text-emerald-400",
+  },
+  security: {
+    icon: ShieldCheck,
+    accent: "from-red-500 to-orange-600",
+    iconBg:
+      "bg-red-500/10 text-red-600 dark:bg-red-500/15 dark:text-red-400",
+  },
+  frontend: {
+    icon: Monitor,
+    accent: "from-sky-500 to-cyan-500",
+    iconBg:
+      "bg-sky-500/10 text-sky-600 dark:bg-sky-500/15 dark:text-sky-400",
+  },
+  data: {
+    icon: Database,
+    accent: "from-rose-500 to-pink-500",
+    iconBg:
+      "bg-rose-500/10 text-rose-600 dark:bg-rose-500/15 dark:text-rose-400",
+  },
+  ai: {
+    icon: Sparkles,
+    accent: "from-indigo-500 to-fuchsia-500",
+    iconBg:
+      "bg-indigo-500/10 text-indigo-600 dark:bg-indigo-500/15 dark:text-indigo-400",
   },
   soft: {
     icon: Users,
@@ -68,7 +92,7 @@ const Skills = ({ t }: Props) => {
                 className={cn(
                   "group relative overflow-hidden rounded-2xl border border-border/70 bg-card/90 p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg",
                   "dark:border-zinc-800/90 dark:bg-[#1b1b1f] dark:shadow-none",
-                  isFullWidth && "md:col-span-3"
+                  isFullWidth && "md:col-span-2"
                 )}
               >
                 <div
