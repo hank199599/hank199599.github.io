@@ -11,8 +11,8 @@ export const mainSection = {
     title: "About Me",
     professionalBackground: {
       title: "Professional Background",
-      paragraph1: "I am an engineer focused on cloud technologies and backend development, with extensive experience in system architecture and development. From my graduate studies in AI to my current role as a Cloud Engineer at Trend Micro, I have always strived to translate technology into real business value.",
-      paragraph2: "Beyond my work, I actively participate in tech communities, speaking at events for GDG Taipei and TensorFlow User Group. While sharing my technical experience, I continuously learn new things. I believe that technology is not just a tool for solving problems, but a medium for creating value."
+      paragraph1: "As a full-cycle Senior Backend Engineer, I thrive on solving complex distributed challenges through scalable cloud architecture and generative AI. At Trend Micro, I led the optimization of the ASSESSMENTS module—combining GenAI system analysis with multi-tier caching and message queues to eliminate overload risks and elevate system availability from 99.7% to 99.9%.",
+      paragraph2: "My background spans architecting high-traffic streaming backends at LINE TV, independently creating 32 Google Assistant voice skills across 10 languages (reaching 3,000+ weekly new users and twice featured on the Google Taiwan Blog), and contributing to tech communities as a book club co-founder and GDG Taipei GenAI bot developer. I am constantly exploring frontier technologies to deliver transformative engineering value."
     },
     techStack: {
       title: "Technical Skills"

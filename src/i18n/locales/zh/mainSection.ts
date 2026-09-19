@@ -11,8 +11,8 @@ export const mainSection = {
         title: "關於我",
         professionalBackground: {
             title: "專業背景",
-            paragraph1: "我是一位專注於雲端技術與後端開發的工程師，擁有豐富的系統架構和開發經驗。從研究所開始接觸 AI 技術，到現在在趨勢科技擔任 Cloud Engineer，一路走來都在追求如何將技術轉化為實際的商業價值。",
-            paragraph2: "除了工作，我也積極參與技術社群活動，擔任 GDG Taipei 和 TensorFlow User Group 的講者，分享技術經驗的同時也不斷學習新知。我相信技術不僅是解決問題的工具，更是創造價值的媒介。"
+            paragraph1: "身為一位全端資深後端工程師（Full-cycle Senior Backend Engineer），我樂於透過可擴展的雲端架構與生成式 AI 解決複雜的分散式系統挑戰。在趨勢科技任職期間，我主導了 ASSESSMENTS 模組的優化專案，結合 GenAI 系統分析、多層快取與訊息佇列，消除系統過載風險，將系統可用性從 99.7% 提升至 99.9%。",
+            paragraph2: "我的經歷涵蓋在 LINE TV 打造高流量串流服務後端架構、獨立開發 32 款橫跨 10 種語言的 Google Assistant 語音技能（每週吸引超過 3,000 名新使用者，並兩度獲 Google 台灣官方部落格報導），以及作為讀書會共同創辦人與 GDG Taipei GenAI 機器人開發者持續投入技術社群。我持續探索前沿技術，致力於創造具突破性的工程價值。"
         },
         techStack: {
             title: "技術專長"
