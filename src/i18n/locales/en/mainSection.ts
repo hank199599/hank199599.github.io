@@ -5,7 +5,7 @@ export const mainSection = {
     greeting: "Hi, I'm",
     name: "Shao-Hung Yu",
     quote: "'Opportunity is reserved for those who are prepared.'",
-    jobTitle: "Cloud Engineer @ Trend Micro"
+    jobTitle: "Senior Software Engineer @ Trend Micro"
   },
   about: {
     title: "About Me",
@@ -55,26 +55,32 @@ export const mainSection = {
             period: "Jan 2026 - Present",
             employmentType: "Full-time",
             description:
-              "Assist in the development of FIPS/STIG compliance certification, ensuring system reliability and performance.",
+              "Leading FIPS 140-3 and STIG compliance engineering for Trend Micro's Vision One Container Security (Sovereign Private Cloud), combining Compliance-as-Code automation with AI-assisted tooling.",
             achievements: [
-              "Collaborate closely with stakeholders for requirement discussions, cross-team integration, and problem-solving",
-              "Integrate ChainGuard's FIPS 140-3 compliant Docker image and perform STIG compliance certification",
-              "Use AWS GovCloud for development and testing of compliance certification",
+              "Migrated infrastructure-scope images to ChainGuard FIPS 140-3 compliant versions alongside colleagues within 5 weeks",
+              "Compliance as Code: automated FIPS compliance and STIG scanning workflows, cutting information lag from 7 days to under 30 minutes",
+              "Refactored Helm Charts to align with STIG compliance, achieving rigorous federal-grade security baselines",
+              "Reduced deployment friction by documenting common FIPS 140-3 compliance patterns and troubleshooting guides for 80+ stakeholder teams",
+              "Leveraged Claude AI skills to package FIPS/STIG migration guidance, accelerating developer adoption across Docker images and Helm Charts",
+              "Automated hardened image migrations and CVE remediation by integrating Claude Code into GitHub Actions, reducing manual engineering effort by 40% while autonomously validating Helm charts, committing changes, and deploying patches to test environments",
             ],
-            technologies: ["Kubernetes", "FIPS 140-3", "STIG", "ChainGuard", "Terraform"],
+            technologies: ["Kubernetes", "FIPS 140-3", "STIG", "ChainGuard", "Terraform", "Claude Code", "GitHub Actions"],
           },
           {
             title: "Software Engineer",
             period: "Jul 2024 - Dec 2025",
             employmentType: "Full-time",
             description:
-              "As a Cloud Engineer, I developed and maintained enterprise-level cloud services, ensuring system reliability and performance.",
+              "Owned the ASSESSMENTS module end-to-end as a full-cycle developer, from planning and design through implementation, testing, deployment, and operations.",
             achievements: [
-              "Collaborate closely with stakeholders for requirement discussions, cross-team integration, and problem-solving",
-              "As a full-cycle developer, responsible for the complete process from planning, design, to implementation, testing, deployment, and operation",
-              "Automate and improve development and release processes",
+              "Designed an isolated worker node for data synchronization, enabling real-time access and increasing operational efficiency by 40%",
+              "Improved service availability SLO from 98% to 99.9% by implementing shared Redis caching and using LLM tools to diagnose performance bottlenecks",
+              "Leveraged AI tools (Claude Code) to automate testing, increasing coverage from 0% to 94.17% and resolving critical concurrency issues",
+              "Re-architected core logic using Domain-Driven Design (DDD) and Azure Functions to automate partner site creation, cutting turnaround time from 2 weeks to 2 days",
+              "Automated Azure AD secret rotation via GitHub Actions and resolved 11 critical support/PCT cases",
+              "Collaborated with Japanese stakeholders to collect and organize evidence for ISMAP registration, ensuring alignment with official security requirements",
             ],
-            technologies: ["Azure", "Oracle Cloud", "CI/CD", "Kubernetes", "Python", "Golang"],
+            technologies: ["Azure", "Oracle Cloud", "CI/CD", "Kubernetes", "Python", "Golang", "Redis", "Domain-Driven Design"],
           },
         ],
       },
@@ -92,11 +98,13 @@ export const mainSection = {
             endDate: "2024-04",
             employmentType: "Full-time",
             description:
-              "Developed and maintained core backend systems for LINE TV's streaming platform.",
+              "Maintained and developed LINE TV's product operations and backend systems, working closely with PMs to understand business needs and design APIs, databases, and system architecture.",
             achievements: [
-              "Worked closely with PMs to understand business needs, design APIs, databases, and system architecture",
-              "Wrote logic based on the post-POC architecture, ensuring smooth product iteration through unit and integration testing",
-              "Participated in a large-scale system refactoring project to improve system performance and maintainability",
+              "Reward Delivery Modularization: transformed a locally run, manually executed script into a modular architecture, reducing internal operational overhead by 80%",
+              "Task Module Revamp: migrated core logic from the mobile app to the backend, wrote the database interaction logic and synchronized the admin dashboard, reducing internal operational overhead by 90%, with integration and unit testing to keep iterations smooth",
+              "Web Purchase Page Revamp: added discount code functionality and helped build a backend to reduce internal operational overhead",
+              "Third-Party Playlist Recommendation System: partnered with the Data Team to build a playlist information delivery pipeline and a backend for verifying recommended playlists",
+              "Payment Plan Backend: helped build payment plan APIs and added auditing functionality",
             ],
             technologies: ["Node.js", "SQL", "RESTful API", "Microservices", "Docker", "AWS"],
           },
@@ -160,6 +168,33 @@ export const mainSection = {
           "Node.js",
           "SQL",
           "RESTful API"
+        ]
+      },
+      frontend: {
+        title: "Frontend Development",
+        skills: [
+          "React",
+          "Next.js",
+          "HTML5",
+          "CSS3"
+        ]
+      },
+      data: {
+        title: "Data Management",
+        skills: [
+          "MySQL",
+          "MongoDB",
+          "Redis"
+        ]
+      },
+      ai: {
+        title: "AI & Automation",
+        skills: [
+          "Generative AI",
+          "LLMOps",
+          "AI Agents",
+          "Claude Code",
+          "DevSecOps"
         ]
       },
       soft: {
@@ -265,6 +300,7 @@ export const mainSection = {
           "Assist in organizing I/O Extends 2023",
           "Assist in organizing DevFest 2023, achieving a record attendance of 700 people",
           "Assist in building a generative AI-powered automated posting system to help manage fan pages ( as the following link https://www.facebook.com/GDG.Taipei )",
+          "Invited as a Featured Speaker at GDG Taiwan DevFest '20 and GDG Taipei/Taiyuan DevFest '21, sharing technical insights with the developer community",
         ],
         logo: "/volunteer-logos/gdg-taipei.png",
         links: [
@@ -389,7 +425,7 @@ export const mainSection = {
         name: "TOEIC",
         issuer: "ETS",
         score: "825",
-        year: "2023"
+        year: "2020"
       }
     ]
   }

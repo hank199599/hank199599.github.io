@@ -5,7 +5,7 @@ export const mainSection = {
         greeting: "Hi, 我是",
         name: "游紹宏",
         quote: "「機會，是留給準備好的人」",
-        jobTitle: "Cloud Engineer @ Trend Micro"
+        jobTitle: "Senior Software Engineer @ Trend Micro"
     },
     about: {
         title: "關於我",
@@ -54,26 +54,32 @@ export const mainSection = {
                         title: "Senior Software Engineer",
                         period: "2026/01 - 至今",
                         employmentType: "正職",
-                        description: "協助 FIPS/STIG 合規認證的開發工作，確保系統的可靠性和效能。",
+                        description: "主導 Trend Micro Vision One Container Security（Sovereign Private Cloud）產品的 FIPS 140-3 與 STIG 合規工程，結合 Compliance-as-Code 自動化與 AI 輔助工具。",
                         achievements: [
-                            "與利害關係人密切合作，進行需求討論、跨團隊整合和問題排除",
-                            "整合 ChainGuard 的 FIPS 140-3 合規 Docker image，並進行 STIG 合規認證",
-                            "使用 AWS GovCloud 進行合規認證的開發和測試",
+                            "與同事共同於 5 週內，將基礎設施層級的映像檔遷移至符合 ChainGuard FIPS 140-3 標準的版本",
+                            "Compliance as Code：自動化 FIPS 合規與 STIG 掃描流程，將資訊延遲從 7 天縮短至 30 分鐘內",
+                            "重構 Helm Charts 以符合 STIG 合規要求，達成嚴謹的聯邦等級安全標準",
+                            "為 80 多個利害關係團隊撰寫常見 FIPS 140-3 合規問題與排錯指南，降低部署阻力",
+                            "運用 Claude AI skills 整理 FIPS/STIG 遷移指引，加速團隊對 Docker image 與 Helm Charts 的導入",
+                            "將 Claude Code 整合進 GitHub Actions，自動化強化映像檔遷移與 CVE 修復，自主驗證 Helm charts、提交變更並部署修補程式至測試環境，減少 40% 人工工程投入",
                         ],
-                        technologies: ["Kubernetes", "FIPS 140-3", "STIG", "ChainGuard", "Terraform"],
+                        technologies: ["Kubernetes", "FIPS 140-3", "STIG", "ChainGuard", "Terraform", "Claude Code", "GitHub Actions"],
                     },
                     {
                         title: "Software Engineer",
                         period: "2024/07 - 2025/12",
                         employmentType: "正職",
                         description:
-                            "作為雲端工程師，負責開發和維護企業級的雲端服務，確保系統的可靠性和效能。",
+                            "以全週期開發者身分負責 ASSESSMENTS 模組，涵蓋規劃、設計、實作、測試、部署到維運的完整流程。",
                         achievements: [
-                            "與利害關係人密切合作，進行需求討論、跨團隊整合和問題排除",
-                            "作為全週期開發者，負責從規劃、設計到實作、測試、部署和營運的完整流程",
-                            "自動化和改進開發及發布流程",
+                            "設計獨立的 worker node 處理資料同步，達成即時存取並提升 40% 作業效率",
+                            "導入共用 Redis 快取並運用 LLM 工具診斷效能瓶頸，將服務可用性 SLO 從 98% 提升至 99.9%",
+                            "運用 AI 工具（Claude Code）自動化測試，將覆蓋率從 0% 提升至 94.17%，並解決關鍵的併發問題",
+                            "以 Domain-Driven Design（DDD）與 Azure Functions 重構核心邏輯，自動化夥伴站台建立流程，將處理時間從 2 週縮短至 2 天",
+                            "透過 GitHub Actions 自動化 Azure AD 密鑰輪替，並成功處理 11 件關鍵支援/PCT 案件",
+                            "與日本利害關係人合作蒐集並整理 ISMAP 註冊所需證明文件，確保符合官方資安要求",
                         ],
-                        technologies: ["Azure", "Oracle Cloud", "CI/CD", "Kubernetes", "Python", "Golang"],
+                        technologies: ["Azure", "Oracle Cloud", "CI/CD", "Kubernetes", "Python", "Golang", "Redis", "Domain-Driven Design"],
                     },
                 ],
             },
@@ -90,11 +96,13 @@ export const mainSection = {
                         startDate: "2022-09",
                         endDate: "2024-04",
                         employmentType: "正職",
-                        description: "負責開發和維護 LINE TV 的後端系統，處理大規模用戶請求和資料處理。",
+                        description: "負責與同事一同維護並開發 LINE TV 的產品，與 PM 緊密合作了解商業需求，設計 API、資料庫與系統架構。",
                         achievements: [
-                            "與 PM 緊密合作了解商業需求，設計 API、資料庫和系統架構",
-                            "根據 POC 後的架構撰寫邏輯，透過單元測試和整合測試確保產品迭代順暢",
-                            "參與大型系統重構專案，提升系統效能和可維護性",
+                            "發送獎勵模組化：將原先本地化、手動執行的腳本轉為模組化架構設計，減少內部 OP 80%",
+                            "任務模組改版：與同事協作將原本實作於行動端的邏輯搬遷至後端，撰寫資料庫互動邏輯並同步建立後台，減少內部 OP 90%，並完善整合測試與單元測試確保後續迭代順暢",
+                            "網頁端購買頁改版：新增折扣碼功能，並協助建立後台以減少內部 OP",
+                            "供第三方的推薦系統建置：與 Data Team 協作建立片單資訊發送 pipeline，並協助建立對應後台供 Data Team 核對推薦片單",
+                            "方案設定後台化：協助建立方案相關 API，並加上稽核功能",
                         ],
                         technologies: ["Node.js", "SQL", "RESTful API", "Microservices", "Docker", "AWS"],
                     },
@@ -158,6 +166,33 @@ export const mainSection = {
                     "Node.js",
                     "SQL",
                     "RESTful API"
+                ]
+            },
+            frontend: {
+                title: "前端開發",
+                skills: [
+                    "React",
+                    "Next.js",
+                    "HTML5",
+                    "CSS3"
+                ]
+            },
+            data: {
+                title: "資料管理",
+                skills: [
+                    "MySQL",
+                    "MongoDB",
+                    "Redis"
+                ]
+            },
+            ai: {
+                title: "AI 與自動化",
+                skills: [
+                    "Generative AI",
+                    "LLMOps",
+                    "AI Agents",
+                    "Claude Code",
+                    "DevSecOps"
                 ]
             },
             soft: {
@@ -263,6 +298,7 @@ export const mainSection = {
                     "協助籌辦 I/O Extends 2023",
                     "協助籌辦 DevFest 2023，創下 700 人參與的紀錄",
                     "協助建置生成式 AI 自動發文系統，幫助管理粉絲專頁（如：https://www.facebook.com/GDG.Taipei）",
+                    "受邀於 GDG Taiwan DevFest '20 及 GDG Taipei/Taiyuan DevFest '21 擔任講者，與開發者社群分享技術洞見",
                 ],
                 logo: "/volunteer-logos/gdg-taipei.png",
                 links: [
@@ -387,7 +423,7 @@ export const mainSection = {
                 name: "TOEIC",
                 issuer: "ETS",
                 score: "825",
-                year: "2023"
+                year: "2020"
             }
         ]
     }
