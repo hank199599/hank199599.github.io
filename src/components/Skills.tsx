@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { TFunction } from "i18next";
 import { cn } from "@/lib/utils";
-import { Cloud, Cog, Code2, Users, Monitor, Database, Sparkles, type LucideIcon } from "lucide-react";
+import { Cloud, Cog, Code2, Users, Monitor, Database, Sparkles, ShieldCheck, type LucideIcon } from "lucide-react";
 
 interface SkillCategory {
   title: string;
@@ -32,6 +32,12 @@ const CATEGORY_META: Record<
     accent: "from-emerald-500 to-teal-500",
     iconBg:
       "bg-emerald-500/10 text-emerald-600 dark:bg-emerald-500/15 dark:text-emerald-400",
+  },
+  security: {
+    icon: ShieldCheck,
+    accent: "from-red-500 to-orange-600",
+    iconBg:
+      "bg-red-500/10 text-red-600 dark:bg-red-500/15 dark:text-red-400",
   },
   frontend: {
     icon: Monitor,

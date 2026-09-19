@@ -157,7 +157,20 @@ export const mainSection = {
           "Kubernetes",
           "Docker",
           "CI/CD Pipeline",
-          "Cloud Functions"
+          "Cloud Functions",
+          "Helm",
+          "GitHub Actions"
+        ]
+      },
+      security: {
+        title: "Security & Compliance",
+        skills: [
+          "FIPS 140-3",
+          "STIG",
+          "ChainGuard",
+          "Compliance as Code",
+          "DevSecOps",
+          "ISMAP"
         ]
       },
       backend: {
@@ -167,7 +180,9 @@ export const mainSection = {
           "Go",
           "Node.js",
           "SQL",
-          "RESTful API"
+          "RESTful API",
+          "GraphQL",
+          "Domain-Driven Design (DDD)"
         ]
       },
       frontend: {
@@ -194,7 +209,7 @@ export const mainSection = {
           "LLMOps",
           "AI Agents",
           "Claude Code",
-          "DevSecOps"
+          "MCP (Model Context Protocol)"
         ]
       },
       soft: {
@@ -426,6 +441,32 @@ export const mainSection = {
         issuer: "ETS",
         score: "825",
         year: "2020"
+      }
+    ]
+  },
+  accomplishments: {
+    title: "Accomplishments & Recognition",
+    items: [
+      {
+        type: "award",
+        title: "2026Q2 Quarter Star",
+        organization: "Trend Micro",
+        period: "Q2 2026",
+        description: "Quarterly recognition for leading FIPS 140-3 and STIG compliance engineering on Vision One Container Security."
+      },
+      {
+        type: "award",
+        title: "2025Q3 Quarter Star",
+        organization: "Trend Micro",
+        period: "Q3 2025",
+        description: "Quarterly recognition for optimizing the ASSESSMENTS module and lifting service availability to 99.9%."
+      },
+      {
+        type: "writing",
+        title: "iThome ITHELP Ironman Contest 2021 (13th)",
+        organization: "iThome",
+        period: "2021",
+        description: "Completed the 13th iThome ITHELP Ironman Contest, a 30-day daily technical writing challenge."
       }
     ]
   }

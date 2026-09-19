@@ -155,7 +155,20 @@ export const mainSection = {
                     "Kubernetes",
                     "Docker",
                     "CI/CD Pipeline",
-                    "Cloud Functions"
+                    "Cloud Functions",
+                    "Helm",
+                    "GitHub Actions"
+                ]
+            },
+            security: {
+                title: "資安與合規",
+                skills: [
+                    "FIPS 140-3",
+                    "STIG",
+                    "ChainGuard",
+                    "Compliance as Code",
+                    "DevSecOps",
+                    "ISMAP"
                 ]
             },
             backend: {
@@ -165,7 +178,9 @@ export const mainSection = {
                     "Go",
                     "Node.js",
                     "SQL",
-                    "RESTful API"
+                    "RESTful API",
+                    "GraphQL",
+                    "Domain-Driven Design（DDD）"
                 ]
             },
             frontend: {
@@ -192,7 +207,7 @@ export const mainSection = {
                     "LLMOps",
                     "AI Agents",
                     "Claude Code",
-                    "DevSecOps"
+                    "MCP（Model Context Protocol）"
                 ]
             },
             soft: {
@@ -424,6 +439,32 @@ export const mainSection = {
                 issuer: "ETS",
                 score: "825",
                 year: "2020"
+            }
+        ]
+    },
+    accomplishments: {
+        title: "成就與榮譽",
+        items: [
+            {
+                type: "award",
+                title: "2026Q2 Quarter Star",
+                organization: "趨勢科技",
+                period: "2026 Q2",
+                description: "表彰主導 Vision One Container Security 的 FIPS 140-3 與 STIG 合規工程之貢獻"
+            },
+            {
+                type: "award",
+                title: "2025Q3 Quarter Star",
+                organization: "趨勢科技",
+                period: "2025 Q3",
+                description: "表彰優化 ASSESSMENTS 模組、將服務可用性提升至 99.9% 之貢獻"
+            },
+            {
+                type: "writing",
+                title: "iThome 鐵人賽 2021（第 13 屆 ITHELP Ironman Contest）",
+                organization: "iThome",
+                period: "2021",
+                description: "完成第 13 屆 iThome 鐵人賽，連續 30 天發表技術文章的寫作挑戰"
             }
         ]
     }

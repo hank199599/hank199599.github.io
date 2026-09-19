@@ -147,6 +147,10 @@ function GetSkillsTool() {
           title: t('skills.categories.backend.title'),
           skills: t('skills.categories.backend.skills', { returnObjects: true }),
         },
+        security: {
+          title: t('skills.categories.security.title'),
+          skills: t('skills.categories.security.skills', { returnObjects: true }),
+        },
         frontend: {
           title: t('skills.categories.frontend.title'),
           skills: t('skills.categories.frontend.skills', { returnObjects: true }),
