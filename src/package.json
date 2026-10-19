@@ -16,7 +16,7 @@
     "@dnd-kit/utilities": "^3.2.2",
     "@mcp-b/global": "^6.0.0",
     "@mcp-b/react-webmcp": "^5.1.0",
-    "@radix-ui/react-accordion": "^1.2.21",
+    "@radix-ui/react-accordion": "^1.3.1",
     "@radix-ui/react-avatar": "^1.2.6",
     "@radix-ui/react-checkbox": "^1.4.1",
     "@radix-ui/react-dialog": "^1.1.23",
